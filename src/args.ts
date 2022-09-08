@@ -1,8 +1,9 @@
 import { parse } from "./deps.ts";
+import { utils } from "./mod.ts";
 
 const TonkazVersion = "0.1.0";
 
-const usage = () => {
+function usage(): void {
   console.log(`\
 Tonkaz ${TonkazVersion} by @suecharo
 
@@ -20,9 +21,9 @@ Examples:
   tonkaz https://example.com/file1 https://example.com/file2\
 `);
   Deno.exit(1);
-};
+}
 
-export const parseArgs = async (args: string[]): Promise<[string, string]> => {
+export async function parseArgs(args: string[]): Promise<string[]> {
   const parsedArgs = parse(args, {
     boolean: ["help", "version"],
     alias: {
@@ -38,21 +39,13 @@ export const parseArgs = async (args: string[]): Promise<[string, string]> => {
   }
   parsedArgs._.length !== 2 && usage();
 
-  const file1 = `${parsedArgs._[0]}`;
-  const file1_is_file_or_remote = await is_file_or_remote(file1);
-  !file1_is_file_or_remote && usage();
-  const file2 = `${parsedArgs._[1]}`;
-  const file2_is_file_or_remote = await is_file_or_remote(file2);
-  !file2_is_file_or_remote && usage();
+  const loc1 = `${parsedArgs._[0]}`;
+  const loc1_is_file_or_remote = await utils.is_file_or_remote(loc1);
+  !loc1_is_file_or_remote && usage();
 
-  return [file1, file2];
-};
+  const loc2 = `${parsedArgs._[1]}`;
+  const loc2_is_file_or_remote = await utils.is_file_or_remote(loc2);
+  !loc2_is_file_or_remote && usage();
 
-const is_file_or_remote = async (file: string): Promise<boolean> => {
-  const isFile = await Deno.stat(file).then((stat) => stat.isFile).catch(() =>
-    false
-  );
-  const isRemote = file.startsWith("http://") || file.startsWith("https://");
-
-  return isFile || isRemote;
-};
+  return [loc1, loc2];
+}

@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "main": "deno run --allow-read src/main.ts",
-    "main:test": "deno run --allow-read src/main.ts ./tests/ro-crate-metadata-example.json ./tests/ro-crate-metadata-example.json"
+    "main": "deno run --allow-read --allow-net src/main.ts",
+    "main:test": "deno task main ./tests/ro-crate-metadata_example_trimming.json ./tests/ro-crate-metadata_example_rnaseq.json"
   }
 }
