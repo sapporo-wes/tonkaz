@@ -1,4 +1,4 @@
-import { args, compare, crate, utils } from "./mod.ts";
+import { args, compare, crate } from "./mod.ts";
 
 export async function main(): Promise<void> {
   try {

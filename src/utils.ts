@@ -6,13 +6,13 @@ export async function isRemote(loc: string): Promise<boolean> {
   return await fetch(loc).then((res) => res.ok).catch(() => false);
 }
 
-export async function is_file_or_remote(loc: string): Promise<boolean> {
+export async function isFileOrRemote(loc: string): Promise<boolean> {
   return await isFile(loc) || await isRemote(loc);
 }
 
 export type Json = Record<string, unknown>;
 
-export async function load_json(
+export async function loadJson(
   loc: string,
 ): Promise<Record<string, unknown>> {
   if (await isFile(loc)) {

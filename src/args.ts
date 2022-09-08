@@ -40,12 +40,12 @@ export async function parseArgs(args: string[]): Promise<string[]> {
   parsedArgs._.length !== 2 && usage();
 
   const loc1 = `${parsedArgs._[0]}`;
-  const loc1_is_file_or_remote = await utils.is_file_or_remote(loc1);
-  !loc1_is_file_or_remote && usage();
+  const loc1_isFileOrRemote = await utils.isFileOrRemote(loc1);
+  !loc1_isFileOrRemote && usage();
 
   const loc2 = `${parsedArgs._[1]}`;
-  const loc2_is_file_or_remote = await utils.is_file_or_remote(loc2);
-  !loc2_is_file_or_remote && usage();
+  const loc2_isFileOrRemote = await utils.isFileOrRemote(loc2);
+  !loc2_isFileOrRemote && usage();
 
   return [loc1, loc2];
 }
