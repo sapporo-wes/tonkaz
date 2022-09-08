@@ -1,0 +1,807 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        {
+            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#FileStats",
+            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#Format",
+            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#IntermediateFile",
+            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#OutputFile",
+            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoConfiguration",
+            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoService",
+            "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
+            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestEnvironment",
+            "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
+            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestResult",
+            "TestService": "https://w3id.org/ro/terms/test#TestService",
+            "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
+            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#WorkflowAttachment",
+            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#attachment",
+            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cmd",
+            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#configuration",
+            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuArchitecture",
+            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuCount",
+            "definition": "https://w3id.org/ro/terms/test#definition",
+            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateRate",
+            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateReads",
+            "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
+            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#environment",
+            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#executableWorkflows",
+            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#exitCode",
+            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#format",
+            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#freeDiskSpace",
+            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#generatedBy",
+            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#getRuns",
+            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#gid",
+            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#inDocker",
+            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#indelsCount",
+            "instance": "https://w3id.org/ro/terms/test#instance",
+            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#intermediateFiles",
+            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#lineCount",
+            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedRate",
+            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedReads",
+            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mode",
+            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#os",
+            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#osVersion",
+            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#outputs",
+            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#pid",
+            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#registeredOnlyMode",
+            "resource": "https://w3id.org/ro/terms/test#resource",
+            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#result",
+            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runId",
+            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runSh",
+            "runsOn": "https://w3id.org/ro/terms/test#runsOn",
+            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoConfig",
+            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoEndpoint",
+            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#serviceInfo",
+            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sha512",
+            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#snpsCount",
+            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#state",
+            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stats",
+            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stderr",
+            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stdout",
+            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalMemory",
+            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalReads",
+            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#uid",
+            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedRate",
+            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedReads",
+            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#urlPrefix",
+            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#variantCount",
+            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowAttachment",
+            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowEngineParameters",
+            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowParameters",
+            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisId",
+            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisMetadata",
+            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisTestId"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "about": {
+                "@id": "#sapporo-test-suite"
+            },
+            "author": {
+                "@id": "https://orcid.org/0000-0003-2765-0049"
+            },
+            "datePublished": "2022-09-07T06:31:25+00:00",
+            "description": "RO-Crate of Sapporo's run execution results.",
+            "hasPart": [
+                {
+                    "@id": "exe/"
+                },
+                {
+                    "@id": "outputs/"
+                },
+                {
+                    "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl"
+                },
+                {
+                    "@id": "exe/fastqc.cwl"
+                },
+                {
+                    "@id": "exe/trimmomatic_pe.cwl"
+                },
+                {
+                    "@id": "service_info.json"
+                },
+                {
+                    "@id": "executable_workflows.json"
+                },
+                {
+                    "@id": "run.sh"
+                },
+                {
+                    "@id": "sapporo_config.json"
+                },
+                {
+                    "@id": "run_request.json"
+                },
+                {
+                    "@id": "exe/workflow_params.json"
+                },
+                {
+                    "@id": "workflow_engine_params.txt"
+                },
+                {
+                    "@id": "yevis-metadata.yml"
+                },
+                {
+                    "@id": "exe/ERR034597_1.small.fq.gz"
+                },
+                {
+                    "@id": "exe/ERR034597_2.small.fq.gz"
+                },
+                {
+                    "@id": "stdout.log"
+                },
+                {
+                    "@id": "stderr.log"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_2.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1P.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2P.fq"
+                }
+            ],
+            "license": {
+                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
+            },
+            "mainEntity": {
+                "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl"
+            },
+            "name": "Sapporo RO-Crate"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "http://choosealicense.com/licenses/cc0-1.0/",
+            "@type": [
+                "CreativeWork"
+            ],
+            "name": "Creative Commons Zero v1.0 Universal"
+        },
+        {
+            "@id": "https://orcid.org/0000-0003-2765-0049",
+            "@type": [
+                "Person"
+            ],
+            "affiliation": "Example Affiliation",
+            "name": "Doe, John (Family name, Given names)"
+        },
+        {
+            "@id": "exe/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "exe/fastqc.cwl"
+                },
+                {
+                    "@id": "exe/trimmomatic_pe.cwl"
+                },
+                {
+                    "@id": "exe/workflow_params.json"
+                },
+                {
+                    "@id": "exe/ERR034597_1.small.fq.gz"
+                },
+                {
+                    "@id": "exe/ERR034597_2.small.fq.gz"
+                }
+            ]
+        },
+        {
+            "@id": "outputs/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_2.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1P.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2P.fq"
+                }
+            ]
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "attachment": [
+                {
+                    "@id": "exe/fastqc.cwl"
+                },
+                {
+                    "@id": "exe/trimmomatic_pe.cwl"
+                }
+            ],
+            "contentSize": 1151,
+            "description": {
+                "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/README.md"
+            },
+            "name": "CWL_trimming_and_qc",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+            },
+            "sha512": "d5d96c780a9c09855883853a6f534938c70cb5139a0fc39d3f712cd5c7011f4c812ff299a2a651d2a9399470ab990e6cf2053ebddfa1613f45745dd0fdd9ce85",
+            "version": "1.0.0",
+            "yevisId": "c13b6e27-a4ee-426f-8bdb-8cf5c4310bad"
+        },
+        {
+            "@id": "https://w3id.org/cwl/v1.0/",
+            "@type": [
+                "WebPage"
+            ]
+        },
+        {
+            "@id": "https://www.commonwl.org/",
+            "@type": [
+                "WebPage"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+            "@type": "ComputerLanguage",
+            "alternateName": "CWL",
+            "identifier": {
+                "@id": "https://w3id.org/cwl/v1.0/"
+            },
+            "name": "Common Workflow Language",
+            "url": {
+                "@id": "https://www.commonwl.org/"
+            },
+            "version": "v1.0"
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/README.md",
+            "@type": [
+                "WebPage"
+            ],
+            "name": "README.md"
+        },
+        {
+            "@id": "exe/fastqc.cwl",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "WorkflowAttachment",
+                "SoftwareSourceCode"
+            ],
+            "contentSize": 577,
+            "dateModified": "2022-09-07T06:30:51.535956",
+            "encodingFormat": "text/plain",
+            "gid": 0,
+            "lineCount": 33,
+            "mode": "-rw-r--r--",
+            "sha512": "af6d23d05f8b42739feb4db4f3222e0201f7186953a4200bc3a72668589db672d738f27275eb5298cd2d4a1f5f3aa854f5f56a8561f5a8217a7f1c9663627b95",
+            "text": "#!/usr/bin/env cwl-runner\ncwlVersion: v1.0\nclass: CommandLineTool\nrequirements:\n  DockerRequirement:\n    dockerPull: quay.io/biocontainers/fastqc:0.11.9--0\nbaseCommand: fastqc\narguments:\n  - position: 0\n    prefix: -o\n    valueFrom: .\n\ninputs:\n  nthreads:\n    type: int?\n    default: 2\n    inputBinding:\n      position: 1\n      prefix: --threads\n  fastq:\n    type: File\n    inputBinding:\n      position: 2\n\noutputs:\n  qc_result:\n    type: File\n    outputBinding:\n      glob: \"*_fastqc.html\"\n  stdout: stdout\n  stderr: stderr\nstdout: fastqc-stdout.log\nstderr: fastqc-stderr.log\n",
+            "uid": 0,
+            "url": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/fastqc.cwl"
+        },
+        {
+            "@id": "exe/trimmomatic_pe.cwl",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "WorkflowAttachment",
+                "SoftwareSourceCode"
+            ],
+            "contentSize": 1570,
+            "dateModified": "2022-09-07T06:30:51.831958",
+            "encodingFormat": "text/plain",
+            "gid": 0,
+            "lineCount": 66,
+            "mode": "-rw-r--r--",
+            "sha512": "cc384f32389e588706860139d843194bef48d53081183f12fc3ed32d3bc56bfca868c2965d5e9dd4e50a66e913b7b3afc0e0f9766353a14ad87f3b4a33b2ed2e",
+            "text": "#!/usr/bin/env cwl-runner\ncwlVersion: v1.0\nclass: CommandLineTool\nrequirements:\n  DockerRequirement:\n    dockerPull: quay.io/biocontainers/trimmomatic:0.38--1\nbaseCommand: trimmomatic\narguments:\n  - position: 0\n    valueFrom: PE\n  - position: 4\n    valueFrom: $(inputs.fastq_1.nameroot).trimmed.1P.fq\n  - position: 5\n    valueFrom: $(inputs.fastq_1.nameroot).trimmed.1U.fq\n  - position: 6\n    valueFrom: $(inputs.fastq_1.nameroot).trimmed.2P.fq\n  - position: 7\n    valueFrom: $(inputs.fastq_1.nameroot).trimmed.2U.fq\n  - position: 8\n    valueFrom: ILLUMINACLIP:/usr/local/share/trimmomatic/adapters/TruSeq2-PE.fa:2:40:15\n  - position: 9\n    valueFrom: LEADING:20\n  - position: 10\n    valueFrom: TRAILING:20\n  - position: 11\n    valueFrom: SLIDINGWINDOW:4:15\n  - position: 12\n    valueFrom: MINLEN:36\n\ninputs:\n  nthreads:\n    type: int?\n    default: 2\n    inputBinding:\n      position: 1\n      prefix: -threads\n  fastq_1:\n    type: File\n    inputBinding:\n      position: 2\n  fastq_2:\n    type: File\n    inputBinding:\n      position: 3\n\noutputs:\n  trimmed_fastq1P:\n    type: File\n    outputBinding:\n      glob: $(inputs.fastq_1.nameroot).trimmed.1P.fq\n  trimmed_fastq1U:\n    type: File\n    outputBinding:\n      glob: $(inputs.fastq_1.nameroot).trimmed.1U.fq\n  trimmed_fastq2P:\n    type: File\n    outputBinding:\n      glob: $(inputs.fastq_1.nameroot).trimmed.2P.fq\n  trimmed_fastq2U:\n    type: File\n    outputBinding:\n      glob: $(inputs.fastq_1.nameroot).trimmed.2U.fq\n  stdout: stdout\n  stderr: stderr\nstdout: trimmomatic-pe-stdout.log\nstderr: trimmomatic-pe-stderr.log\n",
+            "uid": 0,
+            "url": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimmomatic_pe.cwl"
+        },
+        {
+            "@id": "#sapporo-test-suite",
+            "@type": "TestSuite",
+            "definition": {
+                "@id": "run_request.json"
+            },
+            "instance": {
+                "@id": "#sapporo-test-instance"
+            },
+            "mainEntity": {
+                "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl"
+            },
+            "name": "Sapporo test suite",
+            "result": {
+                "@id": "#sapporo-test-result"
+            }
+        },
+        {
+            "@id": "#sapporo-test-instance",
+            "@type": "TestInstance",
+            "environment": {
+                "@id": "#sapporo-test-environment"
+            },
+            "name": "Sapporo test instance",
+            "runsOn": {
+                "@id": "#sapporo-service"
+            },
+            "url": "http://localhost:1122"
+        },
+        {
+            "@id": "#sapporo-service",
+            "@type": [
+                "TestService",
+                "SapporoService",
+                "SoftwareApplication"
+            ],
+            "configuration": {
+                "@id": "#sapporo-config"
+            },
+            "name": "Sapporo-service",
+            "resource": "/",
+            "url": {
+                "@id": "https://github.com/sapporo-wes/sapporo-service"
+            },
+            "version": "1.4.1"
+        },
+        {
+            "@id": "https://github.com/sapporo-wes/sapporo-service",
+            "@type": [
+                "WebPage"
+            ]
+        },
+        {
+            "@id": "#sapporo-config",
+            "@type": [
+                "SapporoConfiguration"
+            ],
+            "executableWorkflows": {
+                "@id": "executable_workflows.json"
+            },
+            "getRuns": true,
+            "registeredOnlyMode": false,
+            "runSh": {
+                "@id": "run.sh"
+            },
+            "sapporoConfig": {
+                "@id": "sapporo_config.json"
+            },
+            "sapporoEndpoint": "http://localhost:1122",
+            "serviceInfo": {
+                "@id": "service_info.json"
+            },
+            "urlPrefix": "/",
+            "workflowAttachment": true
+        },
+        {
+            "@id": "service_info.json",
+            "@type": "File",
+            "contentSize": 1651,
+            "dateModified": "2022-09-07T06:30:46.555925",
+            "encodingFormat": "application/json",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo service info",
+            "sha512": "89eaeb41e5d01bd90ec90438908b7c7d9b05e87aeea98eb64c582f92b042074becaad739fbcb4e66105e3c5b1beb40e3a79f3677f0defb8a72ac9deec0a7d20f",
+            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.1\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"COMPLETE\": 6,\n    \"UNKNOWN\": 1\n  }\n}",
+            "uid": 0
+        },
+        {
+            "@id": "executable_workflows.json",
+            "@type": "File",
+            "contentSize": 33024,
+            "dateModified": "2022-09-07T06:30:50.595950",
+            "encodingFormat": "text/plain",
+            "gid": 0,
+            "lineCount": 651,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo executable workflows",
+            "sha512": "186d6d93ed49399c525e4541e2259da3d6b6a5cc6cfe76489930061add95affad25477d286ede26aa56d81f7fb4b0a452202715bb2a4611ee1e7c8912d60443d",
+            "uid": 0
+        },
+        {
+            "@id": "run.sh",
+            "@type": "File",
+            "contentSize": 11322,
+            "dateModified": "2022-09-07T06:30:50.599951",
+            "encodingFormat": "text/x-shellscript",
+            "gid": 0,
+            "lineCount": 303,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo run.sh",
+            "sha512": "baf3fdb3745de57a6ab994bf594c6c85ea6c5ca460f2d2c113e8e7060f7db723da1c13ba2d3beb49b63b4c33ac8c6d37b92eb2cc396691ce0963119b3f32143f",
+            "uid": 0
+        },
+        {
+            "@id": "sapporo_config.json",
+            "@type": "File",
+            "contentSize": 399,
+            "dateModified": "2022-09-07T06:30:46.539925",
+            "encodingFormat": "application/json",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo runtime configuration",
+            "sha512": "6752d45c424159b1efd013a31823ff2a204decb22aedb9b04c83c5ca318bb0c42b3c9297f1ab438c0d2c2178db1134ad98e8e95ad3583bd78bc52c908523671d",
+            "text": "{\n  \"sapporo_version\": \"1.4.1\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/app/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
+            "uid": 0
+        },
+        {
+            "@id": "#sapporo-test-environment",
+            "@type": [
+                "TestEnvironment"
+            ],
+            "cpuArchitecture": "x86_64",
+            "cpuCount": 4,
+            "freeDiskSpace": 205120659456,
+            "gid": 0,
+            "inDocker": true,
+            "os": "Linux",
+            "osVersion": "5.13.0-40-generic",
+            "totalMemory": 25211322368,
+            "uid": 0
+        },
+        {
+            "@id": "run_request.json",
+            "@type": [
+                "TestDefinition",
+                "File"
+            ],
+            "cmd": "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST=unix:///var/run/docker.sock -v /tmp:/tmp -v /home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9:/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9 -w=/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe quay.io/commonwl/cwltool:3.1.20220628170238 --outdir /home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl /home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe/workflow_params.json 1>/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/stdout.log 2>/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/stderr.log",
+            "conformsTo": {
+                "@id": "#cwltool"
+            },
+            "contentSize": 1339,
+            "dateModified": "2022-09-07T06:30:46.539925",
+            "encodingFormat": "application/json",
+            "engineVersion": "3.1.20220628170238",
+            "gid": 0,
+            "input": [
+                {
+                    "@id": "exe/ERR034597_1.small.fq.gz"
+                },
+                {
+                    "@id": "exe/ERR034597_2.small.fq.gz"
+                }
+            ],
+            "mode": "-rw-r--r--",
+            "name": "Sapporo run request",
+            "sha512": "eaaa6aeb9077269a443167dfae9aa66f4d63ed547ed251e5617081930143bf10bff6a09aba3e606017538650ec86c89ec778eb82af30d4caaf90e82a82df68d6",
+            "text": "{\n  \"workflow_params\": \"{\\n  \\\"fastq_1\\\": {\\n    \\\"class\\\": \\\"File\\\",\\n    \\\"path\\\": \\\"ERR034597_1.small.fq.gz\\\"\\n  },\\n  \\\"fastq_2\\\": {\\n    \\\"class\\\": \\\"File\\\",\\n    \\\"path\\\": \\\"ERR034597_2.small.fq.gz\\\"\\n  }\\n}\\n\",\n  \"workflow_type\": \"CWL\",\n  \"workflow_type_version\": \"v1.0\",\n  \"tags\": null,\n  \"workflow_engine_name\": \"cwltool\",\n  \"workflow_engine_parameters\": \"{}\",\n  \"workflow_url\": \"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl\",\n  \"workflow_name\": null,\n  \"workflow_attachment\": \"[{\\\"file_name\\\": \\\"fastqc.cwl\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/fastqc.cwl\\\"}, {\\\"file_name\\\": \\\"trimmomatic_pe.cwl\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimmomatic_pe.cwl\\\"}, {\\\"file_name\\\": \\\"ERR034597_1.small.fq.gz\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_1.small.fq.gz\\\"}, {\\\"file_name\\\": \\\"ERR034597_2.small.fq.gz\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_2.small.fq.gz\\\"}]\"\n}",
+            "uid": 0,
+            "workflowEngineParameters": {
+                "@id": "workflow_engine_params.txt"
+            },
+            "workflowParameters": {
+                "@id": "exe/workflow_params.json"
+            },
+            "yevisMetadata": {
+                "@id": "yevis-metadata.yml"
+            },
+            "yevisTestId": "test_1"
+        },
+        {
+            "@id": "exe/workflow_params.json",
+            "@type": [
+                "File"
+            ],
+            "contentSize": 161,
+            "dateModified": "2022-09-07T06:30:46.539925",
+            "encodingFormat": "application/json",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo workflow parameters",
+            "sha512": "5b831a6eeb6619f44f3b66a006387bd80796e52e033093b603240c460e7c6e2d160c48ebe0033a76756fb4f13e180fa3f95dd1037b5f59f76c9c31f9ad526ff0",
+            "text": "{\n  \"fastq_1\": {\n    \"class\": \"File\",\n    \"path\": \"ERR034597_1.small.fq.gz\"\n  },\n  \"fastq_2\": {\n    \"class\": \"File\",\n    \"path\": \"ERR034597_2.small.fq.gz\"\n  }\n}\n",
+            "uid": 0,
+            "url": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/wf_params.json"
+        },
+        {
+            "@id": "workflow_engine_params.txt",
+            "@type": [
+                "File"
+            ],
+            "contentSize": 0,
+            "dateModified": "2022-09-07T06:30:46.543925",
+            "encodingFormat": "inode/x-empty",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo workflow engine parameters",
+            "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+            "text": "",
+            "uid": 0
+        },
+        {
+            "@id": "yevis-metadata.yml",
+            "@type": [
+                "File"
+            ],
+            "contentSize": 1610,
+            "dateModified": "2022-09-07T06:30:50.599951",
+            "encodingFormat": "application/json",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Yevis metadata",
+            "sha512": "5d4fba7f738d5cd56edb2a0d1b4f85a0b384f85c9cc178ea781fe00222d3f8a17f0eb50100311ca5483e8462cbf72cf5d3d488dd230a4d5c4018a21262107a04",
+            "text": "{\"id\":\"c13b6e27-a4ee-426f-8bdb-8cf5c4310bad\",\"version\":\"1.0.0\",\"license\":\"CC0-1.0\",\"authors\":[{\"github_account\":\"suecharo\",\"name\":\"Doe, John (Family name, Given names)\",\"affiliation\":\"Example Affiliation\",\"orcid\":\"0000-0003-2765-0049\"}],\"workflow\":{\"name\":\"CWL_trimming_and_qc\",\"readme\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/README.md\",\"language\":{\"type\":\"CWL\",\"version\":\"v1.0\"},\"files\":[{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/fastqc.cwl\",\"target\":\"fastqc.cwl\",\"type\":\"secondary\"},{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimming_and_qc.cwl\",\"target\":\"trimming_and_qc.cwl\",\"type\":\"primary\"},{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/wf/trimmomatic_pe.cwl\",\"target\":\"trimmomatic_pe.cwl\",\"type\":\"secondary\"}],\"testing\":[{\"id\":\"test_1\",\"files\":[{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/wf_params.json\",\"target\":\"wf_params.json\",\"type\":\"wf_params\"},{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_1.small.fq.gz\",\"target\":\"ERR034597_1.small.fq.gz\",\"type\":\"other\"},{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_2.small.fq.gz\",\"target\":\"ERR034597_2.small.fq.gz\",\"type\":\"other\"}]}]}}",
+            "uid": 0
+        },
+        {
+            "@id": "https://github.com/common-workflow-language/cwltool",
+            "@type": [
+                "WebPage"
+            ]
+        },
+        {
+            "@id": "#cwltool",
+            "@type": "SoftwareApplication",
+            "name": "cwltool",
+            "url": {
+                "@id": "https://github.com/common-workflow-language/cwltool"
+            },
+            "version": "3.1.20220628170238"
+        },
+        {
+            "@id": "http://edamontology.org/format_1930",
+            "@type": [
+                "Format"
+            ],
+            "name": "FASTQ short read format ignoring quality scores."
+        },
+        {
+            "@id": "exe/ERR034597_1.small.fq.gz",
+            "@type": [
+                "File",
+                "FormalParameter"
+            ],
+            "contentSize": 1926244,
+            "dateModified": "2022-09-07T06:30:52.247961",
+            "encodingFormat": "application/gzip",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "sha512": "9cbc3dd0207944975b4e603e9e145c109bd6e698eb4c07061ea7c00c371e7c7a280c2d290447f793d9f9f6073821b617b8c875273443b2fed98e827ad083ca04",
+            "uid": 0,
+            "url": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_1.small.fq.gz"
+        },
+        {
+            "@id": "exe/ERR034597_2.small.fq.gz",
+            "@type": [
+                "File",
+                "FormalParameter"
+            ],
+            "contentSize": 1888012,
+            "dateModified": "2022-09-07T06:30:52.655963",
+            "encodingFormat": "application/gzip",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "sha512": "aacec4c9461ad93b1f2737cf75cc5c207faabd1fe9bcedf9c36082fe2a8d12e623647f00009c0907eac7e7e23c38d57fee25d3c5ae4facc1d06884e39d0499c1",
+            "uid": 0,
+            "url": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/45677ce6ed94f42e0a2d5a8db94e33979a60775d/tests/CWL/test/ERR034597_2.small.fq.gz"
+        },
+        {
+            "@id": "#sapporo-test-result",
+            "@type": [
+                "TestResult"
+            ],
+            "endTime": "2022-09-07T06:31:24",
+            "exitCode": 0,
+            "intermediateFiles": [],
+            "name": "Sapporo test result",
+            "outputs": [
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1U.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_2.small_fastqc.html"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.1P.fq"
+                },
+                {
+                    "@id": "outputs/ERR034597_1.small.fq.trimmed.2P.fq"
+                }
+            ],
+            "pid": 22,
+            "runId": "cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9",
+            "startTime": "2022-09-07T06:30:52",
+            "state": "COMPLETE",
+            "stderr": {
+                "@id": "stderr.log"
+            },
+            "stdout": {
+                "@id": "stdout.log"
+            }
+        },
+        {
+            "@id": "stdout.log",
+            "@type": "File",
+            "contentSize": 3218,
+            "dateModified": "2022-09-07T06:31:23.636160",
+            "encodingFormat": "application/json",
+            "gid": 0,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo stdout",
+            "sha512": "a4e06b37722d370cd9dc02fca959ec3a01c567a22111e73e8f570fac1a0b82d60cff22df28120e80a457df5044c652d3b13d71d1dacd1136689f75fbbad62dfb",
+            "text": "{\n    \"qc_result_1\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small_fastqc.html\",\n        \"basename\": \"ERR034597_1.small_fastqc.html\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$e14b771abe488589e21349dabcd7416ad054979d\",\n        \"size\": 592393,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small_fastqc.html\"\n    },\n    \"qc_result_2\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_2.small_fastqc.html\",\n        \"basename\": \"ERR034597_2.small_fastqc.html\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$26a42b68c6e40f4ceb4d5f72ba83fff78ee81e37\",\n        \"size\": 592565,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_2.small_fastqc.html\"\n    },\n    \"trimmed_fastq1P\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.1P.fq\",\n        \"basename\": \"ERR034597_1.small.fq.trimmed.1P.fq\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$5188cdb59cab8010eb673e8bc113b7fd7a686660\",\n        \"size\": 5566650,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.1P.fq\"\n    },\n    \"trimmed_fastq1U\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.1U.fq\",\n        \"basename\": \"ERR034597_1.small.fq.trimmed.1U.fq\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$be4d3444537d2596d122db1ca8e5955954094f6b\",\n        \"size\": 187289,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.1U.fq\"\n    },\n    \"trimmed_fastq2P\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.2P.fq\",\n        \"basename\": \"ERR034597_1.small.fq.trimmed.2P.fq\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$cd1451093c91a9b619337a7bfbe592ad76554745\",\n        \"size\": 5560582,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.2P.fq\"\n    },\n    \"trimmed_fastq2U\": {\n        \"location\": \"file:///home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.2U.fq\",\n        \"basename\": \"ERR034597_1.small.fq.trimmed.2U.fq\",\n        \"class\": \"File\",\n        \"checksum\": \"sha1$dd7edf1b2d599eb3c8fa49426be55d8a0360561c\",\n        \"size\": 80131,\n        \"path\": \"/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/outputs/ERR034597_1.small.fq.trimmed.2U.fq\"\n    }\n}\n",
+            "uid": 0
+        },
+        {
+            "@id": "stderr.log",
+            "@type": "File",
+            "contentSize": 4209,
+            "dateModified": "2022-09-07T06:31:24.860168",
+            "encodingFormat": "text/plain",
+            "gid": 0,
+            "lineCount": 89,
+            "mode": "-rw-r--r--",
+            "name": "Sapporo stderr",
+            "sha512": "2d3b74ce5b9e85e8023ac5f42f582f7425c4d69ff0ce1c356cffe5b638fa56f3ec4b254ab37e12d4cd9dbffe88366d96c3632bfef9d65656e6482d9b8140b79d",
+            "text": "jq: error (at /home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/run_request.json:10): null (null) only strings can be parsed\nFO\u001b[0m [job trimming] /tmp/cys4bxgb$ docker \\\n    run \\\n    -i \\\n    --mount=type=bind,source=/tmp/cys4bxgb,target=/OQEuzM \\\n    --mount=type=bind,source=/tmp/mwa7kzkp,target=/tmp \\\n    --mount=type=bind,source=/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe/ERR034597_1.small.fq.gz,target=/var/lib/cwl/stg0c746501-92fd-483d-9fbe-a967d5f31fdc/ERR034597_1.small.fq.gz,readonly \\\n    --mount=type=bind,source=/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe/ERR034597_2.small.fq.gz,target=/var/lib/cwl/stg71c181e1-3820-4bc5-bd66-342667bd514a/ERR034597_2.small.fq.gz,readonly \\\n    --workdir=/OQEuzM \\\n    --read-only=true \\\n    --log-driver=none \\\n    --user=0:0 \\\n    --rm \\\n    --cidfile=/tmp/yuf_ce7k/20220907063107-782440.cid \\\n    --env=TMPDIR=/tmp \\\n    --env=HOME=/OQEuzM \\\n    quay.io/biocontainers/trimmomatic:0.38--1 \\\n    trimmomatic \\\n    PE \\\n    -threads \\\n    2 \\\n    /var/lib/cwl/stg0c746501-92fd-483d-9fbe-a967d5f31fdc/ERR034597_1.small.fq.gz \\\n    /var/lib/cwl/stg71c181e1-3820-4bc5-bd66-342667bd514a/ERR034597_2.small.fq.gz \\\n    ERR034597_1.small.fq.trimmed.1P.fq \\\n    ERR034597_1.small.fq.trimmed.1U.fq \\\n    ERR034597_1.small.fq.trimmed.2P.fq \\\n    ERR034597_1.small.fq.trimmed.2U.fq \\\n    ILLUMINACLIP:/usr/local/share/trimmomatic/adapters/TruSeq2-PE.fa:2:40:15 \\\n    LEADING:20 \\\n    TRAILING:20 \\\n    SLIDINGWINDOW:4:15 \\\n    MINLEN:36 > /tmp/cys4bxgb/trimmomatic-pe-stdout.log 2> /tmp/cys4bxgb/trimmomatic-pe-stderr.log\n\u001b[1;30mINFO\u001b[0m [job trimming] Max memory used: 156MiB\n\u001b[1;30mINFO\u001b[0m [job trimming] completed success\n\u001b[1;30mINFO\u001b[0m [step trimming] completed success\n\u001b[1;30mINFO\u001b[0m [workflow ] starting step qc_2\n\u001b[1;30mINFO\u001b[0m [step qc_2] start\n\u001b[1;30mINFO\u001b[0m [job qc_2] /tmp/fq5kkswj$ docker \\\n    run \\\n    -i \\\n    --mount=type=bind,source=/tmp/fq5kkswj,target=/OQEuzM \\\n    --mount=type=bind,source=/tmp/agk4em5f,target=/tmp \\\n    --mount=type=bind,source=/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe/ERR034597_2.small.fq.gz,target=/var/lib/cwl/stg5701f3f1-8c62-43ca-85c8-37177acf30d5/ERR034597_2.small.fq.gz,readonly \\\n    --workdir=/OQEuzM \\\n    --read-only=true \\\n    --log-driver=none \\\n    --user=0:0 \\\n    --rm \\\n    --cidfile=/tmp/_j3uh4mt/20220907063112-269943.cid \\\n    --env=TMPDIR=/tmp \\\n    --env=HOME=/OQEuzM \\\n    quay.io/biocontainers/fastqc:0.11.9--0 \\\n    fastqc \\\n    -o \\\n    . \\\n    --threads \\\n    2 \\\n    /var/lib/cwl/stg5701f3f1-8c62-43ca-85c8-37177acf30d5/ERR034597_2.small.fq.gz > /tmp/fq5kkswj/fastqc-stdout.log 2> /tmp/fq5kkswj/fastqc-stderr.log\n\u001b[1;30mINFO\u001b[0m [job qc_2] Max memory used: 156MiB\n\u001b[1;30mINFO\u001b[0m [job qc_2] completed success\n\u001b[1;30mINFO\u001b[0m [step qc_2] completed success\n\u001b[1;30mINFO\u001b[0m [workflow ] starting step qc_1\n\u001b[1;30mINFO\u001b[0m [step qc_1] start\n\u001b[1;30mINFO\u001b[0m [job qc_1] /tmp/qqaxib1i$ docker \\\n    run \\\n    -i \\\n    --mount=type=bind,source=/tmp/qqaxib1i,target=/OQEuzM \\\n    --mount=type=bind,source=/tmp/8cypx1ap,target=/tmp \\\n    --mount=type=bind,source=/home/ubuntu/git/github.com/sapporo-wes/sapporo-service/run/cb/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/exe/ERR034597_1.small.fq.gz,target=/var/lib/cwl/stg8c3be76a-2f2c-47cc-910a-73d8c9ef2754/ERR034597_1.small.fq.gz,readonly \\\n    --workdir=/OQEuzM \\\n    --read-only=true \\\n    --log-driver=none \\\n    --user=0:0 \\\n    --rm \\\n    --cidfile=/tmp/_yuel8qs/20220907063117-912551.cid \\\n    --env=TMPDIR=/tmp \\\n    --env=HOME=/OQEuzM \\\n    quay.io/biocontainers/fastqc:0.11.9--0 \\\n    fastqc \\\n    -o \\\n    . \\\n    --threads \\\n    2 \\\n    /var/lib/cwl/stg8c3be76a-2f2c-47cc-910a-73d8c9ef2754/ERR034597_1.small.fq.gz > /tmp/qqaxib1i/fastqc-stdout.log 2> /tmp/qqaxib1i/fastqc-stderr.log\n\u001b[1;30mINFO\u001b[0m [job qc_1] Max memory used: 158MiB\n\u001b[1;30mINFO\u001b[0m [job qc_1] completed success\n\u001b[1;30mINFO\u001b[0m [step qc_1] completed success\n\u001b[1;30mINFO\u001b[0m [workflow ] completed success\n\u001b[1;30mINFO\u001b[0m Final process status is success\n",
+            "uid": 0
+        },
+        {
+            "@id": "outputs/ERR034597_1.small.fq.trimmed.2U.fq",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 80131,
+            "dateModified": "2022-09-07T06:31:11.500083",
+            "encodingFormat": "text/plain",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "lineCount": 1468,
+            "mode": "-rw-r--r--",
+            "sha512": "ff2ac389f7a48bd87576c27935c436899dd9ad4929d8b0a3e85fd4ca711dcb17c6b323b1be3d68ff8353e94b83be14637081a66eccb27daa69b95fba5b5eaf63",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_1.small.fq.trimmed.2U.fq"
+        },
+        {
+            "@id": "outputs/ERR034597_1.small.fq.trimmed.1U.fq",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 187289,
+            "dateModified": "2022-09-07T06:31:11.500083",
+            "encodingFormat": "text/plain",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "lineCount": 3424,
+            "mode": "-rw-r--r--",
+            "sha512": "dba779dbc2280232dcc64c3aee9dca5ad56508d13a9905e986d0b30c04ff2eb14a7dabc3055cf8a02a1805dad6daa736d98e1df89385847e1884a3ea80bf8b23",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_1.small.fq.trimmed.1U.fq"
+        },
+        {
+            "@id": "outputs/ERR034597_1.small_fastqc.html",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 592393,
+            "dateModified": "2022-09-07T06:31:22.588154",
+            "encodingFormat": "text/html",
+            "gid": 0,
+            "lineCount": 187,
+            "mode": "-rw-r--r--",
+            "sha512": "b0906263868d1b2f0ae0facd3d66d89f78a899def0a99ef52cc5e6006373979917b1ee94fe3c534c855baf87d0c507965b31561942d1f387629ed36d7fa47c80",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_1.small_fastqc.html"
+        },
+        {
+            "@id": "outputs/ERR034597_2.small_fastqc.html",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 592565,
+            "dateModified": "2022-09-07T06:31:16.912117",
+            "encodingFormat": "text/html",
+            "gid": 0,
+            "lineCount": 187,
+            "mode": "-rw-r--r--",
+            "sha512": "f51de90e6f3c9d1918016380dc495799bd8a31bf80f6bfe46198834907954eea8b471f8216f079d0905e7c16e4373fe902ccb711a88aeeffb8e179579ca3beb1",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_2.small_fastqc.html"
+        },
+        {
+            "@id": "outputs/ERR034597_1.small.fq.trimmed.1P.fq",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 5566650,
+            "dateModified": "2022-09-07T06:31:11.500083",
+            "encodingFormat": "text/plain",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "lineCount": 94556,
+            "mode": "-rw-r--r--",
+            "sha512": "b5d5b088550ef1cd1b8d1760d6e7bc93fe1500cded15df196e5173e7b5e2732b0a63ccb3dcc535c1991ad95faaf81eda5e61958d0ef42a561d1daa2fae5858b6",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_1.small.fq.trimmed.1P.fq"
+        },
+        {
+            "@id": "outputs/ERR034597_1.small.fq.trimmed.2P.fq",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "OutputFile"
+            ],
+            "contentSize": 5560582,
+            "dateModified": "2022-09-07T06:31:11.500083",
+            "encodingFormat": "text/plain",
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 0,
+            "lineCount": 94556,
+            "mode": "-rw-r--r--",
+            "sha512": "908eccc73c48bb1ae1accd0ff91aaf13f41a6340288357199da3944f2801a94935dd314c3c8877bed7959ba77d3c88b2c0b58f937f77b9ba6167c103a85a027a",
+            "uid": 0,
+            "url": "http://localhost:1122/runs/cbab12f5-c95b-4a87-b27f-d3ee0d3e00e9/data/outputs/ERR034597_1.small.fq.trimmed.2P.fq"
+        }
+    ]
+}
