@@ -1,4 +1,5 @@
 import { utils } from "./mod.ts";
+import { datetime } from "./deps.ts";
 
 export class Crate {
   "location": string;
@@ -68,17 +69,13 @@ export class Crate {
     return this.findEntity(nextIds[0]);
   }
 
-  summarize(): Summary {
-    const license = this.getValRecursively(this.rootdataEntity, [
-      "license",
-      "name",
-    ]);
+  summarize(): void {
     const wfName = this.getValRecursively(this.mainWf, ["name"]);
     const wfVersion = this.getValRecursively(this.mainWf, ["version"]);
     const wfId = this.getValRecursively(this.mainWf, ["yevisId"]);
     const wfType = this.getValRecursively(this.mainWf, [
       "programmingLanguage",
-      "alternateName",
+      "name",
     ]);
     const wfTypeVersion = this.getValRecursively(this.mainWf, [
       "programmingLanguage",
@@ -89,9 +86,20 @@ export class Crate {
     const startTime = this.getValRecursively(this.testResult, [
       "startTime",
     ]);
+    const dateStartTime = typeof startTime === "string"
+      ? datetime.parse(startTime, "yyyy-MM-dd'T'HH:mm:ss")
+      : undefined;
     const endTime = this.getValRecursively(this.testResult, [
       "endTime",
     ]);
+    const dateEndTime = typeof endTime === "string"
+      ? datetime.parse(endTime, "yyyy-MM-dd'T'HH:mm:ss")
+      : undefined;
+    let duration = undefined;
+    if (dateStartTime != undefined && dateEndTime != undefined) {
+      duration = datetime.difference(dateStartTime, dateEndTime);
+    }
+
     const exitCode = this.getValRecursively(this.testResult, [
       "exitCode",
     ]);
@@ -99,26 +107,28 @@ export class Crate {
     const intermediateFiles = this.testResult.flattenIds("intermediateFiles");
     const outputs = this.testResult.flattenIds("outputs");
 
-    const testId = this.getValRecursively(this.testDefinition, ["yevisId"]);
+    const testId = this.getValRecursively(this.testDefinition, ["yevisTestId"]);
 
     const summary: Summary = {
-      "license": `${license}`,
-      "wfName": `${wfName}`,
-      "wfVersion": `${wfVersion}`,
-      "wfId": `${wfId}`,
-      "wfType": `${wfType}`,
-      "wfTypeVersion": `${wfTypeVersion}`,
-      "testId": `${testId}`,
-      "startTime": `${startTime}`,
-      "endTime": `${endTime}`,
-      "exitCode": `${exitCode}`,
-      "state": `${state}`,
+      "wfName": typeof wfName === "string" ? wfName : undefined,
+      "wfVersion": typeof wfVersion === "string" ? wfVersion : undefined,
+      "wfId": typeof wfId === "string" ? wfId : undefined,
+      "wfType": typeof wfType === "string" ? wfType : undefined,
+      "wfTypeVersion": typeof wfTypeVersion === "string"
+        ? wfTypeVersion
+        : undefined,
+      "testId": typeof testId === "string" ? testId : undefined,
+      "startTime": dateStartTime,
+      "endTime": dateEndTime,
+      "duration": duration,
+      "exitCode": typeof exitCode === "number" ? exitCode : undefined,
+      "state": typeof state === "string" ? state : undefined,
       "wfAttachments": wfAttachments,
       "intermediateFiles": intermediateFiles,
       "outputs": outputs,
     };
 
-    return summary;
+    this.summary = summary;
   }
 
   getValRecursively(
@@ -207,17 +217,17 @@ export class Entity {
 }
 
 export interface Summary {
-  license: string;
-  wfName: string;
-  wfVersion: string;
-  wfId: string;
-  wfType: string;
-  wfTypeVersion: string;
-  testId: string;
-  startTime: string;
-  endTime: string;
-  exitCode: string;
-  state: string;
+  wfName?: string;
+  wfVersion?: string;
+  wfId?: string;
+  wfType?: string;
+  wfTypeVersion?: string;
+  testId?: string;
+  startTime?: Date;
+  endTime?: Date;
+  duration?: ReturnType<typeof datetime.difference>;
+  exitCode?: number;
+  state?: string;
   wfAttachments: string[];
   intermediateFiles: string[];
   outputs: string[];

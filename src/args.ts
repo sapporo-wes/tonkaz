@@ -1,30 +1,36 @@
-import { parse } from "./deps.ts";
-import { utils } from "./mod.ts";
-
-const TonkazVersion = "0.1.0";
+import { flags } from "./deps.ts";
+import { main, utils } from "./mod.ts";
 
 function usage(): void {
-  console.log(`\
-Tonkaz ${TonkazVersion} by @suecharo
+  console.log(
+    `\
+Tonkaz ${main.TonkazVersion} by @suecharo
 
 CLI tool to verify workflow reproducibility
 
-Usage: tonkaz [options] file1 file2
+%cUsage:%c tonkaz [options] file1 file2
 
-Options:
+%cOptions:%c
   -h, --help    Show this help message and exit.
   -v, --version Show version and exit.
 
-Examples:
-  tonkaz file1 file2
-  tonkaz file1 https://example.com/file2
-  tonkaz https://example.com/file1 https://example.com/file2\
-`);
+%cExamples:%c
+  $ tonkaz file1 file2
+  $ tonkaz file1 https://example.com/file2
+  $ tonkaz https://example.com/file1 https://example.com/file2\
+`,
+    "color: blue",
+    "",
+    "color: blue",
+    "",
+    "color: blue",
+    "",
+  );
   Deno.exit(1);
 }
 
 export async function parseArgs(args: string[]): Promise<string[]> {
-  const parsedArgs = parse(args, {
+  const parsedArgs = flags.parse(args, {
     boolean: ["help", "version"],
     alias: {
       h: "help",
@@ -34,7 +40,7 @@ export async function parseArgs(args: string[]): Promise<string[]> {
 
   parsedArgs.help && usage();
   if (parsedArgs.version) {
-    console.log(TonkazVersion);
+    console.log(main.TonkazVersion);
     Deno.exit(0);
   }
   parsedArgs._.length !== 2 && usage();

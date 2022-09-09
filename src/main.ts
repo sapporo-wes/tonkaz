@@ -1,5 +1,7 @@
 import { args, compare, crate } from "./mod.ts";
 
+export const TonkazVersion = "0.1.0";
+
 export async function main(): Promise<void> {
   try {
     const [loc1, loc2] = await args.parseArgs(Deno.args);
@@ -9,7 +11,11 @@ export async function main(): Promise<void> {
     await crate2.initialize();
     compare.compare(crate1, crate2);
   } catch (e) {
-    console.error(`Error occurred: ${e.message}`);
+    console.error(
+      `%cError occurred!!%c: ${e.message}`,
+      "color: red; font-weight: bold",
+      "",
+    );
     Deno.exit(1);
   }
   Deno.exit(0);
