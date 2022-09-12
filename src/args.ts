@@ -11,6 +11,7 @@ CLI tool to verify workflow reproducibility
 %cUsage:%c tonkaz [options] file1 file2
 
 %cOptions:%c
+  -a, --all     Use all output files for comparison
   -h, --help    Show this help message and exit.
   -v, --version Show version and exit.
 
@@ -29,10 +30,17 @@ CLI tool to verify workflow reproducibility
   Deno.exit(1);
 }
 
-export async function parseArgs(args: string[]): Promise<string[]> {
+export interface Args {
+  all: boolean;
+  loc1: string;
+  loc2: string;
+}
+
+export async function parseArgs(args: string[]): Promise<Args> {
   const parsedArgs = flags.parse(args, {
-    boolean: ["help", "version"],
+    boolean: ["all", "help", "version"],
     alias: {
+      a: "all",
       h: "help",
       v: "version",
     },
@@ -53,5 +61,9 @@ export async function parseArgs(args: string[]): Promise<string[]> {
   const loc2_isFileOrRemote = await utils.isFileOrRemote(loc2);
   !loc2_isFileOrRemote && usage();
 
-  return [loc1, loc2];
+  return {
+    all: parsedArgs.all,
+    loc1,
+    loc2,
+  };
 }

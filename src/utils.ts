@@ -29,3 +29,11 @@ export async function loadJson(
 
   throw new Error(`Invalid location: ${loc}`);
 }
+
+export function intersection(ids_1: string[], ids_2: string[]): string[] {
+  return ids_1.filter((id) => ids_2.includes(id));
+}
+
+export function difference(ids_1: string[], ids_2: string[]): string[] {
+  return ids_1.filter((id) => !ids_2.includes(id));
+}

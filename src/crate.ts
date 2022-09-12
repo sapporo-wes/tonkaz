@@ -4,7 +4,7 @@ import { datetime } from "./deps.ts";
 export class Crate {
   "location": string;
   "json": utils.Json;
-  "entities": Entity[];
+  "entities": Record<string, Entity>;
   "rootdataEntity": Entity;
   "mainWf": Entity;
   "testSuite": Entity;
@@ -32,8 +32,10 @@ export class Crate {
         throw new Error(`Crate ${this.location} has invalid @graph`);
       }
 
-      this.entities = graph.map((entity_json) => {
-        return new Entity(entity_json);
+      this.entities = {};
+      graph.map((entity_json) => {
+        const entity = new Entity(entity_json);
+        this.entities[entity.id] = entity;
       });
 
       this.rootdataEntity = this.findEntity("./");
@@ -54,9 +56,10 @@ export class Crate {
   }
 
   findEntity(id: string): Entity {
-    const entity = this.entities.find((entity) => entity.id === id);
+    const entity = this.entities[id];
     if (entity == undefined) {
-      throw new Error(`Entity ${id} not found in crate ${this.location}`);
+      console.log(id);
+      // throw new Error(`Entity ${id} not found in crate ${this.location}`);
     }
     return entity;
   }
@@ -106,6 +109,7 @@ export class Crate {
     const state = this.getValRecursively(this.testResult, ["state"]);
     const intermediateFiles = this.testResult.flattenIds("intermediateFiles");
     const outputs = this.testResult.flattenIds("outputs");
+    const outputsWithEdam = this.filterHasEdam(outputs);
 
     const testId = this.getValRecursively(this.testDefinition, ["yevisTestId"]);
 
@@ -126,6 +130,7 @@ export class Crate {
       "wfAttachments": wfAttachments,
       "intermediateFiles": intermediateFiles,
       "outputs": outputs,
+      "outputsWithEdam": outputsWithEdam,
     };
 
     this.summary = summary;
@@ -148,6 +153,11 @@ export class Crate {
       const nextEntity = this.findEntity(nextIds[0]);
       return this.getValRecursively(nextEntity, fields.slice(1));
     }
+  }
+
+  filterHasEdam(ids: string[]): string[] {
+    // return ids.filter((id) => this.entities[id].hasEdam());
+    return ids.filter((id) => this.findEntity(id).hasEdam());
   }
 }
 
@@ -214,6 +224,10 @@ export class Entity {
       throw new Error(`Entity ${this.id} has invalid ${field}`);
     }
   }
+
+  hasEdam(): boolean {
+    return "format" in this.self;
+  }
 }
 
 export interface Summary {
@@ -231,4 +245,72 @@ export interface Summary {
   wfAttachments: string[];
   intermediateFiles: string[];
   outputs: string[];
+  outputsWithEdam: string[];
 }
+
+export const EDAM_MAPPING = {
+  ".bam": {
+    "url": "http://edamontology.org/format_2572",
+    "name":
+      "BAM format, the binary, BGZF-formatted compressed version of SAM format for alignment of nucleotide sequences (e.g. sequencing reads) to (a) reference sequence(s). May contain base-call and alignment qualities and other data.",
+  },
+  ".bb": {
+    "url": "http://edamontology.org/format_3004",
+    "name":
+      "bigBed format for large sequence annotation tracks, similar to textual BED format.",
+  },
+  ".bed": {
+    "url": "http://edamontology.org/format_3003",
+    "name":
+      "Browser Extensible Data (BED) format of sequence annotation track, typically to be displayed in a genome browser.",
+  },
+  ".bw": {
+    "url": "http://edamontology.org/format_3006",
+    "name":
+      "bigWig format for large sequence annotation tracks that consist of a value for each sequence position. Similar to textual WIG format.",
+  },
+  ".fa": {
+    "url": "http://edamontology.org/format_1929",
+    "name": "FASTA format including NCBI-style IDs.",
+  },
+  ".fasta": {
+    "url": "http://edamontology.org/format_1929",
+    "name": "FASTA format including NCBI-style IDs.",
+  },
+  ".fq": {
+    "url": "http://edamontology.org/format_1930",
+    "name": "FASTQ short read format ignoring quality scores.",
+  },
+  ".fq.gz": {
+    "url": "http://edamontology.org/format_1930",
+    "name": "FASTQ short read format ignoring quality scores.",
+  },
+  ".gtf": {
+    "url": "http://edamontology.org/format_2306",
+    "name": "Gene Transfer Format (GTF), a restricted version of GFF.",
+  },
+  ".gff": {
+    "url": "http://edamontology.org/format_1975",
+    "name": "Generic Feature Format version 3 (GFF3) of sequence features.",
+  },
+  ".sam": {
+    "url": "http://edamontology.org/format_2573",
+    "name":
+      "Sequence Alignment/Map (SAM) format for alignment of nucleotide sequences (e.g. sequencing reads) to (a) reference sequence(s). May contain base-call and alignment qualities and other data.",
+  },
+  ".vcf": {
+    "url": "http://edamontology.org/format_3016",
+    "name":
+      "Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation).",
+  },
+  ".vcf.gz": {
+    "url": "http://edamontology.org/format_3016",
+    "name":
+      "Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation).",
+  },
+  ".wig": {
+    "url": "http://edamontology.org/format_3005",
+    "name":
+      "Wiggle format (WIG) of a sequence annotation track that consists of a value for each sequence position. Typically to be displayed in a genome browser.",
+  },
+};

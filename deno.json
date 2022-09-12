@@ -1,6 +1,9 @@
 {
   "tasks": {
     "main": "deno run --allow-read --allow-net src/main.ts",
-    "main:test": "deno -q task main ./tests/crate_example_rnaseq1.json ./tests/crate_example_rnaseq2.json"
+    "test:trimming": "deno -q task main ./tests/crate_example_trimming.json ./tests/crate_example_trimming_diff.json",
+    "test:rnaseq": "deno -q task main ./tests/crate_example_rnaseq1.json ./tests/crate_example_rnaseq2.json",
+    "test:gatk": "deno -q task main ./tests/crate_example_gatk1.json ./tests/crate_example_gatk2.json",
+    "test:jga": "deno -q task main ./tests/crate_example_jga1.json ./tests/crate_example_jga2.json"
   }
 }

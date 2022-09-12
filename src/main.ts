@@ -4,12 +4,12 @@ export const TonkazVersion = "0.1.0";
 
 export async function main(): Promise<void> {
   try {
-    const [loc1, loc2] = await args.parseArgs(Deno.args);
-    const crate1 = new crate.Crate(loc1);
+    const parsedArgs = await args.parseArgs(Deno.args);
+    const crate1 = new crate.Crate(parsedArgs.loc1);
     await crate1.initialize();
-    const crate2 = new crate.Crate(loc2);
+    const crate2 = new crate.Crate(parsedArgs.loc2);
     await crate2.initialize();
-    compare.compare(crate1, crate2);
+    compare.compare(crate1, crate2, parsedArgs.all);
   } catch (e) {
     console.error(
       `%cError occurred!!%c: ${e.message}`,
