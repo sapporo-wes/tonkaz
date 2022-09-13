@@ -1,32 +1,23 @@
-import { flags } from "./deps.ts";
+import { color, flags } from "./deps.ts";
 import { main, utils } from "./mod.ts";
 
 function usage(): void {
-  console.log(
-    `\
+  console.log(`\
 Tonkaz ${main.TonkazVersion} by @suecharo
 
 CLI tool to verify workflow reproducibility
 
-%cUsage:%c tonkaz [options] file1 file2
+${color.blue("Usage:")} tonkaz [options] file1 file2
 
-%cOptions:%c
+${color.blue("Options:")}
   -a, --all     Use all output files for comparison
   -h, --help    Show this help message and exit.
   -v, --version Show version and exit.
 
-%cExamples:%c
+${color.blue("Examples:")}
   $ tonkaz file1 file2
   $ tonkaz file1 https://example.com/file2
-  $ tonkaz https://example.com/file1 https://example.com/file2\
-`,
-    "color: blue",
-    "",
-    "color: blue",
-    "",
-    "color: blue",
-    "",
-  );
+  $ tonkaz https://example.com/file1 https://example.com/file2`);
   Deno.exit(1);
 }
 

@@ -1,4 +1,5 @@
 import { args, compare, crate } from "./mod.ts";
+import { color } from "./deps.ts";
 
 export const TonkazVersion = "0.1.0";
 
@@ -11,11 +12,7 @@ export async function main(): Promise<void> {
     await crate2.initialize();
     compare.compare(crate1, crate2, parsedArgs.all);
   } catch (e) {
-    console.error(
-      `%cError occurred!!%c: ${e.message}`,
-      "color: red; font-weight: bold",
-      "",
-    );
+    console.error(`${color.red("Error occurred!!")}: ${e.message}`);
     Deno.exit(1);
   }
   Deno.exit(0);

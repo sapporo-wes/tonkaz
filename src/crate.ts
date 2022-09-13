@@ -228,6 +228,105 @@ export class Entity {
   hasEdam(): boolean {
     return "format" in this.self;
   }
+
+  getEdamUrl(): string | undefined {
+    if (!this.hasEdam()) {
+      return undefined;
+    }
+    return this.flattenIds("format")[0];
+  }
+
+  fileSummary(startDate: Date): FileSummary {
+    const contentSize = this.self["contentSize"] as number;
+    if (contentSize === undefined) {
+      throw new Error(`Entity ${this.id} has no contentSize`);
+    }
+    const lineCount = this.self["lineCount"] as number | undefined;
+    const checksum = this.self["sha512"] as string;
+    if (checksum === undefined) {
+      throw new Error(`Entity ${this.id} has no sha512`);
+    }
+
+    const dateModified = this.self["dateModified"] as string;
+    if (dateModified === undefined) {
+      throw new Error(`Entity ${this.id} has no dateModified`);
+    }
+    const dateModifiedDate = datetime.parse(
+      dateModified,
+      "yyyy-MM-dd'T'HH:mm:ss.SSSSSS",
+    );
+    const duration = datetime.difference(startDate, dateModifiedDate);
+
+    return {
+      entity: this,
+      contentSize,
+      duration,
+      lineCount,
+      checksum,
+    };
+  }
+
+  getSamtoolsStats(crate: Crate): SamtoolsStats {
+    const statsId = this.flattenIds("stats")[0];
+    if (statsId == undefined) {
+      throw new Error(`Entity ${this.id} has no stats`);
+    }
+    const statsEntity = crate.findEntity(statsId);
+    if (statsEntity == undefined) {
+      throw new Error(`Entity ${this.id} has invalid stats`);
+    }
+    const keys = [
+      "totalReads",
+      "mappedReads",
+      "unmappedReads",
+      "duplicateReads",
+      "mappedRate",
+      "unmappedRate",
+      "duplicateRate",
+    ];
+    const stats: Record<string, number> = {};
+    keys.forEach((key) => {
+      const val = statsEntity.self[key];
+      if (val == undefined) {
+        throw new Error(`Entity ${statsId} has no ${key}`);
+      }
+      if (typeof val !== "number") {
+        throw new Error(`Entity ${statsId} has invalid ${key}`);
+      }
+      stats[key] = val;
+    });
+
+    return stats as SamtoolsStats;
+  }
+
+  getVcftoolsStats(crate: Crate): VcftoolsStats {
+    const statsId = this.flattenIds("stats")[0];
+    if (statsId == undefined) {
+      throw new Error(`Entity ${this.id} has no stats`);
+    }
+    const statsEntity = crate.findEntity(statsId);
+    if (statsEntity == undefined) {
+      throw new Error(`Entity ${this.id} has invalid stats`);
+    }
+    const keys = [
+      "variantCount",
+      "snpsCount",
+      "indelsCount",
+    ];
+    const stats: Record<string, number> = {};
+    keys.forEach((key) => {
+      const val = statsEntity.self[key];
+      if (val == undefined) {
+        throw new Error(`Entity ${statsId} has no ${key}`);
+      }
+      if (typeof val !== "number") {
+        throw new Error(`Entity ${statsId} has invalid ${key}`);
+      }
+      stats[key] = val;
+    });
+
+    return stats as VcftoolsStats;
+  }
 }
 
 export interface Summary {
@@ -246,6 +345,14 @@ export interface Summary {
   intermediateFiles: string[];
   outputs: string[];
   outputsWithEdam: string[];
+}
+
+export interface FileSummary {
+  entity: Entity;
+  contentSize: number;
+  duration: ReturnType<typeof datetime.difference>;
+  lineCount?: number;
+  checksum: string;
 }
 
 export const EDAM_MAPPING = {
@@ -314,3 +421,50 @@ export const EDAM_MAPPING = {
       "Wiggle format (WIG) of a sequence annotation track that consists of a value for each sequence position. Typically to be displayed in a genome browser.",
   },
 };
+
+// .bam, .sam
+export const SAM_EDAM = [
+  "http://edamontology.org/format_2572",
+  "http://edamontology.org/format_2573",
+];
+
+// .vcf
+export const VCF_EDAM = [
+  "http://edamontology.org/format_3016",
+];
+
+export const HAS_ONTOLOGY_EDAM = [
+  ...SAM_EDAM,
+  ...VCF_EDAM,
+];
+
+export interface SamtoolsStats {
+  totalReads: number;
+  mappedReads: number;
+  unmappedReads: number;
+  duplicateReads: number;
+  mappedRate: number;
+  unmappedRate: number;
+  duplicateRate: number;
+  [key: string]: number;
+}
+
+export const SAM_HEADER_KEYS = [
+  ["Total Reads", "totalReads"],
+  ["  # Mapped", "mapped"],
+  ["  # Unmapped", "unmapped"],
+  ["  # Duplicate", "duplicate"],
+];
+
+export interface VcftoolsStats {
+  variantCount: number;
+  snpsCount: number;
+  indelsCount: number;
+  [key: string]: number;
+}
+
+export const VCF_HEADER_KEYS = [
+  ["Variant Count", "variantCount"],
+  ["SNPs Count", "snpsCount"],
+  ["Indels Count", "indelsCount"],
+];
