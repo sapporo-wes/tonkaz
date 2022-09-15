@@ -1,0 +1,571 @@
+---
+id: fbb91c56-fbbb-4d09-86f6-c44cba7d8bcc
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: suecharo
+    name: Hirotaka Suetake
+    affiliation: "The University of Tokyo"
+    orcid: 0000-0003-2765-0049
+workflow:
+  name: nf-core - rnaseq - v3.6
+  readme: "https://raw.githubusercontent.com/nf-core/rnaseq/e0dfce9af5c2299bcc2b8a74b6559ce055965455/README.md"
+  language:
+    type: NFL
+    version: "1.0"
+  files:
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/LICENSE"
+      target: LICENSE
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/README.md"
+      target: README.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/dummy_file.txt"
+      target: assets/dummy_file.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/email_template.html"
+      target: assets/email_template.html
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/email_template.txt"
+      target: assets/email_template.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/multiqc/biotypes_header.txt"
+      target: assets/multiqc/biotypes_header.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/multiqc/deseq2_clustering_header.txt"
+      target: assets/multiqc/deseq2_clustering_header.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/multiqc/deseq2_pca_header.txt"
+      target: assets/multiqc/deseq2_pca_header.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/multiqc_config.yaml"
+      target: assets/multiqc_config.yaml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/nf-core-rnaseq_logo_light.png"
+      target: assets/nf-core-rnaseq_logo_light.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/rrna-db-defaults.txt"
+      target: assets/rrna-db-defaults.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/samplesheet.csv"
+      target: assets/samplesheet.csv
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/schema_input.json"
+      target: assets/schema_input.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/assets/sendmail_template.txt"
+      target: assets/sendmail_template.txt
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/check_samplesheet.py"
+      target: bin/check_samplesheet.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/deseq2_qc.r"
+      target: bin/deseq2_qc.r
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/dupradar.r"
+      target: bin/dupradar.r
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/fasta2gtf.py"
+      target: bin/fasta2gtf.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/fastq_dir_to_samplesheet.py"
+      target: bin/fastq_dir_to_samplesheet.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/filter_gtf_for_genes_in_genome.py"
+      target: bin/filter_gtf_for_genes_in_genome.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/gtf2bed"
+      target: bin/gtf2bed
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/mqc_features_stat.py"
+      target: bin/mqc_features_stat.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/salmon_summarizedexperiment.r"
+      target: bin/salmon_summarizedexperiment.r
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/salmon_tx2gene.py"
+      target: bin/salmon_tx2gene.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/bin/salmon_tximport.r"
+      target: bin/salmon_tximport.r
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/conf/base.config"
+      target: conf/base.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/conf/igenomes.config"
+      target: conf/igenomes.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/conf/modules.config"
+      target: conf/modules.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/conf/test.config"
+      target: conf/test.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/conf/test_full.config"
+      target: conf/test_full.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/README.md"
+      target: docs/README.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/deseq2_qc_plots.png"
+      target: docs/images/deseq2_qc_plots.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/dupradar_example_plot.png"
+      target: docs/images/dupradar_example_plot.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_alignment_check.png"
+      target: docs/images/mqc_alignment_check.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_cutadapt_trimmed.png"
+      target: docs/images/mqc_cutadapt_trimmed.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_deseq2_clustering.png"
+      target: docs/images/mqc_deseq2_clustering.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_deseq2_pca.png"
+      target: docs/images/mqc_deseq2_pca.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_dupradar.png"
+      target: docs/images/mqc_dupradar.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_fastqc_adapter.png"
+      target: docs/images/mqc_fastqc_adapter.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_fastqc_counts.png"
+      target: docs/images/mqc_fastqc_counts.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_fastqc_quality.png"
+      target: docs/images/mqc_fastqc_quality.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_featurecounts_biotype.png"
+      target: docs/images/mqc_featurecounts_biotype.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_hisat2.png"
+      target: docs/images/mqc_hisat2.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_picard_markduplicates.png"
+      target: docs/images/mqc_picard_markduplicates.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_preseq_plot.png"
+      target: docs/images/mqc_preseq_plot.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_qualimap_coverage.png"
+      target: docs/images/mqc_qualimap_coverage.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_qualimap_features.png"
+      target: docs/images/mqc_qualimap_features.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rsem_mapped.png"
+      target: docs/images/mqc_rsem_mapped.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rsem_multimapped.png"
+      target: docs/images/mqc_rsem_multimapped.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_inferexperiment.png"
+      target: docs/images/mqc_rseqc_inferexperiment.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_innerdistance.png"
+      target: docs/images/mqc_rseqc_innerdistance.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_junctionannotation.png"
+      target: docs/images/mqc_rseqc_junctionannotation.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_junctionsaturation.png"
+      target: docs/images/mqc_rseqc_junctionsaturation.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_readdistribution.png"
+      target: docs/images/mqc_rseqc_readdistribution.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_rseqc_readduplication.png"
+      target: docs/images/mqc_rseqc_readduplication.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_salmon.png"
+      target: docs/images/mqc_salmon.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_samtools_idxstats.png"
+      target: docs/images/mqc_samtools_idxstats.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_samtools_mapped.png"
+      target: docs/images/mqc_samtools_mapped.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_sortmerna.png"
+      target: docs/images/mqc_sortmerna.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_star.png"
+      target: docs/images/mqc_star.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/mqc_strand_check.png"
+      target: docs/images/mqc_strand_check.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/nf-core-rnaseq_logo_dark.png"
+      target: docs/images/nf-core-rnaseq_logo_dark.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/nf-core-rnaseq_logo_light.png"
+      target: docs/images/nf-core-rnaseq_logo_light.png
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/images/nfcore-rnaseq_logo.ai"
+      target: docs/images/nfcore-rnaseq_logo.ai
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/output.md"
+      target: docs/output.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/docs/usage.md"
+      target: docs/usage.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/NfcoreSchema.groovy"
+      target: lib/NfcoreSchema.groovy
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/NfcoreTemplate.groovy"
+      target: lib/NfcoreTemplate.groovy
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/Utils.groovy"
+      target: lib/Utils.groovy
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/WorkflowMain.groovy"
+      target: lib/WorkflowMain.groovy
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/WorkflowRnaseq.groovy"
+      target: lib/WorkflowRnaseq.groovy
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/lib/nfcore_external_java_deps.jar"
+      target: lib/nfcore_external_java_deps.jar
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/main.nf"
+      target: main.nf
+      type: primary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules.json"
+      target: modules.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/bedtools_genomecov.nf"
+      target: modules/local/bedtools_genomecov.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/cat_additional_fasta.nf"
+      target: modules/local/cat_additional_fasta.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/deseq2_qc.nf"
+      target: modules/local/deseq2_qc.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/dupradar.nf"
+      target: modules/local/dupradar.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/gtf2bed.nf"
+      target: modules/local/gtf2bed.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/gtf_gene_filter.nf"
+      target: modules/local/gtf_gene_filter.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/multiqc.nf"
+      target: modules/local/multiqc.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/multiqc_custom_biotype.nf"
+      target: modules/local/multiqc_custom_biotype.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/multiqc_tsv_from_list.nf"
+      target: modules/local/multiqc_tsv_from_list.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/rsem_merge_counts.nf"
+      target: modules/local/rsem_merge_counts.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/salmon_summarizedexperiment.nf"
+      target: modules/local/salmon_summarizedexperiment.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/salmon_tx2gene.nf"
+      target: modules/local/salmon_tx2gene.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/salmon_tximport.nf"
+      target: modules/local/salmon_tximport.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/samplesheet_check.nf"
+      target: modules/local/samplesheet_check.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/star_align.nf"
+      target: modules/local/star_align.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/local/star_genomegenerate.nf"
+      target: modules/local/star_genomegenerate.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/bbmap/bbsplit/main.nf"
+      target: modules/nf-core/modules/bbmap/bbsplit/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/bbmap/bbsplit/meta.yml"
+      target: modules/nf-core/modules/bbmap/bbsplit/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/cat/fastq/main.nf"
+      target: modules/nf-core/modules/cat/fastq/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/cat/fastq/meta.yml"
+      target: modules/nf-core/modules/cat/fastq/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/custom/dumpsoftwareversions/main.nf"
+      target: modules/nf-core/modules/custom/dumpsoftwareversions/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/custom/dumpsoftwareversions/meta.yml"
+      target: modules/nf-core/modules/custom/dumpsoftwareversions/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/custom/dumpsoftwareversions/templates/dumpsoftwareversions.py"
+      target: modules/nf-core/modules/custom/dumpsoftwareversions/templates/dumpsoftwareversions.py
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/custom/getchromsizes/main.nf"
+      target: modules/nf-core/modules/custom/getchromsizes/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/custom/getchromsizes/meta.yml"
+      target: modules/nf-core/modules/custom/getchromsizes/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/fastqc/main.nf"
+      target: modules/nf-core/modules/fastqc/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/fastqc/meta.yml"
+      target: modules/nf-core/modules/fastqc/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/gffread/main.nf"
+      target: modules/nf-core/modules/gffread/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/gffread/meta.yml"
+      target: modules/nf-core/modules/gffread/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/gunzip/main.nf"
+      target: modules/nf-core/modules/gunzip/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/gunzip/meta.yml"
+      target: modules/nf-core/modules/gunzip/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/align/main.nf"
+      target: modules/nf-core/modules/hisat2/align/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/align/meta.yml"
+      target: modules/nf-core/modules/hisat2/align/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/build/main.nf"
+      target: modules/nf-core/modules/hisat2/build/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/build/meta.yml"
+      target: modules/nf-core/modules/hisat2/build/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/extractsplicesites/main.nf"
+      target: modules/nf-core/modules/hisat2/extractsplicesites/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/hisat2/extractsplicesites/meta.yml"
+      target: modules/nf-core/modules/hisat2/extractsplicesites/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/picard/markduplicates/main.nf"
+      target: modules/nf-core/modules/picard/markduplicates/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/picard/markduplicates/meta.yml"
+      target: modules/nf-core/modules/picard/markduplicates/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/preseq/lcextrap/main.nf"
+      target: modules/nf-core/modules/preseq/lcextrap/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/preseq/lcextrap/meta.yml"
+      target: modules/nf-core/modules/preseq/lcextrap/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/qualimap/rnaseq/main.nf"
+      target: modules/nf-core/modules/qualimap/rnaseq/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rsem/calculateexpression/main.nf"
+      target: modules/nf-core/modules/rsem/calculateexpression/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rsem/calculateexpression/meta.yml"
+      target: modules/nf-core/modules/rsem/calculateexpression/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rsem/preparereference/main.nf"
+      target: modules/nf-core/modules/rsem/preparereference/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rsem/preparereference/meta.yml"
+      target: modules/nf-core/modules/rsem/preparereference/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/bamstat/main.nf"
+      target: modules/nf-core/modules/rseqc/bamstat/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/bamstat/meta.yml"
+      target: modules/nf-core/modules/rseqc/bamstat/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/inferexperiment/main.nf"
+      target: modules/nf-core/modules/rseqc/inferexperiment/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/inferexperiment/meta.yml"
+      target: modules/nf-core/modules/rseqc/inferexperiment/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/innerdistance/main.nf"
+      target: modules/nf-core/modules/rseqc/innerdistance/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/innerdistance/meta.yml"
+      target: modules/nf-core/modules/rseqc/innerdistance/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/junctionannotation/main.nf"
+      target: modules/nf-core/modules/rseqc/junctionannotation/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/junctionannotation/meta.yml"
+      target: modules/nf-core/modules/rseqc/junctionannotation/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/junctionsaturation/main.nf"
+      target: modules/nf-core/modules/rseqc/junctionsaturation/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/junctionsaturation/meta.yml"
+      target: modules/nf-core/modules/rseqc/junctionsaturation/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/readdistribution/main.nf"
+      target: modules/nf-core/modules/rseqc/readdistribution/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/readdistribution/meta.yml"
+      target: modules/nf-core/modules/rseqc/readdistribution/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/readduplication/main.nf"
+      target: modules/nf-core/modules/rseqc/readduplication/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/readduplication/meta.yml"
+      target: modules/nf-core/modules/rseqc/readduplication/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/tin/main.nf"
+      target: modules/nf-core/modules/rseqc/tin/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/rseqc/tin/meta.yml"
+      target: modules/nf-core/modules/rseqc/tin/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/salmon/index/main.nf"
+      target: modules/nf-core/modules/salmon/index/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/salmon/index/meta.yml"
+      target: modules/nf-core/modules/salmon/index/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/salmon/quant/main.nf"
+      target: modules/nf-core/modules/salmon/quant/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/salmon/quant/meta.yml"
+      target: modules/nf-core/modules/salmon/quant/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/flagstat/main.nf"
+      target: modules/nf-core/modules/samtools/flagstat/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/flagstat/meta.yml"
+      target: modules/nf-core/modules/samtools/flagstat/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/idxstats/main.nf"
+      target: modules/nf-core/modules/samtools/idxstats/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/idxstats/meta.yml"
+      target: modules/nf-core/modules/samtools/idxstats/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/index/main.nf"
+      target: modules/nf-core/modules/samtools/index/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/index/meta.yml"
+      target: modules/nf-core/modules/samtools/index/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/sort/main.nf"
+      target: modules/nf-core/modules/samtools/sort/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/sort/meta.yml"
+      target: modules/nf-core/modules/samtools/sort/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/stats/main.nf"
+      target: modules/nf-core/modules/samtools/stats/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/samtools/stats/meta.yml"
+      target: modules/nf-core/modules/samtools/stats/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/sortmerna/main.nf"
+      target: modules/nf-core/modules/sortmerna/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/stringtie/stringtie/main.nf"
+      target: modules/nf-core/modules/stringtie/stringtie/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/stringtie/stringtie/meta.yml"
+      target: modules/nf-core/modules/stringtie/stringtie/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/subread/featurecounts/main.nf"
+      target: modules/nf-core/modules/subread/featurecounts/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/subread/featurecounts/meta.yml"
+      target: modules/nf-core/modules/subread/featurecounts/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/trimgalore/main.nf"
+      target: modules/nf-core/modules/trimgalore/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/trimgalore/meta.yml"
+      target: modules/nf-core/modules/trimgalore/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/ucsc/bedclip/main.nf"
+      target: modules/nf-core/modules/ucsc/bedclip/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/ucsc/bedclip/meta.yml"
+      target: modules/nf-core/modules/ucsc/bedclip/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/ucsc/bedgraphtobigwig/main.nf"
+      target: modules/nf-core/modules/ucsc/bedgraphtobigwig/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/ucsc/bedgraphtobigwig/meta.yml"
+      target: modules/nf-core/modules/ucsc/bedgraphtobigwig/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/umitools/dedup/main.nf"
+      target: modules/nf-core/modules/umitools/dedup/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/umitools/dedup/meta.yml"
+      target: modules/nf-core/modules/umitools/dedup/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/umitools/extract/main.nf"
+      target: modules/nf-core/modules/umitools/extract/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/umitools/extract/meta.yml"
+      target: modules/nf-core/modules/umitools/extract/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/untar/main.nf"
+      target: modules/nf-core/modules/untar/main.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/modules/nf-core/modules/untar/meta.yml"
+      target: modules/nf-core/modules/untar/meta.yml
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/nextflow.config"
+      target: nextflow.config
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/nextflow_schema.json"
+      target: nextflow_schema.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/local/align_star.nf"
+      target: subworkflows/local/align_star.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/local/input_check.nf"
+      target: subworkflows/local/input_check.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/local/prepare_genome.nf"
+      target: subworkflows/local/prepare_genome.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/local/quantify_rsem.nf"
+      target: subworkflows/local/quantify_rsem.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/local/quantify_salmon.nf"
+      target: subworkflows/local/quantify_salmon.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/align_hisat2.nf"
+      target: subworkflows/nf-core/align_hisat2.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/bam_sort_samtools.nf"
+      target: subworkflows/nf-core/bam_sort_samtools.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/bam_stats_samtools.nf"
+      target: subworkflows/nf-core/bam_stats_samtools.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/bedgraph_to_bigwig.nf"
+      target: subworkflows/nf-core/bedgraph_to_bigwig.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/dedup_umi_umitools.nf"
+      target: subworkflows/nf-core/dedup_umi_umitools.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/fastqc_umitools_trimgalore.nf"
+      target: subworkflows/nf-core/fastqc_umitools_trimgalore.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/mark_duplicates_picard.nf"
+      target: subworkflows/nf-core/mark_duplicates_picard.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/subworkflows/nf-core/rseqc.nf"
+      target: subworkflows/nf-core/rseqc.nf
+      type: secondary
+    - url: "https://raw.githubusercontent.com/nf-core/rnaseq/7106bd792b3fb04f9f09b4e737165fa4e736ea81/workflows/rnaseq.nf"
+      target: workflows/rnaseq.nf
+      type: secondary
+  testing:
+    - id: example_test
+      files:
+        - url: "https://gist.github.com/e42b4a98990ac8894a975223d41bfaeb"
+          target: wf_engine_params.json
+          type: wf_engine_params
