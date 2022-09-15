@@ -312,7 +312,7 @@ export function compareSummaryContent(
 
 const STAR = emoji.get("star");
 const LEVEL_EXP = {
-  4: "Files are identical with same checksum",
+  4: "Files are identical with the same checksum",
   3: "Files are identical in features (size, map rate, variant count, etc.)",
   2: "Acceptable differences in features (within threshold)",
   1: "Unacceptable differences in features (beyond threshold)",
