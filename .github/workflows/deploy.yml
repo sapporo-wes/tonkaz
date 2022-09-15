@@ -6,7 +6,7 @@ on:
       - "*.*.*"
 
 jobs:
-  build-binary:
+  build_binary:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
