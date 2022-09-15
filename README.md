@@ -24,7 +24,7 @@ Use a single binary that is built without any dependencies.
 Linux x86_64:
 
 ```bash
-$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/x86_64-unknown-linux-gnu
+$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_x86_64-unknown-linux-gnu
 $ chmod +x ./tonkaz
 $ ./tonkaz --help
 ```
@@ -32,7 +32,7 @@ $ ./tonkaz --help
 Mac x86_64:
 
 ```bash
-$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/x86_64-apple-darwin
+$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_x86_64-apple-darwin
 $ chmod +x ./tonkaz
 $ ./tonkaz --help
 ```
@@ -40,7 +40,7 @@ $ ./tonkaz --help
 Mac aarch64:
 
 ```bash
-$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/aarch64-apple-darwin
+$ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_aarch64-apple-darwin
 $ chmod +x ./tonkaz
 $ ./tonkaz --help
 ```
