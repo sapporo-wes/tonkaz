@@ -1,25 +1,45 @@
 import { crate, main, utils } from "./mod.ts";
-import { asciiTable, color, datetime } from "./deps.ts";
+import { asciiTable, color, datetime, emoji } from "./deps.ts";
+
+export const DEFAULT_THRESHOLD = 0.05;
+export const OUTPUTS_ID_PREFIX_RE = new RegExp(`^outputs/`);
 
 export function compare(
   crate1: crate.Crate,
   crate2: crate.Crate,
   all: boolean,
+  threshold: number = DEFAULT_THRESHOLD,
 ): void {
   renderFirstMsg(crate1, crate2);
   crate1.summarize();
   crate2.summarize();
   renderSummaryTable(crate1, crate2);
   renderEdamExt();
-  console.log(""); // empty line
-  compareOutputs(crate1, crate2, all);
+
+  const c1OutputsIds = all
+    ? crate1.summary.outputs
+    : crate1.summary.outputsWithEdam;
+  const c2OutputsIds = all
+    ? crate2.summary.outputs
+    : crate2.summary.outputsWithEdam;
+
+  renderRepLevelExplanation(all, threshold);
+
+  const compareResult = compareFiles(
+    crate1,
+    crate2,
+    c1OutputsIds,
+    c2OutputsIds,
+    threshold,
+  );
+  renderCompareResult(compareResult, crate1, crate2, threshold);
 }
 
 export function renderFirstMsg(crate1: crate.Crate, crate2: crate.Crate): void {
   console.log(`\
 Tonkaz ${main.TonkazVersion}
 
-${color.green("Comparing")} these files:
+${color.green("Comparing")} Crate1 to Crate2 to verify reproducibility:
 
   Crate1: ${color.cyan(crate1.location)}
   Crate2: ${color.cyan(crate2.location)}
@@ -35,17 +55,24 @@ export function renderSummaryTable(
     return val.slice(0, 10) + " ... " + val.slice(-21);
   };
 
+  // alignFuncs
+  const a1 = (val: string) => asciiTable.default.alignLeft(val, 14, " ");
+  const a23Header = (val: string) =>
+    asciiTable.default.alignCenter(ellipseVal(val), 36, " ");
+  const a23 = (val: string) =>
+    asciiTable.default.alignLeft(ellipseVal(val), 36, " ");
+
   const data: asciiTable.AsciiData = {
     title: "",
     heading: [
-      "",
-      asciiTable.default.alignCenter(ellipseVal(crate1.location), 36, " "),
-      asciiTable.default.alignCenter(ellipseVal(crate2.location), 36, " "),
+      a1(""),
+      a23Header(crate1.location),
+      a23Header(crate2.location),
     ],
     rows: [],
   };
 
-  const headerToField: [string, keyof crate.Summary][] = [
+  const headerKeys: [string, keyof crate.CrateSummary][] = [
     ["WF Name", "wfName"],
     ["WF ID", "wfId"],
     ["WF Version", "wfVersion"],
@@ -63,279 +90,536 @@ export function renderSummaryTable(
     ["# Outputs with EDAM", "outputsWithEdam"],
   ];
 
-  headerToField.forEach(([header, key]) => {
+  headerKeys.forEach(([header, key]) => {
+    header = a1(header);
     if (header.includes("#")) {
       if (key === "outputsWithEdam") {
         // do nothing
       } else {
         data.rows.push([
           header,
-          ...[crate1, crate2].map((c) =>
-            `${(c.summary[key] as string[]).length} files${
+          ...utils.warningColor([crate1, crate2].map((c) => {
+            const val = `${(c.summary[key] as string[]).length} files${
               key === "outputs"
                 ? ` (${c.summary.outputsWithEdam.length} EDAM-assigned files)`
                 : ""
-            }`
-          ),
+            }`;
+            return a23(val);
+          })),
         ]);
       }
     } else if (header.includes("Time")) {
       data.rows.push([
         header,
-        ...[crate1, crate2].map((c) =>
-          c.summary[key] != undefined
+        ...[crate1, crate2].map((c) => {
+          const val = c.summary[key] != undefined
             ? datetime.format(
               c.summary[key] as Date,
               "yyyy-MM-dd HH:mm:ss",
             )
-            : ""
-        ),
+            : "";
+          return a23(val);
+        }),
       ]);
     } else if (key === "duration") {
       data.rows.push([
         header,
         ...[crate1, crate2].map((c) => {
-          if (c.summary[key] === undefined) return "";
-          const duration = c.summary[key] as ReturnType<
-            typeof datetime.difference
-          >;
-          return utils.formatDuration(duration);
+          let val = "";
+          if (c.summary[key] != undefined) {
+            const duration = c.summary[key] as ReturnType<
+              typeof datetime.difference
+            >;
+            val = utils.formatDuration(duration);
+          }
+          return a23(val);
         }),
       ]);
     } else {
       data.rows.push([
         header,
-        ...[crate1, crate2].map((c) =>
-          c.summary[key] != undefined ? ellipseVal(`${c.summary[key]}`) : ""
-        ),
+        ...utils.warningColor([crate1, crate2].map((c) => {
+          const val = c.summary[key] != undefined
+            ? ellipseVal(`${c.summary[key]}`)
+            : "";
+          return a23(val);
+        })),
       ]);
     }
   });
 
   const table = asciiTable.default.fromJSON(data);
-  table.setAlign(1, asciiTable.AsciiAlign.LEFT);
-  table.setAlign(2, asciiTable.AsciiAlign.LEFT);
-
-  console.log(table.toString());
+  console.log(utils.ourTableToString(table));
 }
 
 export function renderEdamExt(): void {
   const ext = Object.keys(crate.EDAM_MAPPING);
   console.log(`  * EDAM extensions: ${ext.join("/")}`);
+  console.log(""); // empty line
 }
 
-export function compareOutputs(
+// generated by compareFiles
+export interface CompareResult {
+  sameIds: string[];
+  onlyCrate1: string[];
+  onlyCrate2: string[];
+  sameChecksum: string[]; // ReproducibilityLevel.SAME_CHECKSUM
+  sameFeatures: string[]; // ReproducibilityLevel.SAME_FEATURES
+  similarFeatures: string[]; // ReproducibilityLevel.SIMILAR_FEATURES
+  diffFeatures: string[]; // ReproducibilityLevel.DIFF_FEATURES
+}
+
+// Result file reproducibility level is:
+//
+// level4. same checksum
+// level3. checksum are different, but its stats (file size, map rate, etc.) are the same
+// level2. checksum are different, but its stats are similar (within threshold)
+// level1. checksum are different, and its stats are different (beyond threshold)
+// level0. file not found
+export enum ReproducibilityLevel {
+  SAME_CHECKSUM = 4,
+  SAME_FEATURES = 3,
+  SIMILAR_FEATURES = 2,
+  DIFFERENT_FEATURES = 1,
+  NO_FILE = 0,
+}
+
+export function compareFiles(
   crate1: crate.Crate,
   crate2: crate.Crate,
-  all: boolean,
-): void {
-  const trim_prefix_regex = new RegExp(`^outputs/`);
-
-  console.log(`\
-${color.green("Comparing")} output files to verify their reproducibility${
-    !all
-      ? " (using only EDAM-assigned files, option \`--all`\ to compare all files)"
-      : ""
-  }`);
-  console.log(""); // empty line
-
-  const crate1_ids = all
-    ? crate1.summary.outputs
-    : crate1.summary.outputsWithEdam;
-  const crate2_ids = all
-    ? crate2.summary.outputs
-    : crate2.summary.outputsWithEdam;
-
-  const same_ids = utils.intersection(crate1_ids, crate2_ids);
-  const only1_ids = utils.difference(crate1_ids, crate2_ids);
-  const only2_ids = utils.difference(crate2_ids, crate1_ids);
-
-  const has_diff_ids = only1_ids.length > 0 || only2_ids.length > 0;
-  if (has_diff_ids) {
-    renderDiffFiles(only1_ids, only2_ids, trim_prefix_regex);
-  }
-
-  if (same_ids.length > 0) {
-    compareFileSummary(crate1, crate2, same_ids, trim_prefix_regex);
-  }
-}
-
-export function renderDiffFiles(
   ids1: string[],
   ids2: string[],
-  trim_prefix_regex: RegExp,
-): void {
-  const ellipseVal = (val: string) => {
-    if (val.length <= 36) return val;
-    return val.slice(0, 10) + " ... " + val.slice(-21);
+  threshold: number,
+): CompareResult {
+  const compareResult = {
+    sameIds: [] as string[],
+    onlyCrate1: [] as string[],
+    onlyCrate2: [] as string[],
+    sameChecksum: [] as string[],
+    sameFeatures: [] as string[],
+    similarFeatures: [] as string[],
+    diffFeatures: [] as string[],
   };
 
-  console.log(`${color.yellow("Found differences")} in output files:`);
-  const data: asciiTable.AsciiData = {
-    title: "",
-    heading: [
-      "File",
-      asciiTable.default.alignCenter("in Crate1", 11, " "),
-      asciiTable.default.alignCenter("in Crate2", 11, " "),
-    ],
-    rows: [],
-  };
-  const sortedIds = [...ids1, ...ids2].sort();
-  sortedIds.forEach((id) => {
-    data.rows.push([
-      asciiTable.default.alignLeft(
-        ellipseVal(id.replace(trim_prefix_regex, "")),
-        36,
-        " ",
-      ),
-      ids1.includes(id) ? asciiTable.default.alignCenter("✓", 11, " ") : "",
-      ids2.includes(id) ? asciiTable.default.alignCenter("✓", 11, " ") : "",
-    ]);
+  compareResult.sameIds = utils.intersection(ids1, ids2);
+  compareResult.onlyCrate1 = utils.difference(ids1, ids2);
+  compareResult.onlyCrate2 = utils.difference(ids2, ids1);
+
+  const stats = compareResult.sameIds.map((id) => {
+    return {
+      id,
+      c1: crate1.findEntity(id).stats(),
+      c2: crate2.findEntity(id).stats(),
+    };
+  });
+  stats.forEach((s) => {
+    const level = compareSummary(s.c1, s.c2, threshold);
+    switch (level) {
+      case ReproducibilityLevel.SAME_CHECKSUM:
+        compareResult.sameChecksum.push(s.id);
+        break;
+      case ReproducibilityLevel.SAME_FEATURES:
+        compareResult.sameFeatures.push(s.id);
+        break;
+      case ReproducibilityLevel.SIMILAR_FEATURES:
+        compareResult.similarFeatures.push(s.id);
+        break;
+      case ReproducibilityLevel.DIFFERENT_FEATURES:
+        compareResult.diffFeatures.push(s.id);
+        break;
+      default:
+        throw new Error(`Unexpected reproducibility level: ${level}`);
+    }
   });
 
-  const table = asciiTable.default.fromJSON(data);
-
-  console.log(table.toString());
+  return compareResult;
 }
 
-export function compareFileSummary(
-  crate1: crate.Crate,
-  crate2: crate.Crate,
-  same_ids: string[],
-  trim_prefix_regex: RegExp,
-): void {
-  const summaries = same_ids.map((id) => ({
-    id,
-    crate1: crate1.findEntity(id).fileSummary(crate1.summary.startTime as Date),
-    crate2: crate2.findEntity(id).fileSummary(crate2.summary.startTime as Date),
-  }));
+export function compareSummary(
+  s1: crate.FileStats,
+  s2: crate.FileStats,
+  threshold: number,
+): ReproducibilityLevel {
+  let level: ReproducibilityLevel;
+  if (s1.checksum === s2.checksum) {
+    level = ReproducibilityLevel.SAME_CHECKSUM;
+  } else {
+    level = ReproducibilityLevel.SAME_FEATURES;
 
-  const sameChecksumSummaries = summaries.filter((s) =>
-    s.crate1.checksum === s.crate2.checksum
-  );
-  if (sameChecksumSummaries.length > 0) {
-    const ids = sameChecksumSummaries.map((s) => s.id).sort();
-    console.log(
-      `${color.green("Found identical checksums")} for output files:`,
-    );
-    console.log(""); // empty line
-    console.log(
-      ids
-        .map((id) => `  - ${id.replace(trim_prefix_regex, "")}`)
-        .join("\n"),
-    );
-    console.log(""); // empty line
-  }
+    const updateLevel = (
+      level: ReproducibilityLevel,
+      val1: number | undefined,
+      val2: number | undefined,
+    ): ReproducibilityLevel => {
+      if (val1 == undefined && val2 == undefined) {
+        return level;
+      } else {
+        const newLevel = compareSummaryContent(val1, val2, threshold);
+        return Math.min(level, newLevel);
+      }
+    };
 
-  const diffChecksumSummaries = summaries.filter((s) =>
-    s.crate1.checksum !== s.crate2.checksum
-  );
-  if (diffChecksumSummaries.length > 0) {
-    console.log(`${color.yellow("Found differences")} in output files:`);
-    console.log(""); // empty line
-    diffChecksumSummaries.forEach((s) => {
-      renderDiffFileSummary(
-        crate1,
-        crate2,
-        s.id,
-        s.crate1,
-        s.crate2,
-        trim_prefix_regex,
-      );
+    const keys = Object.keys(s1) as (keyof crate.FileStats)[];
+    keys.forEach((k) => {
+      if (k === "checksum" || k == "duration") {
+        // do nothing
+      } else if (k === "contentSize" || k == "lineCount") {
+        level = updateLevel(level, s1[k], s2[k]);
+      } else if (k === "samtoolsStats") {
+        const [s1Sam, s2Sam] = [s1, s2].map((s) => s.samtoolsStats);
+        if (s1Sam != undefined && s2Sam != undefined) {
+          (["totalReads", "mappedReads", "duplicateReads"] as Array<
+            keyof crate.SamtoolsStats
+          >).forEach((k2) => {
+            level = updateLevel(level, s1Sam[k2], s2Sam[k2]);
+          });
+        }
+      } else if (k === "vcftoolsStats") {
+        const [s1Vcf, s2Vcf] = [s1, s2].map((s) => s.vcftoolsStats);
+        if (s1Vcf != undefined && s2Vcf != undefined) {
+          (["variantCount", "snpsCount", "indelsCount"] as Array<
+            keyof crate.VcftoolsStats
+          >).forEach((k2) => {
+            level = updateLevel(level, s1Vcf[k2], s2Vcf[k2]);
+          });
+        }
+      }
     });
   }
+
+  return level;
 }
 
-export function renderDiffFileSummary(
+export function compareSummaryContent(
+  val1: number | undefined,
+  val2: number | undefined,
+  threshold: number,
+): ReproducibilityLevel {
+  if (val1 == undefined && val2 == undefined) {
+    throw new Error("Both values are undefined");
+  }
+  if (val1 == undefined || val2 == undefined) {
+    return ReproducibilityLevel.DIFFERENT_FEATURES;
+  }
+  if (val1 === val2) {
+    return ReproducibilityLevel.SAME_FEATURES;
+  } else if (Math.abs(val1 - val2) / val1 < threshold) {
+    return ReproducibilityLevel.SIMILAR_FEATURES;
+  } else {
+    return ReproducibilityLevel.DIFFERENT_FEATURES;
+  }
+}
+
+const STAR = emoji.get("star");
+const LEVEL_EXP = {
+  4: "Files are identical with same checksum",
+  3: "Files are identical in features (size, map rate, variant count, etc.)",
+  2: "Acceptable differences in features (within threshold)",
+  1: "Unacceptable differences in features (beyond threshold)",
+  0: "File not found",
+};
+
+export function renderRepLevelExplanation(
+  all: boolean,
+  threshold: number,
+): void {
+  console.log(
+    `${color.green("Comparing")} workflow results...`,
+  );
+  if (!all) {
+    console.log(
+      "Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)",
+    );
+  } else {
+    console.log(
+      "Calculate the reproducibility level by comparing the output files of Crate1 and Crate2.",
+    );
+  }
+  console.log(""); // empty line
+  console.log(
+    "Reproducibility level is defined as follows:",
+  );
+  console.log(""); // empty line
+
+  const levels: Array<keyof typeof LEVEL_EXP> = Object.keys(LEVEL_EXP).map(
+    (k) => parseInt(k) as keyof typeof LEVEL_EXP,
+  ).sort().reverse();
+  levels.forEach((l) => {
+    console.log(
+      `  - ${color.blue(`Level${l}`)} ${STAR.repeat(l)}${
+        "  ".repeat(4 - l)
+      } : ${
+        l === 2
+          ? LEVEL_EXP[l].replace("threshold", `threshold: ${threshold}`)
+          : LEVEL_EXP[l]
+      }`,
+    );
+  });
+
+  console.log(""); // empty line
+  console.log(
+    `  ${color.blue("Level4")}: "Fully Reproduced" <---> ${
+      color.blue("Level0")
+    }: "Not Reproduced"`,
+  );
+  console.log("");
+}
+
+export function renderCompareResult(
+  result: CompareResult,
   crate1: crate.Crate,
   crate2: crate.Crate,
+  threshold: number,
+): void {
+  renderLevel4Files(result);
+  renderLevel3Files(result, crate1, crate2, threshold);
+  renderLevel2Files(result, crate1, crate2, threshold);
+  renderLevel1Files(result, crate1, crate2, threshold);
+  renderLevel0Files(result, crate1, crate2);
+}
+
+export function renderLevel4Files(result: CompareResult): void {
+  console.log(
+    `=== ${color.blue("Level4")} ${
+      STAR.repeat(4)
+    } (SameChecksum, ${result.sameChecksum.length}/${result.sameIds.length} files)`,
+  );
+  console.log(""); // empty line
+
+  const ids = result.sameChecksum.map((id) =>
+    id.replace(OUTPUTS_ID_PREFIX_RE, "")
+  ).sort();
+  if (ids.length > 0) {
+    ids.forEach((id) => {
+      console.log(`  - ${id}`);
+    });
+    console.log(""); // empty line
+  }
+}
+
+export function renderLevel3Files(
+  result: CompareResult,
+  crate1: crate.Crate,
+  crate2: crate.Crate,
+  threshold: number,
+): void {
+  console.log(
+    `=== ${color.blue("Level3")} ${
+      STAR.repeat(3)
+    } (SameFeatures, ${result.sameFeatures.length}/${result.sameIds.length} files)`,
+  );
+  console.log(""); // empty line
+
+  const ids = result.sameFeatures.sort();
+  ids.forEach((id) => {
+    renderFileStats(id, crate1, crate2, threshold, OUTPUTS_ID_PREFIX_RE);
+  });
+}
+
+export function renderLevel2Files(
+  result: CompareResult,
+  crate1: crate.Crate,
+  crate2: crate.Crate,
+  threshold: number,
+): void {
+  console.log(
+    `=== ${color.blue("Level2")} ${
+      STAR.repeat(2)
+    } (SimilarFeatures, ${result.similarFeatures.length}/${result.sameIds.length} files)`,
+  );
+  console.log(""); // empty line
+
+  const ids = result.similarFeatures.sort();
+  ids.forEach((id) => {
+    renderFileStats(id, crate1, crate2, threshold, OUTPUTS_ID_PREFIX_RE);
+  });
+}
+
+export function renderLevel1Files(
+  result: CompareResult,
+  crate1: crate.Crate,
+  crate2: crate.Crate,
+  threshold: number,
+): void {
+  console.log(
+    `=== ${color.blue("Level1")} ${
+      STAR.repeat(1)
+    } (DifferentFeatures, ${result.diffFeatures.length}/${result.sameIds.length} files)`,
+  );
+  console.log(""); // empty line
+
+  const ids = result.diffFeatures.sort();
+  ids.forEach((id) => {
+    renderFileStats(id, crate1, crate2, threshold, OUTPUTS_ID_PREFIX_RE);
+  });
+}
+
+export function renderLevel0Files(
+  result: CompareResult,
+  crate1: crate.Crate,
+  crate2: crate.Crate,
+): void {
+  console.log(
+    `=== ${
+      color.blue("Level0")
+    } (NotFound, Crate1: ${result.onlyCrate1.length} files, Crate2: ${result.onlyCrate2.length} files)`,
+  );
+  console.log(""); // empty line
+
+  const ids1 = result.onlyCrate1.sort();
+  if (ids1.length > 0) {
+    console.log("  - Only in Crate1:");
+    ids1.forEach((id) => {
+      console.log(`    - ${id}`);
+    });
+    console.log(""); // empty line
+  }
+
+  const ids2 = result.onlyCrate2.sort();
+  if (ids2.length > 0) {
+    console.log("  - Only in Crate2:");
+    console.log(""); // empty line
+    ids2.forEach((id) => {
+      console.log(`    - ${id}`);
+    });
+    console.log(""); // empty line
+    console.log(""); // empty line
+  }
+}
+
+export function renderFileStats(
   id: string,
-  summary1: crate.FileSummary,
-  summary2: crate.FileSummary,
+  crate1: crate.Crate,
+  crate2: crate.Crate,
+  threshold: number,
   trim_prefix_regex: RegExp,
 ): void {
+  const e1 = crate1.findEntity(id);
+  const e2 = crate2.findEntity(id);
+  const s1 = e1.stats();
+  const s2 = e2.stats();
+
+  // alignFuncs
+  const a1 = (val: string) => asciiTable.default.alignLeft(val, 14, " ");
+  const a23Header = (val: string) =>
+    asciiTable.default.alignCenter(val, 23, " ");
+  const a23 = (val: string) => asciiTable.default.alignLeft(val, 23, " ");
+
   const data: asciiTable.AsciiData = {
     title: "",
     heading: [
-      asciiTable.default.alignCenter("", 14, " "),
-      asciiTable.default.alignCenter("in Crate1", 19, " "),
-      asciiTable.default.alignCenter("in Crate2", 19, " "),
+      a1(""),
+      a23Header("in Crate1"),
+      a23Header("in Crate2"),
     ],
     rows: [
       [
-        "Duration",
-        utils.formatDuration(summary1.duration),
-        utils.formatDuration(summary2.duration),
-      ],
-      [
-        "Content Size",
-        utils.formatFileSize(summary1.contentSize),
-        utils.formatFileSize(summary1.contentSize),
+        a1("Duration"),
+        a23(utils.formatDuration(s1.duration)),
+        a23(utils.formatDuration(s2.duration)),
       ],
     ],
   };
-  if (summary1.lineCount != undefined && summary2.lineCount != undefined) {
-    data.rows.push([
-      "Line Count",
-      summary1.lineCount.toString(),
-      summary2.lineCount.toString(),
-    ]);
+
+  // compareVal -> format -> align -> colorized
+  const appendRow = (
+    header: string,
+    val1: number | undefined,
+    val2: number | undefined,
+    formatFunc: typeof outToString = outToString,
+    arg1: number | undefined = undefined,
+    arg2: number | undefined = undefined,
+  ): void => {
+    const result = compareSummaryContent(val1, val2, threshold);
+    let formattedVal1 = a23(formatFunc(val1, arg1));
+    let formattedVal2 = a23(formatFunc(val2, arg2));
+    if (result === ReproducibilityLevel.DIFFERENT_FEATURES) {
+      formattedVal1 = color.red(formattedVal1);
+      formattedVal2 = color.red(formattedVal2);
+    } else if (result === ReproducibilityLevel.SIMILAR_FEATURES) {
+      formattedVal1 = color.yellow(formattedVal1);
+      formattedVal2 = color.yellow(formattedVal2);
+    }
+    data.rows.push([a1(header), formattedVal1, formattedVal2]);
+  };
+
+  appendRow(
+    "Content Size",
+    s1.contentSize,
+    s2.contentSize,
+    utils.formatFileSize,
+  );
+  if (s1.lineCount != undefined && s2.lineCount != undefined) {
+    appendRow("Line Count", s1.lineCount, s2.lineCount);
   }
 
-  if (summary1.entity.hasEdam()) {
-    const edamUrl = summary1.entity.getEdamUrl() || "";
-    if (crate.HAS_ONTOLOGY_EDAM.includes(edamUrl)) {
-      if (crate.SAM_EDAM.includes(edamUrl)) {
-        const stats1 = summary1.entity.getSamtoolsStats(crate1);
-        const stats2 = summary2.entity.getSamtoolsStats(crate2);
-        crate.SAM_HEADER_KEYS.forEach(([header, key]) => {
-          if (header.includes("#")) {
-            // Reads, Rate
-            data.rows.push([
-              header,
-              `${stats1[key + "Reads"]} (${
-                (stats1[key + "Rate"] * 100).toFixed(2)
-              } %)`,
-              `${stats2[key + "Reads"]} (${
-                (stats2[key + "Rate"] * 100).toFixed(2)
-              } %)`,
-            ]);
-          } else {
-            data.rows.push([
-              header,
-              `${stats1[key]}`,
-              `${stats2[key]}`,
-            ]);
-          }
-        });
-      } else if (crate.VCF_EDAM.includes(edamUrl)) {
-        const stats1 = summary1.entity.getVcftoolsStats(crate1);
-        const stats2 = summary2.entity.getVcftoolsStats(crate2);
-        crate.VCF_HEADER_KEYS.forEach(([header, key]) => {
-          data.rows.push([
-            header,
-            stats1[key].toFixed(2).toString(),
-            stats2[key].toFixed(2).toString(),
-          ]);
-        });
+  if (s1.samtoolsStats != undefined || s2.samtoolsStats != undefined) {
+    crate.SAM_HEADER_KEYS.forEach(([header, key]) => {
+      if (key == "totalReads") {
+        appendRow(
+          header,
+          s1.samtoolsStats?.[key],
+          s2.samtoolsStats?.[key],
+        );
+      } else {
+        // key == "mappedReads", "duplicateReads"
+        const s1Read = s1.samtoolsStats?.[key];
+        const s1Rate = s1.samtoolsStats
+          ?.[key.replace("Reads", "Rate") as keyof crate.SamtoolsStats];
+        const s2Read = s1.samtoolsStats?.[key];
+        const s2Rate = s1.samtoolsStats
+          ?.[key.replace("Reads", "Rate") as keyof crate.SamtoolsStats];
+        const appendRate = (
+          read: number | undefined,
+          rate: number | undefined,
+        ): string => {
+          if (read == undefined) return "-";
+          if (rate == undefined) return `${read}`;
+          return `${read} (${(rate * 100).toFixed(2)}%)`;
+        };
+        appendRow(
+          header,
+          s1Read,
+          s2Read,
+          appendRate,
+          s1Rate,
+          s2Rate,
+        );
       }
-    }
+    });
+  }
+
+  if (s1.vcftoolsStats != undefined || s2.vcftoolsStats != undefined) {
+    crate.VCF_HEADER_KEYS.forEach(([header, key]) => {
+      appendRow(header, s1.vcftoolsStats?.[key], s2.vcftoolsStats?.[key]);
+    });
   }
 
   const table = asciiTable.default.fromJSON(data);
-  table.setAlign(1, asciiTable.AsciiAlign.LEFT);
-  table.setAlign(2, asciiTable.AsciiAlign.LEFT);
 
   console.log(`  - ${id.replace(trim_prefix_regex, "")}`);
   console.log(
-    utils.tablePaddingLeft(addLineUnderGeneralMetadata(table.toString()), 2),
+    utils.tablePaddingLeft(
+      appendLineUnderGeneralMetadata(utils.ourTableToString(table)),
+      4,
+    ),
   );
   console.log(""); // empty line
 }
 
-export function addLineUnderGeneralMetadata(table: string): string {
-  // add line under general metadata (Line Count or Content Size)
+export function outToString(
+  val: number | undefined,
+  _extra: number | undefined,
+): string {
+  return val == undefined ? "-" : `${val}`;
+}
+
+export function appendLineUnderGeneralMetadata(table: string): string {
+  // append line under general metadata (Line Count or Content Size)
   const lines = table.split("\n");
+  if (lines.length < 8) {
+    return table;
+  }
   const line = lines[2];
   const lineCountIndex = lines.findIndex((l) => l.includes("Line Count"));
   const contentSizeIndex = lines.findIndex((l) => l.includes("Content Size"));
@@ -347,3 +631,134 @@ export function addLineUnderGeneralMetadata(table: string): string {
   ];
   return insertedLines.join("\n");
 }
+
+// render("Only in Crate1", result.onlyCrate1);
+// render("Only in Crate2", result.onlyCrate2);
+// render("Same checksum", result.sameChecksum);
+// render("Same stats", result.sameFeatures);
+// render("Similar stats", result.similarFeatures);
+// render("Different stats", result.diffFeatures);
+
+//   const ellipseVal = (val: string) => {
+//     if (val.length <= 36) return val;
+//     return val.slice(0, 10) + " ... " + val.slice(-21);
+//   };
+
+//   // alignFuncs
+//   const a1 = (val: string) => asciiTable.default.alignLeft(val, 36, " ");
+//   const a23 = (val: string) =>
+//     asciiTable.default.alignCenter(ellipseVal(val), 12, " ");
+
+//   console.log(
+//     `${
+//       color.yellow("Differences are found: ")
+//     }Output files that exist in only one of the crates:`,
+//   );
+//   const data: asciiTable.AsciiData = {
+//     title: "",
+//     heading: [
+//       a1("File"),
+//       a23("in Crate1"),
+//       a23("in Crate2"),
+//     ],
+//     rows: [],
+//   };
+//   const sortedIds = [...ids1, ...ids2].sort();
+//   sortedIds.forEach((id) => {
+//     data.rows.push([
+//       a1(ellipseVal(id.replace(trim_prefix_regex, ""))),
+//       ids1.includes(id) ? a23("✓") : a23(""),
+//       ids2.includes(id) ? a23("✓") : a23(""),
+//     ]);
+//   });
+
+//   const table = asciiTable.default.fromJSON(data);
+//   console.log(utils.ourTableToString(table));
+//   console.log(""); // empty line
+// }
+
+// export interface SummaryObj {
+//   id: string;
+//   c1: crate.FileStats;
+//   c2: crate.FileStats;
+// }
+
+// export function compareFileStats(
+//   crate1: crate.Crate,
+//   crate2: crate.Crate,
+//   same_ids: string[],
+//   trim_prefix_regex: RegExp,
+// ): string[][] {
+//   const summaries = same_ids.map((id) => ({
+//     id,
+//     c1: crate1.findEntity(id).fileSummary(
+//       crate1.summary.startTime as Date,
+//     ),
+//     c2: crate2.findEntity(id).fileSummary(
+//       crate2.summary.startTime as Date,
+//     ),
+//   }));
+
+//   const sameChecksumSummaries = summaries.filter((s) =>
+//     s.c1.checksum === s.c2.checksum
+//   );
+//   if (sameChecksumSummaries.length > 0) {
+//     const ids = sameChecksumSummaries.map((s) => s.id).sort();
+//     console.log(
+//       `${color.green("Checksum matched")} output files:`,
+//     );
+//     console.log(""); // empty line
+//     console.log(
+//       ids
+//         .map((id) => `  - ${id.replace(trim_prefix_regex, "")}`)
+//         .join("\n"),
+//     );
+//     console.log(""); // empty line
+//   }
+
+//   const diffChecksumSummaries = summaries.filter((s) =>
+//     s.c1.checksum !== s.c2.checksum
+//   );
+//   const fullyReproduced: string[] = [];
+//   const partiallyReproduced: string[] = [];
+//   const notReproduced: string[] = [];
+//   if (diffChecksumSummaries.length > 0) {
+//     console.log(`${color.yellow("Checksum unmatched")} output files:`);
+//     console.log(""); // empty line
+//     diffChecksumSummaries.forEach((s) => {
+//       const reproducibility = renderDiffFileStats(
+//         crate1,
+//         crate2,
+//         s,
+//         trim_prefix_regex,
+//       );
+//       if (reproducibility === "FullyReproduced") {
+//         fullyReproduced.push(s.id);
+//       } else if (reproducibility === "PartiallyReproduced") {
+//         partiallyReproduced.push(s.id);
+//       } else {
+//         notReproduced.push(s.id);
+//       }
+//     });
+//   }
+
+//   const sameChecksum = sameChecksumSummaries.map((s) => s.id);
+//   const diffChecksum = diffChecksumSummaries.map((s) => s.id);
+
+//   return [sameChecksum, diffChecksum, fullyReproduced, partiallyReproduced, notReproduced];
+// }
+
+// export enum Reproducibility {
+//   FullyReproduced = "FullyReproduced",
+//   PartiallyReproduced = "PartiallyReproduced",
+//   NotReproduced = "NotReproduced",
+// }
+
+// // export function compare
+
+// -[nf-core/rnaseq] 5/5 samples passed STAR 5% mapped threshold:
+//     95.86%: RAP1_UNINDUCED_REP1
+//     89.34%: WT_REP2
+//     95.77%: RAP1_UNINDUCED_REP2
+//     90.22%: RAP1_IAA_30M_REP1
+//     88.78%: WT_REP1

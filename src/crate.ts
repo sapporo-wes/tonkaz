@@ -1,6 +1,24 @@
 import { utils } from "./mod.ts";
 import { datetime } from "./deps.ts";
 
+export interface CrateSummary {
+  wfName: string;
+  wfVersion: string;
+  wfId: string;
+  wfType: string;
+  wfTypeVersion: string;
+  testId: string;
+  startTime: Date;
+  endTime: Date;
+  duration: ReturnType<typeof datetime.difference>;
+  exitCode: number;
+  state: string;
+  wfAttachments: string[];
+  intermediateFiles: string[];
+  outputs: string[];
+  outputsWithEdam: string[];
+}
+
 export class Crate {
   "location": string;
   "json": utils.Json;
@@ -11,7 +29,7 @@ export class Crate {
   "testResult": Entity;
   "testDefinition": Entity;
   "testInstance": Entity;
-  "summary": Summary;
+  "summary": CrateSummary;
 
   constructor(loc: string) {
     this.location = loc;
@@ -34,16 +52,16 @@ export class Crate {
 
       this.entities = {};
       graph.map((entity_json) => {
-        const entity = new Entity(entity_json);
+        const entity = new Entity(this, entity_json);
         this.entities[entity.id] = entity;
       });
 
       this.rootdataEntity = this.findEntity("./");
-      this.mainWf = this.getEntity(this.rootdataEntity, "mainEntity");
-      this.testSuite = this.getEntity(this.rootdataEntity, "about");
-      this.testResult = this.getEntity(this.testSuite, "result");
-      this.testDefinition = this.getEntity(this.testSuite, "definition");
-      this.testInstance = this.getEntity(this.testSuite, "instance");
+      this.mainWf = this.getChildEntity(this.rootdataEntity, "mainEntity");
+      this.testSuite = this.getChildEntity(this.rootdataEntity, "about");
+      this.testResult = this.getChildEntity(this.testSuite, "result");
+      this.testDefinition = this.getChildEntity(this.testSuite, "definition");
+      this.testInstance = this.getChildEntity(this.testSuite, "instance");
     } catch (e) {
       throw new Error(
         `Failed to initialize crate ${this.location}: ${e.message}`,
@@ -58,13 +76,12 @@ export class Crate {
   findEntity(id: string): Entity {
     const entity = this.entities[id];
     if (entity == undefined) {
-      console.log(id);
-      // throw new Error(`Entity ${id} not found in crate ${this.location}`);
+      throw new Error(`Entity ${id} not found`);
     }
     return entity;
   }
 
-  getEntity(parentEntity: Entity, field: string): Entity {
+  getChildEntity(parentEntity: Entity, field: string): Entity {
     const nextIds = parentEntity.flattenIds(field);
     if (nextIds.length !== 1) {
       throw new Error(`Entity ${parentEntity.id} has invalid ${field}`);
@@ -73,67 +90,104 @@ export class Crate {
   }
 
   summarize(): void {
-    const wfName = this.getValRecursively(this.mainWf, ["name"]);
-    const wfVersion = this.getValRecursively(this.mainWf, ["version"]);
-    const wfId = this.getValRecursively(this.mainWf, ["yevisId"]);
-    const wfType = this.getValRecursively(this.mainWf, [
-      "programmingLanguage",
-      "name",
-    ]);
-    const wfTypeVersion = this.getValRecursively(this.mainWf, [
-      "programmingLanguage",
-      "version",
-    ]);
-    const wfAttachments = this.mainWf.flattenIds("attachment");
+    try {
+      // General Metadata
+      const wfName = `${this.getValRecursively(this.mainWf, ["name"])}`;
+      const wfVersion = `${this.getValRecursively(this.mainWf, ["version"])}`;
+      const wfId = `${this.getValRecursively(this.mainWf, ["yevisId"])}`;
+      const wfType = `${
+        this.getValRecursively(this.mainWf, [
+          "programmingLanguage",
+          "name",
+        ])
+      }`;
+      const wfTypeVersion = `${
+        this.getValRecursively(this.mainWf, [
+          "programmingLanguage",
+          "version",
+        ])
+      }`;
+      const exitCode = this.getValRecursively(this.testResult, [
+        "exitCode",
+      ]);
+      if (typeof exitCode !== "number") {
+        throw new Error(`Invalid exit code ${exitCode}`);
+      }
+      const state = `${this.getValRecursively(this.testResult, ["state"])}`;
+      const testId = `${
+        this.getValRecursively(this.testDefinition, ["yevisTestId"])
+      }`;
 
-    const startTime = this.getValRecursively(this.testResult, [
-      "startTime",
-    ]);
-    const dateStartTime = typeof startTime === "string"
-      ? datetime.parse(startTime, "yyyy-MM-dd'T'HH:mm:ss")
-      : undefined;
-    const endTime = this.getValRecursively(this.testResult, [
-      "endTime",
-    ]);
-    const dateEndTime = typeof endTime === "string"
-      ? datetime.parse(endTime, "yyyy-MM-dd'T'HH:mm:ss")
-      : undefined;
-    let duration = undefined;
-    if (dateStartTime != undefined && dateEndTime != undefined) {
-      duration = datetime.difference(dateStartTime, dateEndTime);
+      // File IDs
+      let wfAttachments: string[] = [];
+      try {
+        wfAttachments = this.mainWf.flattenIds("attachment");
+      } catch (_) {
+        // do nothing
+      }
+      let intermediateFiles: string[] = [];
+      try {
+        intermediateFiles = this.testResult.flattenIds("intermediateFiles");
+      } catch (_) {
+        // do nothing
+      }
+      let outputs: string[] = [];
+      try {
+        outputs = this.testResult.flattenIds("outputs");
+      } catch (_) {
+        // do nothing
+      }
+      const outputsWithEdam = this.filterHasEdam(outputs);
+
+      // Time
+      const startTimeStr = `${
+        this.getValRecursively(this.testResult, [
+          "startTime",
+        ])
+      }`;
+      let startTime: Date;
+      try {
+        startTime = datetime.parse(startTimeStr, "yyyy-MM-dd'T'HH:mm:ss");
+      } catch (_) {
+        throw new Error(`Invalid start time ${startTimeStr}`);
+      }
+      const endTimeStr = `${
+        this.getValRecursively(this.testResult, [
+          "endTime",
+        ])
+      }`;
+      let endTime: Date;
+      try {
+        endTime = datetime.parse(endTimeStr, "yyyy-MM-dd'T'HH:mm:ss");
+      } catch (_) {
+        throw new Error(`Invalid end time ${endTimeStr}`);
+      }
+      const duration = datetime.difference(startTime, endTime);
+
+      const summary: CrateSummary = {
+        wfName,
+        wfVersion,
+        wfId,
+        wfType,
+        wfTypeVersion,
+        testId,
+        startTime,
+        endTime,
+        duration,
+        exitCode,
+        state,
+        wfAttachments,
+        intermediateFiles,
+        outputs,
+        outputsWithEdam,
+      };
+
+      this.summary = summary;
+    } catch (e) {
+      throw new Error(
+        `Failed to summarize crate ${this.location}: ${e.message}`,
+      );
     }
-
-    const exitCode = this.getValRecursively(this.testResult, [
-      "exitCode",
-    ]);
-    const state = this.getValRecursively(this.testResult, ["state"]);
-    const intermediateFiles = this.testResult.flattenIds("intermediateFiles");
-    const outputs = this.testResult.flattenIds("outputs");
-    const outputsWithEdam = this.filterHasEdam(outputs);
-
-    const testId = this.getValRecursively(this.testDefinition, ["yevisTestId"]);
-
-    const summary: Summary = {
-      "wfName": typeof wfName === "string" ? wfName : undefined,
-      "wfVersion": typeof wfVersion === "string" ? wfVersion : undefined,
-      "wfId": typeof wfId === "string" ? wfId : undefined,
-      "wfType": typeof wfType === "string" ? wfType : undefined,
-      "wfTypeVersion": typeof wfTypeVersion === "string"
-        ? wfTypeVersion
-        : undefined,
-      "testId": typeof testId === "string" ? testId : undefined,
-      "startTime": dateStartTime,
-      "endTime": dateEndTime,
-      "duration": duration,
-      "exitCode": typeof exitCode === "number" ? exitCode : undefined,
-      "state": typeof state === "string" ? state : undefined,
-      "wfAttachments": wfAttachments,
-      "intermediateFiles": intermediateFiles,
-      "outputs": outputs,
-      "outputsWithEdam": outputsWithEdam,
-    };
-
-    this.summary = summary;
   }
 
   getValRecursively(
@@ -156,17 +210,19 @@ export class Crate {
   }
 
   filterHasEdam(ids: string[]): string[] {
-    // return ids.filter((id) => this.entities[id].hasEdam());
     return ids.filter((id) => this.findEntity(id).hasEdam());
   }
 }
 
 export class Entity {
+  "crate": Crate;
   "id": string;
   "type": string | string[];
   "self": utils.Json;
+  "fileStats": FileStats | undefined;
 
-  constructor(json: utils.Json) {
+  constructor(crate: Crate, json: utils.Json) {
+    this.crate = crate;
     const id = json["@id"];
     if (id == undefined) {
       throw new Error(`Entity has no @id`);
@@ -174,7 +230,7 @@ export class Entity {
     if (typeof id !== "string") {
       throw new Error(`Entity has invalid @id`);
     }
-    this["id"] = id;
+    this.id = id;
 
     const type = json["@type"];
     if (type == undefined) {
@@ -183,9 +239,10 @@ export class Entity {
     if (typeof type !== "string" && !Array.isArray(type)) {
       throw new Error(`Entity has invalid @type`);
     }
-    this["type"] = type;
+    this.type = type;
 
-    this["self"] = json;
+    this.self = json;
+    this.fileStats = undefined;
   }
 
   flattenIds(field: string): string[] {
@@ -236,123 +293,142 @@ export class Entity {
     return this.flattenIds("format")[0];
   }
 
-  fileSummary(startDate: Date): FileSummary {
-    const contentSize = this.self["contentSize"] as number;
-    if (contentSize === undefined) {
+  getStatId(): string | undefined {
+    let statsId: string | undefined = undefined;
+    try {
+      statsId = this.flattenIds("stats")[0];
+    } catch (_) {
+      return undefined;
+    }
+    if (statsId == undefined) {
+      return undefined;
+    }
+    return statsId;
+  }
+
+  stats(): FileStats {
+    if (this.fileStats != undefined) {
+      return this.fileStats;
+    }
+
+    const contentSize = this.self["contentSize"];
+    if (contentSize == undefined || typeof contentSize !== "number") {
       throw new Error(`Entity ${this.id} has no contentSize`);
     }
     const lineCount = this.self["lineCount"] as number | undefined;
+    if (lineCount != undefined && typeof lineCount !== "number") {
+      throw new Error(`Entity ${this.id} has invalid lineCount`);
+    }
     const checksum = this.self["sha512"] as string;
-    if (checksum === undefined) {
+    if (checksum == undefined) {
       throw new Error(`Entity ${this.id} has no sha512`);
     }
 
     const dateModified = this.self["dateModified"] as string;
-    if (dateModified === undefined) {
+    if (dateModified == undefined) {
       throw new Error(`Entity ${this.id} has no dateModified`);
     }
     const dateModifiedDate = datetime.parse(
       dateModified,
       "yyyy-MM-dd'T'HH:mm:ss.SSSSSS",
     );
-    const duration = datetime.difference(startDate, dateModifiedDate);
+    const duration = datetime.difference(
+      this.crate.summary.startTime,
+      dateModifiedDate,
+    );
 
-    return {
-      entity: this,
+    const fileStats: FileStats = {
       contentSize,
       duration,
       lineCount,
       checksum,
+      samtoolsStats: this.getSamtoolsStats(this.crate),
+      vcftoolsStats: this.getVcftoolsStats(this.crate),
     };
+    this.fileStats = fileStats;
+
+    return fileStats;
   }
 
-  getSamtoolsStats(crate: Crate): SamtoolsStats {
-    const statsId = this.flattenIds("stats")[0];
-    if (statsId == undefined) {
-      throw new Error(`Entity ${this.id} has no stats`);
-    }
-    const statsEntity = crate.findEntity(statsId);
-    if (statsEntity == undefined) {
-      throw new Error(`Entity ${this.id} has invalid stats`);
-    }
-    const keys = [
-      "totalReads",
-      "mappedReads",
-      "unmappedReads",
-      "duplicateReads",
-      "mappedRate",
-      "unmappedRate",
-      "duplicateRate",
-    ];
-    const stats: Record<string, number> = {};
-    keys.forEach((key) => {
-      const val = statsEntity.self[key];
-      if (val == undefined) {
-        throw new Error(`Entity ${statsId} has no ${key}`);
-      }
-      if (typeof val !== "number") {
-        throw new Error(`Entity ${statsId} has invalid ${key}`);
-      }
-      stats[key] = val;
-    });
+  getSamtoolsStats(crate: Crate): SamtoolsStats | undefined {
+    if (this.hasEdam()) {
+      const edamUrl = this.getEdamUrl();
+      if (edamUrl != undefined && SAM_EDAM.includes(edamUrl)) {
+        const statsId = this.getStatId();
+        if (statsId == undefined) {
+          return undefined;
+        }
+        const statsEntity = crate.findEntity(statsId);
 
-    return stats as SamtoolsStats;
+        const keys: Array<keyof SamtoolsStats> = [
+          "totalReads",
+          "mappedReads",
+          "unmappedReads",
+          "duplicateReads",
+          "mappedRate",
+          "unmappedRate",
+          "duplicateRate",
+        ];
+        const stats: SamtoolsStats = {} as SamtoolsStats;
+        keys.forEach((key) => {
+          const val = statsEntity.self[key];
+          if (val == undefined) {
+            throw new Error(`Entity ${statsId} has no ${key}`);
+          }
+          if (typeof val !== "number") {
+            throw new Error(`Entity ${statsId} has invalid ${key}`);
+          }
+          stats[key] = val;
+        });
+
+        return stats;
+      }
+    }
+
+    return undefined;
   }
 
-  getVcftoolsStats(crate: Crate): VcftoolsStats {
-    const statsId = this.flattenIds("stats")[0];
-    if (statsId == undefined) {
-      throw new Error(`Entity ${this.id} has no stats`);
-    }
-    const statsEntity = crate.findEntity(statsId);
-    if (statsEntity == undefined) {
-      throw new Error(`Entity ${this.id} has invalid stats`);
-    }
-    const keys = [
-      "variantCount",
-      "snpsCount",
-      "indelsCount",
-    ];
-    const stats: Record<string, number> = {};
-    keys.forEach((key) => {
-      const val = statsEntity.self[key];
-      if (val == undefined) {
-        throw new Error(`Entity ${statsId} has no ${key}`);
-      }
-      if (typeof val !== "number") {
-        throw new Error(`Entity ${statsId} has invalid ${key}`);
-      }
-      stats[key] = val;
-    });
+  getVcftoolsStats(crate: Crate): VcftoolsStats | undefined {
+    if (this.hasEdam()) {
+      const edamUrl = this.getEdamUrl();
+      if (edamUrl != undefined && VCF_EDAM.includes(edamUrl)) {
+        const statsId = this.getStatId();
+        if (statsId == undefined) {
+          return undefined;
+        }
+        const statsEntity = crate.findEntity(statsId);
+        const keys: Array<keyof VcftoolsStats> = [
+          "variantCount",
+          "snpsCount",
+          "indelsCount",
+        ];
+        const stats: VcftoolsStats = {} as VcftoolsStats;
+        keys.forEach((key) => {
+          const val = statsEntity.self[key];
+          if (val == undefined) {
+            throw new Error(`Entity ${statsId} has no ${key}`);
+          }
+          if (typeof val !== "number") {
+            throw new Error(`Entity ${statsId} has invalid ${key}`);
+          }
+          stats[key] = val;
+        });
 
-    return stats as VcftoolsStats;
+        return stats;
+      }
+    }
+
+    return undefined;
   }
 }
 
-export interface Summary {
-  wfName?: string;
-  wfVersion?: string;
-  wfId?: string;
-  wfType?: string;
-  wfTypeVersion?: string;
-  testId?: string;
-  startTime?: Date;
-  endTime?: Date;
-  duration?: ReturnType<typeof datetime.difference>;
-  exitCode?: number;
-  state?: string;
-  wfAttachments: string[];
-  intermediateFiles: string[];
-  outputs: string[];
-  outputsWithEdam: string[];
-}
-
-export interface FileSummary {
-  entity: Entity;
+export interface FileStats {
   contentSize: number;
   duration: ReturnType<typeof datetime.difference>;
   lineCount?: number;
   checksum: string;
+  samtoolsStats?: SamtoolsStats;
+  vcftoolsStats?: VcftoolsStats;
 }
 
 export const EDAM_MAPPING = {
@@ -446,24 +522,21 @@ export interface SamtoolsStats {
   mappedRate: number;
   unmappedRate: number;
   duplicateRate: number;
-  [key: string]: number;
 }
 
-export const SAM_HEADER_KEYS = [
+export const SAM_HEADER_KEYS: [string, keyof SamtoolsStats][] = [
   ["Total Reads", "totalReads"],
-  ["  # Mapped", "mapped"],
-  ["  # Unmapped", "unmapped"],
-  ["  # Duplicate", "duplicate"],
+  ["  # Mapped", "mappedReads"],
+  ["  # Duplicate", "duplicateReads"],
 ];
 
 export interface VcftoolsStats {
   variantCount: number;
   snpsCount: number;
   indelsCount: number;
-  [key: string]: number;
 }
 
-export const VCF_HEADER_KEYS = [
+export const VCF_HEADER_KEYS: [string, keyof VcftoolsStats][] = [
   ["Variant Count", "variantCount"],
   ["SNPs Count", "snpsCount"],
   ["Indels Count", "indelsCount"],

@@ -1,4 +1,4 @@
-import { datetime } from "./deps.ts";
+import { asciiTable, color, datetime } from "./deps.ts";
 
 export async function isFile(loc: string): Promise<boolean> {
   return await Deno.stat(loc).then((stat) => stat.isFile).catch(() => false);
@@ -57,17 +57,56 @@ export function formatDuration(
 }
 
 export function formatFileSize(
-  fileSize: number,
+  fileSize: number | undefined,
+  _extra: number | undefined = undefined,
 ): string {
+  if (fileSize == undefined) return "-";
+  const fileSizeOri = `${fileSize}`;
   const units = ["B", "KB", "MB", "GB", "TB"];
   let unit = 0;
   while (fileSize > 1024) {
     fileSize /= 1024;
     unit += 1;
   }
-  return `${fileSize.toFixed(2)} ${units[unit]}`;
+  return `${fileSize.toFixed(2)} ${units[unit]} (${fileSizeOri})`;
 }
 
+// Use after table.toString()
 export function tablePaddingLeft(table: string, padding: number): string {
   return table.split("\n").map((line) => " ".repeat(padding) + line).join("\n");
+}
+
+// considering color code, all items must be aligned
+export function ourTableToString(table: asciiTable.default): string {
+  const colLenArr = table.getHeading().map((h) => h.length);
+  const body = [] as string[];
+
+  // top bar
+  body.push(
+    `.${
+      "-".repeat(colLenArr.reduce((a, b) => a + b) + 3 * colLenArr.length - 1)
+    }.`,
+  );
+  // heading
+  body.push(`| ${table.getHeading().join(" | ")} |`);
+  // middle bar
+  body.push(`|${colLenArr.map((len) => "-".repeat(len + 2)).join("|")}|`);
+  // body
+  table.getRows().forEach((row) => {
+    body.push(`| ${row.join(" | ")} |`);
+  });
+  // bottom bar
+  body.push(
+    `'${
+      "-".repeat(colLenArr.reduce((a, b) => a + b) + 3 * colLenArr.length - 1)
+    }'`,
+  );
+
+  return body.join("\n");
+}
+
+export function warningColor(pair: string[]): string[] {
+  return pair[0] !== pair[1]
+    ? [color.yellow(pair[0]), color.yellow(pair[1])]
+    : pair;
 }

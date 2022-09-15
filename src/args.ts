@@ -1,5 +1,5 @@
 import { color, flags } from "./deps.ts";
-import { main, utils } from "./mod.ts";
+import { compare, main, utils } from "./mod.ts";
 
 function usage(): void {
   console.log(`\
@@ -7,22 +7,24 @@ Tonkaz ${main.TonkazVersion} by @suecharo
 
 CLI tool to verify workflow reproducibility
 
-${color.blue("Usage:")} tonkaz [options] file1 file2
+${color.blue("Usage:")} tonkaz [options] crate1 crate2
 
 ${color.blue("Options:")}
-  -a, --all     Use all output files for comparison
-  -h, --help    Show this help message and exit.
-  -v, --version Show version and exit.
+  -a, --all                    Use all output files for comparison
+  -t, --threshold <threshold>  Set threshold for comparison (default: ${compare.DEFAULT_THRESHOLD})
+  -h, --help                   Show this help message and exit
+  -v, --version                Show version and exit
 
 ${color.blue("Examples:")}
-  $ tonkaz file1 file2
-  $ tonkaz file1 https://example.com/file2
-  $ tonkaz https://example.com/file1 https://example.com/file2`);
+  $ tonkaz crate1 crate2
+  $ tonkaz crate1 https://example.com/crate2
+  $ tonkaz https://example.com/crate1 https://example.com/crate2`);
   Deno.exit(1);
 }
 
 export interface Args {
   all: boolean;
+  threshold: number;
   loc1: string;
   loc2: string;
 }
@@ -30,8 +32,10 @@ export interface Args {
 export async function parseArgs(args: string[]): Promise<Args> {
   const parsedArgs = flags.parse(args, {
     boolean: ["all", "help", "version"],
+    string: ["threshold"],
     alias: {
       a: "all",
+      t: "threshold",
       h: "help",
       v: "version",
     },
@@ -42,18 +46,38 @@ export async function parseArgs(args: string[]): Promise<Args> {
     console.log(main.TonkazVersion);
     Deno.exit(0);
   }
-  parsedArgs._.length !== 2 && usage();
+  if (parsedArgs._.length !== 2) {
+    throw new Error("Invalid number of arguments (expected: 2)");
+  }
 
   const loc1 = `${parsedArgs._[0]}`;
   const loc1_isFileOrRemote = await utils.isFileOrRemote(loc1);
-  !loc1_isFileOrRemote && usage();
+  if (!loc1_isFileOrRemote) {
+    throw new Error(`Invalid location: ${loc1}`);
+  }
 
   const loc2 = `${parsedArgs._[1]}`;
   const loc2_isFileOrRemote = await utils.isFileOrRemote(loc2);
-  !loc2_isFileOrRemote && usage();
+  if (!loc2_isFileOrRemote) {
+    throw new Error(`Invalid location: ${loc2}`);
+  }
+
+  let threshold: number;
+  if (parsedArgs.threshold == undefined) {
+    threshold = compare.DEFAULT_THRESHOLD;
+  } else {
+    threshold = Number(parsedArgs.threshold);
+    if (Number.isNaN(threshold)) {
+      throw new Error("Threshold must be a number");
+    }
+    if (threshold < 0 || threshold > 1) {
+      throw new Error("Threshold must be between 0 and 1");
+    }
+  }
 
   return {
     all: parsedArgs.all,
+    threshold: threshold,
     loc1,
     loc2,
   };

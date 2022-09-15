@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-10T08:08:32+00:00",
+            "datePublished": "2022-09-14T06:32:55+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -2529,9 +2529,9 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 177527529472,
+            "freeDiskSpace": 151166816256,
             "gid": 0,
-            "inDocker": true,
+            "inDocker": false,
             "os": "Linux",
             "osVersion": "5.13.0-40-generic",
             "totalMemory": 25211322368,
@@ -2728,7 +2728,7 @@
             ],
             "contentSize": 120633043,
             "dateModified": "2022-09-08T09:29:09.250063",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -4162,7 +4162,7 @@
                 }
             ],
             "pid": 12,
-            "runId": "c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc",
+            "runId": "gatk1",
             "startTime": "2022-09-08T09:30:03",
             "state": "COMPLETE",
             "stderr": {
@@ -4266,6 +4266,28 @@
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.vcf.idx"
         },
         {
+            "@id": "#samtools",
+            "@type": "SoftwareApplication",
+            "name": "samtools",
+            "version": "1.15.1--h1170115_0"
+        },
+        {
+            "@id": "#5d5d1345-e4b9-4a84-a5c3-b840d44ace8d",
+            "@type": [
+                "FileStats"
+            ],
+            "duplicateRate": 0.3063459248661424,
+            "duplicateReads": 719878,
+            "generatedBy": {
+                "@id": "#samtools"
+            },
+            "mappedRate": 1.0,
+            "mappedReads": 2349886,
+            "totalReads": 2349886,
+            "unmappedRate": 0.0,
+            "unmappedReads": 0
+        },
+        {
             "@id": "outputs/G97753.NA12878.bam",
             "@type": [
                 "File",
@@ -4274,13 +4296,16 @@
             ],
             "contentSize": 154962060,
             "dateModified": "2022-09-08T09:58:31.260879",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "5bb2600f09cdbb7847e2bac06ebf1323f97a9243a0323c5429c375ed262965334952f3e4eda904096aa7ea6f1f79a4c05f5443785257ee981bbaff65ce2d531c",
+            "stats": {
+                "@id": "#5d5d1345-e4b9-4a84-a5c3-b840d44ace8d"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.bam"
         },
@@ -4332,6 +4357,24 @@
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.vcf"
         },
         {
+            "@id": "#vcftools",
+            "@type": "SoftwareApplication",
+            "name": "vcftools",
+            "version": "0.1.16--pl5321h9a82719_6"
+        },
+        {
+            "@id": "#7034581d-43b7-4307-a054-caf26e3391b5",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 2,
+            "snpsCount": 16,
+            "variantCount": 18
+        },
+        {
             "@id": "outputs/splitAndPassOnly.vcf",
             "@type": [
                 "File",
@@ -4348,6 +4391,9 @@
             "lineCount": 96,
             "mode": "-rw-r--r--",
             "sha512": "9278bb53e11183d0be5fcb45c5eea49235bbbc02da9d2181c4c32bd13550a8059f0348e3db4314de3778214dd584271063c97d60b89687328255a5c786ac3fa4",
+            "stats": {
+                "@id": "#7034581d-43b7-4307-a054-caf26e3391b5"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/splitAndPassOnly.vcf"
         },
@@ -4369,6 +4415,22 @@
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/per_base_coverage.tsv"
         },
         {
+            "@id": "#53d2a5da-20dd-4879-a47b-f1298b8c7d13",
+            "@type": [
+                "FileStats"
+            ],
+            "duplicateRate": 0.3063243148927087,
+            "duplicateReads": 723304,
+            "generatedBy": {
+                "@id": "#samtools"
+            },
+            "mappedRate": 0.9999944944088605,
+            "mappedReads": 2361223,
+            "totalReads": 2361236,
+            "unmappedRate": 5.505591139555724e-06,
+            "unmappedReads": 13
+        },
+        {
             "@id": "outputs/G97753.NA12878.realigned.bam",
             "@type": [
                 "File",
@@ -4377,13 +4439,16 @@
             ],
             "contentSize": 103241649,
             "dateModified": "2022-09-08T09:58:31.516879",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "057c8d8eeb508e0792e39fd45fbfab4eecb9c15b601a4d9fdc540ae21e55aaaddcb8079978fa97efe799db0fddfa6b792cac9db662bb0d121da403acceda8781",
+            "stats": {
+                "@id": "#53d2a5da-20dd-4879-a47b-f1298b8c7d13"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.realigned.bam"
         },
@@ -4479,7 +4544,7 @@
             ],
             "contentSize": 103241649,
             "dateModified": "2022-09-08T09:36:27.625751",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -4662,7 +4727,7 @@
             ],
             "contentSize": 103328759,
             "dateModified": "2022-09-08T09:36:24.813729",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -5183,7 +5248,7 @@
             ],
             "contentSize": 103241649,
             "dateModified": "2022-09-08T09:36:27.625751",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -5716,7 +5781,7 @@
             ],
             "contentSize": 140507515,
             "dateModified": "2022-09-08T09:31:58.443560",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -5734,7 +5799,7 @@
             ],
             "contentSize": 168459861,
             "dateModified": "2022-09-08T09:35:46.461427",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -5863,7 +5928,7 @@
             ],
             "contentSize": 167118611,
             "dateModified": "2022-09-08T09:34:52.424997",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -5897,7 +5962,7 @@
             ],
             "contentSize": 103328759,
             "dateModified": "2022-09-08T09:36:24.813729",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -6587,7 +6652,7 @@
             ],
             "contentSize": 140507515,
             "dateModified": "2022-09-08T09:31:58.443560",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -6605,7 +6670,7 @@
             ],
             "contentSize": 168361136,
             "dateModified": "2022-09-08T09:35:48.865447",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -6734,7 +6799,7 @@
             ],
             "contentSize": 167019138,
             "dateModified": "2022-09-08T09:34:54.609015",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -6768,7 +6833,7 @@
             ],
             "contentSize": 103241649,
             "dateModified": "2022-09-08T09:36:27.625751",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -8570,7 +8635,7 @@
             ],
             "contentSize": 103241649,
             "dateModified": "2022-09-08T09:36:27.625751",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -8918,7 +8983,7 @@
             ],
             "contentSize": 103328759,
             "dateModified": "2022-09-08T09:36:24.813729",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -9165,7 +9230,7 @@
             ],
             "contentSize": 120633043,
             "dateModified": "2022-09-08T09:29:09.250063",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -9281,7 +9346,7 @@
             ],
             "contentSize": 154962060,
             "dateModified": "2022-09-08T09:30:52.950994",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -9410,7 +9475,7 @@
             ],
             "contentSize": 154962060,
             "dateModified": "2022-09-08T09:30:52.950994",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
@@ -9476,7 +9541,7 @@
             ],
             "contentSize": 140507515,
             "dateModified": "2022-09-08T09:31:58.443560",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },

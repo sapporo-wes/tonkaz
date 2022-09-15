@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-12T05:03:58+00:00",
+            "datePublished": "2022-09-14T07:42:36+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -795,9 +795,9 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 143702196224,
+            "freeDiskSpace": 151318249472,
             "gid": 0,
-            "inDocker": true,
+            "inDocker": false,
             "os": "Linux",
             "osVersion": "5.13.0-40-generic",
             "totalMemory": 25211322368,
@@ -1314,7 +1314,7 @@
             ],
             "contentSize": 61692306,
             "dateModified": "2022-09-10T13:32:49.605081",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
@@ -1332,7 +1332,7 @@
             ],
             "contentSize": 1567886,
             "dateModified": "2022-09-10T13:32:56.129124",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "6d35713f6bc8b76c5ce5e08bd02b2017cbe11ed6987d37fed8410297e436495ff2b49c67e43f45868682854e52477d9ff4bad96a437197c2ac67e821878fc253",
@@ -1347,7 +1347,7 @@
             ],
             "contentSize": 20685880,
             "dateModified": "2022-09-10T13:33:35.121382",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
@@ -1365,7 +1365,7 @@
             ],
             "contentSize": 1500013,
             "dateModified": "2022-09-10T13:33:39.929414",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "6b2af39a30ec2f768d8fd70e50a641b520ad9d3c4f3e2a6c19bb6b59e58b67ba6606700bcc6f133ddbb79dab5fd5ff65fb259a86465ee1b97f44dba280c91414",
@@ -1528,7 +1528,7 @@
                 }
             ],
             "pid": 12,
-            "runId": "79027d00-d40c-4d25-b71d-3c07afc9ac86",
+            "runId": "jga1",
             "startTime": "2022-09-10T13:33:40",
             "state": "COMPLETE",
             "stderr": {
@@ -1644,7 +1644,7 @@
             ],
             "contentSize": 274,
             "dateModified": "2022-09-10T13:45:26.267758",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "09385cea778a3e9c104c37361df27999d0ee6160c57a3e8a300bbd00e6d4bfb615201c319d961aa4c40fdb815d21510c912a1ed45f873d50800de1f98dfba091",
@@ -1660,7 +1660,7 @@
             ],
             "contentSize": 319,
             "dateModified": "2022-09-10T13:43:35.561575",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "f13cd0db3d3751580b8c97b28d2f87571c6871983546073b0669f4aa5a869422bef2cb7b2c89802701ca4f2e0f10fe7c5f1b9b45afd5995c1eca2f1e347ccb17",
@@ -1685,6 +1685,24 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.idxstats"
         },
         {
+            "@id": "#vcftools",
+            "@type": "SoftwareApplication",
+            "name": "vcftools",
+            "version": "0.1.16--pl5321h9a82719_6"
+        },
+        {
+            "@id": "#ca25eab6-a238-4b49-bd5a-7e24bfd7c778",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 1,
+            "snpsCount": 14,
+            "variantCount": 1061
+        },
+        {
             "@id": "outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz",
             "@type": [
                 "File",
@@ -1693,13 +1711,16 @@
             ],
             "contentSize": 34397,
             "dateModified": "2022-09-10T14:57:38.148845",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "58b1ed78251ababa6dc48d8f1e51d07fc1c551e2e0382cd4e593bd790d33a7141c6d45816a2c2c4e57c70b8d067b7fe736cf795f9e88974eb8aba8f31ec0bde6",
+            "stats": {
+                "@id": "#ca25eab6-a238-4b49-bd5a-7e24bfd7c778"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz"
         },
@@ -1792,6 +1813,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.collect_base_dist_by_cycle"
         },
         {
+            "@id": "#b3aae073-db78-4813-9831-056249b2fda5",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 4,
+            "variantCount": 42
+        },
+        {
             "@id": "outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz",
             "@type": [
                 "File",
@@ -1800,13 +1833,16 @@
             ],
             "contentSize": 24931,
             "dateModified": "2022-09-10T13:45:25.263739",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "a4876258fd697980a3a7ed678f3d3923049b68b4e2058293b6f4d3d55d12b583f4e701971c33ca9078a8f1b6951a177b07e9019a6b6928dfe4c507909a7c0e96",
+            "stats": {
+                "@id": "#b3aae073-db78-4813-9831-056249b2fda5"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz"
         },
@@ -1891,7 +1927,7 @@
             ],
             "contentSize": 322,
             "dateModified": "2022-09-10T15:03:02.097575",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "006c7ca8e5e529bb4e8c1aa26c9de4d39c99a0c9df93ae5eff9668f00cf63c820b36d9ebba84fb58dc7b628b7c796f1f176d23c17e795110de8bc71e154f1d31",
@@ -2007,6 +2043,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats.log"
         },
         {
+            "@id": "#b18b0164-d077-4354-a3d2-c11f26d310ce",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 0,
+            "variantCount": 2
+        },
+        {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz",
             "@type": [
                 "File",
@@ -2015,13 +2063,16 @@
             ],
             "contentSize": 24602,
             "dateModified": "2022-09-10T13:43:34.597555",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "28387445db7849fa2957130d2979e11e2329adeb3c80dc38cabd2e8dc07c71a425f26160ee8fb313315db4c8343be52475591b889ecbf61645cec3d18b0c0cf3",
+            "stats": {
+                "@id": "#b18b0164-d077-4354-a3d2-c11f26d310ce"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz"
         },
@@ -2154,7 +2205,7 @@
             ],
             "contentSize": 13432,
             "dateModified": "2022-09-10T14:57:39.108861",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "f57c40785e56819dca86b2d1fe35da0937edd1764124eea163ec5c8e3c25db73a03f07b105ba958e3c98c5a3c3ceab267349514bda969f75d51a6915817aa7da",
@@ -2355,6 +2406,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.collect_base_dist_by_cycle.chart.pdf"
         },
         {
+            "@id": "#7e6aa919-3225-4da9-8ab9-82d45e8dc472",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 0,
+            "variantCount": 2
+        },
+        {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz",
             "@type": [
                 "File",
@@ -2363,13 +2426,16 @@
             ],
             "contentSize": 24408,
             "dateModified": "2022-09-10T15:03:01.093562",
-            "encodingFormat": "application/gzip",
+            "encodingFormat": "application/x-gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
             "gid": 0,
             "mode": "-rw-r--r--",
             "sha512": "2eac577b0626787c8e1b8546f42310cf9dcbea882292516cdbd8a75a05166653abffb75551eaaebf3a0c9cde31a3d54a481b5f1360b5205ec2d8dc73854192cc",
+            "stats": {
+                "@id": "#7e6aa919-3225-4da9-8ab9-82d45e8dc472"
+            },
             "uid": 0,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz"
         },
