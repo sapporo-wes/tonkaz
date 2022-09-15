@@ -375,7 +375,7 @@ export function renderCompareResult(
   renderLevel3Files(result, crate1, crate2, threshold);
   renderLevel2Files(result, crate1, crate2, threshold);
   renderLevel1Files(result, crate1, crate2, threshold);
-  renderLevel0Files(result, crate1, crate2);
+  renderLevel0Files(result);
 }
 
 export function renderLevel4Files(result: CompareResult): void {
@@ -456,8 +456,6 @@ export function renderLevel1Files(
 
 export function renderLevel0Files(
   result: CompareResult,
-  crate1: crate.Crate,
-  crate2: crate.Crate,
 ): void {
   console.log(
     `=== ${
@@ -631,134 +629,3 @@ export function appendLineUnderGeneralMetadata(table: string): string {
   ];
   return insertedLines.join("\n");
 }
-
-// render("Only in Crate1", result.onlyCrate1);
-// render("Only in Crate2", result.onlyCrate2);
-// render("Same checksum", result.sameChecksum);
-// render("Same stats", result.sameFeatures);
-// render("Similar stats", result.similarFeatures);
-// render("Different stats", result.diffFeatures);
-
-//   const ellipseVal = (val: string) => {
-//     if (val.length <= 36) return val;
-//     return val.slice(0, 10) + " ... " + val.slice(-21);
-//   };
-
-//   // alignFuncs
-//   const a1 = (val: string) => asciiTable.default.alignLeft(val, 36, " ");
-//   const a23 = (val: string) =>
-//     asciiTable.default.alignCenter(ellipseVal(val), 12, " ");
-
-//   console.log(
-//     `${
-//       color.yellow("Differences are found: ")
-//     }Output files that exist in only one of the crates:`,
-//   );
-//   const data: asciiTable.AsciiData = {
-//     title: "",
-//     heading: [
-//       a1("File"),
-//       a23("in Crate1"),
-//       a23("in Crate2"),
-//     ],
-//     rows: [],
-//   };
-//   const sortedIds = [...ids1, ...ids2].sort();
-//   sortedIds.forEach((id) => {
-//     data.rows.push([
-//       a1(ellipseVal(id.replace(trim_prefix_regex, ""))),
-//       ids1.includes(id) ? a23("✓") : a23(""),
-//       ids2.includes(id) ? a23("✓") : a23(""),
-//     ]);
-//   });
-
-//   const table = asciiTable.default.fromJSON(data);
-//   console.log(utils.ourTableToString(table));
-//   console.log(""); // empty line
-// }
-
-// export interface SummaryObj {
-//   id: string;
-//   c1: crate.FileStats;
-//   c2: crate.FileStats;
-// }
-
-// export function compareFileStats(
-//   crate1: crate.Crate,
-//   crate2: crate.Crate,
-//   same_ids: string[],
-//   trim_prefix_regex: RegExp,
-// ): string[][] {
-//   const summaries = same_ids.map((id) => ({
-//     id,
-//     c1: crate1.findEntity(id).fileSummary(
-//       crate1.summary.startTime as Date,
-//     ),
-//     c2: crate2.findEntity(id).fileSummary(
-//       crate2.summary.startTime as Date,
-//     ),
-//   }));
-
-//   const sameChecksumSummaries = summaries.filter((s) =>
-//     s.c1.checksum === s.c2.checksum
-//   );
-//   if (sameChecksumSummaries.length > 0) {
-//     const ids = sameChecksumSummaries.map((s) => s.id).sort();
-//     console.log(
-//       `${color.green("Checksum matched")} output files:`,
-//     );
-//     console.log(""); // empty line
-//     console.log(
-//       ids
-//         .map((id) => `  - ${id.replace(trim_prefix_regex, "")}`)
-//         .join("\n"),
-//     );
-//     console.log(""); // empty line
-//   }
-
-//   const diffChecksumSummaries = summaries.filter((s) =>
-//     s.c1.checksum !== s.c2.checksum
-//   );
-//   const fullyReproduced: string[] = [];
-//   const partiallyReproduced: string[] = [];
-//   const notReproduced: string[] = [];
-//   if (diffChecksumSummaries.length > 0) {
-//     console.log(`${color.yellow("Checksum unmatched")} output files:`);
-//     console.log(""); // empty line
-//     diffChecksumSummaries.forEach((s) => {
-//       const reproducibility = renderDiffFileStats(
-//         crate1,
-//         crate2,
-//         s,
-//         trim_prefix_regex,
-//       );
-//       if (reproducibility === "FullyReproduced") {
-//         fullyReproduced.push(s.id);
-//       } else if (reproducibility === "PartiallyReproduced") {
-//         partiallyReproduced.push(s.id);
-//       } else {
-//         notReproduced.push(s.id);
-//       }
-//     });
-//   }
-
-//   const sameChecksum = sameChecksumSummaries.map((s) => s.id);
-//   const diffChecksum = diffChecksumSummaries.map((s) => s.id);
-
-//   return [sameChecksum, diffChecksum, fullyReproduced, partiallyReproduced, notReproduced];
-// }
-
-// export enum Reproducibility {
-//   FullyReproduced = "FullyReproduced",
-//   PartiallyReproduced = "PartiallyReproduced",
-//   NotReproduced = "NotReproduced",
-// }
-
-// // export function compare
-
-// -[nf-core/rnaseq] 5/5 samples passed STAR 5% mapped threshold:
-//     95.86%: RAP1_UNINDUCED_REP1
-//     89.34%: WT_REP2
-//     95.77%: RAP1_UNINDUCED_REP2
-//     90.22%: RAP1_IAA_30M_REP1
-//     88.78%: WT_REP1
