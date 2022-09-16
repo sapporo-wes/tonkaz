@@ -379,13 +379,15 @@ export function renderCompareResult(
   renderLevel2Files(result, crate1, crate2, threshold);
   renderLevel1Files(result, crate1, crate2, threshold);
   renderLevel0Files(result);
+
+  renderCompareSummary(result);
 }
 
 export function renderLevel4Files(result: CompareResult): void {
   console.log(
     `=== ${color.blue("Level4")} ${
       STAR.repeat(4)
-    } (SameChecksum, ${result.sameChecksum.length}/${result.sameIds.length} files)`,
+    } (FullyReproduced, ${result.sameChecksum.length}/${result.sameIds.length} files)`,
   );
   console.log(""); // empty line
 
@@ -409,7 +411,7 @@ export function renderLevel3Files(
   console.log(
     `=== ${color.blue("Level3")} ${
       STAR.repeat(3)
-    } (SameFeatures, ${result.sameFeatures.length}/${result.sameIds.length} files)`,
+    } (Reproduced, ${result.sameFeatures.length}/${result.sameIds.length} files)`,
   );
   console.log(""); // empty line
 
@@ -428,7 +430,7 @@ export function renderLevel2Files(
   console.log(
     `=== ${color.blue("Level2")} ${
       STAR.repeat(2)
-    } (SimilarFeatures, ${result.similarFeatures.length}/${result.sameIds.length} files)`,
+    } (AcceptableDifferences, ${result.similarFeatures.length}/${result.sameIds.length} files)`,
   );
   console.log(""); // empty line
 
@@ -447,7 +449,7 @@ export function renderLevel1Files(
   console.log(
     `=== ${color.blue("Level1")} ${
       STAR.repeat(1)
-    } (DifferentFeatures, ${result.diffFeatures.length}/${result.sameIds.length} files)`,
+    } (UnacceptableDifferences, ${result.diffFeatures.length}/${result.sameIds.length} files)`,
   );
   console.log(""); // empty line
 
@@ -463,7 +465,7 @@ export function renderLevel0Files(
   console.log(
     `=== ${
       color.blue("Level0")
-    } (NotFound, Crate1: ${result.onlyCrate1.length} files, Crate2: ${result.onlyCrate2.length} files)`,
+    } (NotReproduced, Crate1: ${result.onlyCrate1.length} files, Crate2: ${result.onlyCrate2.length} files)`,
   );
   console.log(""); // empty line
 
@@ -635,4 +637,68 @@ export function appendLineUnderGeneralMetadata(table: string): string {
 
 export function renderJson(compareResult: CompareResult): void {
   console.log(JSON.stringify(compareResult, null, 2));
+}
+
+export function renderCompareSummary(compareResult: CompareResult): void {
+  // alignFuncs
+  const aHeader = (val: string, len: number) =>
+    asciiTable.default.alignCenter(val, len, " ");
+  const a = (val: string, len: number) =>
+    asciiTable.default.alignLeft(val, len, " ");
+  const col1Len = 9;
+  const col2Len = 25;
+  const col3Len = 19;
+  const col4Len = 11;
+
+  const data: asciiTable.AsciiData = {
+    title: "",
+    heading: [
+      aHeader("Reproducibility", col2Len),
+      aHeader("Level", col1Len),
+      aHeader("Definition", col3Len),
+      aHeader("File #", col4Len),
+    ],
+    rows: [],
+  };
+
+  const addRow = (c1: number, c2: string, c3: string, c4: number): void => {
+    data.rows.push([
+      a(c2, col2Len),
+      a(STAR.repeat(c1), col1Len - c1),
+      a(c3, col3Len),
+      a(`${c4} files`, col4Len),
+    ]);
+  };
+
+  addRow(4, "Fully Reproduced", "Same Checksum", compareResult.sameIds.length);
+  addRow(
+    3,
+    "Partially Reproduced",
+    "Same Features",
+    compareResult.sameFeatures.length,
+  );
+  addRow(
+    2,
+    "Acceptable Differences",
+    "Similar Features",
+    compareResult.similarFeatures.length,
+  );
+  addRow(
+    1,
+    "Unacceptable Differences",
+    "Different Features",
+    compareResult.diffFeatures.length,
+  );
+  addRow(
+    0,
+    "Not Reproduced",
+    "Not Found",
+    compareResult.onlyCrate1.length + compareResult.onlyCrate2.length,
+  );
+
+  console.log(`${color.green("Summarize")} compare result:`);
+  console.log(""); // empty line
+  const table = asciiTable.default.fromJSON(data);
+  console.log(utils.tablePaddingLeft(utils.ourTableToString(table), 2));
+  console.log(""); // empty line
 }
