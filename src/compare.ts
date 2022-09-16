@@ -467,6 +467,7 @@ export function renderLevel0Files(
   const ids1 = result.onlyCrate1.sort();
   if (ids1.length > 0) {
     console.log("  - Only in Crate1:");
+    console.log(""); // empty line
     ids1.forEach((id) => {
       console.log(`    - ${id}`);
     });
@@ -480,7 +481,6 @@ export function renderLevel0Files(
     ids2.forEach((id) => {
       console.log(`    - ${id}`);
     });
-    console.log(""); // empty line
     console.log(""); // empty line
   }
 }

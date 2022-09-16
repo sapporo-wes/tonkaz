@@ -17,30 +17,27 @@ Reproducibility level is defined as follows:
 Level4: "Fully Reproduced" <---> Level0: "Not Reproduced"
 ```
 
+If you want to try easily, run as follows.
+It compares the execution results of [nf-core/rnaseq v3.7](https://nf-co.re/rnaseq/3.7/usage) twice in the same Linux environment.
+
+```bash
+$ tonkaz ./tests/example_crate/rnaseq_1st.json ./tests/example_crate/rnaseq_2nd.json
+```
+
 ## Installation
 
 Use a single binary that is built without any dependencies.
 
-Linux x86_64:
-
 ```bash
+# for Linux x86_64
 $ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_x86_64-unknown-linux-gnu
-$ chmod +x ./tonkaz
-$ ./tonkaz --help
-```
 
-Mac x86_64:
-
-```bash
+# for Mac x86_64
 $ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_x86_64-apple-darwin
-$ chmod +x ./tonkaz
-$ ./tonkaz --help
-```
 
-Mac aarch64:
-
-```bash
+# for Mac Apple silicon
 $ curl -fsSL -o ./tonkaz https://github.com/sapporo-wes/tonkaz/releases/latest/download/tonkaz_aarch64-apple-darwin
+
 $ chmod +x ./tonkaz
 $ ./tonkaz --help
 ```

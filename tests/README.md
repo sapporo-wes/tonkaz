@@ -6,6 +6,39 @@ These test data are generated using [`sapporo-wes/sapporo-service`](https://gith
 
 Also, please check [sapporo-wes/test-workflow](https://github.com/sapporo-wes/test-workflow).
 
+## Run tests
+
+Several combinations of crates are available as follows:
+
+```bash
+# GATK (Linux, 1st) <-> GATK (Linux, 2nd)
+$ deno test -A ./tests/gatk_test.ts
+
+# GATK (Linux) <-> GATK (Mac)
+$ deno test -A ./tests/gatk_mac_test.ts
+
+# JGA (Linux, 1st) <-> JGA (Linux, 2nd)
+$ deno test -A ./tests/jga_test.ts
+
+# JGA (Linux) <-> JGA (Mac)
+$ deno test -A ./tests/jga_mac_test.ts
+
+# RNA-seq (Linux, 1st) <-> RNA-seq (Linux, 2nd)
+$ deno test -A ./tests/rnaseq_test.ts
+
+# RNA-seq (Linux) <-> RNA-seq (Mac)
+$ deno test -A ./tests/rnaseq_mac_test.ts
+
+# RNA-seq (Linux, 1st) <-> RNA-seq (Linux, v3.6)
+$ deno test -A ./tests/rnaseq_v3.6_test.ts
+
+# RNA-seq (Linux, 1st) <-> RNA-seq (Linux, small)
+$ deno test -A ./tests/rnaseq_small_test.ts
+
+# Trimming (Linux) <-> Trimming (Mac)
+$ deno test -A ./tests/trimming_mac_test.ts
+```
+
 ## About test data
 
 The json files contained in [`example_crate`](./example_crate) are generated using [`sapporo-wes/sapporo-service`](https://github.com/sapporo-wes/sapporo-service) and [`sapporo-wes/yevis-cli`](https://github.com/sapporo-wes/yevis-cli).
