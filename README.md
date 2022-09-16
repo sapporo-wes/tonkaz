@@ -1,5 +1,6 @@
 # Tonkaz
 
+[![DOI](https://zenodo.org/badge/195738176.svg)](https://zenodo.org/badge/latestdoi/195738176)
 [![Apache License](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat&color=important)](http://www.apache.org/licenses/LICENSE-2.0)
 
 Tonkaz is a CLI tool to verify workflow reproducibility.
