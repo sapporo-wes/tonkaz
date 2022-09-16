@@ -12,6 +12,7 @@ ${color.blue("Usage:")} tonkaz [options] crate1 crate2
 ${color.blue("Options:")}
   -a, --all                    Use all output files for comparison
   -t, --threshold <threshold>  Set threshold for comparison (default: ${compare.DEFAULT_THRESHOLD})
+  -j, --json                   Output result as JSON
   -h, --help                   Show this help message and exit
   -v, --version                Show version and exit
 
@@ -27,17 +28,19 @@ export interface Args {
   threshold: number;
   loc1: string;
   loc2: string;
+  json: boolean;
 }
 
 export async function parseArgs(args: string[]): Promise<Args> {
   const parsedArgs = flags.parse(args, {
-    boolean: ["all", "help", "version"],
+    boolean: ["all", "help", "version", "json"],
     string: ["threshold"],
     alias: {
       a: "all",
       t: "threshold",
       h: "help",
       v: "version",
+      j: "json",
     },
   });
 
@@ -80,5 +83,6 @@ export async function parseArgs(args: string[]): Promise<Args> {
     threshold: threshold,
     loc1,
     loc2,
+    json: parsedArgs.json,
   };
 }

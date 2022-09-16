@@ -10,7 +10,13 @@ export async function main(): Promise<void> {
     await crate1.initialize();
     const crate2 = new crate.Crate(parsedArgs.loc2);
     await crate2.initialize();
-    compare.compare(crate1, crate2, parsedArgs.all, parsedArgs.threshold);
+    compare.compare(
+      crate1,
+      crate2,
+      parsedArgs.all,
+      parsedArgs.threshold,
+      parsedArgs.json,
+    );
   } catch (e) {
     console.error(`${color.red("Error occurred!!")}: ${e.message}`);
     Deno.exit(1);

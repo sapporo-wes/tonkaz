@@ -7,24 +7,18 @@ export const OUTPUTS_ID_PREFIX_RE = new RegExp(`^outputs/`);
 export function compare(
   crate1: crate.Crate,
   crate2: crate.Crate,
-  all: boolean,
+  all = false,
   threshold: number = DEFAULT_THRESHOLD,
+  json = false,
 ): void {
-  renderFirstMsg(crate1, crate2);
   crate1.summarize();
   crate2.summarize();
-  renderSummaryTable(crate1, crate2);
-  renderEdamExt();
-
   const c1OutputsIds = all
     ? crate1.summary.outputs
     : crate1.summary.outputsWithEdam;
   const c2OutputsIds = all
     ? crate2.summary.outputs
     : crate2.summary.outputsWithEdam;
-
-  renderRepLevelExplanation(all, threshold);
-
   const compareResult = compareFiles(
     crate1,
     crate2,
@@ -32,7 +26,16 @@ export function compare(
     c2OutputsIds,
     threshold,
   );
-  renderCompareResult(compareResult, crate1, crate2, threshold);
+
+  if (!json) {
+    renderFirstMsg(crate1, crate2);
+    renderSummaryTable(crate1, crate2);
+    renderEdamExt();
+    renderRepLevelExplanation(all, threshold);
+    renderCompareResult(compareResult, crate1, crate2, threshold);
+  } else {
+    renderJson(compareResult);
+  }
 }
 
 export function renderFirstMsg(crate1: crate.Crate, crate2: crate.Crate): void {
@@ -628,4 +631,8 @@ export function appendLineUnderGeneralMetadata(table: string): string {
     ...lines.slice(insertIndex + 1),
   ];
   return insertedLines.join("\n");
+}
+
+export function renderJson(compareResult: CompareResult): void {
+  console.log(JSON.stringify(compareResult, null, 2));
 }
