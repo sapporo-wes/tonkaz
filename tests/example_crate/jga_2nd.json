@@ -2,76 +2,76 @@
     "@context": [
         "https://w3id.org/ro/crate/1.1/context",
         {
-            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#FileStats",
-            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#Format",
-            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#IntermediateFile",
-            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#OutputFile",
-            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoConfiguration",
-            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoService",
+            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#FileStats",
+            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#Format",
+            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#IntermediateFile",
+            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#OutputFile",
+            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoConfiguration",
+            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoService",
             "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
-            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestEnvironment",
+            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestEnvironment",
             "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
-            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestResult",
+            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestResult",
             "TestService": "https://w3id.org/ro/terms/test#TestService",
             "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
-            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#WorkflowAttachment",
-            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#attachment",
-            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cmd",
-            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#configuration",
-            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuArchitecture",
-            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuCount",
+            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#WorkflowAttachment",
+            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#attachment",
+            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cmd",
+            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#configuration",
+            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuArchitecture",
+            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuCount",
             "definition": "https://w3id.org/ro/terms/test#definition",
-            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateRate",
-            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateReads",
+            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateRate",
+            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateReads",
             "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
-            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#environment",
-            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#executableWorkflows",
-            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#exitCode",
-            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#format",
-            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#freeDiskSpace",
-            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#generatedBy",
-            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#getRuns",
-            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#gid",
-            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#inDocker",
-            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#indelsCount",
+            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#environment",
+            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#executableWorkflows",
+            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#exitCode",
+            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#format",
+            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#freeDiskSpace",
+            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#generatedBy",
+            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#getRuns",
+            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#gid",
+            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#inDocker",
+            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#indelsCount",
             "instance": "https://w3id.org/ro/terms/test#instance",
-            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#intermediateFiles",
-            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#lineCount",
-            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedRate",
-            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedReads",
-            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mode",
-            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#os",
-            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#osVersion",
-            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#outputs",
-            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#pid",
-            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#registeredOnlyMode",
+            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#intermediateFiles",
+            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#lineCount",
+            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedRate",
+            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedReads",
+            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mode",
+            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#os",
+            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#osVersion",
+            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#outputs",
+            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#pid",
+            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#registeredOnlyMode",
             "resource": "https://w3id.org/ro/terms/test#resource",
-            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#result",
-            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runId",
-            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runSh",
+            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#result",
+            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runId",
+            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runSh",
             "runsOn": "https://w3id.org/ro/terms/test#runsOn",
-            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoConfig",
-            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoEndpoint",
-            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#serviceInfo",
-            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sha512",
-            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#snpsCount",
-            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#state",
-            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stats",
-            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stderr",
-            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stdout",
-            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalMemory",
-            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalReads",
-            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#uid",
-            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedRate",
-            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedReads",
-            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#urlPrefix",
-            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#variantCount",
-            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowAttachment",
-            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowEngineParameters",
-            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowParameters",
-            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisId",
-            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisMetadata",
-            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisTestId"
+            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoConfig",
+            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoEndpoint",
+            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#serviceInfo",
+            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sha512",
+            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#snpsCount",
+            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#state",
+            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stats",
+            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stderr",
+            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stdout",
+            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalMemory",
+            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalReads",
+            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#uid",
+            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedRate",
+            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedReads",
+            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#urlPrefix",
+            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#variantCount",
+            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowAttachment",
+            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowEngineParameters",
+            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowParameters",
+            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisId",
+            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisMetadata",
+            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisTestId"
         }
     ],
     "@graph": [
@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-14T07:47:43+00:00",
+            "datePublished": "2022-09-17T16:08:53+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -703,7 +703,7 @@
             "url": {
                 "@id": "https://github.com/sapporo-wes/sapporo-service"
             },
-            "version": "1.4.6"
+            "version": "1.4.8"
         },
         {
             "@id": "https://github.com/sapporo-wes/sapporo-service",
@@ -738,55 +738,55 @@
             "@id": "service_info.json",
             "@type": "File",
             "contentSize": 1651,
-            "dateModified": "2022-09-10T15:09:20.026055",
+            "dateModified": "2022-09-17T15:48:28.789640",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 84,
             "mode": "-rw-r--r--",
             "name": "Sapporo service info",
-            "sha512": "e448c48f7ac4e1751fd2c0369c39ba098df869d2449275e6043bc05853717bee62bcbdc069cccba808e3847a1cff79ea74ab16c9a1b0f0ec01ec856f07d1a255",
-            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.6\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"UNKNOWN\": 1,\n    \"COMPLETE\": 1\n  }\n}",
-            "uid": 0
+            "sha512": "a0d7d80fbaf92a9b7b84297e367c91d46f123b404ff97dbbe69eee5b010d364d353ec4bdbb8e006bb590837723cf3aca4724d11f60da28b873543903ca470709",
+            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.8\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"UNKNOWN\": 1,\n    \"COMPLETE\": 1\n  }\n}",
+            "uid": 1000
         },
         {
             "@id": "executable_workflows.json",
             "@type": "File",
             "contentSize": 33024,
-            "dateModified": "2022-09-10T15:09:23.886097",
+            "dateModified": "2022-09-17T15:48:28.797640",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 650,
             "mode": "-rw-r--r--",
             "name": "Sapporo executable workflows",
             "sha512": "186d6d93ed49399c525e4541e2259da3d6b6a5cc6cfe76489930061add95affad25477d286ede26aa56d81f7fb4b0a452202715bb2a4611ee1e7c8912d60443d",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "run.sh",
             "@type": "File",
             "contentSize": 11327,
-            "dateModified": "2022-09-10T15:09:23.886097",
+            "dateModified": "2022-09-17T15:48:28.801640",
             "encodingFormat": "text/x-shellscript",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 307,
             "mode": "-rw-r--r--",
             "name": "Sapporo run.sh",
             "sha512": "b0f968d72e5722befba64719731849f574ab20f7a3c2cd0ab8165457c629cedbcc88b0d4392d812533ac6c6316647e9a089339e57269332c40f04674842d84b9",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "sapporo_config.json",
             "@type": "File",
             "contentSize": 441,
-            "dateModified": "2022-09-10T15:09:20.018054",
+            "dateModified": "2022-09-17T15:48:28.805640",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 10,
             "mode": "-rw-r--r--",
             "name": "Sapporo runtime configuration",
-            "sha512": "dd5aaf247282342c87c6ecbccf60866fb83b8b369dbed4d220232c932f4e4c72712766892b54ae31aa7c67462864e152543dd93cef9ecd25cff03bff3104066e",
-            "text": "{\n  \"sapporo_version\": \"1.4.6\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
-            "uid": 0
+            "sha512": "5ca15ddb3d9e71d17b00b16486de5c9c391726e509de5b45553bd01c482a6c04bb5c2be18580b9395411b7d154567dbae8eb1519506fa9345bc212b5ae965219",
+            "text": "{\n  \"sapporo_version\": \"1.4.8\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
+            "uid": 1000
         },
         {
             "@id": "#sapporo-test-environment",
@@ -795,9 +795,9 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 151318020096,
+            "freeDiskSpace": 138291490816,
             "gid": 0,
-            "inDocker": false,
+            "inDocker": true,
             "os": "Linux",
             "osVersion": "5.13.0-40-generic",
             "totalMemory": 25211322368,
@@ -817,7 +817,7 @@
             "dateModified": "2022-09-10T15:09:20.018054",
             "encodingFormat": "application/json",
             "engineVersion": "3.1.20220628170238",
-            "gid": 0,
+            "gid": 1000,
             "input": [
                 {
                     "@id": "exe/autosome-PAR.bed"
@@ -894,7 +894,7 @@
             "name": "Sapporo run request",
             "sha512": "2d52e65406548ff26399927588b7ea4d10edb792c15863680f22bd4b3796f515a1f376d0442d4431c2260df5fce45b46676a5ca1bff70c9eb78df0d7c1ea9d6e",
             "text": "{\n  \"workflow_params\": \"reference:\\n  class: File\\n  path: Homo_sapiens_assembly38.fasta\\n  format: http://edamontology.org/format_1929\\nsortsam_max_records_in_ram: 5000000\\nsortsam_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_MarkDuplicates_java_option: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_BaseRecalibrator_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_ApplyBQSR_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_HaplotypeCaller_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\nfastq2bam_ram_min: 48000\\nfastq2bam_cores_min: 16\\nbams2cram_ram_min: 48000\\nbams2cram_cores_min: 6\\nhaplotypecaller_ram_min: 48000\\nhaplotypecaller_cores_min: 6\\nbwa_bases_per_batch: 10000000\\nuse_bqsr: false\\ndbsnp:\\n  class: File\\n  path: Homo_sapiens_assembly38.dbsnp138.vcf\\n  format: http://edamontology.org/format_3016\\nmills:\\n  class: File\\n  path: Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\n  format: http://edamontology.org/format_3016\\nknown_indels:\\n  class: File\\n  path: Homo_sapiens_assembly38.known_indels.vcf.gz\\n  format: http://edamontology.org/format_3016\\nhaplotypecaller_autosome_PAR_interval_bed:\\n  class: File\\n  path: autosome-PAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_autosome_PAR_interval_list:\\n  class: File\\n  path: autosome-PAR.interval_list\\nhaplotypecaller_chrX_nonPAR_interval_bed:\\n  class: File\\n  path: chrX-nonPAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_chrX_nonPAR_interval_list:\\n  class: File\\n  path: chrX-nonPAR.interval_list\\nhaplotypecaller_chrY_nonPAR_interval_bed:\\n  class: File\\n  path: chrY-nonPAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_chrY_nonPAR_interval_list:\\n  class: File\\n  path: chrY-nonPAR.interval_list\\nsample_id: NA19023\\nrunlist_pe:\\n  - run_id: ERR1347662\\n    platform_name: ILLUMINA\\n    fastq1:\\n      class: File\\n      path: ERR1347662.small_1.fastq.gz\\n      format: http://edamontology.org/format_1930\\n    fastq2:\\n      class: File\\n      path: ERR1347662.small_2.fastq.gz\\n      format: http://edamontology.org/format_1930\\nrunlist_se: []\",\n  \"workflow_type\": \"CWL\",\n  \"workflow_type_version\": \"v1.1\",\n  \"tags\": null,\n  \"workflow_engine_name\": \"cwltool\",\n  \"workflow_engine_parameters\": \"{}\",\n  \"workflow_url\": \"https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl\",\n  \"workflow_name\": null,\n  \"workflow_attachment\": \"[{\\\"file_name\\\": \\\"autosome-PAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed\\\"}, {\\\"file_name\\\": \\\"autosome-PAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list\\\"}, {\\\"file_name\\\": \\\"chrX-nonPAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed\\\"}, {\\\"file_name\\\": \\\"chrX-nonPAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list\\\"}, {\\\"file_name\\\": \\\"chrY-nonPAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed\\\"}, {\\\"file_name\\\": \\\"chrY-nonPAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list\\\"}, {\\\"file_name\\\": \\\"ERR1347662.small_1.fastq.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz\\\"}, {\\\"file_name\\\": \\\"ERR1347662.small_2.fastq.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dbsnp138.vcf\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dbsnp138.vcf.idx\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dict\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.alt\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.amb\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.ann\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.bwt\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.fai\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.pac\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.sa\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.known_indels.vcf.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\\\"}, {\\\"file_name\\\": \\\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\\"}, {\\\"file_name\\\": \\\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\\\"}]\"\n}",
-            "uid": 0,
+            "uid": 1000,
             "workflowEngineParameters": {
                 "@id": "workflow_engine_params.txt"
             },
@@ -914,13 +914,13 @@
             "contentSize": 2055,
             "dateModified": "2022-09-10T15:09:20.018054",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 63,
             "mode": "-rw-r--r--",
             "name": "Sapporo workflow parameters",
             "sha512": "b5a40c2c6e62c154c01906d39ea0334e74a58f472ab4f640ce8ff204025a95c8860263666b545011aeeda5e8f26d73e15353c7548652f07448cfe0bf538eb799",
             "text": "reference:\n  class: File\n  path: Homo_sapiens_assembly38.fasta\n  format: http://edamontology.org/format_1929\nsortsam_max_records_in_ram: 5000000\nsortsam_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_MarkDuplicates_java_option: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_BaseRecalibrator_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_ApplyBQSR_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_HaplotypeCaller_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\nfastq2bam_ram_min: 48000\nfastq2bam_cores_min: 16\nbams2cram_ram_min: 48000\nbams2cram_cores_min: 6\nhaplotypecaller_ram_min: 48000\nhaplotypecaller_cores_min: 6\nbwa_bases_per_batch: 10000000\nuse_bqsr: false\ndbsnp:\n  class: File\n  path: Homo_sapiens_assembly38.dbsnp138.vcf\n  format: http://edamontology.org/format_3016\nmills:\n  class: File\n  path: Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\n  format: http://edamontology.org/format_3016\nknown_indels:\n  class: File\n  path: Homo_sapiens_assembly38.known_indels.vcf.gz\n  format: http://edamontology.org/format_3016\nhaplotypecaller_autosome_PAR_interval_bed:\n  class: File\n  path: autosome-PAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_autosome_PAR_interval_list:\n  class: File\n  path: autosome-PAR.interval_list\nhaplotypecaller_chrX_nonPAR_interval_bed:\n  class: File\n  path: chrX-nonPAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_chrX_nonPAR_interval_list:\n  class: File\n  path: chrX-nonPAR.interval_list\nhaplotypecaller_chrY_nonPAR_interval_bed:\n  class: File\n  path: chrY-nonPAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_chrY_nonPAR_interval_list:\n  class: File\n  path: chrY-nonPAR.interval_list\nsample_id: NA19023\nrunlist_pe:\n  - run_id: ERR1347662\n    platform_name: ILLUMINA\n    fastq1:\n      class: File\n      path: ERR1347662.small_1.fastq.gz\n      format: http://edamontology.org/format_1930\n    fastq2:\n      class: File\n      path: ERR1347662.small_2.fastq.gz\n      format: http://edamontology.org/format_1930\nrunlist_se: []",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://gist.githubusercontent.com/suecharo/96ef41ff0cb7af998c1cb7d41b4dfc83/raw/e5fbc2c844c5a37aeb3e7e80befa4f80b2c4299e/wf_params.yml"
         },
         {
@@ -931,13 +931,13 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T15:09:20.022054",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Sapporo workflow engine parameters",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "yevis-metadata.yml",
@@ -947,13 +947,13 @@
             "contentSize": 4744,
             "dateModified": "2022-09-10T15:09:23.890097",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Yevis metadata",
             "sha512": "ee922508b0d52618f7a3d9e694926bb211b9f8c81d67d5ba065c7a67bdc44e588cde23321b1eebb5ca5627224521c440879ff2265470e9060bb1dd995c470419",
             "text": "{\"id\":\"579bbccf-ff06-4c5f-98cb-d7a2dc73eca8\",\"version\":\"1.0.0\",\"license\":\"Apache-2.0\",\"authors\":[{\"github_account\":\"suecharo\",\"name\":\"Suetake, Hirotaka\",\"affiliation\":\"The University of Tokyo, Ascade Inc.\",\"orcid\":\"0000-0003-2765-0049\"}],\"workflow\":{\"name\":\"jga-analysis per-sample workflow\",\"readme\":\"https://raw.githubusercontent.com/biosciencedbc/jga-analysis/7fe2ede543fc42b1647774f7821380ecf22dfa26/README.md\",\"language\":{\"type\":\"CWL\",\"version\":\"v1.1\"},\"files\":[{\"url\":\"https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl\",\"target\":\"per-sample.cwl\",\"type\":\"primary\"}],\"testing\":[{\"id\":\"test_1\",\"files\":[{\"url\":\"https://gist.githubusercontent.com/suecharo/96ef41ff0cb7af998c1cb7d41b4dfc83/raw/e5fbc2c844c5a37aeb3e7e80befa4f80b2c4299e/wf_params.yml\",\"target\":\"wf_params.yml\",\"type\":\"wf_params\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed\",\"target\":\"autosome-PAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list\",\"target\":\"autosome-PAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed\",\"target\":\"chrX-nonPAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list\",\"target\":\"chrX-nonPAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed\",\"target\":\"chrY-nonPAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list\",\"target\":\"chrY-nonPAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz\",\"target\":\"ERR1347662.small_1.fastq.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz\",\"target\":\"ERR1347662.small_2.fastq.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf\",\"target\":\"Homo_sapiens_assembly38.dbsnp138.vcf\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx\",\"target\":\"Homo_sapiens_assembly38.dbsnp138.vcf.idx\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict\",\"target\":\"Homo_sapiens_assembly38.dict\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta\",\"target\":\"Homo_sapiens_assembly38.fasta\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt\",\"target\":\"Homo_sapiens_assembly38.fasta.alt\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb\",\"target\":\"Homo_sapiens_assembly38.fasta.amb\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann\",\"target\":\"Homo_sapiens_assembly38.fasta.ann\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt\",\"target\":\"Homo_sapiens_assembly38.fasta.bwt\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai\",\"target\":\"Homo_sapiens_assembly38.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac\",\"target\":\"Homo_sapiens_assembly38.fasta.pac\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa\",\"target\":\"Homo_sapiens_assembly38.fasta.sa\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz\",\"target\":\"Homo_sapiens_assembly38.known_indels.vcf.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\",\"target\":\"Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\",\"target\":\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\",\"target\":\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\",\"type\":\"other\"}]}]}}",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "https://github.com/common-workflow-language/cwltool",
@@ -989,11 +989,11 @@
             "format": {
                 "@id": "http://edamontology.org/format_3003"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 718,
             "mode": "-rw-r--r--",
             "sha512": "b2c7882ee7063559b37ca31ebea9ca0d169b602cd50205477ad92efd10ba5aceb5ea75c1d46b4b524e8395e74ffe37d3aeaabe00ee7bb71947ef405f4aa266c4",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed"
         },
         {
@@ -1005,11 +1005,11 @@
             "contentSize": 419230,
             "dateModified": "2022-09-10T15:09:30.206166",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 4085,
             "mode": "-rw-r--r--",
             "sha512": "f43551f519da78d5aa76837636b8e440e02f40954aa0b00019e7adc4f916b77424557b05b741e7b484d65815da8f2140a5f2ea4d84be6b46778e61773a222edf",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list"
         },
         {
@@ -1024,12 +1024,12 @@
             "format": {
                 "@id": "http://edamontology.org/format_3003"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "8b17ebdbd3732b31b43f5abf9d0f03ec61fef54968c57d9685e582625b03cf93ae4255df2c3dad4f1228f270a32b356ef3e1560fd67f445c15b77e6ec30934d7",
             "text": "chrX\t0\t10000\nchrX\t2781479\t155701382",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed"
         },
         {
@@ -1041,11 +1041,11 @@
             "contentSize": 399994,
             "dateModified": "2022-09-10T15:09:35.362222",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3369,
             "mode": "-rw-r--r--",
             "sha512": "090fdedb5349e6b2660afb6790d2f845c9985c04b023c42351438c60e296fbe25dd57fb074f26af1e366ad7e84034f34537235b94a4adabccb9fc8542dcdd8fd",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list"
         },
         {
@@ -1060,12 +1060,12 @@
             "format": {
                 "@id": "http://edamontology.org/format_3003"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3,
             "mode": "-rw-r--r--",
             "sha512": "e1568c7c26198db09adc0e9a784cb5aed8f31373bb6845cee67b819780b7674ac43dd69e9a83df60c08d6437aceb0935d126db3e641a3f0aad64efa1d5363a67",
             "text": "chrY\t0\t10000\nchrY\t2781479\t56887902\nchrY_KI270740v1_random\t0\t37240\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed"
         },
         {
@@ -1077,12 +1077,19 @@
             "contentSize": 400028,
             "dateModified": "2022-09-10T15:09:40.470277",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3370,
             "mode": "-rw-r--r--",
             "sha512": "72ddb909bed07befd0585a03884a987ecb63f1d182a5d99d8729bc81f277f184d8d94c6c0b28f0861709db05174450be52f3fa4cb72299b47fd00b27d59a93b8",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list"
+        },
+        {
+            "@id": "http://edamontology.org/format_1930",
+            "@type": [
+                "Format"
+            ],
+            "name": "FASTQ short read format ignoring quality scores."
         },
         {
             "@id": "exe/ERR1347662.small_1.fastq.gz",
@@ -1093,10 +1100,13 @@
             "contentSize": 767112,
             "dateModified": "2022-09-10T15:09:44.194318",
             "encodingFormat": "application/gzip",
-            "gid": 0,
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "5f757898c4b183d02e996cf179311ae58b716a9b2d9ff63101b4111931bd04efcf7230ac11b39700a3f3ac6a9f06a985330fd60a02bd6b4d4c1179039dfa5508",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz"
         },
         {
@@ -1108,10 +1118,13 @@
             "contentSize": 746812,
             "dateModified": "2022-09-10T15:09:47.850358",
             "encodingFormat": "application/gzip",
-            "gid": 0,
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "4e6b7247f6adf98a8639b81d0a137eb906904a4a0f584ce66e168ea1594779bb607d40b3b9d1c3337b90775166b39d0132d2d0e2acbbdd498e43f97c18417da6",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz"
         },
         {
@@ -1133,11 +1146,11 @@
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 60694831,
             "mode": "-rw-r--r--",
             "sha512": "e26fc9190fff0c7055844880d7265d1d18e38656f41a4765e8872a6300f70c17410dd24d8c08281be4ee58617afd6291b875ad9c3014f699859ea5d8c8d628d8",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf"
         },
         {
@@ -1149,10 +1162,10 @@
             "contentSize": 12480412,
             "dateModified": "2022-09-10T18:23:31.837910",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "bc7ef2be51c7ec65146e81350c1e12db92d122b20f4a468f31564107c6864a1539d7f80112cdd2fd4de8a643b77d951691d8d1f199632bfca1ce4940aaa33de8",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx"
         },
         {
@@ -1164,11 +1177,11 @@
             "contentSize": 581712,
             "dateModified": "2022-09-10T18:23:35.253865",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3367,
             "mode": "-rw-r--r--",
             "sha512": "9b64fa47412becaab2e41ecc7c4132fe5a5763980b27f2d16e52c8c712309f33efb1bc2fc713fcf75317e32386ebd8f06009e608c4d6e7252612a755b61e22bd",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict"
         },
         {
@@ -1190,11 +1203,11 @@
             "format": {
                 "@id": "http://edamontology.org/format_1929"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 32178545,
             "mode": "-rw-r--r--",
             "sha512": "41a0edb97c470b327464d37a4efe8d36f1796e1148191f1c5be1d7d868c4bfb91958f66de4234d402ec0360fac07b6fdd766b5c1100ae909c073425551256915",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta"
         },
         {
@@ -1206,11 +1219,11 @@
             "contentSize": 487553,
             "dateModified": "2022-09-10T19:11:56.486207",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3201,
             "mode": "-rw-r--r--",
             "sha512": "735507fd0216e640117684089c4d7da15151b7132ba7dca75ffb4d4684fe09e19ba78cb8da35d341345891e0adf44ee9f78e4f2a778dc9dd940889a93a0a511a",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt"
         },
         {
@@ -1222,11 +1235,11 @@
             "contentSize": 20199,
             "dateModified": "2022-09-10T19:11:58.410213",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1187,
             "mode": "-rw-r--r--",
             "sha512": "b438e8a0db4efefedaa1ce8a5e0d8ce5dc674828a5a53fcbd38d8414aac5c4aa7a81774ad4c2e2791813c7d6d2fc502af0893c78856366421a2e913a53b54f03",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb"
         },
         {
@@ -1238,11 +1251,11 @@
             "contentSize": 455474,
             "dateModified": "2022-09-10T19:12:01.798222",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 6733,
             "mode": "-rw-r--r--",
             "sha512": "ba0da6e18eb5b1152bdb2b6a6d24bf6aed3a66bc772ad15b2afef0a15ba0c11ab96bb3b050ff6d782542be4a700f48b08a4af3845a62c884981b641968176601",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann"
         },
         {
@@ -1254,10 +1267,10 @@
             "contentSize": 3217347004,
             "dateModified": "2022-09-10T20:01:20.693260",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "8f37627df707fef64eebfe2c1c01fb06235c3f4b7537c8e78921b3bd2662141a293d5421f48bd229ce08a2d40db7f5e7c3e26ee987737b600a522d00e424f01f",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt"
         },
         {
@@ -1269,11 +1282,11 @@
             "contentSize": 160928,
             "dateModified": "2022-09-10T20:01:23.037291",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3366,
             "mode": "-rw-r--r--",
             "sha512": "cfcc85de41b11afddc0013653f9d55c8c0d0e9f20962432ecdbd9445e42fd56601f91eeed1bdc31c257d35ef3a4d81ced720112018310b2db74cbb2730738feb",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai"
         },
         {
@@ -1285,10 +1298,10 @@
             "contentSize": 804336731,
             "dateModified": "2022-09-10T20:11:37.285074",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "f5a17908b53f88eb114510aa5b341df445fc592027e2d2d84205cec64b2e9b07f756e2e84a25fe9f4cf290a9dfeff69ea0c930306cff8c5727bc4b30451fa645",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac"
         },
         {
@@ -1300,10 +1313,10 @@
             "contentSize": 1608673512,
             "dateModified": "2022-09-10T20:38:45.037459",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "442596898fcc91f5f15f8661541062d84197a254bc83dd572ac36bc7a64afb78c19e2103b87db58c968c16c37e8c0be5ec29bc034cad50cd11c8ec2d791c181a",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa"
         },
         {
@@ -1314,14 +1327,14 @@
             ],
             "contentSize": 61692306,
             "dateModified": "2022-09-10T20:39:59.407701",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "293a430a339b59fb455c82393f806bf8f6057b1709a68361fa5d0f2a965cdcd4c9c1ccd8c3323915b3fd7287daa354b8aa55710a3f0797d7b4cf6f579b00a783",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz"
         },
         {
@@ -1332,11 +1345,11 @@
             ],
             "contentSize": 1567886,
             "dateModified": "2022-09-10T20:40:04.391594",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "6d35713f6bc8b76c5ce5e08bd02b2017cbe11ed6987d37fed8410297e436495ff2b49c67e43f45868682854e52477d9ff4bad96a437197c2ac67e821878fc253",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi"
         },
         {
@@ -1347,14 +1360,14 @@
             ],
             "contentSize": 20685880,
             "dateModified": "2022-09-10T20:40:36.990920",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "049749123bc5e10ca8af690d6af560e9647e9332181f71421e9638cb8c7a104c931554a5d931386f21344efd66e9eaa7e56ec5a891f40491a128e2b05ac8efdb",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
         },
         {
@@ -1365,11 +1378,11 @@
             ],
             "contentSize": 1500013,
             "dateModified": "2022-09-10T20:40:42.022820",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "6b2af39a30ec2f768d8fd70e50a641b520ad9d3c4f3e2a6c19bb6b59e58b67ba6606700bcc6f133ddbb79dab5fd5ff65fb259a86465ee1b97f44dba280c91414",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
         },
         {
@@ -1528,7 +1541,7 @@
                 }
             ],
             "pid": 12,
-            "runId": "jga2",
+            "runId": "work",
             "startTime": "2022-09-10T20:40:42",
             "state": "COMPLETE",
             "stderr": {
@@ -1544,12 +1557,12 @@
             "contentSize": 28775,
             "dateModified": "2022-09-10T22:09:06.100898",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 403,
             "mode": "-rw-r--r--",
             "name": "Sapporo stdout",
             "sha512": "5dd1558f0f9811c3229f4f5c3d2c8d26225f0ba7d558e71ffb859193cf4d919e0b41e5c772244710fd476aa58eeee281c8231ba6f7d0b15dce0bb201626dfc2c",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "stderr.log",
@@ -1557,12 +1570,12 @@
             "contentSize": 110327,
             "dateModified": "2022-09-10T22:09:08.380907",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1192,
             "mode": "-rw-r--r--",
             "name": "Sapporo stderr",
             "sha512": "4d902c1b536c542a0c3e8bafa656660559a61ec7b7dd758bc4a90ae1d3b7b8301c7ca1ae613ce77521a46349be201721371b0f44a72316fb0bcbc82ca9477259",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "outputs/NA19023.cram.crai.log",
@@ -1574,12 +1587,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T20:43:11.740342",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.crai.log"
         },
         {
@@ -1592,11 +1605,11 @@
             "contentSize": 50335,
             "dateModified": "2022-09-10T21:56:36.953851",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 308,
             "mode": "-rw-r--r--",
             "sha512": "1e27eae07e583208bcfbf0f5591604e51a947936b52c9b8566e5f4d3da5a29be800826044998cb6bb1c4309081f99d1f5ae44493949a4fb97c122ebe3e1cf2f6",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.autosome_PAR_ploidy_2.wgs_metrics.log"
         },
         {
@@ -1609,12 +1622,12 @@
             "contentSize": 90,
             "dateModified": "2022-09-10T22:01:55.551083",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "020aecfb7e091c4a11007a2e782def0b1052e79c7cc179df44b293283d90c3875440ff084693395c75f5150b3202e8ab31f1c894b2eeeef9a8d4b3787216186f",
             "text": "ln: failed to create symbolic link './NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz': File exists\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz.tbi.log"
         },
         {
@@ -1627,12 +1640,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T22:01:55.923085",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz.bcftools-stats.log"
         },
         {
@@ -1644,11 +1657,11 @@
             ],
             "contentSize": 274,
             "dateModified": "2022-09-10T22:09:04.592891",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "10b93e6b7ef5b2620bc12c9d788d31581cc31b9b671c61900d2e0afb75f33efc7e95c0bc02a36d778ae798077eb29dae88659fdf8c5c7c20d967843d30dfa74e",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz.tbi"
         },
         {
@@ -1660,11 +1673,11 @@
             ],
             "contentSize": 319,
             "dateModified": "2022-09-10T22:01:55.563083",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "2ec274b9d71c6209165903242e45c8ba8855ce1601689ebf25f3707ea291d165a825d49f7326e328c26c309212bdcdbac099ab669d354e13846b6153643e9fde",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz.tbi"
         },
         {
@@ -1677,30 +1690,12 @@
             "contentSize": 110509,
             "dateModified": "2022-09-10T20:43:14.388305",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3367,
             "mode": "-rw-r--r--",
             "sha512": "b30cf21bfe2f90b83c8dcc43b28c0979394f581bd0a0a4df8d8dcef5c082273f73fa4bc2ee6bd0f1a0c6ed629a0a616f689d9314242023c5f75b2c86b6310193",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.idxstats"
-        },
-        {
-            "@id": "#vcftools",
-            "@type": "SoftwareApplication",
-            "name": "vcftools",
-            "version": "0.1.16--pl5321h9a82719_6"
-        },
-        {
-            "@id": "#e9400f14-3b2c-4a09-9cb7-0c8923d86de3",
-            "@type": [
-                "FileStats"
-            ],
-            "generatedBy": {
-                "@id": "#vcftools"
-            },
-            "indelsCount": 1,
-            "snpsCount": 14,
-            "variantCount": 1061
         },
         {
             "@id": "outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz",
@@ -1711,17 +1706,14 @@
             ],
             "contentSize": 34398,
             "dateModified": "2022-09-10T21:45:48.276093",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "fe0e68834eb46245ab1e4b7c33966f0a41c049d3bba93188815a5e73537e148211f05622b51232c1417c554ed01e28634fc8d290db7be33e890f539d0abe8704",
-            "stats": {
-                "@id": "#e9400f14-3b2c-4a09-9cb7-0c8923d86de3"
-            },
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz"
         },
         {
@@ -1734,12 +1726,12 @@
             "contentSize": 90,
             "dateModified": "2022-09-10T22:09:04.580891",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "6ed4e2ee2d8b256bd3bf2390e0572f925d350de8f51eb9fea108d5eae118754a5819fff389851574e32e1ea51b73a63c702210cb8f3879edd1346554fc7bc002",
             "text": "ln: failed to create symbolic link './NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz': File exists\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz.tbi.log"
         },
         {
@@ -1752,12 +1744,12 @@
             "contentSize": 2831,
             "dateModified": "2022-09-10T22:09:05.660896",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 63,
             "mode": "-rw-r--r--",
             "sha512": "a7097bf147c20dba9a9ee19058d63a900a777bf3194d1bf241f5b3c5040116d1ac865d1eb5bfea17bfa5e9f069d9b614df8111132a4680904a2cd8453d31d705",
             "text": "# This file was produced by bcftools stats (1.9+htslib-1.9) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  /var/lib/cwl/stg289c1b1e-40f0-42d5-858d-ea53b38dfbcf/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\t/var/lib/cwl/stg289c1b1e-40f0-42d5-858d-ea53b38dfbcf/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t42\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t4\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t0\nSN\t0\tnumber of others:\t42\nSN\t0\tnumber of multiallelic sites:\t4\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t2\t2\t1.00\t2\t2\t1.00\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t4\t2\t2\t0\t0\t0\t0\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t4\t2\t2\t0\t0\t0\t0\n# QUAL, Stats by quality:\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t80\t4\t2\t2\t0\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]count\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t0\nST\t0\tA>G\t0\nST\t0\tA>T\t0\nST\t0\tC>A\t1\nST\t0\tC>G\t1\nST\t0\tC>T\t0\nST\t0\tG>A\t0\nST\t0\tG>C\t0\nST\t0\tG>T\t0\nST\t0\tT>A\t0\nST\t0\tT>C\t2\nST\t0\tT>G\t0\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t4\t0\t0.000000\t1\t25.000000\nDP\t0\t5\t0\t0.000000\t3\t75.000000\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats"
         },
         {
@@ -1770,11 +1762,11 @@
             "contentSize": 13773,
             "dateModified": "2022-09-10T20:42:25.949008",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 152,
             "mode": "-rw-r--r--",
             "sha512": "bbe854b5d28d457b2449e5e7ac5e287b8639173a8b79d15a784cf36e7d411a9aedf4b23fb8472c9c42982e1965d477564f622ada9188b2b349d190182ebbc6a4",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.log"
         },
         {
@@ -1787,12 +1779,12 @@
             "contentSize": 91,
             "dateModified": "2022-09-10T21:56:38.189856",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "902f253c7ccd8b51e1894da7076748999bff0e14791dc6b8452c00ed3bbc4ba0e1a89085a192ccfd63213275894c44f4aa1d2b249f875d93622b497b591463d8",
             "text": "ln: failed to create symbolic link './NA19023.autosome_PAR_ploidy_2.g.vcf.gz': File exists\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.tbi.log"
         },
         {
@@ -1805,24 +1797,12 @@
             "contentSize": 11212,
             "dateModified": "2022-09-10T20:43:50.843830",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 209,
             "mode": "-rw-r--r--",
             "sha512": "4ee97a774a4c41dae92e7017f0cc5c418b42572c5a3a6e4c400ab75d1386ec65a46e6f58f290810e428207d33940d8083a9a26df370443d7683e29e46beffbfd",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.collect_base_dist_by_cycle"
-        },
-        {
-            "@id": "#a3d9d8c7-a953-43b9-b860-db39bfa8b2c6",
-            "@type": [
-                "FileStats"
-            ],
-            "generatedBy": {
-                "@id": "#vcftools"
-            },
-            "indelsCount": 0,
-            "snpsCount": 4,
-            "variantCount": 42
         },
         {
             "@id": "outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz",
@@ -1833,17 +1813,14 @@
             ],
             "contentSize": 24935,
             "dateModified": "2022-09-10T22:09:03.612887",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "13b1802512ace1d93b0d72196ebd8db973d7c1abc2b591fd640f126a7cba8c215af4a8b6a4d95c09a75197a4eaa43f594dc8d07c12a77eee442babcd7505ce67",
-            "stats": {
-                "@id": "#a3d9d8c7-a953-43b9-b860-db39bfa8b2c6"
-            },
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz"
         },
         {
@@ -1856,12 +1833,12 @@
             "contentSize": 3244,
             "dateModified": "2022-09-10T21:56:40.397864",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 81,
             "mode": "-rw-r--r--",
             "sha512": "91e9af6cdf3f6a5e515cc21abc125930bc4946ae5c39135f9f9ed6bba962001f73d93fe8930f6ae0ca3f5656b0846319b79c9062d9083c39c64b9dbcd7fabee3",
             "text": "# This file was produced by bcftools stats (1.9+htslib-1.9) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  /var/lib/cwl/stg38fa8437-8e86-4c2c-b092-b7b0e4cc5d66/NA19023.autosome_PAR_ploidy_2.g.vcf.gz\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\t/var/lib/cwl/stg38fa8437-8e86-4c2c-b092-b7b0e4cc5d66/NA19023.autosome_PAR_ploidy_2.g.vcf.gz\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t1061\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t14\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t1\nSN\t0\tnumber of others:\t1061\nSN\t0\tnumber of multiallelic sites:\t15\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t10\t4\t2.50\t10\t4\t2.50\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t14\t10\t4\t1\t0\t0\t1\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t14\t10\t4\t1\t0\t0\t1\n# QUAL, Stats by quality:\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t0\t2\t2\t0\t1\nQUAL\t0\t13\t1\t0\t1\t0\nQUAL\t0\t16\t1\t1\t0\t0\nQUAL\t0\t35\t1\t0\t1\t0\nQUAL\t0\t41\t1\t1\t0\t0\nQUAL\t0\t58\t1\t1\t0\t0\nQUAL\t0\t59\t1\t1\t0\t0\nQUAL\t0\t62\t1\t0\t1\t0\nQUAL\t0\t78\t2\t2\t0\t0\nQUAL\t0\t87\t1\t1\t0\t0\nQUAL\t0\t166\t2\t1\t1\t0\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]count\nIDD\t0\t-1\t1\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t0\nST\t0\tA>G\t3\nST\t0\tA>T\t0\nST\t0\tC>A\t0\nST\t0\tC>G\t0\nST\t0\tC>T\t4\nST\t0\tG>A\t0\nST\t0\tG>C\t0\nST\t0\tG>T\t1\nST\t0\tT>A\t2\nST\t0\tT>C\t3\nST\t0\tT>G\t1\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t2\t0\t0.000000\t4\t26.666667\nDP\t0\t3\t0\t0.000000\t1\t6.666667\nDP\t0\t4\t0\t0.000000\t1\t6.666667\nDP\t0\t5\t0\t0.000000\t1\t6.666667\nDP\t0\t6\t0\t0.000000\t1\t6.666667\nDP\t0\t10\t0\t0.000000\t1\t6.666667\nDP\t0\t11\t0\t0.000000\t3\t20.000000\nDP\t0\t13\t0\t0.000000\t2\t13.333333\nDP\t0\t16\t0\t0.000000\t1\t6.666667\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.bcftools-stats"
         },
         {
@@ -1874,12 +1851,12 @@
             "contentSize": 2723,
             "dateModified": "2022-09-10T22:01:56.631088",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 59,
             "mode": "-rw-r--r--",
             "sha512": "a0220545b293a2e7b14a63ef6f627ebc1c4f4ad9a9e95cd5c0df529b110f933b71133cdc7134d1004cd99a83908c1df760574c264545034e532ecc9315953455",
             "text": "# This file was produced by bcftools stats (1.9+htslib-1.9) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  /var/lib/cwl/stg85c5e3ba-dd61-4900-9c2e-d5975a8743fd/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\t/var/lib/cwl/stg85c5e3ba-dd61-4900-9c2e-d5975a8743fd/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t2\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t0\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t0\nSN\t0\tnumber of others:\t2\nSN\t0\tnumber of multiallelic sites:\t0\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t0\t0\t0.00\t0\t0\t0.00\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t0\t0\t0\t0\t0\t0\t0\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\n# QUAL, Stats by quality:\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]count\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t0\nST\t0\tA>G\t0\nST\t0\tA>T\t0\nST\t0\tC>A\t0\nST\t0\tC>G\t0\nST\t0\tC>T\t0\nST\t0\tG>A\t0\nST\t0\tG>C\t0\nST\t0\tG>T\t0\nST\t0\tT>A\t0\nST\t0\tT>C\t0\nST\t0\tT>G\t0\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz.bcftools-stats"
         },
         {
@@ -1892,12 +1869,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T21:45:47.536092",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.log"
         },
         {
@@ -1910,12 +1887,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T22:09:04.944892",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats.log"
         },
         {
@@ -1927,11 +1904,11 @@
             ],
             "contentSize": 322,
             "dateModified": "2022-09-10T22:07:13.724413",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "3a9660dbe2ae565b7cd634a689c355c529142bf0adb1f2032b7a7c4bb36ae90c34a02f257731dec898b23b5242dd62d8b6ccf603e9620ad4ede8b56d22b57d74",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.tbi"
         },
         {
@@ -1944,12 +1921,12 @@
             "contentSize": 5766,
             "dateModified": "2022-09-10T22:04:18.027670",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 47,
             "mode": "-rw-r--r--",
             "sha512": "1c592436b1ce544eecc1dc7c9a2aa8c9eab22e1107e4c17664de65063c00ac06ecd8ac8cf580d767afcde697edec397fd39048d983b4406eee442699fee254f4",
             "text": "INFO\t2022-09-10 22:02:01\tCollectWgsMetrics\t\n\n********** NOTE: Picard's command line syntax is changing.\n**********\n********** For more information, please see:\n********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)\n**********\n********** The command line looks like this in the new syntax:\n**********\n**********    CollectWgsMetrics -I /var/lib/cwl/stg1d755c9c-d640-4a0b-b26b-3e6c6199cc39/NA19023.cram -O NA19023.cram.chrX_nonPAR_ploidy_1.wgs_metrics -R /var/lib/cwl/stg932cc5f5-f530-4681-a686-325d3332d536/Homo_sapiens_assembly38.fasta -INTERVALS /var/lib/cwl/stgfe657547-1d77-4149-868c-fdecf76eb7e1/chrX-nonPAR.interval_list -TMP_DIR temp -VALIDATION_STRINGENCY LENIENT\n**********\n\n\n22:02:01.396 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gatk/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so\n[Sat Sep 10 22:02:01 GMT 2022] CollectWgsMetrics INPUT=/var/lib/cwl/stg1d755c9c-d640-4a0b-b26b-3e6c6199cc39/NA19023.cram OUTPUT=NA19023.cram.chrX_nonPAR_ploidy_1.wgs_metrics INTERVALS=/var/lib/cwl/stgfe657547-1d77-4149-868c-fdecf76eb7e1/chrX-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stg932cc5f5-f530-4681-a686-325d3332d536/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\nSep 10, 2022 10:02:01 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine\nINFO: Failed to detect whether we are running on Google Compute Engine.\nINFO\t2022-09-10 22:02:20\tCollectWgsMetrics\tProcessed    10,000,000 loci.  Elapsed time: 00:00:18s.  Time for last 10,000,000:    2s.  Last read position: chrX:12,781,479\nINFO\t2022-09-10 22:02:22\tCollectWgsMetrics\tProcessed    20,000,000 loci.  Elapsed time: 00:00:21s.  Time for last 10,000,000:    2s.  Last read position: chrX:22,781,479\nINFO\t2022-09-10 22:02:24\tCollectWgsMetrics\tProcessed    30,000,000 loci.  Elapsed time: 00:00:23s.  Time for last 10,000,000:    2s.  Last read position: chrX:32,781,479\nINFO\t2022-09-10 22:02:27\tCollectWgsMetrics\tProcessed    40,000,000 loci.  Elapsed time: 00:00:25s.  Time for last 10,000,000:    2s.  Last read position: chrX:42,968,054\nINFO\t2022-09-10 22:02:29\tCollectWgsMetrics\tProcessed    50,000,000 loci.  Elapsed time: 00:00:27s.  Time for last 10,000,000:    1s.  Last read position: chrX:53,198,054\nINFO\t2022-09-10 22:02:31\tCollectWgsMetrics\tProcessed    60,000,000 loci.  Elapsed time: 00:00:29s.  Time for last 10,000,000:    1s.  Last read position: chrX:63,299,254\nINFO\t2022-09-10 22:02:32\tCollectWgsMetrics\tProcessed    70,000,000 loci.  Elapsed time: 00:00:31s.  Time for last 10,000,000:    1s.  Last read position: chrX:73,299,254\nINFO\t2022-09-10 22:02:34\tCollectWgsMetrics\tProcessed    80,000,000 loci.  Elapsed time: 00:00:33s.  Time for last 10,000,000:    1s.  Last read position: chrX:83,299,254\nINFO\t2022-09-10 22:02:36\tCollectWgsMetrics\tProcessed    90,000,000 loci.  Elapsed time: 00:00:35s.  Time for last 10,000,000:    2s.  Last read position: chrX:93,299,254\nINFO\t2022-09-10 22:02:38\tCollectWgsMetrics\tProcessed   100,000,000 loci.  Elapsed time: 00:00:37s.  Time for last 10,000,000:    1s.  Last read position: chrX:103,299,254\nINFO\t2022-09-10 22:02:40\tCollectWgsMetrics\tProcessed   110,000,000 loci.  Elapsed time: 00:00:39s.  Time for last 10,000,000:    1s.  Last read position: chrX:113,299,254\nINFO\t2022-09-10 22:02:42\tCollectWgsMetrics\tProcessed   120,000,000 loci.  Elapsed time: 00:00:40s.  Time for last 10,000,000:    1s.  Last read position: chrX:123,537,041\nINFO\t2022-09-10 22:02:44\tCollectWgsMetrics\tProcessed   130,000,000 loci.  Elapsed time: 00:00:42s.  Time for last 10,000,000:    1s.  Last read position: chrX:133,537,041\nINFO\t2022-09-10 22:02:46\tCollectWgsMetrics\tProcessed   140,000,000 loci.  Elapsed time: 00:00:44s.  Time for last 10,000,000:    2s.  Last read position: chrX:143,537,041\nINFO\t2022-09-10 22:02:47\tCollectWgsMetrics\tProcessed   150,000,000 loci.  Elapsed time: 00:00:46s.  Time for last 10,000,000:    1s.  Last read position: chrX:153,587,041\nINFO\t2022-09-10 22:02:48\tTheoreticalSensitivity\tCreating Roulette Wheel\nINFO\t2022-09-10 22:02:48\tTheoreticalSensitivity\tCalculating quality sums from quality sampler\nINFO\t2022-09-10 22:02:48\tTheoreticalSensitivity\t0 sampling iterations completed\nINFO\t2022-09-10 22:02:58\tTheoreticalSensitivity\t1000 sampling iterations completed\nINFO\t2022-09-10 22:03:06\tTheoreticalSensitivity\t2000 sampling iterations completed\nINFO\t2022-09-10 22:03:16\tTheoreticalSensitivity\t3000 sampling iterations completed\nINFO\t2022-09-10 22:03:25\tTheoreticalSensitivity\t4000 sampling iterations completed\nINFO\t2022-09-10 22:03:34\tTheoreticalSensitivity\t5000 sampling iterations completed\nINFO\t2022-09-10 22:03:43\tTheoreticalSensitivity\t6000 sampling iterations completed\nINFO\t2022-09-10 22:03:51\tTheoreticalSensitivity\t7000 sampling iterations completed\nINFO\t2022-09-10 22:04:00\tTheoreticalSensitivity\t8000 sampling iterations completed\nINFO\t2022-09-10 22:04:09\tTheoreticalSensitivity\t9000 sampling iterations completed\nINFO\t2022-09-10 22:04:17\tTheoreticalSensitivity\tCalculating theoretical het sensitivity\n[Sat Sep 10 22:04:18 GMT 2022] picard.analysis.CollectWgsMetrics done. Elapsed time: 2.28 minutes.\nRuntime.totalMemory()=2781347840\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrX_nonPAR_ploidy_1.wgs_metrics.log"
         },
         {
@@ -1962,12 +1939,12 @@
             "contentSize": 2981,
             "dateModified": "2022-09-10T22:01:54.419079",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 263,
             "mode": "-rw-r--r--",
             "sha512": "6d63cfbb3d75857cdc653157ff1a5de17377d25823e1b0c0ab03f5e095c2b8c8b0c10a1341d1f2863a1c408b88a1a1f8cc62b7fdf4e98d3c9f1951012341f95b",
             "text": "## htsjdk.samtools.metrics.StringHeader\n# CollectWgsMetrics INPUT=/var/lib/cwl/stg1aa8d437-1983-4bd4-9245-3a749e354fb4/NA19023.cram OUTPUT=NA19023.cram.chrX_nonPAR_ploidy_2.wgs_metrics INTERVALS=/var/lib/cwl/stg3018a2cb-5bc4-44ee-9efe-0510e69ca3cd/chrX-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stgb115dde0-9545-4c85-8c58-fb5d0253c737/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\n## htsjdk.samtools.metrics.StringHeader\n# Started on: Sat Sep 10 21:59:37 GMT 2022\n\n## METRICS CLASS\tpicard.analysis.WgsMetrics\nGENOME_TERRITORY\tMEAN_COVERAGE\tSD_COVERAGE\tMEDIAN_COVERAGE\tMAD_COVERAGE\tPCT_EXC_ADAPTER\tPCT_EXC_MAPQ\tPCT_EXC_DUPE\tPCT_EXC_UNPAIRED\tPCT_EXC_BASEQ\tPCT_EXC_OVERLAP\tPCT_EXC_CAPPED\tPCT_EXC_TOTAL\tPCT_1X\tPCT_5X\tPCT_10X\tPCT_15X\tPCT_20X\tPCT_25X\tPCT_30X\tPCT_40X\tPCT_50X\tPCT_60X\tPCT_70X\tPCT_80X\tPCT_90X\tPCT_100X\tFOLD_80_BASE_PENALTY\tFOLD_90_BASE_PENALTY\tFOLD_95_BASE_PENALTY\tHET_SNP_SENSITIVITY\tHET_SNP_Q\n152114341\t0\t0\t0\t0\t0\t1\t0\t0\t0\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t?\t?\t?\t0\t0\n\n## HISTOGRAM\tjava.lang.Integer\ncoverage\thigh_quality_coverage_count\n0\t152114341\n1\t0\n2\t0\n3\t0\n4\t0\n5\t0\n6\t0\n7\t0\n8\t0\n9\t0\n10\t0\n11\t0\n12\t0\n13\t0\n14\t0\n15\t0\n16\t0\n17\t0\n18\t0\n19\t0\n20\t0\n21\t0\n22\t0\n23\t0\n24\t0\n25\t0\n26\t0\n27\t0\n28\t0\n29\t0\n30\t0\n31\t0\n32\t0\n33\t0\n34\t0\n35\t0\n36\t0\n37\t0\n38\t0\n39\t0\n40\t0\n41\t0\n42\t0\n43\t0\n44\t0\n45\t0\n46\t0\n47\t0\n48\t0\n49\t0\n50\t0\n51\t0\n52\t0\n53\t0\n54\t0\n55\t0\n56\t0\n57\t0\n58\t0\n59\t0\n60\t0\n61\t0\n62\t0\n63\t0\n64\t0\n65\t0\n66\t0\n67\t0\n68\t0\n69\t0\n70\t0\n71\t0\n72\t0\n73\t0\n74\t0\n75\t0\n76\t0\n77\t0\n78\t0\n79\t0\n80\t0\n81\t0\n82\t0\n83\t0\n84\t0\n85\t0\n86\t0\n87\t0\n88\t0\n89\t0\n90\t0\n91\t0\n92\t0\n93\t0\n94\t0\n95\t0\n96\t0\n97\t0\n98\t0\n99\t0\n100\t0\n101\t0\n102\t0\n103\t0\n104\t0\n105\t0\n106\t0\n107\t0\n108\t0\n109\t0\n110\t0\n111\t0\n112\t0\n113\t0\n114\t0\n115\t0\n116\t0\n117\t0\n118\t0\n119\t0\n120\t0\n121\t0\n122\t0\n123\t0\n124\t0\n125\t0\n126\t0\n127\t0\n128\t0\n129\t0\n130\t0\n131\t0\n132\t0\n133\t0\n134\t0\n135\t0\n136\t0\n137\t0\n138\t0\n139\t0\n140\t0\n141\t0\n142\t0\n143\t0\n144\t0\n145\t0\n146\t0\n147\t0\n148\t0\n149\t0\n150\t0\n151\t0\n152\t0\n153\t0\n154\t0\n155\t0\n156\t0\n157\t0\n158\t0\n159\t0\n160\t0\n161\t0\n162\t0\n163\t0\n164\t0\n165\t0\n166\t0\n167\t0\n168\t0\n169\t0\n170\t0\n171\t0\n172\t0\n173\t0\n174\t0\n175\t0\n176\t0\n177\t0\n178\t0\n179\t0\n180\t0\n181\t0\n182\t0\n183\t0\n184\t0\n185\t0\n186\t0\n187\t0\n188\t0\n189\t0\n190\t0\n191\t0\n192\t0\n193\t0\n194\t0\n195\t0\n196\t0\n197\t0\n198\t0\n199\t0\n200\t0\n201\t0\n202\t0\n203\t0\n204\t0\n205\t0\n206\t0\n207\t0\n208\t0\n209\t0\n210\t0\n211\t0\n212\t0\n213\t0\n214\t0\n215\t0\n216\t0\n217\t0\n218\t0\n219\t0\n220\t0\n221\t0\n222\t0\n223\t0\n224\t0\n225\t0\n226\t0\n227\t0\n228\t0\n229\t0\n230\t0\n231\t0\n232\t0\n233\t0\n234\t0\n235\t0\n236\t0\n237\t0\n238\t0\n239\t0\n240\t0\n241\t0\n242\t0\n243\t0\n244\t0\n245\t0\n246\t0\n247\t0\n248\t0\n249\t0\n250\t0\n\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrX_nonPAR_ploidy_2.wgs_metrics"
         },
         {
@@ -1980,12 +1957,12 @@
             "contentSize": 3094,
             "dateModified": "2022-09-10T21:56:36.953851",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 263,
             "mode": "-rw-r--r--",
             "sha512": "c5428ecbbaffe450c65aaea7991ab8317bf4fe42e771360d89b8f2b3e0bcaf92ed24c62bfb9e44d2048448c0263679d8516a98ac73247f86eeaea8557d58610f",
             "text": "## htsjdk.samtools.metrics.StringHeader\n# CollectWgsMetrics INPUT=/var/lib/cwl/stga80a0026-cae3-43fd-9113-b65a3172cb59/NA19023.cram OUTPUT=NA19023.cram.autosome_PAR_ploidy_2.wgs_metrics INTERVALS=/var/lib/cwl/stg3d57bd49-b42a-41bb-9e30-f6e54ec32a69/autosome-PAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stg95e6f038-a688-4c4c-96f7-d57e302b02b2/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\n## htsjdk.samtools.metrics.StringHeader\n# Started on: Sat Sep 10 21:45:52 GMT 2022\n\n## METRICS CLASS\tpicard.analysis.WgsMetrics\nGENOME_TERRITORY\tMEAN_COVERAGE\tSD_COVERAGE\tMEDIAN_COVERAGE\tMAD_COVERAGE\tPCT_EXC_ADAPTER\tPCT_EXC_MAPQ\tPCT_EXC_DUPE\tPCT_EXC_UNPAIRED\tPCT_EXC_BASEQ\tPCT_EXC_OVERLAP\tPCT_EXC_CAPPED\tPCT_EXC_TOTAL\tPCT_1X\tPCT_5X\tPCT_10X\tPCT_15X\tPCT_20X\tPCT_25X\tPCT_30X\tPCT_40X\tPCT_50X\tPCT_60X\tPCT_70X\tPCT_80X\tPCT_90X\tPCT_100X\tFOLD_80_BASE_PENALTY\tFOLD_90_BASE_PENALTY\tFOLD_95_BASE_PENALTY\tHET_SNP_SENSITIVITY\tHET_SNP_Q\n2761168508\t0.000012\t0.009411\t0\t0\t0\t0.983971\t0.000046\t0.000041\t0.00083\t0.000007\t0\t0.984895\t0.000003\t0.000001\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t?\t?\t?\t0.000002\t0\n\n## HISTOGRAM\tjava.lang.Integer\ncoverage\thigh_quality_coverage_count\n0\t2761158984\n1\t4642\n2\t1518\n3\t387\n4\t630\n5\t491\n6\t183\n7\t241\n8\t265\n9\t235\n10\t169\n11\t194\n12\t112\n13\t85\n14\t212\n15\t74\n16\t33\n17\t35\n18\t14\n19\t4\n20\t0\n21\t0\n22\t0\n23\t0\n24\t0\n25\t0\n26\t0\n27\t0\n28\t0\n29\t0\n30\t0\n31\t0\n32\t0\n33\t0\n34\t0\n35\t0\n36\t0\n37\t0\n38\t0\n39\t0\n40\t0\n41\t0\n42\t0\n43\t0\n44\t0\n45\t0\n46\t0\n47\t0\n48\t0\n49\t0\n50\t0\n51\t0\n52\t0\n53\t0\n54\t0\n55\t0\n56\t0\n57\t0\n58\t0\n59\t0\n60\t0\n61\t0\n62\t0\n63\t0\n64\t0\n65\t0\n66\t0\n67\t0\n68\t0\n69\t0\n70\t0\n71\t0\n72\t0\n73\t0\n74\t0\n75\t0\n76\t0\n77\t0\n78\t0\n79\t0\n80\t0\n81\t0\n82\t0\n83\t0\n84\t0\n85\t0\n86\t0\n87\t0\n88\t0\n89\t0\n90\t0\n91\t0\n92\t0\n93\t0\n94\t0\n95\t0\n96\t0\n97\t0\n98\t0\n99\t0\n100\t0\n101\t0\n102\t0\n103\t0\n104\t0\n105\t0\n106\t0\n107\t0\n108\t0\n109\t0\n110\t0\n111\t0\n112\t0\n113\t0\n114\t0\n115\t0\n116\t0\n117\t0\n118\t0\n119\t0\n120\t0\n121\t0\n122\t0\n123\t0\n124\t0\n125\t0\n126\t0\n127\t0\n128\t0\n129\t0\n130\t0\n131\t0\n132\t0\n133\t0\n134\t0\n135\t0\n136\t0\n137\t0\n138\t0\n139\t0\n140\t0\n141\t0\n142\t0\n143\t0\n144\t0\n145\t0\n146\t0\n147\t0\n148\t0\n149\t0\n150\t0\n151\t0\n152\t0\n153\t0\n154\t0\n155\t0\n156\t0\n157\t0\n158\t0\n159\t0\n160\t0\n161\t0\n162\t0\n163\t0\n164\t0\n165\t0\n166\t0\n167\t0\n168\t0\n169\t0\n170\t0\n171\t0\n172\t0\n173\t0\n174\t0\n175\t0\n176\t0\n177\t0\n178\t0\n179\t0\n180\t0\n181\t0\n182\t0\n183\t0\n184\t0\n185\t0\n186\t0\n187\t0\n188\t0\n189\t0\n190\t0\n191\t0\n192\t0\n193\t0\n194\t0\n195\t0\n196\t0\n197\t0\n198\t0\n199\t0\n200\t0\n201\t0\n202\t0\n203\t0\n204\t0\n205\t0\n206\t0\n207\t0\n208\t0\n209\t0\n210\t0\n211\t0\n212\t0\n213\t0\n214\t0\n215\t0\n216\t0\n217\t0\n218\t0\n219\t0\n220\t0\n221\t0\n222\t0\n223\t0\n224\t0\n225\t0\n226\t0\n227\t0\n228\t0\n229\t0\n230\t0\n231\t0\n232\t0\n233\t0\n234\t0\n235\t0\n236\t0\n237\t0\n238\t0\n239\t0\n240\t0\n241\t0\n242\t0\n243\t0\n244\t0\n245\t0\n246\t0\n247\t0\n248\t0\n249\t0\n250\t0\n\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.autosome_PAR_ploidy_2.wgs_metrics"
         },
         {
@@ -1998,12 +1975,12 @@
             "contentSize": 90,
             "dateModified": "2022-09-10T22:07:13.712413",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "fb2745633bf5cb01a7f456ef26e0d53ab9cc4f1ea4f9599479d2ce2199e506a8581a4c2c1b75bafadc06da9addb34b0f5264b1a093556f9e374612ab2469ef70",
             "text": "ln: failed to create symbolic link './NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz': File exists\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.tbi.log"
         },
         {
@@ -2016,12 +1993,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T21:56:38.873858",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.bcftools-stats.log"
         },
         {
@@ -2034,25 +2011,13 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T22:07:14.136415",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats.log"
-        },
-        {
-            "@id": "#362a4b61-cbf2-4ee9-bb87-2ff96f6d627e",
-            "@type": [
-                "FileStats"
-            ],
-            "generatedBy": {
-                "@id": "#vcftools"
-            },
-            "indelsCount": 0,
-            "snpsCount": 0,
-            "variantCount": 2
         },
         {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz",
@@ -2063,17 +2028,14 @@
             ],
             "contentSize": 24601,
             "dateModified": "2022-09-10T21:59:33.302517",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "cb4e9e8f30cdbd36199db9e510226838e824d4ee2af63555ab570f49bb5317b4cbf3e753963069a02146e4bafa828a2ca1d12e9908b11a5ffd66c1d3903ec0d5",
-            "stats": {
-                "@id": "#362a4b61-cbf2-4ee9-bb87-2ff96f6d627e"
-            },
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz"
         },
         {
@@ -2086,11 +2048,11 @@
             "contentSize": 16381,
             "dateModified": "2022-09-10T21:59:31.898511",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 171,
             "mode": "-rw-r--r--",
             "sha512": "a008b0da5291d0ad1fc3f4ae52ea7227b33d26c1057584f26cd9cfb355c0a6a7921c03da32d2de2416a981401ff06a8034a3abd2f8ca123e2e54416b61598887",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.log"
         },
         {
@@ -2103,10 +2065,10 @@
             "contentSize": 86130,
             "dateModified": "2022-09-10T20:44:53.919105",
             "encodingFormat": "image/png",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "2dabb806641a04071cc5d9a354f5bd2cc934bb1ad8c78932e2f2160edf2cb0e3517351a4369ae583d32af62d000e7e3862c90a055e6f40f1f694d8ef08f93b91",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.collect_base_dist_by_cycle.chart.png"
         },
         {
@@ -2119,12 +2081,12 @@
             "contentSize": 413,
             "dateModified": "2022-09-10T20:43:15.892285",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 13,
             "mode": "-rw-r--r--",
             "sha512": "9dec11b92ddf9d85c4147dc52d0a7047d2f3809c363f5f63a80a529c560b6c37c9025544fa8e454efd508e39e3c40eb3d7fabdbc1f6d4844ff7f06112c619f54",
             "text": "21866 + 0 in total (QC-passed reads + QC-failed reads)\n0 + 0 secondary\n110 + 0 supplementary\n21 + 0 duplicates\n21838 + 0 mapped (99.87% : N/A)\n21756 + 0 paired in sequencing\n10878 + 0 read1\n10878 + 0 read2\n0 + 0 properly paired (0.00% : N/A)\n21700 + 0 with itself and mate mapped\n28 + 0 singletons (0.13% : N/A)\n15748 + 0 with mate mapped to a different chr\n1468 + 0 with mate mapped to a different chr (mapQ>=5)\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.flagstat"
         },
         {
@@ -2137,12 +2099,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T22:09:02.888884",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz.log"
         },
         {
@@ -2155,11 +2117,11 @@
             "contentSize": 53949,
             "dateModified": "2022-09-10T21:45:46.628091",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 506,
             "mode": "-rw-r--r--",
             "sha512": "08a9e740a745e08a09ab2012ad6aef887e85763ec411b95d61ee7fc158cf5d0c21c77b9296713de8e99e953906fbda182ccaca3580fe5fd55ab48567607d84c8",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.log"
         },
         {
@@ -2172,12 +2134,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T20:42:26.856994",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.bam.log"
         },
         {
@@ -2190,10 +2152,10 @@
             "contentSize": 1894122,
             "dateModified": "2022-09-10T20:43:11.508345",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "68b62cec57cf0df24f0a20df15188b7712444bf8e2bbaa4b2769aacbd9e14197c1ac58f9e58562b4b035a0738da801d014b8c85b9c5669e8122b47b65ac64147",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram"
         },
         {
@@ -2205,11 +2167,11 @@
             ],
             "contentSize": 13433,
             "dateModified": "2022-09-10T21:56:38.245856",
-            "encodingFormat": "application/x-gzip",
-            "gid": 0,
+            "encodingFormat": "application/gzip",
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "1b3c14e90a23b946ae7648229accc53f05f768f82b5e5eb1ab4d6c3d73ab331133373899f06248db0b75b40278123779b5726eb6bb973257ee806650d451c482",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.tbi"
         },
         {
@@ -2222,12 +2184,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T21:59:32.562514",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz.log"
         },
         {
@@ -2240,12 +2202,12 @@
             "contentSize": 2723,
             "dateModified": "2022-09-10T22:07:14.864418",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 59,
             "mode": "-rw-r--r--",
             "sha512": "c00da4295454c5906f2198cc27848b456cca50d2a99920234f3c1d6b9dfd71f1ba8652bcfd1e99d33ed6529f2969fd743a71746ded2ad2ebabc40a33d587a038",
             "text": "# This file was produced by bcftools stats (1.9+htslib-1.9) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  /var/lib/cwl/stgaa4c1a84-851b-4ce8-a466-0291459edf51/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\t/var/lib/cwl/stgaa4c1a84-851b-4ce8-a466-0291459edf51/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t2\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t0\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t0\nSN\t0\tnumber of others:\t2\nSN\t0\tnumber of multiallelic sites:\t0\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t0\t0\t0.00\t0\t0\t0.00\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t0\t0\t0\t0\t0\t0\t0\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\n# QUAL, Stats by quality:\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]count\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t0\nST\t0\tA>G\t0\nST\t0\tA>T\t0\nST\t0\tC>A\t0\nST\t0\tC>G\t0\nST\t0\tC>T\t0\nST\t0\tG>A\t0\nST\t0\tG>C\t0\nST\t0\tG>T\t0\nST\t0\tT>A\t0\nST\t0\tT>C\t0\nST\t0\tT>G\t0\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats"
         },
         {
@@ -2258,12 +2220,12 @@
             "contentSize": 3550,
             "dateModified": "2022-09-10T22:09:02.420882",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 34,
             "mode": "-rw-r--r--",
             "sha512": "3f366630b2f94233e5a93acf074b922d8affa5cc8188388f0dd6415b30d9604bae92f206614a53663a10d2535202ab281e256e7f98de39d03d7c0e43faedb8a4",
             "text": "INFO\t2022-09-10 22:08:29\tCollectWgsMetrics\t\n\n********** NOTE: Picard's command line syntax is changing.\n**********\n********** For more information, please see:\n********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)\n**********\n********** The command line looks like this in the new syntax:\n**********\n**********    CollectWgsMetrics -I /var/lib/cwl/stg312dadef-385c-48f3-8d04-c35274850c52/NA19023.cram -O NA19023.cram.chrY_nonPAR_ploidy_1.wgs_metrics -R /var/lib/cwl/stgbea757d3-5e4f-46ae-aff3-6bc934aae56e/Homo_sapiens_assembly38.fasta -INTERVALS /var/lib/cwl/stgb1da4dff-64e0-4562-87c8-6e7d1ab69b38/chrY-nonPAR.interval_list -TMP_DIR temp -VALIDATION_STRINGENCY LENIENT\n**********\n\n\n22:08:29.675 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gatk/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so\n[Sat Sep 10 22:08:29 GMT 2022] CollectWgsMetrics INPUT=/var/lib/cwl/stg312dadef-385c-48f3-8d04-c35274850c52/NA19023.cram OUTPUT=NA19023.cram.chrY_nonPAR_ploidy_1.wgs_metrics INTERVALS=/var/lib/cwl/stgb1da4dff-64e0-4562-87c8-6e7d1ab69b38/chrY-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stgbea757d3-5e4f-46ae-aff3-6bc934aae56e/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\nSep 10, 2022 10:08:30 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine\nINFO: Failed to detect whether we are running on Google Compute Engine.\nINFO\t2022-09-10 22:08:51\tCollectWgsMetrics\tProcessed    10,000,000 loci.  Elapsed time: 00:00:21s.  Time for last 10,000,000:    2s.  Last read position: chrY:13,132,839\nINFO\t2022-09-10 22:08:53\tCollectWgsMetrics\tProcessed    20,000,000 loci.  Elapsed time: 00:00:23s.  Time for last 10,000,000:    2s.  Last read position: chrY:23,201,547\nINFO\t2022-09-10 22:08:58\tTheoreticalSensitivity\tCreating Roulette Wheel\nINFO\t2022-09-10 22:08:58\tTheoreticalSensitivity\tCalculating quality sums from quality sampler\nINFO\t2022-09-10 22:08:58\tTheoreticalSensitivity\t0 sampling iterations completed\nINFO\t2022-09-10 22:08:59\tTheoreticalSensitivity\t1000 sampling iterations completed\nINFO\t2022-09-10 22:08:59\tTheoreticalSensitivity\t2000 sampling iterations completed\nINFO\t2022-09-10 22:08:59\tTheoreticalSensitivity\t3000 sampling iterations completed\nINFO\t2022-09-10 22:09:00\tTheoreticalSensitivity\t4000 sampling iterations completed\nINFO\t2022-09-10 22:09:00\tTheoreticalSensitivity\t5000 sampling iterations completed\nINFO\t2022-09-10 22:09:00\tTheoreticalSensitivity\t6000 sampling iterations completed\nINFO\t2022-09-10 22:09:00\tTheoreticalSensitivity\t7000 sampling iterations completed\nINFO\t2022-09-10 22:09:01\tTheoreticalSensitivity\t8000 sampling iterations completed\nINFO\t2022-09-10 22:09:01\tTheoreticalSensitivity\t9000 sampling iterations completed\nINFO\t2022-09-10 22:09:01\tTheoreticalSensitivity\tCalculating theoretical het sensitivity\n[Sat Sep 10 22:09:02 GMT 2022] picard.analysis.CollectWgsMetrics done. Elapsed time: 0.55 minutes.\nRuntime.totalMemory()=2577924096\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrY_nonPAR_ploidy_1.wgs_metrics.log"
         },
         {
@@ -2276,12 +2238,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T22:07:12.084406",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.log"
         },
         {
@@ -2294,10 +2256,10 @@
             "contentSize": 538,
             "dateModified": "2022-09-10T20:43:12.464332",
             "encodingFormat": "application/gzip",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "7ccc32f25f6772e1e82d3c0f465cbccbd788677527f26a069f143a3425cf6b793578e4934dfbb72ebb674d96a6379ebc9a61c9aaef820c9ba16dca2226ee3e1f",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.crai"
         },
         {
@@ -2310,12 +2272,12 @@
             "contentSize": 0,
             "dateModified": "2022-09-10T20:42:28.048975",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.log"
         },
         {
@@ -2328,12 +2290,12 @@
             "contentSize": 5765,
             "dateModified": "2022-09-10T22:01:54.419079",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 47,
             "mode": "-rw-r--r--",
             "sha512": "2c2a16308cca8495e2b4c9d105ce7fe6bf8b152b4fdaf934431ee28397dfa3c1f699f82e01c9bcded9c96f9b21bfd65907b30df23d62350710e05945b3859c1e",
             "text": "INFO\t2022-09-10 21:59:37\tCollectWgsMetrics\t\n\n********** NOTE: Picard's command line syntax is changing.\n**********\n********** For more information, please see:\n********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)\n**********\n********** The command line looks like this in the new syntax:\n**********\n**********    CollectWgsMetrics -I /var/lib/cwl/stg1aa8d437-1983-4bd4-9245-3a749e354fb4/NA19023.cram -O NA19023.cram.chrX_nonPAR_ploidy_2.wgs_metrics -R /var/lib/cwl/stgb115dde0-9545-4c85-8c58-fb5d0253c737/Homo_sapiens_assembly38.fasta -INTERVALS /var/lib/cwl/stg3018a2cb-5bc4-44ee-9efe-0510e69ca3cd/chrX-nonPAR.interval_list -TMP_DIR temp -VALIDATION_STRINGENCY LENIENT\n**********\n\n\n21:59:37.713 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gatk/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so\n[Sat Sep 10 21:59:37 GMT 2022] CollectWgsMetrics INPUT=/var/lib/cwl/stg1aa8d437-1983-4bd4-9245-3a749e354fb4/NA19023.cram OUTPUT=NA19023.cram.chrX_nonPAR_ploidy_2.wgs_metrics INTERVALS=/var/lib/cwl/stg3018a2cb-5bc4-44ee-9efe-0510e69ca3cd/chrX-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stgb115dde0-9545-4c85-8c58-fb5d0253c737/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\nSep 10, 2022 9:59:37 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine\nINFO: Failed to detect whether we are running on Google Compute Engine.\nINFO\t2022-09-10 21:59:57\tCollectWgsMetrics\tProcessed    10,000,000 loci.  Elapsed time: 00:00:19s.  Time for last 10,000,000:    2s.  Last read position: chrX:12,781,479\nINFO\t2022-09-10 21:59:59\tCollectWgsMetrics\tProcessed    20,000,000 loci.  Elapsed time: 00:00:21s.  Time for last 10,000,000:    2s.  Last read position: chrX:22,781,479\nINFO\t2022-09-10 22:00:01\tCollectWgsMetrics\tProcessed    30,000,000 loci.  Elapsed time: 00:00:23s.  Time for last 10,000,000:    2s.  Last read position: chrX:32,781,479\nINFO\t2022-09-10 22:00:03\tCollectWgsMetrics\tProcessed    40,000,000 loci.  Elapsed time: 00:00:25s.  Time for last 10,000,000:    2s.  Last read position: chrX:42,968,054\nINFO\t2022-09-10 22:00:05\tCollectWgsMetrics\tProcessed    50,000,000 loci.  Elapsed time: 00:00:27s.  Time for last 10,000,000:    1s.  Last read position: chrX:53,198,054\nINFO\t2022-09-10 22:00:07\tCollectWgsMetrics\tProcessed    60,000,000 loci.  Elapsed time: 00:00:29s.  Time for last 10,000,000:    1s.  Last read position: chrX:63,299,254\nINFO\t2022-09-10 22:00:09\tCollectWgsMetrics\tProcessed    70,000,000 loci.  Elapsed time: 00:00:31s.  Time for last 10,000,000:    2s.  Last read position: chrX:73,299,254\nINFO\t2022-09-10 22:00:11\tCollectWgsMetrics\tProcessed    80,000,000 loci.  Elapsed time: 00:00:33s.  Time for last 10,000,000:    1s.  Last read position: chrX:83,299,254\nINFO\t2022-09-10 22:00:13\tCollectWgsMetrics\tProcessed    90,000,000 loci.  Elapsed time: 00:00:35s.  Time for last 10,000,000:    1s.  Last read position: chrX:93,299,254\nINFO\t2022-09-10 22:00:14\tCollectWgsMetrics\tProcessed   100,000,000 loci.  Elapsed time: 00:00:36s.  Time for last 10,000,000:    1s.  Last read position: chrX:103,299,254\nINFO\t2022-09-10 22:00:16\tCollectWgsMetrics\tProcessed   110,000,000 loci.  Elapsed time: 00:00:38s.  Time for last 10,000,000:    1s.  Last read position: chrX:113,299,254\nINFO\t2022-09-10 22:00:18\tCollectWgsMetrics\tProcessed   120,000,000 loci.  Elapsed time: 00:00:40s.  Time for last 10,000,000:    1s.  Last read position: chrX:123,537,041\nINFO\t2022-09-10 22:00:20\tCollectWgsMetrics\tProcessed   130,000,000 loci.  Elapsed time: 00:00:42s.  Time for last 10,000,000:    1s.  Last read position: chrX:133,537,041\nINFO\t2022-09-10 22:00:22\tCollectWgsMetrics\tProcessed   140,000,000 loci.  Elapsed time: 00:00:44s.  Time for last 10,000,000:    1s.  Last read position: chrX:143,537,041\nINFO\t2022-09-10 22:00:23\tCollectWgsMetrics\tProcessed   150,000,000 loci.  Elapsed time: 00:00:45s.  Time for last 10,000,000:    1s.  Last read position: chrX:153,587,041\nINFO\t2022-09-10 22:00:24\tTheoreticalSensitivity\tCreating Roulette Wheel\nINFO\t2022-09-10 22:00:24\tTheoreticalSensitivity\tCalculating quality sums from quality sampler\nINFO\t2022-09-10 22:00:24\tTheoreticalSensitivity\t0 sampling iterations completed\nINFO\t2022-09-10 22:00:33\tTheoreticalSensitivity\t1000 sampling iterations completed\nINFO\t2022-09-10 22:00:42\tTheoreticalSensitivity\t2000 sampling iterations completed\nINFO\t2022-09-10 22:00:51\tTheoreticalSensitivity\t3000 sampling iterations completed\nINFO\t2022-09-10 22:00:59\tTheoreticalSensitivity\t4000 sampling iterations completed\nINFO\t2022-09-10 22:01:09\tTheoreticalSensitivity\t5000 sampling iterations completed\nINFO\t2022-09-10 22:01:18\tTheoreticalSensitivity\t6000 sampling iterations completed\nINFO\t2022-09-10 22:01:27\tTheoreticalSensitivity\t7000 sampling iterations completed\nINFO\t2022-09-10 22:01:36\tTheoreticalSensitivity\t8000 sampling iterations completed\nINFO\t2022-09-10 22:01:45\tTheoreticalSensitivity\t9000 sampling iterations completed\nINFO\t2022-09-10 22:01:54\tTheoreticalSensitivity\tCalculating theoretical het sensitivity\n[Sat Sep 10 22:01:54 GMT 2022] picard.analysis.CollectWgsMetrics done. Elapsed time: 2.28 minutes.\nRuntime.totalMemory()=2788687872\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrX_nonPAR_ploidy_2.wgs_metrics.log"
         },
         {
@@ -2346,12 +2308,12 @@
             "contentSize": 3454,
             "dateModified": "2022-09-10T20:42:25.949008",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 112,
             "mode": "-rw-r--r--",
             "sha512": "ac4d8a06fda76a20b79eabcfa722a047d0824e97eaa005d856f5ad42f6f5f94cd5d830eacde030466fa83ee304d8dfd471f1de41ff87234a60c0fab1a5750c4d",
             "text": "## htsjdk.samtools.metrics.StringHeader\n# MarkDuplicates  --INPUT /var/lib/cwl/stg7a822cef-acae-47b2-8f4b-8c3b099832cb/ERR1347662.bam --OUTPUT NA19023.bam --METRICS_FILE NA19023.metrics.txt  --MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP 50000 --MAX_FILE_HANDLES_FOR_READ_ENDS_MAP 8000 --SORTING_COLLECTION_SIZE_RATIO 0.25 --TAG_DUPLICATE_SET_MEMBERS false --REMOVE_SEQUENCING_DUPLICATES false --TAGGING_POLICY DontTag --CLEAR_DT true --DUPLEX_UMI false --ADD_PG_TAG_TO_READS true --REMOVE_DUPLICATES false --ASSUME_SORTED false --DUPLICATE_SCORING_STRATEGY SUM_OF_BASE_QUALITIES --PROGRAM_RECORD_ID MarkDuplicates --PROGRAM_GROUP_NAME MarkDuplicates --READ_NAME_REGEX <optimized capture of last three ':' separated fields as numeric values> --OPTICAL_DUPLICATE_PIXEL_DISTANCE 100 --MAX_OPTICAL_DUPLICATE_SET_SIZE 300000 --VERBOSITY INFO --QUIET false --VALIDATION_STRINGENCY STRICT --COMPRESSION_LEVEL 2 --MAX_RECORDS_IN_RAM 500000 --CREATE_INDEX false --CREATE_MD5_FILE false --GA4GH_CLIENT_SECRETS client_secrets.json --help false --version false --showHidden false --USE_JDK_DEFLATER false --USE_JDK_INFLATER false\n## htsjdk.samtools.metrics.StringHeader\n# Started on: Sat Sep 10 20:42:13 GMT 2022\n\n## METRICS CLASS\tpicard.sam.DuplicationMetrics\nLIBRARY\tUNPAIRED_READS_EXAMINED\tREAD_PAIRS_EXAMINED\tSECONDARY_OR_SUPPLEMENTARY_RDS\tUNMAPPED_READS\tUNPAIRED_READ_DUPLICATES\tREAD_PAIR_DUPLICATES\tREAD_PAIR_OPTICAL_DUPLICATES\tPERCENT_DUPLICATION\tESTIMATED_LIBRARY_SIZE\nERR1347662\t28\t10850\t110\t28\t1\t10\t0\t0.000966\t5882507\n\n## HISTOGRAM\tjava.lang.Double\nBIN\tVALUE\tall_sets\tnon_optical_sets\n1.0\t1\t10830\t10830\n2.0\t1.998157\t10\t10\n3.0\t2.994475\t0\t0\n4.0\t3.988957\t0\t0\n5.0\t4.981606\t0\t0\n6.0\t5.972427\t0\t0\n7.0\t6.961421\t0\t0\n8.0\t7.948593\t0\t0\n9.0\t8.933945\t0\t0\n10.0\t9.917482\t0\t0\n11.0\t10.899207\t0\t0\n12.0\t11.879122\t0\t0\n13.0\t12.857232\t0\t0\n14.0\t13.833539\t0\t0\n15.0\t14.808048\t0\t0\n16.0\t15.78076\t0\t0\n17.0\t16.75168\t0\t0\n18.0\t17.720811\t0\t0\n19.0\t18.688156\t0\t0\n20.0\t19.653718\t0\t0\n21.0\t20.617501\t0\t0\n22.0\t21.579508\t0\t0\n23.0\t22.539743\t0\t0\n24.0\t23.498207\t0\t0\n25.0\t24.454906\t0\t0\n26.0\t25.409842\t0\t0\n27.0\t26.363018\t0\t0\n28.0\t27.314437\t0\t0\n29.0\t28.264104\t0\t0\n30.0\t29.21202\t0\t0\n31.0\t30.158189\t0\t0\n32.0\t31.102615\t0\t0\n33.0\t32.045301\t0\t0\n34.0\t32.986249\t0\t0\n35.0\t33.925464\t0\t0\n36.0\t34.862948\t0\t0\n37.0\t35.798704\t0\t0\n38.0\t36.732736\t0\t0\n39.0\t37.665046\t0\t0\n40.0\t38.595639\t0\t0\n41.0\t39.524517\t0\t0\n42.0\t40.451683\t0\t0\n43.0\t41.377141\t0\t0\n44.0\t42.300893\t0\t0\n45.0\t43.222943\t0\t0\n46.0\t44.143294\t0\t0\n47.0\t45.061949\t0\t0\n48.0\t45.978911\t0\t0\n49.0\t46.894183\t0\t0\n50.0\t47.807768\t0\t0\n51.0\t48.719671\t0\t0\n52.0\t49.629892\t0\t0\n53.0\t50.538437\t0\t0\n54.0\t51.445307\t0\t0\n55.0\t52.350506\t0\t0\n56.0\t53.254037\t0\t0\n57.0\t54.155903\t0\t0\n58.0\t55.056107\t0\t0\n59.0\t55.954653\t0\t0\n60.0\t56.851542\t0\t0\n61.0\t57.746779\t0\t0\n62.0\t58.640366\t0\t0\n63.0\t59.532306\t0\t0\n64.0\t60.422603\t0\t0\n65.0\t61.311259\t0\t0\n66.0\t62.198278\t0\t0\n67.0\t63.083662\t0\t0\n68.0\t63.967414\t0\t0\n69.0\t64.849538\t0\t0\n70.0\t65.730036\t0\t0\n71.0\t66.608912\t0\t0\n72.0\t67.486169\t0\t0\n73.0\t68.361808\t0\t0\n74.0\t69.235834\t0\t0\n75.0\t70.10825\t0\t0\n76.0\t70.979058\t0\t0\n77.0\t71.848261\t0\t0\n78.0\t72.715863\t0\t0\n79.0\t73.581865\t0\t0\n80.0\t74.446272\t0\t0\n81.0\t75.309086\t0\t0\n82.0\t76.17031\t0\t0\n83.0\t77.029947\t0\t0\n84.0\t77.888\t0\t0\n85.0\t78.744472\t0\t0\n86.0\t79.599365\t0\t0\n87.0\t80.452684\t0\t0\n88.0\t81.304429\t0\t0\n89.0\t82.154605\t0\t0\n90.0\t83.003215\t0\t0\n91.0\t83.850261\t0\t0\n92.0\t84.695745\t0\t0\n93.0\t85.539672\t0\t0\n94.0\t86.382044\t0\t0\n95.0\t87.222863\t0\t0\n96.0\t88.062133\t0\t0\n97.0\t88.899856\t0\t0\n98.0\t89.736036\t0\t0\n99.0\t90.570675\t0\t0\n100.0\t91.403775\t0\t0\n\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.metrics.txt"
         },
         {
@@ -2364,12 +2326,12 @@
             "contentSize": 2981,
             "dateModified": "2022-09-10T22:04:18.023670",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 263,
             "mode": "-rw-r--r--",
             "sha512": "c7e1e573b3cceb95937903cff06c2cef8db9904785d40b5ca60acc7d2507877e225b6f630b3fc6464a40db8abcdb05db8c56a75df3052bf414439693fd9e3f48",
             "text": "## htsjdk.samtools.metrics.StringHeader\n# CollectWgsMetrics INPUT=/var/lib/cwl/stg1d755c9c-d640-4a0b-b26b-3e6c6199cc39/NA19023.cram OUTPUT=NA19023.cram.chrX_nonPAR_ploidy_1.wgs_metrics INTERVALS=/var/lib/cwl/stgfe657547-1d77-4149-868c-fdecf76eb7e1/chrX-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stg932cc5f5-f530-4681-a686-325d3332d536/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\n## htsjdk.samtools.metrics.StringHeader\n# Started on: Sat Sep 10 22:02:01 GMT 2022\n\n## METRICS CLASS\tpicard.analysis.WgsMetrics\nGENOME_TERRITORY\tMEAN_COVERAGE\tSD_COVERAGE\tMEDIAN_COVERAGE\tMAD_COVERAGE\tPCT_EXC_ADAPTER\tPCT_EXC_MAPQ\tPCT_EXC_DUPE\tPCT_EXC_UNPAIRED\tPCT_EXC_BASEQ\tPCT_EXC_OVERLAP\tPCT_EXC_CAPPED\tPCT_EXC_TOTAL\tPCT_1X\tPCT_5X\tPCT_10X\tPCT_15X\tPCT_20X\tPCT_25X\tPCT_30X\tPCT_40X\tPCT_50X\tPCT_60X\tPCT_70X\tPCT_80X\tPCT_90X\tPCT_100X\tFOLD_80_BASE_PENALTY\tFOLD_90_BASE_PENALTY\tFOLD_95_BASE_PENALTY\tHET_SNP_SENSITIVITY\tHET_SNP_Q\n152114341\t0\t0\t0\t0\t0\t1\t0\t0\t0\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t?\t?\t?\t0\t0\n\n## HISTOGRAM\tjava.lang.Integer\ncoverage\thigh_quality_coverage_count\n0\t152114341\n1\t0\n2\t0\n3\t0\n4\t0\n5\t0\n6\t0\n7\t0\n8\t0\n9\t0\n10\t0\n11\t0\n12\t0\n13\t0\n14\t0\n15\t0\n16\t0\n17\t0\n18\t0\n19\t0\n20\t0\n21\t0\n22\t0\n23\t0\n24\t0\n25\t0\n26\t0\n27\t0\n28\t0\n29\t0\n30\t0\n31\t0\n32\t0\n33\t0\n34\t0\n35\t0\n36\t0\n37\t0\n38\t0\n39\t0\n40\t0\n41\t0\n42\t0\n43\t0\n44\t0\n45\t0\n46\t0\n47\t0\n48\t0\n49\t0\n50\t0\n51\t0\n52\t0\n53\t0\n54\t0\n55\t0\n56\t0\n57\t0\n58\t0\n59\t0\n60\t0\n61\t0\n62\t0\n63\t0\n64\t0\n65\t0\n66\t0\n67\t0\n68\t0\n69\t0\n70\t0\n71\t0\n72\t0\n73\t0\n74\t0\n75\t0\n76\t0\n77\t0\n78\t0\n79\t0\n80\t0\n81\t0\n82\t0\n83\t0\n84\t0\n85\t0\n86\t0\n87\t0\n88\t0\n89\t0\n90\t0\n91\t0\n92\t0\n93\t0\n94\t0\n95\t0\n96\t0\n97\t0\n98\t0\n99\t0\n100\t0\n101\t0\n102\t0\n103\t0\n104\t0\n105\t0\n106\t0\n107\t0\n108\t0\n109\t0\n110\t0\n111\t0\n112\t0\n113\t0\n114\t0\n115\t0\n116\t0\n117\t0\n118\t0\n119\t0\n120\t0\n121\t0\n122\t0\n123\t0\n124\t0\n125\t0\n126\t0\n127\t0\n128\t0\n129\t0\n130\t0\n131\t0\n132\t0\n133\t0\n134\t0\n135\t0\n136\t0\n137\t0\n138\t0\n139\t0\n140\t0\n141\t0\n142\t0\n143\t0\n144\t0\n145\t0\n146\t0\n147\t0\n148\t0\n149\t0\n150\t0\n151\t0\n152\t0\n153\t0\n154\t0\n155\t0\n156\t0\n157\t0\n158\t0\n159\t0\n160\t0\n161\t0\n162\t0\n163\t0\n164\t0\n165\t0\n166\t0\n167\t0\n168\t0\n169\t0\n170\t0\n171\t0\n172\t0\n173\t0\n174\t0\n175\t0\n176\t0\n177\t0\n178\t0\n179\t0\n180\t0\n181\t0\n182\t0\n183\t0\n184\t0\n185\t0\n186\t0\n187\t0\n188\t0\n189\t0\n190\t0\n191\t0\n192\t0\n193\t0\n194\t0\n195\t0\n196\t0\n197\t0\n198\t0\n199\t0\n200\t0\n201\t0\n202\t0\n203\t0\n204\t0\n205\t0\n206\t0\n207\t0\n208\t0\n209\t0\n210\t0\n211\t0\n212\t0\n213\t0\n214\t0\n215\t0\n216\t0\n217\t0\n218\t0\n219\t0\n220\t0\n221\t0\n222\t0\n223\t0\n224\t0\n225\t0\n226\t0\n227\t0\n228\t0\n229\t0\n230\t0\n231\t0\n232\t0\n233\t0\n234\t0\n235\t0\n236\t0\n237\t0\n238\t0\n239\t0\n240\t0\n241\t0\n242\t0\n243\t0\n244\t0\n245\t0\n246\t0\n247\t0\n248\t0\n249\t0\n250\t0\n\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrX_nonPAR_ploidy_1.wgs_metrics"
         },
         {
@@ -2382,11 +2344,11 @@
             "contentSize": 15418,
             "dateModified": "2022-09-10T22:08:25.068720",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 162,
             "mode": "-rw-r--r--",
             "sha512": "8ff79fbef2e706787df050ca058208055e3a5273c7278ae4b029af3a3d73edc35811c6a103fa5d07e258824b461003182a2f4566ae67c511245e9c0d2a97a060",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.log"
         },
         {
@@ -2399,23 +2361,11 @@
             "contentSize": 9790,
             "dateModified": "2022-09-10T20:43:51.259825",
             "encodingFormat": "application/pdf",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "b98e9d4d9ae8ef4e992a04c5f17f419971b4db9fb3ed297c89b76d0e5630de550501f5cd1d985f201dafdaa0888c13415613ee3570d69ba7e6d2512bb912801a",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.collect_base_dist_by_cycle.chart.pdf"
-        },
-        {
-            "@id": "#6d1bc6d9-09d8-47da-a04c-311c93d1f2f2",
-            "@type": [
-                "FileStats"
-            ],
-            "generatedBy": {
-                "@id": "#vcftools"
-            },
-            "indelsCount": 0,
-            "snpsCount": 0,
-            "variantCount": 2
         },
         {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz",
@@ -2426,17 +2376,14 @@
             ],
             "contentSize": 24409,
             "dateModified": "2022-09-10T22:07:12.844409",
-            "encodingFormat": "application/x-gzip",
+            "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_3016"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "b444bb4d8be6fc46e731ab8dd7e2ed9379a1a433d2391a170af08f6d560f5c8b0019db6afe0e618dc578fae8fb46ff313fde27a9c60a89201e7e16b7f3cd452a",
-            "stats": {
-                "@id": "#6d1bc6d9-09d8-47da-a04c-311c93d1f2f2"
-            },
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz"
         },
         {
@@ -2449,12 +2396,12 @@
             "contentSize": 3038,
             "dateModified": "2022-09-10T22:09:02.416882",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 263,
             "mode": "-rw-r--r--",
             "sha512": "0c57aaa3cdddb9f3ababa8935818013a5b28b91a330def62fe7fae89a4cc07515cebf7d5f34063fd840f4b4d407d808ef1a22f8be767ec207104a8c18378c324",
             "text": "## htsjdk.samtools.metrics.StringHeader\n# CollectWgsMetrics INPUT=/var/lib/cwl/stg312dadef-385c-48f3-8d04-c35274850c52/NA19023.cram OUTPUT=NA19023.cram.chrY_nonPAR_ploidy_1.wgs_metrics INTERVALS=/var/lib/cwl/stgb1da4dff-64e0-4562-87c8-6e7d1ab69b38/chrY-nonPAR.interval_list TMP_DIR=[temp] VALIDATION_STRINGENCY=LENIENT REFERENCE_SEQUENCE=/var/lib/cwl/stgbea757d3-5e4f-46ae-aff3-6bc934aae56e/Homo_sapiens_assembly38.fasta    MINIMUM_MAPPING_QUALITY=20 MINIMUM_BASE_QUALITY=20 COVERAGE_CAP=250 LOCUS_ACCUMULATION_CAP=100000 STOP_AFTER=-1 INCLUDE_BQ_HISTOGRAM=false COUNT_UNPAIRED=false SAMPLE_SIZE=10000 ALLELE_FRACTION=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5] USE_FAST_ALGORITHM=false READ_LENGTH=150 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false\n## htsjdk.samtools.metrics.StringHeader\n# Started on: Sat Sep 10 22:08:29 GMT 2022\n\n## METRICS CLASS\tpicard.analysis.WgsMetrics\nGENOME_TERRITORY\tMEAN_COVERAGE\tSD_COVERAGE\tMEDIAN_COVERAGE\tMAD_COVERAGE\tPCT_EXC_ADAPTER\tPCT_EXC_MAPQ\tPCT_EXC_DUPE\tPCT_EXC_UNPAIRED\tPCT_EXC_BASEQ\tPCT_EXC_OVERLAP\tPCT_EXC_CAPPED\tPCT_EXC_TOTAL\tPCT_1X\tPCT_5X\tPCT_10X\tPCT_15X\tPCT_20X\tPCT_25X\tPCT_30X\tPCT_40X\tPCT_50X\tPCT_60X\tPCT_70X\tPCT_80X\tPCT_90X\tPCT_100X\tFOLD_80_BASE_PENALTY\tFOLD_90_BASE_PENALTY\tFOLD_95_BASE_PENALTY\tHET_SNP_SENSITIVITY\tHET_SNP_Q\n23673595\t0.000021\t0.009581\t0\t0\t0\t0.905159\t0\t0\t0.000569\t0\t0\t0.905728\t0.000006\t0.000003\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t?\t?\t?\t0.000004\t0\n\n## HISTOGRAM\tjava.lang.Integer\ncoverage\thigh_quality_coverage_count\n0\t23673461\n1\t27\n2\t7\n3\t7\n4\t30\n5\t63\n6\t0\n7\t0\n8\t0\n9\t0\n10\t0\n11\t0\n12\t0\n13\t0\n14\t0\n15\t0\n16\t0\n17\t0\n18\t0\n19\t0\n20\t0\n21\t0\n22\t0\n23\t0\n24\t0\n25\t0\n26\t0\n27\t0\n28\t0\n29\t0\n30\t0\n31\t0\n32\t0\n33\t0\n34\t0\n35\t0\n36\t0\n37\t0\n38\t0\n39\t0\n40\t0\n41\t0\n42\t0\n43\t0\n44\t0\n45\t0\n46\t0\n47\t0\n48\t0\n49\t0\n50\t0\n51\t0\n52\t0\n53\t0\n54\t0\n55\t0\n56\t0\n57\t0\n58\t0\n59\t0\n60\t0\n61\t0\n62\t0\n63\t0\n64\t0\n65\t0\n66\t0\n67\t0\n68\t0\n69\t0\n70\t0\n71\t0\n72\t0\n73\t0\n74\t0\n75\t0\n76\t0\n77\t0\n78\t0\n79\t0\n80\t0\n81\t0\n82\t0\n83\t0\n84\t0\n85\t0\n86\t0\n87\t0\n88\t0\n89\t0\n90\t0\n91\t0\n92\t0\n93\t0\n94\t0\n95\t0\n96\t0\n97\t0\n98\t0\n99\t0\n100\t0\n101\t0\n102\t0\n103\t0\n104\t0\n105\t0\n106\t0\n107\t0\n108\t0\n109\t0\n110\t0\n111\t0\n112\t0\n113\t0\n114\t0\n115\t0\n116\t0\n117\t0\n118\t0\n119\t0\n120\t0\n121\t0\n122\t0\n123\t0\n124\t0\n125\t0\n126\t0\n127\t0\n128\t0\n129\t0\n130\t0\n131\t0\n132\t0\n133\t0\n134\t0\n135\t0\n136\t0\n137\t0\n138\t0\n139\t0\n140\t0\n141\t0\n142\t0\n143\t0\n144\t0\n145\t0\n146\t0\n147\t0\n148\t0\n149\t0\n150\t0\n151\t0\n152\t0\n153\t0\n154\t0\n155\t0\n156\t0\n157\t0\n158\t0\n159\t0\n160\t0\n161\t0\n162\t0\n163\t0\n164\t0\n165\t0\n166\t0\n167\t0\n168\t0\n169\t0\n170\t0\n171\t0\n172\t0\n173\t0\n174\t0\n175\t0\n176\t0\n177\t0\n178\t0\n179\t0\n180\t0\n181\t0\n182\t0\n183\t0\n184\t0\n185\t0\n186\t0\n187\t0\n188\t0\n189\t0\n190\t0\n191\t0\n192\t0\n193\t0\n194\t0\n195\t0\n196\t0\n197\t0\n198\t0\n199\t0\n200\t0\n201\t0\n202\t0\n203\t0\n204\t0\n205\t0\n206\t0\n207\t0\n208\t0\n209\t0\n210\t0\n211\t0\n212\t0\n213\t0\n214\t0\n215\t0\n216\t0\n217\t0\n218\t0\n219\t0\n220\t0\n221\t0\n222\t0\n223\t0\n224\t0\n225\t0\n226\t0\n227\t0\n228\t0\n229\t0\n230\t0\n231\t0\n232\t0\n233\t0\n234\t0\n235\t0\n236\t0\n237\t0\n238\t0\n239\t0\n240\t0\n241\t0\n242\t0\n243\t0\n244\t0\n245\t0\n246\t0\n247\t0\n248\t0\n249\t0\n250\t0\n\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.cram.chrY_nonPAR_ploidy_1.wgs_metrics"
         },
         {
@@ -2467,11 +2414,11 @@
             "contentSize": 16495,
             "dateModified": "2022-09-10T22:07:11.544404",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 172,
             "mode": "-rw-r--r--",
             "sha512": "6087820c53d1f9fbb55981d454f11c8a5794085e43b67609e710631dea5ee81f075da87a8f86593f42185333173a96206fadef60ee7a19d36f4794e53c1c156c",
-            "uid": 0,
+            "uid": 1000,
             "url": "http://localhost:1122/runs/7e91fa2d-09b8-4887-ab7c-5391aa2787d1/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.log"
         }
     ]

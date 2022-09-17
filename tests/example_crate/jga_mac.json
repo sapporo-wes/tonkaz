@@ -2,76 +2,76 @@
     "@context": [
         "https://w3id.org/ro/crate/1.1/context",
         {
-            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#FileStats",
-            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#Format",
-            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#IntermediateFile",
-            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#OutputFile",
-            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoConfiguration",
-            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoService",
+            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#FileStats",
+            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#Format",
+            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#IntermediateFile",
+            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#OutputFile",
+            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoConfiguration",
+            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoService",
             "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
-            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestEnvironment",
+            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestEnvironment",
             "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
-            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestResult",
+            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestResult",
             "TestService": "https://w3id.org/ro/terms/test#TestService",
             "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
-            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#WorkflowAttachment",
-            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#attachment",
-            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cmd",
-            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#configuration",
-            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuArchitecture",
-            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuCount",
+            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#WorkflowAttachment",
+            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#attachment",
+            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cmd",
+            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#configuration",
+            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuArchitecture",
+            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuCount",
             "definition": "https://w3id.org/ro/terms/test#definition",
-            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateRate",
-            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateReads",
+            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateRate",
+            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateReads",
             "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
-            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#environment",
-            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#executableWorkflows",
-            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#exitCode",
-            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#format",
-            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#freeDiskSpace",
-            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#generatedBy",
-            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#getRuns",
-            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#gid",
-            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#inDocker",
-            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#indelsCount",
+            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#environment",
+            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#executableWorkflows",
+            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#exitCode",
+            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#format",
+            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#freeDiskSpace",
+            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#generatedBy",
+            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#getRuns",
+            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#gid",
+            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#inDocker",
+            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#indelsCount",
             "instance": "https://w3id.org/ro/terms/test#instance",
-            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#intermediateFiles",
-            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#lineCount",
-            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedRate",
-            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedReads",
-            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mode",
-            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#os",
-            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#osVersion",
-            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#outputs",
-            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#pid",
-            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#registeredOnlyMode",
+            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#intermediateFiles",
+            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#lineCount",
+            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedRate",
+            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedReads",
+            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mode",
+            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#os",
+            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#osVersion",
+            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#outputs",
+            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#pid",
+            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#registeredOnlyMode",
             "resource": "https://w3id.org/ro/terms/test#resource",
-            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#result",
-            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runId",
-            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runSh",
+            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#result",
+            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runId",
+            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runSh",
             "runsOn": "https://w3id.org/ro/terms/test#runsOn",
-            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoConfig",
-            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoEndpoint",
-            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#serviceInfo",
-            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sha512",
-            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#snpsCount",
-            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#state",
-            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stats",
-            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stderr",
-            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stdout",
-            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalMemory",
-            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalReads",
-            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#uid",
-            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedRate",
-            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedReads",
-            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#urlPrefix",
-            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#variantCount",
-            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowAttachment",
-            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowEngineParameters",
-            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowParameters",
-            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisId",
-            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisMetadata",
-            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisTestId"
+            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoConfig",
+            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoEndpoint",
+            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#serviceInfo",
+            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sha512",
+            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#snpsCount",
+            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#state",
+            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stats",
+            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stderr",
+            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stdout",
+            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalMemory",
+            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalReads",
+            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#uid",
+            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedRate",
+            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedReads",
+            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#urlPrefix",
+            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#variantCount",
+            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowAttachment",
+            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowEngineParameters",
+            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowParameters",
+            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisId",
+            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisMetadata",
+            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisTestId"
         }
     ],
     "@graph": [
@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-15T11:00:58+00:00",
+            "datePublished": "2022-09-17T16:14:56+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -112,82 +112,16 @@
                     "@id": "run_request.json"
                 },
                 {
-                    "@id": "exe/workflow_params.json"
-                },
-                {
                     "@id": "workflow_engine_params.txt"
                 },
                 {
                     "@id": "yevis-metadata.yml"
                 },
                 {
-                    "@id": "exe/autosome-PAR.bed"
-                },
-                {
-                    "@id": "exe/autosome-PAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.interval_list"
-                },
-                {
                     "@id": "exe/ERR1347662.small_1.fastq.gz"
                 },
                 {
                     "@id": "exe/ERR1347662.small_2.fastq.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf.idx"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dict"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.alt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.amb"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.ann"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.bwt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.fai"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.pac"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.sa"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
                 },
                 {
                     "@id": "stdout.log"
@@ -239,76 +173,10 @@
             "@type": "Dataset",
             "hasPart": [
                 {
-                    "@id": "exe/workflow_params.json"
-                },
-                {
-                    "@id": "exe/autosome-PAR.bed"
-                },
-                {
-                    "@id": "exe/autosome-PAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.interval_list"
-                },
-                {
                     "@id": "exe/ERR1347662.small_1.fastq.gz"
                 },
                 {
                     "@id": "exe/ERR1347662.small_2.fastq.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf.idx"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dict"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.alt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.amb"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.ann"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.bwt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.fai"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.pac"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.sa"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
                 }
             ]
         },
@@ -396,7 +264,7 @@
             "runsOn": {
                 "@id": "#sapporo-service"
             },
-            "url": "http://localhost:2000"
+            "url": "http://localhost:1122"
         },
         {
             "@id": "#sapporo-service",
@@ -413,7 +281,7 @@
             "url": {
                 "@id": "https://github.com/sapporo-wes/sapporo-service"
             },
-            "version": "1.4.4"
+            "version": "1.4.8"
         },
         {
             "@id": "https://github.com/sapporo-wes/sapporo-service",
@@ -437,7 +305,7 @@
             "sapporoConfig": {
                 "@id": "sapporo_config.json"
             },
-            "sapporoEndpoint": "http://localhost:2000",
+            "sapporoEndpoint": "http://localhost:1122",
             "serviceInfo": {
                 "@id": "service_info.json"
             },
@@ -448,55 +316,55 @@
             "@id": "service_info.json",
             "@type": "File",
             "contentSize": 1699,
-            "dateModified": "2022-09-15T06:49:21.880747",
+            "dateModified": "2022-09-17T15:48:28.809640",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 87,
+            "gid": 1000,
+            "lineCount": 86,
             "mode": "-rw-r--r--",
             "name": "Sapporo service info",
-            "sha512": "a69f75434edfcd57c3d8505230ba8b296a07fe8d563c3973016dc649384b7ce2807e0c08a7bc3d1d1006f36eba27b63ef34ad49da417d1b6c1d40f08650463bb",
-            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.4\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"INITIALIZING\": 1,\n    \"EXECUTOR_ERROR\": 4,\n    \"COMPLETE\": 1,\n    \"UNKNOWN\": 1\n  }\n}",
-            "uid": 0
+            "sha512": "ea3950025761708d53614c37d722d9e920d86b33c9498a51491de789b49781504a13e02bffde76e78a34fa0278cb4a78682529032984e44fd66c27f0537d8183",
+            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.8\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"INITIALIZING\": 1,\n    \"EXECUTOR_ERROR\": 4,\n    \"COMPLETE\": 1,\n    \"UNKNOWN\": 1\n  }\n}",
+            "uid": 1000
         },
         {
             "@id": "executable_workflows.json",
             "@type": "File",
             "contentSize": 33024,
-            "dateModified": "2022-09-15T06:49:25.834009",
+            "dateModified": "2022-09-17T15:48:28.817640",
             "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 651,
+            "gid": 1000,
+            "lineCount": 650,
             "mode": "-rw-r--r--",
             "name": "Sapporo executable workflows",
             "sha512": "186d6d93ed49399c525e4541e2259da3d6b6a5cc6cfe76489930061add95affad25477d286ede26aa56d81f7fb4b0a452202715bb2a4611ee1e7c8912d60443d",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "run.sh",
             "@type": "File",
-            "contentSize": 11419,
-            "dateModified": "2022-09-15T06:49:25.849500",
+            "contentSize": 11327,
+            "dateModified": "2022-09-17T15:48:28.821640",
             "encodingFormat": "text/x-shellscript",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 307,
             "mode": "-rw-r--r--",
             "name": "Sapporo run.sh",
-            "sha512": "cffdb26c287dcb34ffa75666571041884f7bb7d1ea85c3688e8f3012fbc2fb350dd299a2b88efbe39c1f2316d90e0483970bc20275f6885e90c18a87a0eacd4b",
-            "uid": 0
+            "sha512": "b0f968d72e5722befba64719731849f574ab20f7a3c2cd0ab8165457c629cedbcc88b0d4392d812533ac6c6316647e9a089339e57269332c40f04674842d84b9",
+            "uid": 1000
         },
         {
             "@id": "sapporo_config.json",
             "@type": "File",
-            "contentSize": 339,
-            "dateModified": "2022-09-15T06:49:21.678600",
+            "contentSize": 441,
+            "dateModified": "2022-09-17T15:48:28.825640",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 11,
+            "gid": 1000,
+            "lineCount": 10,
             "mode": "-rw-r--r--",
             "name": "Sapporo runtime configuration",
-            "sha512": "c48913b25f410e9e77d52ebcd6bbb8ec94f26bff61702d2d12700eedd8de946d7eba7920e06a0fe1651f548d8de4019876d23055d69ccc64e73471f47a8710af",
-            "text": "{\n  \"sapporo_version\": \"1.4.4\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/app/sapporo/service-info.json\",\n  \"executable_workflows\": \"/app/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/app/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:2000\"\n}",
-            "uid": 0
+            "sha512": "5ca15ddb3d9e71d17b00b16486de5c9c391726e509de5b45553bd01c482a6c04bb5c2be18580b9395411b7d154567dbae8eb1519506fa9345bc212b5ae965219",
+            "text": "{\n  \"sapporo_version\": \"1.4.8\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
+            "uid": 1000
         },
         {
             "@id": "#sapporo-test-environment",
@@ -504,13 +372,13 @@
                 "TestEnvironment"
             ],
             "cpuArchitecture": "x86_64",
-            "cpuCount": 8,
-            "freeDiskSpace": 224231813120,
+            "cpuCount": 4,
+            "freeDiskSpace": 138291453952,
             "gid": 0,
             "inDocker": true,
             "os": "Linux",
-            "osVersion": "5.10.104-linuxkit",
-            "totalMemory": 56236802048,
+            "osVersion": "5.13.0-40-generic",
+            "totalMemory": 25211322368,
             "uid": 0
         },
         {
@@ -524,92 +392,26 @@
                 "@id": "#cwltool"
             },
             "contentSize": 6481,
-            "dateModified": "2022-09-15T06:49:21.681949",
+            "dateModified": "2022-09-15T06:49:21",
             "encodingFormat": "application/json",
             "engineVersion": "3.1.20220628170238",
-            "gid": 0,
+            "gid": 1000,
             "input": [
-                {
-                    "@id": "exe/autosome-PAR.bed"
-                },
-                {
-                    "@id": "exe/autosome-PAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrX-nonPAR.interval_list"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.bed"
-                },
-                {
-                    "@id": "exe/chrY-nonPAR.interval_list"
-                },
                 {
                     "@id": "exe/ERR1347662.small_1.fastq.gz"
                 },
                 {
                     "@id": "exe/ERR1347662.small_2.fastq.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf.idx"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.dict"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.alt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.amb"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.ann"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.bwt"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.fai"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.pac"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.fasta.sa"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz"
-                },
-                {
-                    "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-                },
-                {
-                    "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
                 }
             ],
-            "lineCount": 11,
+            "lineCount": 10,
             "mode": "-rw-r--r--",
             "name": "Sapporo run request",
             "sha512": "2d52e65406548ff26399927588b7ea4d10edb792c15863680f22bd4b3796f515a1f376d0442d4431c2260df5fce45b46676a5ca1bff70c9eb78df0d7c1ea9d6e",
             "text": "{\n  \"workflow_params\": \"reference:\\n  class: File\\n  path: Homo_sapiens_assembly38.fasta\\n  format: http://edamontology.org/format_1929\\nsortsam_max_records_in_ram: 5000000\\nsortsam_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_MarkDuplicates_java_option: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_BaseRecalibrator_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_ApplyBQSR_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\ngatk4_HaplotypeCaller_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\\nfastq2bam_ram_min: 48000\\nfastq2bam_cores_min: 16\\nbams2cram_ram_min: 48000\\nbams2cram_cores_min: 6\\nhaplotypecaller_ram_min: 48000\\nhaplotypecaller_cores_min: 6\\nbwa_bases_per_batch: 10000000\\nuse_bqsr: false\\ndbsnp:\\n  class: File\\n  path: Homo_sapiens_assembly38.dbsnp138.vcf\\n  format: http://edamontology.org/format_3016\\nmills:\\n  class: File\\n  path: Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\n  format: http://edamontology.org/format_3016\\nknown_indels:\\n  class: File\\n  path: Homo_sapiens_assembly38.known_indels.vcf.gz\\n  format: http://edamontology.org/format_3016\\nhaplotypecaller_autosome_PAR_interval_bed:\\n  class: File\\n  path: autosome-PAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_autosome_PAR_interval_list:\\n  class: File\\n  path: autosome-PAR.interval_list\\nhaplotypecaller_chrX_nonPAR_interval_bed:\\n  class: File\\n  path: chrX-nonPAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_chrX_nonPAR_interval_list:\\n  class: File\\n  path: chrX-nonPAR.interval_list\\nhaplotypecaller_chrY_nonPAR_interval_bed:\\n  class: File\\n  path: chrY-nonPAR.bed\\n  format: http://edamontology.org/format_3584\\nhaplotypecaller_chrY_nonPAR_interval_list:\\n  class: File\\n  path: chrY-nonPAR.interval_list\\nsample_id: NA19023\\nrunlist_pe:\\n  - run_id: ERR1347662\\n    platform_name: ILLUMINA\\n    fastq1:\\n      class: File\\n      path: ERR1347662.small_1.fastq.gz\\n      format: http://edamontology.org/format_1930\\n    fastq2:\\n      class: File\\n      path: ERR1347662.small_2.fastq.gz\\n      format: http://edamontology.org/format_1930\\nrunlist_se: []\",\n  \"workflow_type\": \"CWL\",\n  \"workflow_type_version\": \"v1.1\",\n  \"tags\": null,\n  \"workflow_engine_name\": \"cwltool\",\n  \"workflow_engine_parameters\": \"{}\",\n  \"workflow_url\": \"https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl\",\n  \"workflow_name\": null,\n  \"workflow_attachment\": \"[{\\\"file_name\\\": \\\"autosome-PAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed\\\"}, {\\\"file_name\\\": \\\"autosome-PAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list\\\"}, {\\\"file_name\\\": \\\"chrX-nonPAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed\\\"}, {\\\"file_name\\\": \\\"chrX-nonPAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list\\\"}, {\\\"file_name\\\": \\\"chrY-nonPAR.bed\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed\\\"}, {\\\"file_name\\\": \\\"chrY-nonPAR.interval_list\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list\\\"}, {\\\"file_name\\\": \\\"ERR1347662.small_1.fastq.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz\\\"}, {\\\"file_name\\\": \\\"ERR1347662.small_2.fastq.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dbsnp138.vcf\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dbsnp138.vcf.idx\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dict\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.alt\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.amb\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.ann\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.bwt\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.fai\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.pac\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.sa\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.known_indels.vcf.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\\\"}, {\\\"file_name\\\": \\\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\\\"}, {\\\"file_name\\\": \\\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\\\"}]\"\n}",
-            "uid": 0,
+            "uid": 1000,
             "workflowEngineParameters": {
                 "@id": "workflow_engine_params.txt"
-            },
-            "workflowParameters": {
-                "@id": "exe/workflow_params.json"
             },
             "yevisMetadata": {
                 "@id": "yevis-metadata.yml"
@@ -617,37 +419,20 @@
             "yevisTestId": "test_1"
         },
         {
-            "@id": "exe/workflow_params.json",
-            "@type": [
-                "File"
-            ],
-            "contentSize": 2055,
-            "dateModified": "2022-09-15T06:49:21.685205",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 64,
-            "mode": "-rw-r--r--",
-            "name": "Sapporo workflow parameters",
-            "sha512": "b5a40c2c6e62c154c01906d39ea0334e74a58f472ab4f640ce8ff204025a95c8860263666b545011aeeda5e8f26d73e15353c7548652f07448cfe0bf538eb799",
-            "text": "reference:\n  class: File\n  path: Homo_sapiens_assembly38.fasta\n  format: http://edamontology.org/format_1929\nsortsam_max_records_in_ram: 5000000\nsortsam_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_MarkDuplicates_java_option: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_BaseRecalibrator_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_ApplyBQSR_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\ngatk4_HaplotypeCaller_java_options: -XX:-UseContainerSupport -Xmx8g -Xms8g\nfastq2bam_ram_min: 48000\nfastq2bam_cores_min: 16\nbams2cram_ram_min: 48000\nbams2cram_cores_min: 6\nhaplotypecaller_ram_min: 48000\nhaplotypecaller_cores_min: 6\nbwa_bases_per_batch: 10000000\nuse_bqsr: false\ndbsnp:\n  class: File\n  path: Homo_sapiens_assembly38.dbsnp138.vcf\n  format: http://edamontology.org/format_3016\nmills:\n  class: File\n  path: Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\n  format: http://edamontology.org/format_3016\nknown_indels:\n  class: File\n  path: Homo_sapiens_assembly38.known_indels.vcf.gz\n  format: http://edamontology.org/format_3016\nhaplotypecaller_autosome_PAR_interval_bed:\n  class: File\n  path: autosome-PAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_autosome_PAR_interval_list:\n  class: File\n  path: autosome-PAR.interval_list\nhaplotypecaller_chrX_nonPAR_interval_bed:\n  class: File\n  path: chrX-nonPAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_chrX_nonPAR_interval_list:\n  class: File\n  path: chrX-nonPAR.interval_list\nhaplotypecaller_chrY_nonPAR_interval_bed:\n  class: File\n  path: chrY-nonPAR.bed\n  format: http://edamontology.org/format_3584\nhaplotypecaller_chrY_nonPAR_interval_list:\n  class: File\n  path: chrY-nonPAR.interval_list\nsample_id: NA19023\nrunlist_pe:\n  - run_id: ERR1347662\n    platform_name: ILLUMINA\n    fastq1:\n      class: File\n      path: ERR1347662.small_1.fastq.gz\n      format: http://edamontology.org/format_1930\n    fastq2:\n      class: File\n      path: ERR1347662.small_2.fastq.gz\n      format: http://edamontology.org/format_1930\nrunlist_se: []",
-            "uid": 0,
-            "url": "https://gist.githubusercontent.com/suecharo/96ef41ff0cb7af998c1cb7d41b4dfc83/raw/e5fbc2c844c5a37aeb3e7e80befa4f80b2c4299e/wf_params.yml"
-        },
-        {
             "@id": "workflow_engine_params.txt",
             "@type": [
                 "File"
             ],
             "contentSize": 0,
-            "dateModified": "2022-09-15T06:49:21.687170",
+            "dateModified": "2022-09-15T06:49:21",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Sapporo workflow engine parameters",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "yevis-metadata.yml",
@@ -655,15 +440,15 @@
                 "File"
             ],
             "contentSize": 4744,
-            "dateModified": "2022-09-15T06:49:25.857672",
+            "dateModified": "2022-09-15T06:49:25",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 1,
+            "gid": 1000,
+            "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Yevis metadata",
             "sha512": "ee922508b0d52618f7a3d9e694926bb211b9f8c81d67d5ba065c7a67bdc44e588cde23321b1eebb5ca5627224521c440879ff2265470e9060bb1dd995c470419",
             "text": "{\"id\":\"579bbccf-ff06-4c5f-98cb-d7a2dc73eca8\",\"version\":\"1.0.0\",\"license\":\"Apache-2.0\",\"authors\":[{\"github_account\":\"suecharo\",\"name\":\"Suetake, Hirotaka\",\"affiliation\":\"The University of Tokyo, Ascade Inc.\",\"orcid\":\"0000-0003-2765-0049\"}],\"workflow\":{\"name\":\"jga-analysis per-sample workflow\",\"readme\":\"https://raw.githubusercontent.com/biosciencedbc/jga-analysis/7fe2ede543fc42b1647774f7821380ecf22dfa26/README.md\",\"language\":{\"type\":\"CWL\",\"version\":\"v1.1\"},\"files\":[{\"url\":\"https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl\",\"target\":\"per-sample.cwl\",\"type\":\"primary\"}],\"testing\":[{\"id\":\"test_1\",\"files\":[{\"url\":\"https://gist.githubusercontent.com/suecharo/96ef41ff0cb7af998c1cb7d41b4dfc83/raw/e5fbc2c844c5a37aeb3e7e80befa4f80b2c4299e/wf_params.yml\",\"target\":\"wf_params.yml\",\"type\":\"wf_params\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed\",\"target\":\"autosome-PAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list\",\"target\":\"autosome-PAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed\",\"target\":\"chrX-nonPAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list\",\"target\":\"chrX-nonPAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed\",\"target\":\"chrY-nonPAR.bed\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list\",\"target\":\"chrY-nonPAR.interval_list\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz\",\"target\":\"ERR1347662.small_1.fastq.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz\",\"target\":\"ERR1347662.small_2.fastq.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf\",\"target\":\"Homo_sapiens_assembly38.dbsnp138.vcf\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx\",\"target\":\"Homo_sapiens_assembly38.dbsnp138.vcf.idx\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict\",\"target\":\"Homo_sapiens_assembly38.dict\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta\",\"target\":\"Homo_sapiens_assembly38.fasta\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt\",\"target\":\"Homo_sapiens_assembly38.fasta.alt\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb\",\"target\":\"Homo_sapiens_assembly38.fasta.amb\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann\",\"target\":\"Homo_sapiens_assembly38.fasta.ann\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt\",\"target\":\"Homo_sapiens_assembly38.fasta.bwt\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai\",\"target\":\"Homo_sapiens_assembly38.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac\",\"target\":\"Homo_sapiens_assembly38.fasta.pac\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa\",\"target\":\"Homo_sapiens_assembly38.fasta.sa\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz\",\"target\":\"Homo_sapiens_assembly38.known_indels.vcf.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\",\"target\":\"Homo_sapiens_assembly38.known_indels.vcf.gz.tbi\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\",\"target\":\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\",\"target\":\"Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi\",\"type\":\"other\"}]}]}}",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "https://github.com/common-workflow-language/cwltool",
@@ -681,118 +466,11 @@
             "version": "3.1.20220628170238"
         },
         {
-            "@id": "http://edamontology.org/format_3003",
+            "@id": "http://edamontology.org/format_1930",
             "@type": [
                 "Format"
             ],
-            "name": "Browser Extensible Data (BED) format of sequence annotation track, typically to be displayed in a genome browser."
-        },
-        {
-            "@id": "exe/autosome-PAR.bed",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 16408,
-            "dateModified": "2022-09-10T08:14:58",
-            "encodingFormat": "text/plain",
-            "format": {
-                "@id": "http://edamontology.org/format_3003"
-            },
-            "gid": 0,
-            "lineCount": 718,
-            "mode": "-rw-r--r--",
-            "sha512": "b2c7882ee7063559b37ca31ebea9ca0d169b602cd50205477ad92efd10ba5aceb5ea75c1d46b4b524e8395e74ffe37d3aeaabe00ee7bb71947ef405f4aa266c4",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.bed"
-        },
-        {
-            "@id": "exe/autosome-PAR.interval_list",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 419230,
-            "dateModified": "2022-09-10T08:15:02",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 4085,
-            "mode": "-rw-r--r--",
-            "sha512": "f43551f519da78d5aa76837636b8e440e02f40954aa0b00019e7adc4f916b77424557b05b741e7b484d65815da8f2140a5f2ea4d84be6b46778e61773a222edf",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/autosome-PAR.interval_list"
-        },
-        {
-            "@id": "exe/chrX-nonPAR.bed",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 35,
-            "dateModified": "2022-09-10T08:15:03",
-            "encodingFormat": "text/plain",
-            "format": {
-                "@id": "http://edamontology.org/format_3003"
-            },
-            "gid": 0,
-            "lineCount": 2,
-            "mode": "-rw-r--r--",
-            "sha512": "8b17ebdbd3732b31b43f5abf9d0f03ec61fef54968c57d9685e582625b03cf93ae4255df2c3dad4f1228f270a32b356ef3e1560fd67f445c15b77e6ec30934d7",
-            "text": "chrX\t0\t10000\nchrX\t2781479\t155701382",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.bed"
-        },
-        {
-            "@id": "exe/chrX-nonPAR.interval_list",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 399994,
-            "dateModified": "2022-09-10T08:15:09",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 3369,
-            "mode": "-rw-r--r--",
-            "sha512": "090fdedb5349e6b2660afb6790d2f845c9985c04b023c42351438c60e296fbe25dd57fb074f26af1e366ad7e84034f34537235b94a4adabccb9fc8542dcdd8fd",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrX-nonPAR.interval_list"
-        },
-        {
-            "@id": "exe/chrY-nonPAR.bed",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 66,
-            "dateModified": "2022-09-10T08:15:11",
-            "encodingFormat": "text/plain",
-            "format": {
-                "@id": "http://edamontology.org/format_3003"
-            },
-            "gid": 0,
-            "lineCount": 3,
-            "mode": "-rw-r--r--",
-            "sha512": "e1568c7c26198db09adc0e9a784cb5aed8f31373bb6845cee67b819780b7674ac43dd69e9a83df60c08d6437aceb0935d126db3e641a3f0aad64efa1d5363a67",
-            "text": "chrY\t0\t10000\nchrY\t2781479\t56887902\nchrY_KI270740v1_random\t0\t37240\n",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.bed"
-        },
-        {
-            "@id": "exe/chrY-nonPAR.interval_list",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 400028,
-            "dateModified": "2022-09-10T08:15:14",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 3370,
-            "mode": "-rw-r--r--",
-            "sha512": "72ddb909bed07befd0585a03884a987ecb63f1d182a5d99d8729bc81f277f184d8d94c6c0b28f0861709db05174450be52f3fa4cb72299b47fd00b27d59a93b8",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/chrY-nonPAR.interval_list"
+            "name": "FASTQ short read format ignoring quality scores."
         },
         {
             "@id": "exe/ERR1347662.small_1.fastq.gz",
@@ -803,10 +481,13 @@
             "contentSize": 767112,
             "dateModified": "2022-09-10T08:15:19",
             "encodingFormat": "application/gzip",
-            "gid": 0,
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "5f757898c4b183d02e996cf179311ae58b716a9b2d9ff63101b4111931bd04efcf7230ac11b39700a3f3ac6a9f06a985330fd60a02bd6b4d4c1179039dfa5508",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_1.fastq.gz"
         },
         {
@@ -818,269 +499,14 @@
             "contentSize": 746812,
             "dateModified": "2022-09-10T08:15:23",
             "encodingFormat": "application/gzip",
-            "gid": 0,
+            "format": {
+                "@id": "http://edamontology.org/format_1930"
+            },
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "4e6b7247f6adf98a8639b81d0a137eb906904a4a0f584ce66e168ea1594779bb607d40b3b9d1c3337b90775166b39d0132d2d0e2acbbdd498e43f97c18417da6",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/ERR1347662.small_2.fastq.gz"
-        },
-        {
-            "@id": "http://edamontology.org/format_3016",
-            "@type": [
-                "Format"
-            ],
-            "name": "Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation)."
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 10950827213,
-            "dateModified": "2022-09-10T11:13:38",
-            "encodingFormat": "text/plain",
-            "format": {
-                "@id": "http://edamontology.org/format_3016"
-            },
-            "gid": 0,
-            "lineCount": 60694831,
-            "mode": "-rw-r--r--",
-            "sha512": "e26fc9190fff0c7055844880d7265d1d18e38656f41a4765e8872a6300f70c17410dd24d8c08281be4ee58617afd6291b875ad9c3014f699859ea5d8c8d628d8",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.dbsnp138.vcf.idx",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 12480412,
-            "dateModified": "2022-09-10T11:14:16",
-            "encodingFormat": "application/octet-stream",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "bc7ef2be51c7ec65146e81350c1e12db92d122b20f4a468f31564107c6864a1539d7f80112cdd2fd4de8a643b77d951691d8d1f199632bfca1ce4940aaa33de8",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dbsnp138.vcf.idx"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.dict",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 581712,
-            "dateModified": "2022-09-10T11:14:20",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 3367,
-            "mode": "-rw-r--r--",
-            "sha512": "9b64fa47412becaab2e41ecc7c4132fe5a5763980b27f2d16e52c8c712309f33efb1bc2fc713fcf75317e32386ebd8f06009e608c4d6e7252612a755b61e22bd",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.dict"
-        },
-        {
-            "@id": "http://edamontology.org/format_1929",
-            "@type": [
-                "Format"
-            ],
-            "name": "FASTA format including NCBI-style IDs."
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 3249912778,
-            "dateModified": "2022-09-10T12:03:05",
-            "encodingFormat": "text/plain",
-            "format": {
-                "@id": "http://edamontology.org/format_1929"
-            },
-            "gid": 0,
-            "lineCount": 32178545,
-            "mode": "-rw-r--r--",
-            "sha512": "41a0edb97c470b327464d37a4efe8d36f1796e1148191f1c5be1d7d868c4bfb91958f66de4234d402ec0360fac07b6fdd766b5c1100ae909c073425551256915",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.alt",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 487553,
-            "dateModified": "2022-09-10T12:03:11",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 3201,
-            "mode": "-rw-r--r--",
-            "sha512": "735507fd0216e640117684089c4d7da15151b7132ba7dca75ffb4d4684fe09e19ba78cb8da35d341345891e0adf44ee9f78e4f2a778dc9dd940889a93a0a511a",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.alt"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.amb",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 20199,
-            "dateModified": "2022-09-10T12:03:13",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 1187,
-            "mode": "-rw-r--r--",
-            "sha512": "b438e8a0db4efefedaa1ce8a5e0d8ce5dc674828a5a53fcbd38d8414aac5c4aa7a81774ad4c2e2791813c7d6d2fc502af0893c78856366421a2e913a53b54f03",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.amb"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.ann",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 455474,
-            "dateModified": "2022-09-10T12:03:16",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 6733,
-            "mode": "-rw-r--r--",
-            "sha512": "ba0da6e18eb5b1152bdb2b6a6d24bf6aed3a66bc772ad15b2afef0a15ba0c11ab96bb3b050ff6d782542be4a700f48b08a4af3845a62c884981b641968176601",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.ann"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.bwt",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 3217347004,
-            "dateModified": "2022-09-10T12:52:12",
-            "encodingFormat": "application/octet-stream",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "8f37627df707fef64eebfe2c1c01fb06235c3f4b7537c8e78921b3bd2662141a293d5421f48bd229ce08a2d40db7f5e7c3e26ee987737b600a522d00e424f01f",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.bwt"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.fai",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 160928,
-            "dateModified": "2022-09-10T12:52:15",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 3366,
-            "mode": "-rw-r--r--",
-            "sha512": "cfcc85de41b11afddc0013653f9d55c8c0d0e9f20962432ecdbd9445e42fd56601f91eeed1bdc31c257d35ef3a4d81ced720112018310b2db74cbb2730738feb",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.fai"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.pac",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 804336731,
-            "dateModified": "2022-09-10T13:06:21",
-            "encodingFormat": "application/octet-stream",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "f5a17908b53f88eb114510aa5b341df445fc592027e2d2d84205cec64b2e9b07f756e2e84a25fe9f4cf290a9dfeff69ea0c930306cff8c5727bc4b30451fa645",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.pac"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.fasta.sa",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 1608673512,
-            "dateModified": "2022-09-10T13:30:55",
-            "encodingFormat": "application/octet-stream",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "442596898fcc91f5f15f8661541062d84197a254bc83dd572ac36bc7a64afb78c19e2103b87db58c968c16c37e8c0be5ec29bc034cad50cd11c8ec2d791c181a",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.fasta.sa"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 61692306,
-            "dateModified": "2022-09-10T13:32:49",
-            "encodingFormat": "application/gzip",
-            "format": {
-                "@id": "http://edamontology.org/format_3016"
-            },
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "293a430a339b59fb455c82393f806bf8f6057b1709a68361fa5d0f2a965cdcd4c9c1ccd8c3323915b3fd7287daa354b8aa55710a3f0797d7b4cf6f579b00a783",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz"
-        },
-        {
-            "@id": "exe/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 1567886,
-            "dateModified": "2022-09-10T13:32:56",
-            "encodingFormat": "application/gzip",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "6d35713f6bc8b76c5ce5e08bd02b2017cbe11ed6987d37fed8410297e436495ff2b49c67e43f45868682854e52477d9ff4bad96a437197c2ac67e821878fc253",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi"
-        },
-        {
-            "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 20685880,
-            "dateModified": "2022-09-10T13:33:35",
-            "encodingFormat": "application/gzip",
-            "format": {
-                "@id": "http://edamontology.org/format_3016"
-            },
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "049749123bc5e10ca8af690d6af560e9647e9332181f71421e9638cb8c7a104c931554a5d931386f21344efd66e9eaa7e56ec5a891f40491a128e2b05ac8efdb",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-        },
-        {
-            "@id": "exe/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi",
-            "@type": [
-                "File",
-                "FormalParameter"
-            ],
-            "contentSize": 1500013,
-            "dateModified": "2022-09-10T13:33:39",
-            "encodingFormat": "application/gzip",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "6b2af39a30ec2f768d8fd70e50a641b520ad9d3c4f3e2a6c19bb6b59e58b67ba6606700bcc6f133ddbb79dab5fd5ff65fb259a86465ee1b97f44dba280c91414",
-            "uid": 0,
-            "url": "https://zenodo.org/api/files/caab5cda-485e-4238-b532-6452b06d4c88/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
         },
         {
             "@id": "#sapporo-test-result",
@@ -1092,7 +518,7 @@
             "intermediateFiles": [],
             "name": "Sapporo test result",
             "pid": 21,
-            "runId": "e318c3f9-a69f-4c80-8d1f-8dc9d6f478dc",
+            "runId": "work",
             "startTime": "2022-09-15T06:49:26",
             "state": "CANCELED",
             "stderr": {
@@ -1106,28 +532,28 @@
             "@id": "stdout.log",
             "@type": "File",
             "contentSize": 2275,
-            "dateModified": "2022-09-15T10:28:52.342951",
+            "dateModified": "2022-09-15T10:28:52",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 45,
             "mode": "-rw-r--r--",
             "name": "Sapporo stdout",
             "sha512": "49715f33649628332bfbb450883bb349f69bb50c8ff707bac66606ed65f338f8dddb16fa916fab0ca91a65931410d31928d041b69bb3e71eaca791a9ce43aa2d",
             "text": "{\n    \"bcftools_stats\": null,\n    \"bcftools_stats_log\": null,\n    \"bgzip_log\": null,\n    \"bqsr_log\": null,\n    \"crai_log\": null,\n    \"cram\": null,\n    \"cram_log\": null,\n    \"haplotypecaller_autosome_PAR_ploidy_2_vcf_gz\": null,\n    \"haplotypecaller_autosome_PAR_ploidy_2_wgs_metrics\": null,\n    \"haplotypecaller_autosome_PAR_ploidy_2_wgs_metrics_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_bcftools_stats\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_bcftools_stats_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_bgzip_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_haplotypecaller_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_tabix_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_vcf_gz\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_wgs_metrics\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_1_wgs_metrics_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_bcftools_stats\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_bcftools_stats_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_bgzip_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_haplotypecaller_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_tabix_log\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_vcf_gz\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_wgs_metrics\": null,\n    \"haplotypecaller_chrX_nonPAR_ploidy_2_wgs_metrics_log\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_bcftools_stats\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_bcftools_stats_log\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_bgzip_log\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_haplotypecaller_log\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_tabix_log\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_vcf_gz\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_wgs_metrics\": null,\n    \"haplotypecaller_chrY_nonPAR_ploidy_1_wgs_metrics_log\": null,\n    \"haplotypecaller_log\": null,\n    \"markdup_log\": null,\n    \"markdup_metrics\": null,\n    \"picard-CollectBaseDistributionByCycle-chart-pdf\": null,\n    \"picard-CollectBaseDistributionByCycle-chart-png\": null,\n    \"picard-CollectBaseDistributionByCycle-collect_base_dist_by_cycle\": null,\n    \"samtools_flagstat_flagstat\": null,\n    \"samtools_idxstats_idxstats\": null,\n    \"tabix_log\": null\n}\n",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "stderr.log",
             "@type": "File",
             "contentSize": 15165,
-            "dateModified": "2022-09-15T10:28:52.343909",
+            "dateModified": "2022-09-15T10:28:52",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 153,
             "mode": "-rw-r--r--",
             "name": "Sapporo stderr",
             "sha512": "81fa52a591b496f2c16f8f8224f9a9747f37fd79806bdc6387092c23b05a92e3a060dee4fe2c36e06ee4f0b2dae34b2438d24a879915ca533662f72736c05bca",
-            "uid": 0
+            "uid": 1000
         }
     ]
 }

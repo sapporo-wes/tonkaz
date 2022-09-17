@@ -2,76 +2,76 @@
     "@context": [
         "https://w3id.org/ro/crate/1.1/context",
         {
-            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#FileStats",
-            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#Format",
-            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#IntermediateFile",
-            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#OutputFile",
-            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoConfiguration",
-            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#SapporoService",
+            "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#FileStats",
+            "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#Format",
+            "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#IntermediateFile",
+            "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#OutputFile",
+            "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoConfiguration",
+            "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoService",
             "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
-            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestEnvironment",
+            "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestEnvironment",
             "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
-            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#TestResult",
+            "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestResult",
             "TestService": "https://w3id.org/ro/terms/test#TestService",
             "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
-            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#WorkflowAttachment",
-            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#attachment",
-            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cmd",
-            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#configuration",
-            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuArchitecture",
-            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#cpuCount",
+            "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#WorkflowAttachment",
+            "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#attachment",
+            "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cmd",
+            "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#configuration",
+            "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuArchitecture",
+            "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuCount",
             "definition": "https://w3id.org/ro/terms/test#definition",
-            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateRate",
-            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#duplicateReads",
+            "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateRate",
+            "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateReads",
             "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
-            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#environment",
-            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#executableWorkflows",
-            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#exitCode",
-            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#format",
-            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#freeDiskSpace",
-            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#generatedBy",
-            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#getRuns",
-            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#gid",
-            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#inDocker",
-            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#indelsCount",
+            "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#environment",
+            "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#executableWorkflows",
+            "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#exitCode",
+            "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#format",
+            "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#freeDiskSpace",
+            "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#generatedBy",
+            "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#getRuns",
+            "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#gid",
+            "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#inDocker",
+            "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#indelsCount",
             "instance": "https://w3id.org/ro/terms/test#instance",
-            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#intermediateFiles",
-            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#lineCount",
-            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedRate",
-            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mappedReads",
-            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#mode",
-            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#os",
-            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#osVersion",
-            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#outputs",
-            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#pid",
-            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#registeredOnlyMode",
+            "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#intermediateFiles",
+            "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#lineCount",
+            "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedRate",
+            "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedReads",
+            "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mode",
+            "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#os",
+            "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#osVersion",
+            "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#outputs",
+            "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#pid",
+            "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#registeredOnlyMode",
             "resource": "https://w3id.org/ro/terms/test#resource",
-            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#result",
-            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runId",
-            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#runSh",
+            "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#result",
+            "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runId",
+            "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runSh",
             "runsOn": "https://w3id.org/ro/terms/test#runsOn",
-            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoConfig",
-            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sapporoEndpoint",
-            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#serviceInfo",
-            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#sha512",
-            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#snpsCount",
-            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#state",
-            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stats",
-            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stderr",
-            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#stdout",
-            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalMemory",
-            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#totalReads",
-            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#uid",
-            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedRate",
-            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#unmappedReads",
-            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#urlPrefix",
-            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#variantCount",
-            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowAttachment",
-            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowEngineParameters",
-            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#workflowParameters",
-            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisId",
-            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisMetadata",
-            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/ro-terms.csv#yevisTestId"
+            "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoConfig",
+            "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoEndpoint",
+            "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#serviceInfo",
+            "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sha512",
+            "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#snpsCount",
+            "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#state",
+            "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stats",
+            "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stderr",
+            "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stdout",
+            "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalMemory",
+            "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalReads",
+            "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#uid",
+            "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedRate",
+            "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedReads",
+            "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#urlPrefix",
+            "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#variantCount",
+            "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowAttachment",
+            "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowEngineParameters",
+            "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowParameters",
+            "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisId",
+            "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisMetadata",
+            "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisTestId"
         }
     ],
     "@graph": [
@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-14T05:44:12+00:00",
+            "datePublished": "2022-09-17T16:01:36+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -214,37 +214,37 @@
                     "@id": "exe/metadata.json"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bam"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
                 }
             ],
             "license": {
@@ -380,37 +380,37 @@
                     "@id": "exe/metadata.json"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bam"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
                 }
             ]
         },
@@ -475,13 +475,13 @@
                 "WorkflowAttachment"
             ],
             "contentSize": 19616,
-            "dateModified": "2022-09-14T05:38:34.413008",
+            "dateModified": "2022-09-14T05:38:34",
             "encodingFormat": "text/x-objective-c",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 637,
             "mode": "-rw-r--r--",
             "sha512": "f343ca31e5cbfd37e4b29c197dce289d8788a9232678ba1333786628930a897cca954cab3d7a27116a1ba46f9d0d79a9936511d9b1911795640f55c790f59841",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignAndCall.wdl"
         },
         {
@@ -492,13 +492,13 @@
                 "WorkflowAttachment"
             ],
             "contentSize": 5329,
-            "dateModified": "2022-09-14T05:38:34.909754",
+            "dateModified": "2022-09-14T05:38:34",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 184,
             "mode": "-rw-r--r--",
             "sha512": "8c39ba17371924cb268237e0e867475855f7af2494cf448045e24223fe0ec0956e551bba3601a808c120e7e779bb63fabf6f7a3d0d0808f0e2ea8c569ac043b4",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignmentPipeline.wdl"
         },
         {
@@ -528,7 +528,7 @@
             "runsOn": {
                 "@id": "#sapporo-service"
             },
-            "url": "http://localhost:2000"
+            "url": "http://localhost:1122"
         },
         {
             "@id": "#sapporo-service",
@@ -545,7 +545,7 @@
             "url": {
                 "@id": "https://github.com/sapporo-wes/sapporo-service"
             },
-            "version": "1.4.6"
+            "version": "1.4.8"
         },
         {
             "@id": "https://github.com/sapporo-wes/sapporo-service",
@@ -569,7 +569,7 @@
             "sapporoConfig": {
                 "@id": "sapporo_config.json"
             },
-            "sapporoEndpoint": "http://localhost:2000",
+            "sapporoEndpoint": "http://localhost:1122",
             "serviceInfo": {
                 "@id": "service_info.json"
             },
@@ -580,55 +580,55 @@
             "@id": "service_info.json",
             "@type": "File",
             "contentSize": 1676,
-            "dateModified": "2022-09-14T05:38:28.352397",
+            "dateModified": "2022-09-17T15:48:28.749640",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 86,
+            "gid": 1000,
+            "lineCount": 85,
             "mode": "-rw-r--r--",
             "name": "Sapporo service info",
-            "sha512": "84ac5c3541075c040e9f1f14f29548d2bb4782580b9abb46fbc50ff45c375ac0dc58954c7d97d30ec7a7aa7dfc7d561de328dedac9047c1a5c1ed8d789691786",
-            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.6\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"EXECUTOR_ERROR\": 1,\n    \"UNKNOWN\": 1,\n    \"COMPLETE\": 1\n  }\n}",
-            "uid": 0
+            "sha512": "ce835df3238d2d6de3fb4a39c9d6a3185f9d9b130a35bdc0844670c92761cec675b9ec3e5de3d66c709c666c611bbe39e7566e29420e082ff4551e0570b6861b",
+            "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.8\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"EXECUTOR_ERROR\": 1,\n    \"UNKNOWN\": 1,\n    \"COMPLETE\": 1\n  }\n}",
+            "uid": 1000
         },
         {
             "@id": "executable_workflows.json",
             "@type": "File",
             "contentSize": 33024,
-            "dateModified": "2022-09-14T05:38:32.479318",
+            "dateModified": "2022-09-17T15:48:28.757640",
             "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 651,
+            "gid": 1000,
+            "lineCount": 650,
             "mode": "-rw-r--r--",
             "name": "Sapporo executable workflows",
             "sha512": "186d6d93ed49399c525e4541e2259da3d6b6a5cc6cfe76489930061add95affad25477d286ede26aa56d81f7fb4b0a452202715bb2a4611ee1e7c8912d60443d",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "run.sh",
             "@type": "File",
             "contentSize": 11327,
-            "dateModified": "2022-09-14T05:38:32.487581",
+            "dateModified": "2022-09-17T15:48:28.761640",
             "encodingFormat": "text/x-shellscript",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 307,
             "mode": "-rw-r--r--",
             "name": "Sapporo run.sh",
             "sha512": "b0f968d72e5722befba64719731849f574ab20f7a3c2cd0ab8165457c629cedbcc88b0d4392d812533ac6c6316647e9a089339e57269332c40f04674842d84b9",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "sapporo_config.json",
             "@type": "File",
             "contentSize": 441,
-            "dateModified": "2022-09-14T05:38:28.210775",
+            "dateModified": "2022-09-17T15:48:28.765640",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 11,
+            "gid": 1000,
+            "lineCount": 10,
             "mode": "-rw-r--r--",
             "name": "Sapporo runtime configuration",
-            "sha512": "2293d418734367b00d2c14354f0f148e6d8fba7e33410e6c79a38f2d381b9f3fda99f0ad8bab2eed71d08d37c17b82bb751628130868e6b6dcfe511ecfe4b787",
-            "text": "{\n  \"sapporo_version\": \"1.4.6\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:2000\"\n}",
-            "uid": 0
+            "sha512": "5ca15ddb3d9e71d17b00b16486de5c9c391726e509de5b45553bd01c482a6c04bb5c2be18580b9395411b7d154567dbae8eb1519506fa9345bc212b5ae965219",
+            "text": "{\n  \"sapporo_version\": \"1.4.8\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
+            "uid": 1000
         },
         {
             "@id": "#sapporo-test-environment",
@@ -637,12 +637,12 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 233202847744,
+            "freeDiskSpace": 138291724288,
             "gid": 0,
             "inDocker": true,
             "os": "Linux",
-            "osVersion": "5.10.104-linuxkit",
-            "totalMemory": 16763854848,
+            "osVersion": "5.13.0-40-generic",
+            "totalMemory": 25211322368,
             "uid": 0
         },
         {
@@ -656,10 +656,10 @@
                 "@id": "#cromwell"
             },
             "contentSize": 8450,
-            "dateModified": "2022-09-14T05:38:28.216055",
+            "dateModified": "2022-09-14T05:38:28",
             "encodingFormat": "application/json",
             "engineVersion": "80",
-            "gid": 0,
+            "gid": 1000,
             "input": [
                 {
                     "@id": "exe/G97753.NA12878.bam"
@@ -740,12 +740,12 @@
                     "@id": "exe/non_control_region.chrM.interval_list"
                 }
             ],
-            "lineCount": 11,
+            "lineCount": 10,
             "mode": "-rw-r--r--",
             "name": "Sapporo run request",
             "sha512": "5dd570e500ef9222fc761bcb0e29743f56511a4ae789b03836a9cd91323129cb0e3c9844aca7525f2cf8a9f5a0da62c02e182a13344026a9663485c42cef99bf",
             "text": "{\n  \"workflow_params\": \"{\\n  \\\"MitochondriaPipeline.wgs_aligned_input_bam_or_cram\\\": \\\"G97753.NA12878.bam\\\",\\n  \\\"MitochondriaPipeline.wgs_aligned_input_bam_or_cram_index\\\": \\\"G97753.NA12878.bai\\\",\\n  \\\"MitochondriaPipeline.ref_fasta\\\": \\\"Homo_sapiens_assembly38.fasta\\\",\\n  \\\"MitochondriaPipeline.ref_dict\\\": \\\"Homo_sapiens_assembly38.dict\\\",\\n  \\\"MitochondriaPipeline.ref_fasta_index\\\": \\\"Homo_sapiens_assembly38.fasta.fai\\\",\\n  \\\"MitochondriaPipeline.mt_dict\\\": \\\"Homo_sapiens_assembly38.chrM.dict\\\",\\n  \\\"MitochondriaPipeline.mt_fasta\\\": \\\"Homo_sapiens_assembly38.chrM.fasta\\\",\\n  \\\"MitochondriaPipeline.mt_fasta_index\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.fai\\\",\\n  \\\"MitochondriaPipeline.mt_amb\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.amb\\\",\\n  \\\"MitochondriaPipeline.mt_ann\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.ann\\\",\\n  \\\"MitochondriaPipeline.mt_bwt\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.bwt\\\",\\n  \\\"MitochondriaPipeline.mt_pac\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.pac\\\",\\n  \\\"MitochondriaPipeline.mt_sa\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.sa\\\",\\n  \\\"MitochondriaPipeline.blacklisted_sites\\\": \\\"blacklist_sites.hg38.chrM.bed\\\",\\n  \\\"MitochondriaPipeline.blacklisted_sites_index\\\": \\\"blacklist_sites.hg38.chrM.bed.idx\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_dict\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_fasta\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_fasta_index\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_amb\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_ann\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_bwt\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_pac\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\\\",\\n  \\\"MitochondriaPipeline.mt_shifted_sa\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\\\",\\n  \\\"MitochondriaPipeline.shift_back_chain\\\": \\\"ShiftBack.chain\\\",\\n  \\\"MitochondriaPipeline.control_region_shifted_reference_interval_list\\\": \\\"control_region_shifted.chrM.interval_list\\\",\\n  \\\"MitochondriaPipeline.non_control_region_interval_list\\\": \\\"non_control_region.chrM.interval_list\\\"\\n}\\n\",\n  \"workflow_type\": \"WDL\",\n  \"workflow_type_version\": \"1.0\",\n  \"tags\": null,\n  \"workflow_engine_name\": \"cromwell\",\n  \"workflow_engine_parameters\": \"{}\",\n  \"workflow_url\": \"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/MitochondriaPipeline.wdl\",\n  \"workflow_name\": null,\n  \"workflow_attachment\": \"[{\\\"file_name\\\": \\\"AlignAndCall.wdl\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignAndCall.wdl\\\"}, {\\\"file_name\\\": \\\"AlignmentPipeline.wdl\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignmentPipeline.wdl\\\"}, {\\\"file_name\\\": \\\"G97753.NA12878.bam\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gatk-best-practices/mitochondria-pipeline/G97753.NA12878.bam\\\"}, {\\\"file_name\\\": \\\"G97753.NA12878.bai\\\", \\\"file_url\\\": \\\"https://raw.githubusercontent.com/sapporo-wes/test-workflow/fd9bdef7d657f8b29c159dcbc2d59d191b08ae22/assets/G97753.NA12878.bai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.dict\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.fasta.fai\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.dict\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.dict\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.fai\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.amb\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.amb\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.ann\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.ann\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.bwt\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.bwt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.pac\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.pac\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.fasta.sa\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.sa\\\"}, {\\\"file_name\\\": \\\"blacklist_sites.hg38.chrM.bed\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed\\\"}, {\\\"file_name\\\": \\\"blacklist_sites.hg38.chrM.bed.idx\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed.idx\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\\\"}, {\\\"file_name\\\": \\\"ShiftBack.chain\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/ShiftBack.chain\\\"}, {\\\"file_name\\\": \\\"control_region_shifted.chrM.interval_list\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/control_region_shifted.chrM.interval_list\\\"}, {\\\"file_name\\\": \\\"non_control_region.chrM.interval_list\\\", \\\"file_url\\\": \\\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/non_control_region.chrM.interval_list\\\"}]\"\n}",
-            "uid": 0,
+            "uid": 1000,
             "workflowEngineParameters": {
                 "@id": "workflow_engine_params.txt"
             },
@@ -763,15 +763,15 @@
                 "File"
             ],
             "contentSize": 2264,
-            "dateModified": "2022-09-14T05:38:28.220481",
+            "dateModified": "2022-09-14T05:38:28",
             "encodingFormat": "application/json",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 28,
             "mode": "-rw-r--r--",
             "name": "Sapporo workflow parameters",
             "sha512": "b0b93dea5017fc571b32209a36cad10a04468c81edbe1eabc948b83dd39a5187539fd518d9a0901ef3f5b9ff8f26e71a0339bb8754ae92a19f1b2eae38574a4b",
             "text": "{\n  \"MitochondriaPipeline.wgs_aligned_input_bam_or_cram\": \"G97753.NA12878.bam\",\n  \"MitochondriaPipeline.wgs_aligned_input_bam_or_cram_index\": \"G97753.NA12878.bai\",\n  \"MitochondriaPipeline.ref_fasta\": \"Homo_sapiens_assembly38.fasta\",\n  \"MitochondriaPipeline.ref_dict\": \"Homo_sapiens_assembly38.dict\",\n  \"MitochondriaPipeline.ref_fasta_index\": \"Homo_sapiens_assembly38.fasta.fai\",\n  \"MitochondriaPipeline.mt_dict\": \"Homo_sapiens_assembly38.chrM.dict\",\n  \"MitochondriaPipeline.mt_fasta\": \"Homo_sapiens_assembly38.chrM.fasta\",\n  \"MitochondriaPipeline.mt_fasta_index\": \"Homo_sapiens_assembly38.chrM.fasta.fai\",\n  \"MitochondriaPipeline.mt_amb\": \"Homo_sapiens_assembly38.chrM.fasta.amb\",\n  \"MitochondriaPipeline.mt_ann\": \"Homo_sapiens_assembly38.chrM.fasta.ann\",\n  \"MitochondriaPipeline.mt_bwt\": \"Homo_sapiens_assembly38.chrM.fasta.bwt\",\n  \"MitochondriaPipeline.mt_pac\": \"Homo_sapiens_assembly38.chrM.fasta.pac\",\n  \"MitochondriaPipeline.mt_sa\": \"Homo_sapiens_assembly38.chrM.fasta.sa\",\n  \"MitochondriaPipeline.blacklisted_sites\": \"blacklist_sites.hg38.chrM.bed\",\n  \"MitochondriaPipeline.blacklisted_sites_index\": \"blacklist_sites.hg38.chrM.bed.idx\",\n  \"MitochondriaPipeline.mt_shifted_dict\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\",\n  \"MitochondriaPipeline.mt_shifted_fasta\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\",\n  \"MitochondriaPipeline.mt_shifted_fasta_index\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\",\n  \"MitochondriaPipeline.mt_shifted_amb\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\",\n  \"MitochondriaPipeline.mt_shifted_ann\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\",\n  \"MitochondriaPipeline.mt_shifted_bwt\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\",\n  \"MitochondriaPipeline.mt_shifted_pac\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\",\n  \"MitochondriaPipeline.mt_shifted_sa\": \"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\",\n  \"MitochondriaPipeline.shift_back_chain\": \"ShiftBack.chain\",\n  \"MitochondriaPipeline.control_region_shifted_reference_interval_list\": \"control_region_shifted.chrM.interval_list\",\n  \"MitochondriaPipeline.non_control_region_interval_list\": \"non_control_region.chrM.interval_list\"\n}\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://gist.githubusercontent.com/suecharo/69b0086317263b7160bb492914f4a07d/raw/653c44b6c4531ba8d65ecbb19e49180b8393411f/ExampleInputsMitochondriaPipeline.json"
         },
         {
@@ -780,15 +780,15 @@
                 "File"
             ],
             "contentSize": 0,
-            "dateModified": "2022-09-14T05:38:28.223419",
+            "dateModified": "2022-09-14T05:38:28",
             "encodingFormat": "inode/x-empty",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Sapporo workflow engine parameters",
             "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
             "text": "",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "yevis-metadata.yml",
@@ -796,15 +796,15 @@
                 "File"
             ],
             "contentSize": 6441,
-            "dateModified": "2022-09-14T05:38:32.493710",
+            "dateModified": "2022-09-14T05:38:32",
             "encodingFormat": "application/json",
-            "gid": 0,
-            "lineCount": 1,
+            "gid": 1000,
+            "lineCount": 0,
             "mode": "-rw-r--r--",
             "name": "Yevis metadata",
             "sha512": "ecc945b9b4dcb8677d0733b9a002cdde9043c526842ea313090181e5b14fed9540898472276d0392e588a1725194db89e16bc8385066cd3bcdd9e179537e7054",
             "text": "{\"id\":\"68c32f9c-bdaa-420c-879c-90b40d8bc4d5\",\"version\":\"1.0.0\",\"license\":\"CC0-1.0\",\"authors\":[{\"github_account\":\"suecharo\",\"name\":\"Hirotaka Suetake\",\"affiliation\":\"The University of Tokyo\",\"orcid\":\"0000-0003-2765-0049\"}],\"workflow\":{\"name\":\"GATK workflows - Mitochondria Pipeline\",\"readme\":\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/README.md\",\"language\":{\"type\":\"WDL\",\"version\":\"1.0\"},\"files\":[{\"url\":\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignAndCall.wdl\",\"target\":\"AlignAndCall.wdl\",\"type\":\"secondary\"},{\"url\":\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/AlignmentPipeline.wdl\",\"target\":\"AlignmentPipeline.wdl\",\"type\":\"secondary\"},{\"url\":\"https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/MitochondriaPipeline.wdl\",\"target\":\"MitochondriaPipeline.wdl\",\"type\":\"primary\"}],\"testing\":[{\"id\":\"example_test\",\"files\":[{\"url\":\"https://gist.githubusercontent.com/suecharo/69b0086317263b7160bb492914f4a07d/raw/653c44b6c4531ba8d65ecbb19e49180b8393411f/ExampleInputsMitochondriaPipeline.json\",\"target\":\"wf_params.json\",\"type\":\"wf_params\"},{\"url\":\"https://storage.googleapis.com/gatk-best-practices/mitochondria-pipeline/G97753.NA12878.bam\",\"target\":\"G97753.NA12878.bam\",\"type\":\"other\"},{\"url\":\"https://raw.githubusercontent.com/sapporo-wes/test-workflow/fd9bdef7d657f8b29c159dcbc2d59d191b08ae22/assets/G97753.NA12878.bai\",\"target\":\"G97753.NA12878.bai\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta\",\"target\":\"Homo_sapiens_assembly38.fasta\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict\",\"target\":\"Homo_sapiens_assembly38.dict\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai\",\"target\":\"Homo_sapiens_assembly38.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.dict\",\"target\":\"Homo_sapiens_assembly38.chrM.dict\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.fai\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.amb\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.amb\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.ann\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.ann\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.bwt\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.bwt\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.pac\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.pac\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.sa\",\"target\":\"Homo_sapiens_assembly38.chrM.fasta.sa\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed\",\"target\":\"blacklist_sites.hg38.chrM.bed\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed.idx\",\"target\":\"blacklist_sites.hg38.chrM.bed.idx\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\",\"target\":\"Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/ShiftBack.chain\",\"target\":\"ShiftBack.chain\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/control_region_shifted.chrM.interval_list\",\"target\":\"control_region_shifted.chrM.interval_list\",\"type\":\"other\"},{\"url\":\"https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/non_control_region.chrM.interval_list\",\"target\":\"non_control_region.chrM.interval_list\",\"type\":\"other\"}]}]}}",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "https://cromwell.readthedocs.io/en/stable/",
@@ -835,15 +835,15 @@
                 "FormalParameter"
             ],
             "contentSize": 120633043,
-            "dateModified": "2022-09-14T05:38:42.109597",
+            "dateModified": "2022-09-14T05:38:42",
             "encodingFormat": "application/gzip",
             "format": {
                 "@id": "http://edamontology.org/format_2572"
             },
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "8d099a208a63b3ce2c14a01a2ffddf7c97d7ae5997a2433cc79cd0fe1f1c3e93bed4d4c26c850bfdff68444e1cfcac9cb683f90fabf975fccb8f376e48a52a75",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gatk-best-practices/mitochondria-pipeline/G97753.NA12878.bam"
         },
         {
@@ -853,12 +853,12 @@
                 "FormalParameter"
             ],
             "contentSize": 1712968,
-            "dateModified": "2022-09-14T05:38:42.707571",
+            "dateModified": "2022-09-14T05:38:42",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "de71983d22edec88c37e1472bd89f64c82665aaa5f5ffecdc6a97137fa2c7b64393e5e33b219660fe61e96c0439cf5c778e525c0d1eb2b6e8f9f05b3e3b49a10",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://raw.githubusercontent.com/sapporo-wes/test-workflow/fd9bdef7d657f8b29c159dcbc2d59d191b08ae22/assets/G97753.NA12878.bai"
         },
         {
@@ -875,16 +875,16 @@
                 "FormalParameter"
             ],
             "contentSize": 3249912778,
-            "dateModified": "2022-09-14T05:42:06.476153",
+            "dateModified": "2022-09-14T05:42:06",
             "encodingFormat": "text/plain",
             "format": {
                 "@id": "http://edamontology.org/format_1929"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 32178545,
             "mode": "-rw-r--r--",
             "sha512": "41a0edb97c470b327464d37a4efe8d36f1796e1148191f1c5be1d7d868c4bfb91958f66de4234d402ec0360fac07b6fdd766b5c1100ae909c073425551256915",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta"
         },
         {
@@ -894,13 +894,13 @@
                 "FormalParameter"
             ],
             "contentSize": 581712,
-            "dateModified": "2022-09-14T05:42:07.149262",
+            "dateModified": "2022-09-14T05:42:07",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3367,
             "mode": "-rw-r--r--",
             "sha512": "9b64fa47412becaab2e41ecc7c4132fe5a5763980b27f2d16e52c8c712309f33efb1bc2fc713fcf75317e32386ebd8f06009e608c4d6e7252612a755b61e22bd",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict"
         },
         {
@@ -910,13 +910,13 @@
                 "FormalParameter"
             ],
             "contentSize": 160928,
-            "dateModified": "2022-09-14T05:42:07.822060",
+            "dateModified": "2022-09-14T05:42:07",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3366,
             "mode": "-rw-r--r--",
             "sha512": "cfcc85de41b11afddc0013653f9d55c8c0d0e9f20962432ecdbd9445e42fd56601f91eeed1bdc31c257d35ef3a4d81ced720112018310b2db74cbb2730738feb",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai"
         },
         {
@@ -926,14 +926,14 @@
                 "FormalParameter"
             ],
             "contentSize": 192,
-            "dateModified": "2022-09-14T05:42:08.520944",
+            "dateModified": "2022-09-14T05:42:08",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 2,
             "mode": "-rw-r--r--",
             "sha512": "3ebde8539497cadd164b3ccfe4a5fe54638e5502fea822926d689e7dc52dd403253ff64b886d09a36a6e448105be8707fb34dc37d83c990fc5f61418485ccabf",
             "text": "@HD\tVN:1.5\n@SQ\tSN:chrM\tLN:16569\tM5:c68f52674c9fb33aef52dcf399755519\tUR:file:/humgen/gsa-hpprojects/dev/mshand/SpecOps/Mitochondria/MitochondriaOnlyFastas/Homo_sapiens_assembly38.mt_only.fasta\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.dict"
         },
         {
@@ -943,16 +943,16 @@
                 "FormalParameter"
             ],
             "contentSize": 16857,
-            "dateModified": "2022-09-14T05:42:09.186063",
+            "dateModified": "2022-09-14T05:42:09",
             "encodingFormat": "text/plain",
             "format": {
                 "@id": "http://edamontology.org/format_1929"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 167,
             "mode": "-rw-r--r--",
             "sha512": "25ca84c9bb966248305984b92b16629dd45be8dae3b0269f2c13e20c07583f09efba3f3b67775fc47430f6240a7dca9c08cfff1953b0872bbecf3b6ab4448b91",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta"
         },
         {
@@ -962,14 +962,14 @@
                 "FormalParameter"
             ],
             "contentSize": 23,
-            "dateModified": "2022-09-14T05:42:09.864724",
+            "dateModified": "2022-09-14T05:42:09",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "6e86a5d539d55613c00e36ab6c08f25c365b16e9a31e4de4e70574c6edfdc5ac189c9f3d248cf723dc4e0b316abd1a734af6162a660fa0938b31fbef1ce48802",
             "text": "chrM\t16569\t122\t100\t101\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.fai"
         },
         {
@@ -979,14 +979,14 @@
                 "FormalParameter"
             ],
             "contentSize": 19,
-            "dateModified": "2022-09-14T05:42:10.552647",
+            "dateModified": "2022-09-14T05:42:10",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 2,
             "mode": "-rw-r--r--",
             "sha512": "3af4a499fde6da834e9b1987b8d380c7c2c53d2d5395acf5cea475e7722a4843b2e3c65e3c06bc180677693eb3dd269f047688911bfcd0656012a60a89ad2e01",
             "text": "16569 1 1\n3106 1 N\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.amb"
         },
         {
@@ -996,14 +996,14 @@
                 "FormalParameter"
             ],
             "contentSize": 144,
-            "dateModified": "2022-09-14T05:42:11.265971",
+            "dateModified": "2022-09-14T05:42:11",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3,
             "mode": "-rw-r--r--",
             "sha512": "7dbeb4099ab8027cd3aa3c87b4f31b0926c054c3995191832bb0d9d2426a7db9fd440e3142920b74c6f651db5c86d0bf3f64682f179dfec19e32638accf4e9e1",
             "text": "16569 1 11\n0 chrM  AC:J01415.2  gi:113200490  LN:16569  rl:Mitochondrion  M5:c68f52674c9fb33aef52dcf399755519  AS:GRCh38  tp:circular\n0 16569 1\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.ann"
         },
         {
@@ -1013,12 +1013,12 @@
                 "FormalParameter"
             ],
             "contentSize": 16648,
-            "dateModified": "2022-09-14T05:42:11.996771",
+            "dateModified": "2022-09-14T05:42:11",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "98a87aece30d7a5266e391fe8fdbf13158b269bb1f8afce6307076e309bf080821d6208384151eeb5678714743b383fcc161950ca3372493385ff3f1839e3466",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.bwt"
         },
         {
@@ -1028,12 +1028,12 @@
                 "FormalParameter"
             ],
             "contentSize": 4144,
-            "dateModified": "2022-09-14T05:42:12.652531",
+            "dateModified": "2022-09-14T05:42:12",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "7059335681cf2894ca54e8ed5052928897804834e3b925a8aafd7c35ee8f8523348413e2249c2b6b7bfb90882ada6e713ec66f32cecb52e52ea42b50d7318e93",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.pac"
         },
         {
@@ -1043,12 +1043,12 @@
                 "FormalParameter"
             ],
             "contentSize": 8336,
-            "dateModified": "2022-09-14T05:42:13.386892",
+            "dateModified": "2022-09-14T05:42:13",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "1cfb7ce9ee4968bc98bad8342f1063eb0eaf24b6fbd5f92f899b644b39ce629775ef0a30d4b18e83e32bfb4ca7b724d2fabc89ed7900fed7b06cde137824491c",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.fasta.sa"
         },
         {
@@ -1065,17 +1065,17 @@
                 "FormalParameter"
             ],
             "contentSize": 132,
-            "dateModified": "2022-09-14T05:42:14.080459",
+            "dateModified": "2022-09-14T05:42:14",
             "encodingFormat": "text/plain",
             "format": {
                 "@id": "http://edamontology.org/format_3003"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 6,
             "mode": "-rw-r--r--",
             "sha512": "25b8583da9a940ada917897aac821b857244086695a014201985ddf58c1b1ca198b15d134f1e675f3495440b4fef674cb4c0c5575a1f8f9241c292aeabb7216b",
             "text": "chrM\t300\t301\t.\t500\t+\nchrM\t301\t302\t.\t500\t+\nchrM\t309\t310\t.\t500\t+\nchrM\t315\t316\t.\t500\t+\nchrM\t3106\t3107\t.\t500\t+\nchrM\t16181\t16182\t.\t500\t+\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed"
         },
         {
@@ -1085,12 +1085,12 @@
                 "FormalParameter"
             ],
             "contentSize": 283,
-            "dateModified": "2022-09-14T05:42:14.727103",
+            "dateModified": "2022-09-14T05:42:14",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "39fffeacd6948b400324eadbe992498bc2d9bff27584f9d8e13020ac970f04245061a76fcb4818404b2916f13a75f454831b9ab83830d9af46e770dc18dee268",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/blacklist_sites.hg38.chrM.bed.idx"
         },
         {
@@ -1100,14 +1100,14 @@
                 "FormalParameter"
             ],
             "contentSize": 214,
-            "dateModified": "2022-09-14T05:42:15.376869",
+            "dateModified": "2022-09-14T05:42:15",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 2,
             "mode": "-rw-r--r--",
             "sha512": "090175ae4096bffdf32407ae3a70aae51376fe59ceaae8f73dbc559b82e365894e9e2744622c932768e8c8ac2efc6c2ed1fbec99d98f3ff44d9410988a945a77",
             "text": "@HD\tVN:1.5\n@SQ\tSN:chrM\tLN:16569\tM5:8ca1f1339b6185c6f63cf3752285cc37\tUR:file:/humgen/gsa-hpprojects/dev/mshand/SpecOps/Mitochondria/MitochondriaOnlyFastas/Homo_sapiens_assembly38.mt_only.shifted_by_8000_bases.fasta\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict"
         },
         {
@@ -1117,16 +1117,16 @@
                 "FormalParameter"
             ],
             "contentSize": 16857,
-            "dateModified": "2022-09-14T05:42:16.093495",
+            "dateModified": "2022-09-14T05:42:16",
             "encodingFormat": "text/plain",
             "format": {
                 "@id": "http://edamontology.org/format_1929"
             },
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 167,
             "mode": "-rw-r--r--",
             "sha512": "e6728c78cc2976b6c7a2da43f8523738aa2673d9611005b6a879243eeb2015375425a265a845a3a4199275e84dd9c5a74ef77a330c1c1d6446d6579cd43d22ca",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta"
         },
         {
@@ -1136,14 +1136,14 @@
                 "FormalParameter"
             ],
             "contentSize": 23,
-            "dateModified": "2022-09-14T05:42:16.731575",
+            "dateModified": "2022-09-14T05:42:16",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1,
             "mode": "-rw-r--r--",
             "sha512": "6e86a5d539d55613c00e36ab6c08f25c365b16e9a31e4de4e70574c6edfdc5ac189c9f3d248cf723dc4e0b316abd1a734af6162a660fa0938b31fbef1ce48802",
             "text": "chrM\t16569\t122\t100\t101\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai"
         },
         {
@@ -1153,14 +1153,14 @@
                 "FormalParameter"
             ],
             "contentSize": 20,
-            "dateModified": "2022-09-14T05:42:17.368501",
+            "dateModified": "2022-09-14T05:42:17",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 2,
             "mode": "-rw-r--r--",
             "sha512": "58cb448da9a3890a1f8f48698fcb8e1bcf23218bfc157a53031ed4b4276d4a8dda4d6f70e8542dd4c5cd7f1db77c8ce09434f3c73bad73436a1b68d22b432d2e",
             "text": "16569 1 1\n11675 1 N\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb"
         },
         {
@@ -1170,14 +1170,14 @@
                 "FormalParameter"
             ],
             "contentSize": 144,
-            "dateModified": "2022-09-14T05:42:18.136420",
+            "dateModified": "2022-09-14T05:42:18",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3,
             "mode": "-rw-r--r--",
             "sha512": "7dbeb4099ab8027cd3aa3c87b4f31b0926c054c3995191832bb0d9d2426a7db9fd440e3142920b74c6f651db5c86d0bf3f64682f179dfec19e32638accf4e9e1",
             "text": "16569 1 11\n0 chrM  AC:J01415.2  gi:113200490  LN:16569  rl:Mitochondrion  M5:c68f52674c9fb33aef52dcf399755519  AS:GRCh38  tp:circular\n0 16569 1\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann"
         },
         {
@@ -1187,12 +1187,12 @@
                 "FormalParameter"
             ],
             "contentSize": 16648,
-            "dateModified": "2022-09-14T05:42:18.801990",
+            "dateModified": "2022-09-14T05:42:18",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "c24d422df241a0c477db6882562622531321cf34b153f08f3ba395b82238207e599532aa8b69c36af9a7c3766de33640c2d3b49e50e308c24a76962e51c8fb07",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt"
         },
         {
@@ -1202,12 +1202,12 @@
                 "FormalParameter"
             ],
             "contentSize": 4144,
-            "dateModified": "2022-09-14T05:42:19.440812",
+            "dateModified": "2022-09-14T05:42:19",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "ecee39595da480842b5a10859ba523e3a2dbfcc7fd71c3f9a33ee496f1dd0e79c5dd4e4ff6852e56675bf29e2388ff610adc7feb89fe6c8d97717428b842ce10",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac"
         },
         {
@@ -1217,12 +1217,12 @@
                 "FormalParameter"
             ],
             "contentSize": 8336,
-            "dateModified": "2022-09-14T05:42:20.178807",
+            "dateModified": "2022-09-14T05:42:20",
             "encodingFormat": "application/octet-stream",
-            "gid": 0,
+            "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "82218965a7c8ba6462041e83b47adb57a5a696ea5c3b8a5ea770f868432c0c3333aa23c57a326ee147898bd52b94869ff1d8344223817cf515e858f1e181fc3e",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa"
         },
         {
@@ -1232,14 +1232,14 @@
                 "FormalParameter"
             ],
             "contentSize": 125,
-            "dateModified": "2022-09-14T05:42:20.901482",
+            "dateModified": "2022-09-14T05:42:20",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 5,
             "mode": "-rw-r--r--",
             "sha512": "c640b343088777a965b28c50c41c4c503f10347045852e31af46999efe5055c3d4f5edc1b7ab02b99b607694031228b3dbcaf761b78cccfb5862624176e36a6a",
             "text": "chain\t8569\tchrM\t16569\t+\t0\t8569\tchrM\t16569\t+\t8000\t16569\t1\n8569\n\nchain\t7999\tchrM\t16569\t+\t8569\t16569\tchrM\t16569\t+\t0\t8000\t2\n8000\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/ShiftBack.chain"
         },
         {
@@ -1249,14 +1249,14 @@
                 "FormalParameter"
             ],
             "contentSize": 233,
-            "dateModified": "2022-09-14T05:42:21.577266",
+            "dateModified": "2022-09-14T05:42:21",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3,
             "mode": "-rw-r--r--",
             "sha512": "d0f476dbc33b4dceb1bfe786f9163e4b31b5da0b7c8f5984e040895b356586bdb241618690e4d2745874a6257a4ba93a08737ebbed7df163b927f1712911bfca",
             "text": "@HD\tVN:1.5\n@SQ\tSN:chrM\tLN:16569\tM5:8ca1f1339b6185c6f63cf3752285cc37\tUR:file:/humgen/gsa-hpprojects/dev/mshand/SpecOps/Mitochondria/MitochondriaOnlyFastas/Homo_sapiens_assembly38.mt_only.shifted_by_8000_bases.fasta\nchrM\t8025\t9144\t+\t.\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/control_region_shifted.chrM.interval_list"
         },
         {
@@ -1266,14 +1266,14 @@
                 "FormalParameter"
             ],
             "contentSize": 211,
-            "dateModified": "2022-09-14T05:42:22.335846",
+            "dateModified": "2022-09-14T05:42:22",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3,
             "mode": "-rw-r--r--",
             "sha512": "dd8174bed03ef61ed1316a0a8d37b33d95e41509611175e489e7dd21d30ed660d2326431b05a6e1f13aea5a4475661ca47f9d9ae524dff639eb8cfccdd7055af",
             "text": "@HD\tVN:1.5\n@SQ\tSN:chrM\tLN:16569\tM5:c68f52674c9fb33aef52dcf399755519\tUR:file:/humgen/gsa-hpprojects/dev/mshand/SpecOps/Mitochondria/MitochondriaOnlyFastas/Homo_sapiens_assembly38.mt_only.fasta\nchrM\t576\t16024\t+\t.\n",
-            "uid": 0,
+            "uid": 1000,
             "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/non_control_region.chrM.interval_list"
         },
         {
@@ -1288,42 +1288,42 @@
                     "@id": "exe/metadata.json"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
-                },
-                {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bam"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
                 },
                 {
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta"
                 },
                 {
-                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai"
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background"
+                },
+                {
+                    "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
                 }
             ],
             "name": "Sapporo test result",
             "pid": 615,
-            "runId": "6fb2df20-9fd7-435c-a7fb-56d7a44458b8",
+            "runId": "work",
             "startTime": "2022-09-14T05:42:22",
             "state": "EXECUTOR_ERROR",
             "stderr": {
@@ -1337,27 +1337,27 @@
             "@id": "stdout.log",
             "@type": "File",
             "contentSize": 29803,
-            "dateModified": "2022-09-14T05:44:10.263673",
+            "dateModified": "2022-09-14T05:44:10",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 280,
             "mode": "-rw-r--r--",
             "name": "Sapporo stdout",
             "sha512": "1a9f9ed0676a036593a05677332c6bced0f94dc367cc0b3521c8142eaae03a12d7e592e3378c3441d6233060f3b1c84dc920b55f916dbd0cff00e17887503b18",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "stderr.log",
             "@type": "File",
             "contentSize": 69370,
-            "dateModified": "2022-09-14T05:44:10.394227",
+            "dateModified": "2022-09-14T05:44:10",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 1111,
             "mode": "-rw-r--r--",
             "name": "Sapporo stderr",
             "sha512": "638b9fb25736d83dc86ef35f9a75e5d649f32ec562e709f45293eaa11505b12535b16dde94e31d72359ecc23ab69952a6e43a41c401e2c4fec65ef26a2113c0a",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "exe/metadata.json",
@@ -1367,142 +1367,13 @@
                 "IntermediateFile"
             ],
             "contentSize": 24660,
-            "dateModified": "2022-09-14T05:44:08.847409",
+            "dateModified": "2022-09-14T05:44:08",
             "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 176,
+            "gid": 1000,
+            "lineCount": 175,
             "mode": "-rw-r--r--",
             "sha512": "7683aa6ad7c5986342aec0e4457cd624e4a56a9fbcb07388785af7bb8831d26ba4a5046b3cf54ef6d5a7fa05906751da26cbfe9e0181386fb5e294bbda2eaff3",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 3,
-            "dateModified": "2022-09-14T05:43:44.558415",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 1,
-            "mode": "-rw-r--r--",
-            "sha512": "2a9a07515af006a6877718b1069c4923ebca4ac59d66e32d4ba6ad041cbce653dfc3926dea262bcae183453f533a8754a3706c6b5b60e0d83a7f73db3f19998c",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 2898,
-            "dateModified": "2022-09-14T05:43:44.179524",
-            "encodingFormat": "text/x-shellscript",
-            "gid": 0,
-            "lineCount": 48,
-            "mode": "-rw-r--r--",
-            "sha512": "0b6bfee818e11b82a0cd8936627dfb5456ecb23e8ec291a262e3001e25b095d4b9a979ba60739c0d5e34ebc9f138faad651e8d701bc729990555041515514997",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 569,
-            "dateModified": "2022-09-14T05:43:44.291491",
-            "encodingFormat": "text/x-shellscript",
-            "gid": 0,
-            "lineCount": 3,
-            "mode": "-rw-r--r--",
-            "sha512": "7bffbb74c86097d444477f4424781740914c37b172efdc7d8f11a8df4d4cb72f13f087a4723c848f7a3bd725dc4c33079e3b1cff5da25e53632974c920350b0f",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 1836,
-            "dateModified": "2022-09-14T05:43:44.283654",
-            "encodingFormat": "text/x-shellscript",
-            "gid": 0,
-            "lineCount": 20,
-            "mode": "-rw-r--r--",
-            "sha512": "845c4aba5d9b3bfcfceb47e7308fe396fb7765974d72a1669c4b04fed8f98244c33ec05c9d3ef78d347af7ced346bffe2c6fbe6d036fcd0b5e8c7304fe0b4101",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 1366,
-            "dateModified": "2022-09-14T05:43:44.546819",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 5,
-            "mode": "-rw-r--r--",
-            "sha512": "890974e92f2348ab7c9db93759862ccb650a9d6acefb620a488f48c7b7eeecd099361223d2b38d87a79384d6cd6dfa53dd308ead346240aa00c559242ddd4a85",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 4,
-            "dateModified": "2022-09-14T05:43:44.395520",
-            "encodingFormat": "text/plain",
-            "gid": 0,
-            "lineCount": 1,
-            "mode": "-rw-r--r--",
-            "sha512": "a22b4ef9b84718a9b0a13825ac6791729170f53ad6ca0868a8075dd6df10f25bf435811517b3be1739835ca1ef478d1ecd3773fcff81e847c76caaea30a5a4e9",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 1712968,
-            "dateModified": "2022-09-14T05:38:42.707571",
-            "encodingFormat": "application/octet-stream",
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "de71983d22edec88c37e1472bd89f64c82665aaa5f5ffecdc6a97137fa2c7b64393e5e33b219660fe61e96c0439cf5c778e525c0d1eb2b6e8f9f05b3e3b49a10",
-            "uid": 0
-        },
-        {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bam",
-            "@type": [
-                "File",
-                "FormalParameter",
-                "IntermediateFile"
-            ],
-            "contentSize": 120633043,
-            "dateModified": "2022-09-14T05:38:42.109597",
-            "encodingFormat": "application/gzip",
-            "format": {
-                "@id": "http://edamontology.org/format_2572"
-            },
-            "gid": 0,
-            "mode": "-rw-r--r--",
-            "sha512": "8d099a208a63b3ce2c14a01a2ffddf7c97d7ae5997a2433cc79cd0fe1f1c3e93bed4d4c26c850bfdff68444e1cfcac9cb683f90fabf975fccb8f376e48a52a75",
-            "uid": 0
+            "uid": 1000
         },
         {
             "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.dict",
@@ -1512,32 +1383,31 @@
                 "IntermediateFile"
             ],
             "contentSize": 581712,
-            "dateModified": "2022-09-14T05:42:07.149262",
+            "dateModified": "2022-09-14T05:42:07",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3367,
             "mode": "-rw-r--r--",
             "sha512": "9b64fa47412becaab2e41ecc7c4132fe5a5763980b27f2d16e52c8c712309f33efb1bc2fc713fcf75317e32386ebd8f06009e608c4d6e7252612a755b61e22bd",
-            "uid": 0
+            "uid": 1000
         },
         {
-            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta",
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bam",
             "@type": [
                 "File",
                 "FormalParameter",
                 "IntermediateFile"
             ],
-            "contentSize": 3249912778,
-            "dateModified": "2022-09-14T05:42:06.476153",
-            "encodingFormat": "text/plain",
+            "contentSize": 120633043,
+            "dateModified": "2022-09-14T05:38:42",
+            "encodingFormat": "application/gzip",
             "format": {
-                "@id": "http://edamontology.org/format_1929"
+                "@id": "http://edamontology.org/format_2572"
             },
-            "gid": 0,
-            "lineCount": 32178545,
+            "gid": 1000,
             "mode": "-rw-r--r--",
-            "sha512": "41a0edb97c470b327464d37a4efe8d36f1796e1148191f1c5be1d7d868c4bfb91958f66de4234d402ec0360fac07b6fdd766b5c1100ae909c073425551256915",
-            "uid": 0
+            "sha512": "8d099a208a63b3ce2c14a01a2ffddf7c97d7ae5997a2433cc79cd0fe1f1c3e93bed4d4c26c850bfdff68444e1cfcac9cb683f90fabf975fccb8f376e48a52a75",
+            "uid": 1000
         },
         {
             "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta.fai",
@@ -1547,13 +1417,143 @@
                 "IntermediateFile"
             ],
             "contentSize": 160928,
-            "dateModified": "2022-09-14T05:42:07.822060",
+            "dateModified": "2022-09-14T05:42:07",
             "encodingFormat": "text/plain",
-            "gid": 0,
+            "gid": 1000,
             "lineCount": 3366,
             "mode": "-rw-r--r--",
             "sha512": "cfcc85de41b11afddc0013653f9d55c8c0d0e9f20962432ecdbd9445e42fd56601f91eeed1bdc31c257d35ef3a4d81ced720112018310b2db74cbb2730738feb",
-            "uid": 0
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/Homo_sapiens_assembly38.fasta",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 3249912778,
+            "dateModified": "2022-09-14T05:42:06",
+            "encodingFormat": "text/plain",
+            "format": {
+                "@id": "http://edamontology.org/format_1929"
+            },
+            "gid": 1000,
+            "lineCount": 32178545,
+            "mode": "-rw-r--r--",
+            "sha512": "41a0edb97c470b327464d37a4efe8d36f1796e1148191f1c5be1d7d868c4bfb91958f66de4234d402ec0360fac07b6fdd766b5c1100ae909c073425551256915",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/inputs/-1854028738/G97753.NA12878.bai",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 1712968,
+            "dateModified": "2022-09-14T05:38:42",
+            "encodingFormat": "application/octet-stream",
+            "gid": 1000,
+            "mode": "-rw-r--r--",
+            "sha512": "de71983d22edec88c37e1472bd89f64c82665aaa5f5ffecdc6a97137fa2c7b64393e5e33b219660fe61e96c0439cf5c778e525c0d1eb2b6e8f9f05b3e3b49a10",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stderr.background",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 1366,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/plain",
+            "gid": 1000,
+            "lineCount": 5,
+            "mode": "-rw-r--r--",
+            "sha512": "890974e92f2348ab7c9db93759862ccb650a9d6acefb620a488f48c7b7eeecd099361223d2b38d87a79384d6cd6dfa53dd308ead346240aa00c559242ddd4a85",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 2898,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/x-shellscript",
+            "gid": 1000,
+            "lineCount": 48,
+            "mode": "-rw-r--r--",
+            "sha512": "0b6bfee818e11b82a0cd8936627dfb5456ecb23e8ec291a262e3001e25b095d4b9a979ba60739c0d5e34ebc9f138faad651e8d701bc729990555041515514997",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.submit",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 1836,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/x-shellscript",
+            "gid": 1000,
+            "lineCount": 20,
+            "mode": "-rw-r--r--",
+            "sha512": "845c4aba5d9b3bfcfceb47e7308fe396fb7765974d72a1669c4b04fed8f98244c33ec05c9d3ef78d347af7ced346bffe2c6fbe6d036fcd0b5e8c7304fe0b4101",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/rc",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 3,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/plain",
+            "gid": 1000,
+            "lineCount": 1,
+            "mode": "-rw-r--r--",
+            "sha512": "2a9a07515af006a6877718b1069c4923ebca4ac59d66e32d4ba6ad041cbce653dfc3926dea262bcae183453f533a8754a3706c6b5b60e0d83a7f73db3f19998c",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/stdout.background",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 4,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/plain",
+            "gid": 1000,
+            "lineCount": 1,
+            "mode": "-rw-r--r--",
+            "sha512": "a22b4ef9b84718a9b0a13825ac6791729170f53ad6ca0868a8075dd6df10f25bf435811517b3be1739835ca1ef478d1ecd3773fcff81e847c76caaea30a5a4e9",
+            "uid": 1000
+        },
+        {
+            "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background",
+            "@type": [
+                "File",
+                "FormalParameter",
+                "IntermediateFile"
+            ],
+            "contentSize": 569,
+            "dateModified": "2022-09-14T05:43:44",
+            "encodingFormat": "text/x-shellscript",
+            "gid": 1000,
+            "lineCount": 3,
+            "mode": "-rw-r--r--",
+            "sha512": "7bffbb74c86097d444477f4424781740914c37b172efdc7d8f11a8df4d4cb72f13f087a4723c848f7a3bd725dc4c33079e3b1cff5da25e53632974c920350b0f",
+            "uid": 1000
         }
     ]
 }
