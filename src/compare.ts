@@ -299,7 +299,7 @@ export function compareSummaryContent(
   if (val1 == undefined || val2 == undefined) {
     return ReproducibilityLevel.DIFFERENT_FEATURES;
   }
-  if (Math.abs(val1 - val2) / val1 < threshold) {
+  if (Math.abs(val1 - val2) / val1 <= threshold) {
     return ReproducibilityLevel.SIMILAR_FEATURES;
   } else {
     return ReproducibilityLevel.DIFFERENT_FEATURES;
@@ -501,8 +501,12 @@ export function renderFileStats(
       formattedVal1 = color.red(formattedVal1);
       formattedVal2 = color.red(formattedVal2);
     } else if (result === ReproducibilityLevel.SIMILAR_FEATURES) {
-      formattedVal1 = color.yellow(formattedVal1);
-      formattedVal2 = color.yellow(formattedVal2);
+      if (val1 == val2) {
+        // do nothing => same value
+      } else {
+        formattedVal1 = color.yellow(formattedVal1);
+        formattedVal2 = color.yellow(formattedVal2);
+      }
     }
     data.rows.push([a1(header), formattedVal1, formattedVal2]);
   };
