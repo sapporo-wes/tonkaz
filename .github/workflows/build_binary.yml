@@ -24,9 +24,9 @@ jobs:
 
       - name: "Build binary"
         run: |
-          deno compile --target x86_64-unknown-linux-gnu --output=./tonkaz_x86_64-unknown-linux-gnu src/main.ts
-          deno compile --target x86_64-apple-darwin --output=./tonkaz_x86_64-apple-darwin src/main.ts
-          deno compile --target aarch64-apple-darwin --output=./tonkaz_aarch64-apple-darwin src/main.ts
+          deno compile --allow-read --allow-net --target x86_64-unknown-linux-gnu --output=./tonkaz_x86_64-unknown-linux-gnu src/main.ts
+          deno compile --allow-read --allow-net --target x86_64-apple-darwin --output=./tonkaz_x86_64-apple-darwin src/main.ts
+          deno compile --allow-read --allow-net --target aarch64-apple-darwin --output=./tonkaz_aarch64-apple-darwin src/main.ts
 
       - name: "Upload x86_64-unknown-linux-gnu binary"
         uses: actions/upload-artifact@v3
