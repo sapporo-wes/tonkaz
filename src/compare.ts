@@ -42,7 +42,7 @@ export function renderFirstMsg(crate1: crate.Crate, crate2: crate.Crate): void {
   console.log(`\
 Tonkaz ${main.TonkazVersion}
 
-${color.green("Comparing")} Crate1 to Crate2 to verify reproducibility:
+${color.green("Checking")} Crate2 based on Crate1:
 
   Crate1: ${color.cyan(crate1.location)}
   Crate2: ${color.cyan(crate2.location)}
@@ -67,11 +67,7 @@ export function renderSummaryTable(
 
   const data: asciiTable.AsciiData = {
     title: "",
-    heading: [
-      a1(""),
-      a23Header(crate1.location),
-      a23Header(crate2.location),
-    ],
+    heading: [a1(""), a23Header(crate1.location), a23Header(crate2.location)],
     rows: [],
   };
 
@@ -81,9 +77,9 @@ export function renderSummaryTable(
     ["WF Version", "wfVersion"],
     ["WF Type", "wfType"],
     ["WF TypeVersion", "wfTypeVersion"],
-    ["Test ID", "testId"],
-    ["Test State", "state"],
-    ["Test ExitCode", "exitCode"],
+    ["Run Name", "testId"],
+    ["Run State", "state"],
+    ["ExitCode", "exitCode"],
     ["Start Time", "startTime"],
     ["End Time", "endTime"],
     ["Duration", "duration"],
@@ -101,14 +97,16 @@ export function renderSummaryTable(
       } else {
         data.rows.push([
           header,
-          ...utils.warningColor([crate1, crate2].map((c) => {
-            const val = `${(c.summary[key] as string[]).length} files${
-              key === "outputs"
-                ? ` (${c.summary.outputsWithEdam.length} EDAM-assigned files)`
-                : ""
-            }`;
-            return a23(val);
-          })),
+          ...utils.warningColor(
+            [crate1, crate2].map((c) => {
+              const val = `${(c.summary[key] as string[]).length} files${
+                key === "outputs"
+                  ? ` (${c.summary.outputsWithEdam.length} EDAM-assigned files)`
+                  : ""
+              }`;
+              return a23(val);
+            }),
+          ),
         ]);
       }
     } else if (header.includes("Time")) {
@@ -116,10 +114,7 @@ export function renderSummaryTable(
         header,
         ...[crate1, crate2].map((c) => {
           const val = c.summary[key] != undefined
-            ? datetime.format(
-              c.summary[key] as Date,
-              "yyyy-MM-dd HH:mm:ss",
-            )
+            ? datetime.format(c.summary[key] as Date, "yyyy-MM-dd HH:mm:ss")
             : "";
           return a23(val);
         }),
@@ -141,12 +136,14 @@ export function renderSummaryTable(
     } else {
       data.rows.push([
         header,
-        ...utils.warningColor([crate1, crate2].map((c) => {
-          const val = c.summary[key] != undefined
-            ? ellipseVal(`${c.summary[key]}`)
-            : "";
-          return a23(val);
-        })),
+        ...utils.warningColor(
+          [crate1, crate2].map((c) => {
+            const val = c.summary[key] != undefined
+              ? ellipseVal(`${c.summary[key]}`)
+              : "";
+            return a23(val);
+          }),
+        ),
       ]);
     }
   });
@@ -271,18 +268,22 @@ export function compareSummary(
       } else if (k === "samtoolsStats") {
         const [s1Sam, s2Sam] = [s1, s2].map((s) => s.samtoolsStats);
         if (s1Sam != undefined && s2Sam != undefined) {
-          (["totalReads", "mappedReads", "duplicateReads"] as Array<
-            keyof crate.SamtoolsStats
-          >).forEach((k2) => {
+          (
+            ["totalReads", "mappedReads", "duplicateReads"] as Array<
+              keyof crate.SamtoolsStats
+            >
+          ).forEach((k2) => {
             level = updateLevel(level, s1Sam[k2], s2Sam[k2]);
           });
         }
       } else if (k === "vcftoolsStats") {
         const [s1Vcf, s2Vcf] = [s1, s2].map((s) => s.vcftoolsStats);
         if (s1Vcf != undefined && s2Vcf != undefined) {
-          (["variantCount", "snpsCount", "indelsCount"] as Array<
-            keyof crate.VcftoolsStats
-          >).forEach((k2) => {
+          (
+            ["variantCount", "snpsCount", "indelsCount"] as Array<
+              keyof crate.VcftoolsStats
+            >
+          ).forEach((k2) => {
             level = updateLevel(level, s1Vcf[k2], s2Vcf[k2]);
           });
         }
@@ -326,9 +327,7 @@ export function renderRepLevelExplanation(
   all: boolean,
   threshold: number,
 ): void {
-  console.log(
-    `${color.green("Comparing")} workflow results...`,
-  );
+  console.log(`${color.green("Comparing")} workflow results...`);
   if (!all) {
     console.log(
       "Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)",
@@ -339,18 +338,19 @@ export function renderRepLevelExplanation(
     );
   }
   console.log(""); // empty line
-  console.log(
-    "Reproducibility level is defined as follows:",
-  );
+  console.log("Reproducibility level is defined as follows:");
   console.log(""); // empty line
 
-  const levels: Array<keyof typeof LEVEL_EXP> = Object.keys(LEVEL_EXP).map(
-    (k) => parseInt(k) as keyof typeof LEVEL_EXP,
-  ).sort().reverse();
+  const levels: Array<keyof typeof LEVEL_EXP> = Object.keys(LEVEL_EXP)
+    .map((k) => parseInt(k) as keyof typeof LEVEL_EXP)
+    .sort()
+    .reverse();
   levels.forEach((l) => {
     console.log(
       `  - ${color.blue(`Level${l}`)} ${STAR.repeat(l)}${
-        "  ".repeat(4 - l)
+        "  ".repeat(
+          4 - l,
+        )
       } : ${
         l === 2
           ? LEVEL_EXP[l].replace("threshold", `threshold: ${threshold}`)
@@ -362,7 +362,9 @@ export function renderRepLevelExplanation(
   console.log(""); // empty line
   console.log(
     `  ${color.blue("Level4")}: "Fully Reproduced" <---> ${
-      color.blue("Level0")
+      color.blue(
+        "Level0",
+      )
     }: "Not Reproduced"`,
   );
   console.log("");
@@ -391,9 +393,9 @@ export function renderLevel4Files(result: CompareResult): void {
   );
   console.log(""); // empty line
 
-  const ids = result.sameChecksum.map((id) =>
-    id.replace(OUTPUTS_ID_PREFIX_RE, "")
-  ).sort();
+  const ids = result.sameChecksum
+    .map((id) => id.replace(OUTPUTS_ID_PREFIX_RE, ""))
+    .sort();
   if (ids.length > 0) {
     ids.forEach((id) => {
       console.log(`  - ${id}`);
@@ -459,9 +461,7 @@ export function renderLevel1Files(
   });
 }
 
-export function renderLevel0Files(
-  result: CompareResult,
-): void {
+export function renderLevel0Files(result: CompareResult): void {
   console.log(
     `=== ${
       color.blue("Level0")
@@ -510,11 +510,7 @@ export function renderFileStats(
 
   const data: asciiTable.AsciiData = {
     title: "",
-    heading: [
-      a1(""),
-      a23Header("in Crate1"),
-      a23Header("in Crate2"),
-    ],
+    heading: [a1(""), a23Header("in Crate1"), a23Header("in Crate2")],
     rows: [
       [
         a1("Duration"),
@@ -546,12 +542,7 @@ export function renderFileStats(
     data.rows.push([a1(header), formattedVal1, formattedVal2]);
   };
 
-  appendRow(
-    "Content Size",
-    s1.contentSize,
-    s2.contentSize,
-    utils.formatFileSize,
-  );
+  appendRow("File Size", s1.contentSize, s2.contentSize, utils.formatFileSize);
   if (s1.lineCount != undefined && s2.lineCount != undefined) {
     appendRow("Line Count", s1.lineCount, s2.lineCount);
   }
@@ -559,19 +550,17 @@ export function renderFileStats(
   if (s1.samtoolsStats != undefined || s2.samtoolsStats != undefined) {
     crate.SAM_HEADER_KEYS.forEach(([header, key]) => {
       if (key == "totalReads") {
-        appendRow(
-          header,
-          s1.samtoolsStats?.[key],
-          s2.samtoolsStats?.[key],
-        );
+        appendRow(header, s1.samtoolsStats?.[key], s2.samtoolsStats?.[key]);
       } else {
         // key == "mappedReads", "duplicateReads"
         const s1Read = s1.samtoolsStats?.[key];
-        const s1Rate = s1.samtoolsStats
-          ?.[key.replace("Reads", "Rate") as keyof crate.SamtoolsStats];
-        const s2Read = s1.samtoolsStats?.[key];
-        const s2Rate = s1.samtoolsStats
-          ?.[key.replace("Reads", "Rate") as keyof crate.SamtoolsStats];
+        const s1Rate = s1.samtoolsStats?.[
+          key.replace("Reads", "Rate") as keyof crate.SamtoolsStats
+        ];
+        const s2Read = s2.samtoolsStats?.[key];
+        const s2Rate = s2.samtoolsStats?.[
+          key.replace("Reads", "Rate") as keyof crate.SamtoolsStats
+        ];
         const appendRate = (
           read: number | undefined,
           rate: number | undefined,
@@ -580,14 +569,7 @@ export function renderFileStats(
           if (rate == undefined) return `${read}`;
           return `${read} (${(rate * 100).toFixed(2)}%)`;
         };
-        appendRow(
-          header,
-          s1Read,
-          s2Read,
-          appendRate,
-          s1Rate,
-          s2Rate,
-        );
+        appendRow(header, s1Read, s2Read, appendRate, s1Rate, s2Rate);
       }
     });
   }
@@ -618,14 +600,14 @@ export function outToString(
 }
 
 export function appendLineUnderGeneralMetadata(table: string): string {
-  // append line under general metadata (Line Count or Content Size)
+  // append line under general metadata (Line Count or File Size)
   const lines = table.split("\n");
   if (lines.length < 8) {
     return table;
   }
   const line = lines[2];
   const lineCountIndex = lines.findIndex((l) => l.includes("Line Count"));
-  const contentSizeIndex = lines.findIndex((l) => l.includes("Content Size"));
+  const contentSizeIndex = lines.findIndex((l) => l.includes("File Size"));
   const insertIndex = lineCountIndex > -1 ? lineCountIndex : contentSizeIndex;
   const insertedLines = [
     ...lines.slice(0, insertIndex + 1),
@@ -670,7 +652,12 @@ export function renderCompareSummary(compareResult: CompareResult): void {
     ]);
   };
 
-  addRow(4, "Fully Reproduced", "Same Checksum", compareResult.sameIds.length);
+  addRow(
+    4,
+    "Fully Reproduced",
+    "Same Checksum",
+    compareResult.sameChecksum.length,
+  );
   addRow(
     3,
     "Partially Reproduced",
