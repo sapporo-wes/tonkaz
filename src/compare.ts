@@ -511,13 +511,7 @@ export function renderFileStats(
   const data: asciiTable.AsciiData = {
     title: "",
     heading: [a1(""), a23Header("in Crate1"), a23Header("in Crate2")],
-    rows: [
-      [
-        a1("Duration"),
-        a23(utils.formatDuration(s1.duration)),
-        a23(utils.formatDuration(s2.duration)),
-      ],
-    ],
+    rows: [],
   };
 
   // compareVal -> format -> align -> colorized
@@ -584,10 +578,7 @@ export function renderFileStats(
 
   console.log(`  - ${id.replace(trim_prefix_regex, "")}`);
   console.log(
-    utils.tablePaddingLeft(
-      appendLineUnderGeneralMetadata(utils.ourTableToString(table)),
-      4,
-    ),
+    utils.tablePaddingLeft(utils.ourTableToString(table), 4),
   );
   console.log(""); // empty line
 }
