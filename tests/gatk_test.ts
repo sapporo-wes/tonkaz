@@ -1,6 +1,6 @@
 import { args, compare, crate } from "../src/mod.ts";
 
-const CRATE_DIR = `${new URL(".", import.meta.url).pathname}/example_crate`;
+const CRATE_DIR = `${new URL(".", import.meta.url).pathname}example_crate`;
 
 Deno.test("GATK Linux test", async () => {
   const loc1 = `${CRATE_DIR}/gatk_1st.json`;

@@ -1,6 +1,6 @@
 import { args, compare, crate } from "../src/mod.ts";
 
-const CRATE_DIR = `${new URL(".", import.meta.url).pathname}/example_crate`;
+const CRATE_DIR = `${new URL(".", import.meta.url).pathname}example_crate`;
 
 Deno.test("Trimming Mac test", async () => {
   const loc1 = `${CRATE_DIR}/trimming.json`;
