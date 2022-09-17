@@ -147,7 +147,7 @@ export class Crate {
       }`;
       let startTime: Date;
       try {
-        startTime = datetime.parse(startTimeStr, "yyyy-MM-dd'T'HH:mm:ss");
+        startTime = utils.parseDatetime(startTimeStr);
       } catch (_) {
         throw new Error(`Invalid start time ${startTimeStr}`);
       }
@@ -158,7 +158,7 @@ export class Crate {
       }`;
       let endTime: Date;
       try {
-        endTime = datetime.parse(endTimeStr, "yyyy-MM-dd'T'HH:mm:ss");
+        endTime = utils.parseDatetime(endTimeStr);
       } catch (_) {
         throw new Error(`Invalid end time ${endTimeStr}`);
       }
@@ -328,10 +328,7 @@ export class Entity {
     if (dateModified == undefined) {
       throw new Error(`Entity ${this.id} has no dateModified`);
     }
-    const dateModifiedDate = datetime.parse(
-      dateModified,
-      "yyyy-MM-dd'T'HH:mm:ss.SSSSSS",
-    );
+    const dateModifiedDate = utils.parseDatetime(dateModified);
     const duration = datetime.difference(
       this.crate.summary.startTime,
       dateModifiedDate,

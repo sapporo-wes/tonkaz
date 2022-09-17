@@ -110,3 +110,11 @@ export function warningColor(pair: string[]): string[] {
     ? [color.yellow(pair[0]), color.yellow(pair[1])]
     : pair;
 }
+
+export function parseDatetime(datetimeStr: string): Date {
+  const datetime = new Date(datetimeStr);
+  if (isNaN(datetime.getTime())) {
+    throw new Error(`Invalid datetime: ${datetimeStr}`);
+  }
+  return datetime;
+}
