@@ -460,6 +460,14 @@ export const EDAM_MAPPING = {
     "url": "http://edamontology.org/format_1929",
     "name": "FASTA format including NCBI-style IDs.",
   },
+  ".fastq": {
+    "url": "http://edamontology.org/format_1930",
+    "name": "FASTQ short read format ignoring quality scores.",
+  },
+  ".fastq.gz": {
+    "url": "http://edamontology.org/format_1930",
+    "name": "FASTQ short read format ignoring quality scores.",
+  },
   ".fq": {
     "url": "http://edamontology.org/format_1930",
     "name": "FASTQ short read format ignoring quality scores.",
