@@ -35,6 +35,9 @@ $ deno test -A ./tests/rnaseq_v3.6_test.ts
 # RNA-seq (Linux, 1st) <-> RNA-seq (Linux, small)
 $ deno test -A ./tests/rnaseq_small_test.ts
 
+# RNA-seq (Linux, with yevis) <-> RNA-seq (Linux, only sapporo)
+$ deno test -A ./tests/rnaseq_only_sapporo_test.ts
+
 # Trimming (Linux) <-> Trimming (Mac)
 $ deno test -A ./tests/trimming_mac_test.ts
 ```
@@ -54,6 +57,7 @@ example_crate/
 ├── rnaseq_1st.json
 ├── rnaseq_2nd.json
 ├── rnaseq_mac.json
+├── rnaseq_only_sapporo.json
 ├── rnaseq_small.json
 ├── rnaseq_v3.6.json
 ├── trimming.json
@@ -72,8 +76,8 @@ About the environment in which the crate was generated.
 | CPU Architecture        | `x86_64`                                   | `arm64`               |
 | Memory                  | `24.0 GiB`                                 | `64.0 GiB`            |
 | Docker version          | `20.10.8`                                  | `20.10.16`            |
-| Sapporo-service version | `1.4.6`                                    | `1.4.6`               |
-| Yevis-cli version       | `0.5.3`                                    | `0.5.3`               |
+| Sapporo-service version | `1.4.8`                                    | `1.4.8`               |
+| Yevis-cli version       | `0.5.4`                                    | `0.5.4`               |
 
 ### GATK
 
@@ -107,6 +111,10 @@ $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test
   - [`rnaseq_v3.6.json`](./example_crate/rnaseq_v3.6.json)
     - Crate generated on `Linux` environment.
     - Using `nf-core/rnaseq` version is `3.6`. (Normal one is `3.7`)
+  - [`rnaseq_only_sapporo.json`](./example_crate/rnaseq_only_sapporo.json)
+    - Crate generated on `Linux` environment.
+    - Using `nf-core/rnaseq` version is `3.7`.
+    - Using `Sapporo` only. (Not using `Yevis`)
 
 See https://github.com/sapporo-wes/test-workflow#nf-corernaseq for more details about the executed workflow.
 

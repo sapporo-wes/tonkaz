@@ -14,7 +14,7 @@ export interface CrateSummary {
   startTime: Date;
   endTime: Date;
   duration: ReturnType<typeof datetime.difference>;
-  exitCode: number;
+  exitCode: string;
   state: string;
   wfAttachments: string[];
   intermediateFiles: string[];
@@ -93,48 +93,45 @@ export class Crate {
   }
 
   summarize(): void {
+    const unknownToStr = (val: unknown) => {
+      return val == undefined ? "" : `${val}`;
+    };
+
     try {
       // General Metadata
-      const wfName = `${this.getValRecursively(this.mainWf, ["name"])}`;
-      const wfVersion = `${this.getValRecursively(this.mainWf, ["version"])}`;
-      const wfId = `${this.getValRecursively(this.mainWf, ["yevisId"])}`;
-      const wfType = `${
-        this.getValRecursively(this.mainWf, [
-          "programmingLanguage",
-          "name",
-        ])
-      }`;
-      const wfTypeVersion = `${
-        this.getValRecursively(this.mainWf, [
-          "programmingLanguage",
-          "version",
-        ])
-      }`;
-      const exitCode = this.getValRecursively(this.testResult, [
-        "exitCode",
-      ]);
-      if (typeof exitCode !== "number") {
-        throw new Error(`Invalid exit code ${exitCode}`);
-      }
-      const state = `${this.getValRecursively(this.testResult, ["state"])}`;
-      const testId = `${
-        this.getValRecursively(this.testDefinition, ["yevisTestId"])
-      }`;
-      const sapporoVersion = `${
-        this.getValRecursively(this.testInstance, ["version"])
-      }`;
-      const wfEngineName = `${
-        this.getValRecursively(this.testDefinition, [
-          "conformsTo",
-          "name",
-        ])
-      }`;
-      const wfEngineVersion = `${
-        this.getValRecursively(this.testDefinition, [
-          "conformsTo",
-          "version",
-        ])
-      }`;
+      const wfName = unknownToStr(
+        this.getValRecursively(this.mainWf, ["name"]),
+      );
+      const wfVersion = unknownToStr(
+        this.getValRecursively(this.mainWf, ["version"]),
+      );
+      const wfId = unknownToStr(
+        this.getValRecursively(this.mainWf, ["yevisId"]),
+      );
+      const wfType = unknownToStr(
+        this.getValRecursively(this.mainWf, ["programmingLanguage", "name"]),
+      );
+      const wfTypeVersion = unknownToStr(
+        this.getValRecursively(this.mainWf, ["programmingLanguage", "version"]),
+      );
+      const exitCode = unknownToStr(
+        this.getValRecursively(this.testResult, ["exitCode"]),
+      );
+      const state = unknownToStr(
+        this.getValRecursively(this.testResult, ["state"]),
+      );
+      const testId = unknownToStr(
+        this.getValRecursively(this.testDefinition, ["yevisTestId"]),
+      );
+      const sapporoVersion = unknownToStr(
+        this.getValRecursively(this.testInstance, ["runsOn", "version"]),
+      );
+      const wfEngineName = unknownToStr(
+        this.getValRecursively(this.testDefinition, ["conformsTo", "name"]),
+      );
+      const wfEngineVersion = unknownToStr(
+        this.getValRecursively(this.testDefinition, ["conformsTo", "version"]),
+      );
 
       // File IDs
       let wfAttachments: string[] = [];
@@ -158,22 +155,18 @@ export class Crate {
       const outputsWithEdam = this.filterHasEdam(outputs);
 
       // Time
-      const startTimeStr = `${
-        this.getValRecursively(this.testResult, [
-          "startTime",
-        ])
-      }`;
+      const startTimeStr = unknownToStr(
+        this.getValRecursively(this.testResult, ["startTime"]),
+      );
       let startTime: Date;
       try {
         startTime = utils.parseDatetime(startTimeStr);
       } catch (_) {
         throw new Error(`Invalid start time ${startTimeStr}`);
       }
-      const endTimeStr = `${
-        this.getValRecursively(this.testResult, [
-          "endTime",
-        ])
-      }`;
+      const endTimeStr = unknownToStr(
+        this.getValRecursively(this.testResult, ["endTime"]),
+      );
       let endTime: Date;
       try {
         endTime = utils.parseDatetime(endTimeStr);
