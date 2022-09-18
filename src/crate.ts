@@ -7,6 +7,9 @@ export interface CrateSummary {
   wfId: string;
   wfType: string;
   wfTypeVersion: string;
+  sapporoVersion: string;
+  wfEngineName: string;
+  wfEngineVersion: string;
   testId: string;
   startTime: Date;
   endTime: Date;
@@ -117,6 +120,21 @@ export class Crate {
       const testId = `${
         this.getValRecursively(this.testDefinition, ["yevisTestId"])
       }`;
+      const sapporoVersion = `${
+        this.getValRecursively(this.testInstance, ["version"])
+      }`;
+      const wfEngineName = `${
+        this.getValRecursively(this.testDefinition, [
+          "conformsTo",
+          "name",
+        ])
+      }`;
+      const wfEngineVersion = `${
+        this.getValRecursively(this.testDefinition, [
+          "conformsTo",
+          "version",
+        ])
+      }`;
 
       // File IDs
       let wfAttachments: string[] = [];
@@ -170,6 +188,9 @@ export class Crate {
         wfId,
         wfType,
         wfTypeVersion,
+        sapporoVersion,
+        wfEngineName,
+        wfEngineVersion,
         testId,
         startTime,
         endTime,
