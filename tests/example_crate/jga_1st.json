@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-17T16:03:06+00:00",
+            "datePublished": "2022-09-20T14:15:05+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -795,7 +795,7 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 138291556352,
+            "freeDiskSpace": 138361159680,
             "gid": 0,
             "inDocker": true,
             "os": "Linux",
@@ -1541,7 +1541,7 @@
                 }
             ],
             "pid": 12,
-            "runId": "work",
+            "runId": "jga_1st",
             "startTime": "2022-09-10T13:33:40",
             "state": "COMPLETE",
             "stderr": {
@@ -1698,6 +1698,24 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.idxstats"
         },
         {
+            "@id": "#vcftools",
+            "@type": "SoftwareApplication",
+            "name": "vcftools",
+            "version": "0.1.16--pl5321h9a82719_6"
+        },
+        {
+            "@id": "#1a960c73-e6b2-42a5-ba81-06634a7fef68",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 1,
+            "snpsCount": 14,
+            "variantCount": 1061
+        },
+        {
             "@id": "outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz",
             "@type": [
                 "File",
@@ -1713,6 +1731,9 @@
             "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "58b1ed78251ababa6dc48d8f1e51d07fc1c551e2e0382cd4e593bd790d33a7141c6d45816a2c2c4e57c70b8d067b7fe736cf795f9e88974eb8aba8f31ec0bde6",
+            "stats": {
+                "@id": "#1a960c73-e6b2-42a5-ba81-06634a7fef68"
+            },
             "uid": 1000,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz"
         },
@@ -1805,6 +1826,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.collect_base_dist_by_cycle"
         },
         {
+            "@id": "#6f6dd093-3a4d-4f77-9b6a-dec713436eb5",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 4,
+            "variantCount": 42
+        },
+        {
             "@id": "outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz",
             "@type": [
                 "File",
@@ -1820,6 +1853,9 @@
             "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "a4876258fd697980a3a7ed678f3d3923049b68b4e2058293b6f4d3d55d12b583f4e701971c33ca9078a8f1b6951a177b07e9019a6b6928dfe4c507909a7c0e96",
+            "stats": {
+                "@id": "#6f6dd093-3a4d-4f77-9b6a-dec713436eb5"
+            },
             "uid": 1000,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz"
         },
@@ -2020,6 +2056,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz.bcftools-stats.log"
         },
         {
+            "@id": "#b66fcc34-d00c-4937-809a-fb3f943485dd",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 0,
+            "variantCount": 2
+        },
+        {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz",
             "@type": [
                 "File",
@@ -2035,6 +2083,9 @@
             "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "28387445db7849fa2957130d2979e11e2329adeb3c80dc38cabd2e8dc07c71a425f26160ee8fb313315db4c8343be52475591b889ecbf61645cec3d18b0c0cf3",
+            "stats": {
+                "@id": "#b66fcc34-d00c-4937-809a-fb3f943485dd"
+            },
             "uid": 1000,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz"
         },
@@ -2368,6 +2419,18 @@
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.collect_base_dist_by_cycle.chart.pdf"
         },
         {
+            "@id": "#6a0909e9-431c-4301-8460-1fbfd21d69b9",
+            "@type": [
+                "FileStats"
+            ],
+            "generatedBy": {
+                "@id": "#vcftools"
+            },
+            "indelsCount": 0,
+            "snpsCount": 0,
+            "variantCount": 2
+        },
+        {
             "@id": "outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz",
             "@type": [
                 "File",
@@ -2383,6 +2446,9 @@
             "gid": 1000,
             "mode": "-rw-r--r--",
             "sha512": "2eac577b0626787c8e1b8546f42310cf9dcbea882292516cdbd8a75a05166653abffb75551eaaebf3a0c9cde31a3d54a481b5f1360b5205ec2d8dc73854192cc",
+            "stats": {
+                "@id": "#6a0909e9-431c-4301-8460-1fbfd21d69b9"
+            },
             "uid": 1000,
             "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz"
         },

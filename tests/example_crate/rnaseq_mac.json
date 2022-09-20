@@ -84,7 +84,7 @@
             "author": {
                 "@id": "https://orcid.org/0000-0003-2765-0049"
             },
-            "datePublished": "2022-09-17T16:39:35+00:00",
+            "datePublished": "2022-09-20T16:50:38+00:00",
             "description": "RO-Crate of Sapporo's run execution results.",
             "hasPart": [
                 {
@@ -4435,7 +4435,7 @@
             ],
             "cpuArchitecture": "x86_64",
             "cpuCount": 4,
-            "freeDiskSpace": 138289729536,
+            "freeDiskSpace": 138676137984,
             "gid": 0,
             "inDocker": true,
             "os": "Linux",
