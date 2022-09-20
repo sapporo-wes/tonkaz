@@ -1,7 +1,7 @@
 import { args, compare, crate } from "./mod.ts";
 import { color } from "./deps.ts";
 
-export const TonkazVersion = "0.2.0";
+export const TonkazVersion = "0.2.1";
 
 export async function main(): Promise<void> {
   try {
