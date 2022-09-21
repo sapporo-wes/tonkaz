@@ -302,6 +302,13 @@ export function compareSummaryContent(
   if (val1 == undefined || val2 == undefined) {
     return ReproducibilityLevel.DIFFERENT_FEATURES;
   }
+  if (val1 === 0) {
+    if (val2 === 0) {
+      return ReproducibilityLevel.SIMILAR_FEATURES;
+    } else {
+      return ReproducibilityLevel.DIFFERENT_FEATURES;
+    }
+  }
   if (Math.abs(val1 - val2) / val1 <= threshold) {
     return ReproducibilityLevel.SIMILAR_FEATURES;
   } else {
