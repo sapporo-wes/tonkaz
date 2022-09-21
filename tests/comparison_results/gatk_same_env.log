@@ -1,0 +1,108 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/gatk_1st.json[39m
+  Crate2: [36m./tests/example_crate/gatk_2nd.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | GATK workf ... Mitochondria Pipeline | GATK workf ... Mitochondria Pipeline |
+| WF ID          | 68c32f9c-bdaa-420c-879c-90b40d8bc4d5 | 68c32f9c-bdaa-420c-879c-90b40d8bc4d5 |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Workflow Description Language        | Workflow Description Language        |
+| WF Type Ver    | 1.0                                  | 1.0                                  |
+| WF Eng Name    | cromwell                             | cromwell                             |
+| WF Eng Version | 80                                   | 80                                   |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | example_test                         | example_test                         |
+| Run State      | COMPLETE                             | COMPLETE                             |
+| ExitCode       | 0                                    | 0                                    |
+| Start Time     | 2022-09-08 09:30:03                  | 2022-09-08 08:59:34                  |
+| End Time       | 2022-09-08 09:58:32                  | 2022-09-08 09:26:25                  |
+| Duration       | 28m 29s                              | 26m 51s                              |
+| # Attachments  | 2 files                              | 2 files                              |
+| # Intermediate | 314 files                            | 314 files                            |
+| # Outputs      | 13 files (5 EDAM-assigned files)     | 13 files (5 EDAM-assigned files)     |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 0/5 files)
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 5/5 files)
+
+  - G97753.NA12878.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m147.78 MB (154962060)  [39m | [33m147.78 MB (154962147)  [39m |
+    | Total Reads    | 2349886                 | 2349886                 |
+    |   # Mapped     | 2349886 (100.00%)       | 2349886 (100.00%)       |
+    |   # Duplicate  | 719878 (30.63%)         | 719878 (30.63%)         |
+    '--------------------------------------------------------------------'
+
+  - G97753.NA12878.final.split.vcf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m18.51 KB (18955)       [39m | [33m18.51 KB (18953)       [39m |
+    | Line Count     | 107                     | 107                     |
+    '--------------------------------------------------------------------'
+
+  - G97753.NA12878.realigned.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m98.46 MB (103241649)   [39m | [33m98.46 MB (103241732)   [39m |
+    | Total Reads    | 2361236                 | 2361236                 |
+    |   # Mapped     | 2361223 (100.00%)       | 2361223 (100.00%)       |
+    |   # Duplicate  | 723304 (30.63%)         | 723304 (30.63%)         |
+    '--------------------------------------------------------------------'
+
+  - G97753.NA12878.vcf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m24.48 KB (25069)       [39m | [33m24.48 KB (25063)       [39m |
+    | Line Count     | 99                      | 99                      |
+    '--------------------------------------------------------------------'
+
+  - splitAndPassOnly.vcf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m15.85 KB (16229)       [39m | [33m15.85 KB (16228)       [39m |
+    | Line Count     | 96                      | 96                      |
+    | Variant Count  | 18                      | 18                      |
+    | SNPs Count     | 16                      | 16                      |
+    | Indels Count   | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel1[39m ⭐ (Different Features, 0/5 files)
+
+=== [34mLevel0[39m (Not Found, Crate1: 0 files, Crate2: 0 files)
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 0 files     |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 5 files     |
+  | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
+  | Not Reproduced            |           | Not Found           | 0 files     |
+  '---------------------------------------------------------------------------'
+

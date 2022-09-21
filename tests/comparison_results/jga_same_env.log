@@ -1,0 +1,101 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/jga_1st.json[39m
+  Crate2: [36m./tests/example_crate/jga_2nd.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | jga-analysis per-sample workflow     | jga-analysis per-sample workflow     |
+| WF ID          | 579bbccf-ff06-4c5f-98cb-d7a2dc73eca8 | 579bbccf-ff06-4c5f-98cb-d7a2dc73eca8 |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Common Workflow Language             | Common Workflow Language             |
+| WF Type Ver    | v1.1                                 | v1.1                                 |
+| WF Eng Name    | cwltool                              | cwltool                              |
+| WF Eng Version | 3.1.20220628170238                   | 3.1.20220628170238                   |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | test_1                               | test_1                               |
+| Run State      | COMPLETE                             | COMPLETE                             |
+| ExitCode       | 0                                    | 0                                    |
+| Start Time     | 2022-09-10 13:33:40                  | 2022-09-10 20:40:42                  |
+| End Time       | 2022-09-10 15:03:05                  | 2022-09-10 22:09:08                  |
+| Duration       | 1h 29m 25s                           | 1h 28m 26s                           |
+| # Attachments  | 0 files                              | 0 files                              |
+| # Intermediate | 0 files                              | 0 files                              |
+| # Outputs      | 48 files (4 EDAM-assigned files)     | 48 files (4 EDAM-assigned files)     |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 0/4 files)
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 4/4 files)
+
+  - NA19023.autosome_PAR_ploidy_2.g.vcf.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m33.59 KB (34397)       [39m | [33m33.59 KB (34398)       [39m |
+    | Variant Count  | 1061                    | 1061                    |
+    | SNPs Count     | 14                      | 14                      |
+    | Indels Count   | 1                       | 1                       |
+    '--------------------------------------------------------------------'
+
+  - NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m23.84 KB (24408)       [39m | [33m23.84 KB (24409)       [39m |
+    | Variant Count  | 2                       | 2                       |
+    | SNPs Count     | 0                       | 0                       |
+    | Indels Count   | 0                       | 0                       |
+    '--------------------------------------------------------------------'
+
+  - NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m24.03 KB (24602)       [39m | [33m24.02 KB (24601)       [39m |
+    | Variant Count  | 2                       | 2                       |
+    | SNPs Count     | 0                       | 0                       |
+    | Indels Count   | 0                       | 0                       |
+    '--------------------------------------------------------------------'
+
+  - NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m24.35 KB (24931)       [39m | [33m24.35 KB (24935)       [39m |
+    | Variant Count  | 42                      | 42                      |
+    | SNPs Count     | 4                       | 4                       |
+    | Indels Count   | 0                       | 0                       |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel1[39m ⭐ (Different Features, 0/4 files)
+
+=== [34mLevel0[39m (Not Found, Crate1: 0 files, Crate2: 0 files)
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 0 files     |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 4 files     |
+  | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
+  | Not Reproduced            |           | Not Found           | 0 files     |
+  '---------------------------------------------------------------------------'
+

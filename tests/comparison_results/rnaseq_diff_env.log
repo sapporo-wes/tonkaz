@@ -1,0 +1,89 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/rnaseq_1st.json[39m
+  Crate2: [36m./tests/example_crate/rnaseq_mac.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | [33mnf-core - rnaseq                    [39m | [33mnf-core - rnaseq - v3.7             [39m |
+| WF ID          | 20da6ea5-de91-4973-ac20-216882357a0d | 20da6ea5-de91-4973-ac20-216882357a0d |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Nextflow                             | Nextflow                             |
+| WF Type Ver    | 1.0                                  | 1.0                                  |
+| WF Eng Name    | nextflow                             | nextflow                             |
+| WF Eng Version | 22.04.4                              | 22.04.4                              |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | example_test                         | example_test                         |
+| Run State      | [33mCOMPLETE                            [39m | [33mEXECUTOR_ERROR                      [39m |
+| ExitCode       | [33m0                                   [39m | [33m1                                   [39m |
+| Start Time     | 2022-09-08 06:28:11                  | 2022-09-14 08:42:09                  |
+| End Time       | 2022-09-08 06:45:53                  | 2022-09-14 08:44:23                  |
+| Duration       | 17m 42s                              | 2m 14s                               |
+| # Attachments  | 147 files                            | 147 files                            |
+| # Intermediate | [33m3342 files                          [39m | [33m36 files                            [39m |
+| # Outputs      | [33m872 files (25 EDAM-assigned files)  [39m | [33m4 files (0 EDAM-assigned files)     [39m |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 0/0 files)
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 0/0 files)
+
+=== [34mLevel1[39m ⭐ (Different Features, 0/0 files)
+
+=== [34mLevel0[39m (Not Found, Crate1: 25 files, Crate2: 0 files)
+
+  - Only in Crate1:
+
+    - outputs/star_salmon/RAP1_IAA_30M_REP1.markdup.sorted.bam
+    - outputs/star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam
+    - outputs/star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam
+    - outputs/star_salmon/WT_REP1.markdup.sorted.bam
+    - outputs/star_salmon/WT_REP2.markdup.sorted.bam
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.bed
+    - outputs/star_salmon/stringtie/RAP1_IAA_30M_REP1.coverage.gtf
+    - outputs/star_salmon/stringtie/RAP1_IAA_30M_REP1.transcripts.gtf
+    - outputs/star_salmon/stringtie/RAP1_UNINDUCED_REP1.coverage.gtf
+    - outputs/star_salmon/stringtie/RAP1_UNINDUCED_REP1.transcripts.gtf
+    - outputs/star_salmon/stringtie/RAP1_UNINDUCED_REP2.coverage.gtf
+    - outputs/star_salmon/stringtie/RAP1_UNINDUCED_REP2.transcripts.gtf
+    - outputs/star_salmon/stringtie/WT_REP1.coverage.gtf
+    - outputs/star_salmon/stringtie/WT_REP1.transcripts.gtf
+    - outputs/star_salmon/stringtie/WT_REP2.coverage.gtf
+    - outputs/star_salmon/stringtie/WT_REP2.transcripts.gtf
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 0 files     |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 0 files     |
+  | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
+  | Not Reproduced            |           | Not Found           | 25 files    |
+  '---------------------------------------------------------------------------'
+

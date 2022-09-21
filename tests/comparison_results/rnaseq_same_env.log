@@ -1,0 +1,132 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/rnaseq_1st.json[39m
+  Crate2: [36m./tests/example_crate/rnaseq_2nd.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | nf-core - rnaseq                     | nf-core - rnaseq                     |
+| WF ID          | 20da6ea5-de91-4973-ac20-216882357a0d | 20da6ea5-de91-4973-ac20-216882357a0d |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Nextflow                             | Nextflow                             |
+| WF Type Ver    | 1.0                                  | 1.0                                  |
+| WF Eng Name    | nextflow                             | nextflow                             |
+| WF Eng Version | 22.04.4                              | 22.04.4                              |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | example_test                         | example_test                         |
+| Run State      | COMPLETE                             | COMPLETE                             |
+| ExitCode       | 0                                    | 0                                    |
+| Start Time     | 2022-09-08 06:28:11                  | 2022-09-08 06:08:01                  |
+| End Time       | 2022-09-08 06:45:53                  | 2022-09-08 06:25:56                  |
+| Duration       | 17m 42s                              | 17m 55s                              |
+| # Attachments  | 147 files                            | 147 files                            |
+| # Intermediate | 3342 files                           | 3342 files                           |
+| # Outputs      | 872 files (25 EDAM-assigned files)   | 872 files (25 EDAM-assigned files)   |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 20/25 files)
+
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.bed
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.coverage.gtf
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.transcripts.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.coverage.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.transcripts.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.coverage.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.transcripts.gtf
+  - star_salmon/stringtie/WT_REP1.coverage.gtf
+  - star_salmon/stringtie/WT_REP1.transcripts.gtf
+  - star_salmon/stringtie/WT_REP2.coverage.gtf
+  - star_salmon/stringtie/WT_REP2.transcripts.gtf
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 5/25 files)
+
+  - star_salmon/RAP1_IAA_30M_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.60 MB (3778318)      [39m | [33m3.60 MB (3778293)      [39m |
+    | Total Reads    | 94912                   | 94912                   |
+    |   # Mapped     | 94912 (100.00%)         | 94912 (100.00%)         |
+    |   # Duplicate  | 11688 (12.31%)          | 11688 (12.31%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.62 MB (1703202)      [39m | [33m1.62 MB (1703065)      [39m |
+    | Total Reads    | 49040                   | 49040                   |
+    |   # Mapped     | 49040 (100.00%)         | 49040 (100.00%)         |
+    |   # Duplicate  | 36290 (74.00%)          | 36290 (74.00%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.13 MB (3279083)      [39m | [33m3.13 MB (3279085)      [39m |
+    | Total Reads    | 98338                   | 98338                   |
+    |   # Mapped     | 98338 (100.00%)         | 98338 (100.00%)         |
+    |   # Duplicate  | 78936 (80.27%)          | 78936 (80.27%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.86 MB (7196616)      [39m | [33m6.86 MB (7196472)      [39m |
+    | Total Reads    | 188243                  | 188243                  |
+    |   # Mapped     | 188243 (100.00%)        | 188243 (100.00%)        |
+    |   # Duplicate  | 38470 (20.44%)          | 38470 (20.44%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.41 MB (3570486)      [39m | [33m3.41 MB (3570488)      [39m |
+    | Total Reads    | 94419                   | 94419                   |
+    |   # Mapped     | 94419 (100.00%)         | 94419 (100.00%)         |
+    |   # Duplicate  | 12165 (12.88%)          | 12165 (12.88%)          |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel1[39m ⭐ (Different Features, 0/25 files)
+
+=== [34mLevel0[39m (Not Found, Crate1: 0 files, Crate2: 0 files)
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 20 files    |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 5 files     |
+  | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
+  | Not Reproduced            |           | Not Found           | 0 files     |
+  '---------------------------------------------------------------------------'
+

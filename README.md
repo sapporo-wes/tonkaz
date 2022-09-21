@@ -22,6 +22,9 @@ It compares the execution results of [nf-core/rnaseq v3.7](https://nf-co.re/rnas
 
 ```bash
 $ tonkaz ./tests/example_crate/rnaseq_1st.json ./tests/example_crate/rnaseq_2nd.json
+
+# Example output:
+$ cat ./tests/comparison_results/rnaseq_same_env.log
 ```
 
 We provide various examples in the [tests/README.md](./tests/README.md).

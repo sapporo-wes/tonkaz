@@ -1,0 +1,2968 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/rnaseq_1st.json[39m
+  Crate2: [36m./tests/example_crate/rnaseq_2nd.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | nf-core - rnaseq                     | nf-core - rnaseq                     |
+| WF ID          | 20da6ea5-de91-4973-ac20-216882357a0d | 20da6ea5-de91-4973-ac20-216882357a0d |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Nextflow                             | Nextflow                             |
+| WF Type Ver    | 1.0                                  | 1.0                                  |
+| WF Eng Name    | nextflow                             | nextflow                             |
+| WF Eng Version | 22.04.4                              | 22.04.4                              |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | example_test                         | example_test                         |
+| Run State      | COMPLETE                             | COMPLETE                             |
+| ExitCode       | 0                                    | 0                                    |
+| Start Time     | 2022-09-08 06:28:11                  | 2022-09-08 06:08:01                  |
+| End Time       | 2022-09-08 06:45:53                  | 2022-09-08 06:25:56                  |
+| Duration       | 17m 42s                              | 17m 55s                              |
+| # Attachments  | 147 files                            | 147 files                            |
+| # Intermediate | 3342 files                           | 3342 files                           |
+| # Outputs      | 872 files (25 EDAM-assigned files)   | 872 files (25 EDAM-assigned files)   |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the output files of Crate1 and Crate2.
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 557/864 files)
+
+  - bbsplit/RAP1_IAA_30M_REP1.stats.txt
+  - bbsplit/RAP1_UNINDUCED_REP1.stats.txt
+  - bbsplit/RAP1_UNINDUCED_REP2.stats.txt
+  - bbsplit/WT_REP1.stats.txt
+  - fastqc/RAP1_IAA_30M_REP1_1_fastqc.html
+  - fastqc/RAP1_IAA_30M_REP1_2_fastqc.html
+  - fastqc/RAP1_UNINDUCED_REP1_fastqc.html
+  - fastqc/RAP1_UNINDUCED_REP2_fastqc.html
+  - fastqc/WT_REP1_1_fastqc.html
+  - fastqc/WT_REP1_2_fastqc.html
+  - fastqc/WT_REP2_1_fastqc.html
+  - fastqc/WT_REP2_2_fastqc.html
+  - multiqc/star_salmon/multiqc_data/mqc_cutadapt_filtered_reads_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_cutadapt_trimmed_sequences_plot_3_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_adapter_content_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_overrepresented_sequences_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_overrepresented_sequences_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_base_n_content_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_base_n_content_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_base_sequence_quality_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_base_sequence_quality_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_gc_content_plot-2_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_gc_content_plot_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_gc_content_plot_Percentages.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_quality_scores_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_per_sequence_quality_scores_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_sequence_counts_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_sequence_counts_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_sequence_duplication_levels_plot-2_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_sequence_duplication_levels_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_fastqc_sequence_length_distribution_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_featurecounts_biotype_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_picard_deduplication_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_preseq_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_qualimap_gene_coverage_profile_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_qualimap_gene_coverage_profile_Normalised.txt
+  - multiqc/star_salmon/multiqc_data/mqc_qualimap_genomic_origin_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_infer_experiment_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_inner_distance_plot_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_inner_distance_plot_Percentages.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_junction_annotation_junctions_plot_Events.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_junction_annotation_junctions_plot_Junctions.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_read_distribution_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_read_dups_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/mqc_samtools-idxstats-mapped-reads-plot_Normalised_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_samtools-idxstats-mapped-reads-plot_Raw_Counts.txt
+  - multiqc/star_salmon/multiqc_data/mqc_samtools_alignment_plot_1.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_cutadapt.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_fastqc.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_fastqc_1.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_picard_dups.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_rseqc_bam_stat.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_rseqc_infer_experiment.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_rseqc_junction_annotation.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_rseqc_read_distribution.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_samtools_flagstat.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_samtools_idxstats.txt
+  - multiqc/star_salmon/multiqc_data/multiqc_samtools_stats.txt
+  - multiqc/star_salmon/multiqc_plots/png/mqc_cutadapt_filtered_reads_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_cutadapt_filtered_reads_plot_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_cutadapt_trimmed_sequences_plot_3_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_adapter_content_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_overrepresented_sequences_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_overrepresented_sequences_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_base_n_content_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_base_n_content_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_base_sequence_quality_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_base_sequence_quality_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_gc_content_plot-2_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_gc_content_plot_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_gc_content_plot_Percentages.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_quality_scores_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_per_sequence_quality_scores_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_counts_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_counts_plot-2_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_counts_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_counts_plot_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_duplication_levels_plot-2_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_duplication_levels_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_fastqc_sequence_length_distribution_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_featurecounts_biotype_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_featurecounts_biotype_plot_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_picard_deduplication_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_picard_deduplication_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_preseq_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_qualimap_gene_coverage_profile_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_qualimap_gene_coverage_profile_Normalised.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_qualimap_genomic_origin_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_qualimap_genomic_origin_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_infer_experiment_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_inner_distance_plot_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_inner_distance_plot_Percentages.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_annotation_junctions_plot_Events.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_annotation_junctions_plot_Events_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_annotation_junctions_plot_Junctions.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_annotation_junctions_plot_Junctions_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_read_distribution_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_read_distribution_plot_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_read_dups_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_samtools-idxstats-mapped-reads-plot_Normalised_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_samtools-idxstats-mapped-reads-plot_Raw_Counts.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_samtools_alignment_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_samtools_alignment_plot_1_pc.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_star_alignment_plot_1.png
+  - multiqc/star_salmon/multiqc_plots/png/mqc_star_alignment_plot_1_pc.png
+  - pipeline_info/samplesheet.valid.csv
+  - pipeline_info/software_versions.yml
+  - salmon/RAP1_IAA_30M_REP1/aux_info/ambig_info.tsv
+  - salmon/RAP1_IAA_30M_REP1/aux_info/expected_bias.gz
+  - salmon/RAP1_IAA_30M_REP1/aux_info/observed_bias.gz
+  - salmon/RAP1_IAA_30M_REP1/aux_info/observed_bias_3p.gz
+  - salmon/RAP1_IAA_30M_REP1/cmd_info.json
+  - salmon/RAP1_IAA_30M_REP1/lib_format_counts.json
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/ambig_info.tsv
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/expected_bias.gz
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/observed_bias.gz
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/observed_bias_3p.gz
+  - salmon/RAP1_UNINDUCED_REP1/cmd_info.json
+  - salmon/RAP1_UNINDUCED_REP1/libParams/flenDist.txt
+  - salmon/RAP1_UNINDUCED_REP1/lib_format_counts.json
+  - salmon/RAP1_UNINDUCED_REP1/quant.genes.sf
+  - salmon/RAP1_UNINDUCED_REP1/quant.sf
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/ambig_info.tsv
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/expected_bias.gz
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/observed_bias.gz
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/observed_bias_3p.gz
+  - salmon/RAP1_UNINDUCED_REP2/cmd_info.json
+  - salmon/RAP1_UNINDUCED_REP2/libParams/flenDist.txt
+  - salmon/RAP1_UNINDUCED_REP2/lib_format_counts.json
+  - salmon/RAP1_UNINDUCED_REP2/quant.genes.sf
+  - salmon/RAP1_UNINDUCED_REP2/quant.sf
+  - salmon/WT_REP1/aux_info/ambig_info.tsv
+  - salmon/WT_REP1/aux_info/expected_bias.gz
+  - salmon/WT_REP1/aux_info/observed_bias.gz
+  - salmon/WT_REP1/aux_info/observed_bias_3p.gz
+  - salmon/WT_REP1/cmd_info.json
+  - salmon/WT_REP1/lib_format_counts.json
+  - salmon/WT_REP2/aux_info/ambig_info.tsv
+  - salmon/WT_REP2/aux_info/expected_bias.gz
+  - salmon/WT_REP2/aux_info/observed_bias.gz
+  - salmon/WT_REP2/aux_info/observed_bias_3p.gz
+  - salmon/WT_REP2/cmd_info.json
+  - salmon/WT_REP2/lib_format_counts.json
+  - salmon/deseq2_qc/R_sessionInfo.log
+  - salmon/deseq2_qc/size_factors/RAP1_IAA_30M_REP1.txt
+  - salmon/deseq2_qc/size_factors/RAP1_UNINDUCED_REP2.txt
+  - salmon/deseq2_qc/size_factors/WT_REP1.txt
+  - salmon/deseq2_qc/size_factors/WT_REP2.txt
+  - salmon/salmon.merged.gene_counts.tsv
+  - salmon/salmon.merged.transcript_counts.tsv
+  - salmon/salmon_tx2gene.tsv
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/ambig_info.tsv
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/expected_bias.gz
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/observed_bias.gz
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/observed_bias_3p.gz
+  - star_salmon/RAP1_IAA_30M_REP1/cmd_info.json
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/ambig_info.tsv
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/expected_bias.gz
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/observed_bias.gz
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/observed_bias_3p.gz
+  - star_salmon/RAP1_UNINDUCED_REP1/cmd_info.json
+  - star_salmon/RAP1_UNINDUCED_REP1/libParams/flenDist.txt
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/ambig_info.tsv
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/expected_bias.gz
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/observed_bias.gz
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/observed_bias_3p.gz
+  - star_salmon/RAP1_UNINDUCED_REP2/cmd_info.json
+  - star_salmon/RAP1_UNINDUCED_REP2/libParams/flenDist.txt
+  - star_salmon/WT_REP1/aux_info/ambig_info.tsv
+  - star_salmon/WT_REP1/aux_info/expected_bias.gz
+  - star_salmon/WT_REP1/aux_info/observed_bias.gz
+  - star_salmon/WT_REP1/aux_info/observed_bias_3p.gz
+  - star_salmon/WT_REP1/cmd_info.json
+  - star_salmon/WT_REP2/aux_info/ambig_info.tsv
+  - star_salmon/WT_REP2/aux_info/expected_bias.gz
+  - star_salmon/WT_REP2/aux_info/observed_bias.gz
+  - star_salmon/WT_REP2/aux_info/observed_bias_3p.gz
+  - star_salmon/WT_REP2/cmd_info.json
+  - star_salmon/bigwig/RAP1_IAA_30M_REP1.forward.bigWig
+  - star_salmon/bigwig/RAP1_IAA_30M_REP1.reverse.bigWig
+  - star_salmon/bigwig/RAP1_UNINDUCED_REP1.forward.bigWig
+  - star_salmon/bigwig/RAP1_UNINDUCED_REP1.reverse.bigWig
+  - star_salmon/bigwig/RAP1_UNINDUCED_REP2.forward.bigWig
+  - star_salmon/bigwig/RAP1_UNINDUCED_REP2.reverse.bigWig
+  - star_salmon/bigwig/WT_REP1.forward.bigWig
+  - star_salmon/bigwig/WT_REP1.reverse.bigWig
+  - star_salmon/bigwig/WT_REP2.forward.bigWig
+  - star_salmon/bigwig/WT_REP2.reverse.bigWig
+  - star_salmon/deseq2_qc/R_sessionInfo.log
+  - star_salmon/deseq2_qc/deseq2.dds.RData
+  - star_salmon/deseq2_qc/deseq2.pca.vals.txt
+  - star_salmon/deseq2_qc/deseq2.sample.dists.txt
+  - star_salmon/deseq2_qc/size_factors/RAP1_IAA_30M_REP1.txt
+  - star_salmon/deseq2_qc/size_factors/RAP1_UNINDUCED_REP1.txt
+  - star_salmon/deseq2_qc/size_factors/RAP1_UNINDUCED_REP2.txt
+  - star_salmon/deseq2_qc/size_factors/WT_REP1.txt
+  - star_salmon/deseq2_qc/size_factors/WT_REP2.txt
+  - star_salmon/deseq2_qc/size_factors/deseq2.size_factors.RData
+  - star_salmon/dupradar/gene_data/RAP1_IAA_30M_REP1_dupMatrix.txt
+  - star_salmon/dupradar/gene_data/RAP1_UNINDUCED_REP1_dupMatrix.txt
+  - star_salmon/dupradar/gene_data/RAP1_UNINDUCED_REP2_dupMatrix.txt
+  - star_salmon/dupradar/gene_data/WT_REP1_dupMatrix.txt
+  - star_salmon/dupradar/gene_data/WT_REP2_dupMatrix.txt
+  - star_salmon/dupradar/intercepts_slope/RAP1_IAA_30M_REP1_intercept_slope.txt
+  - star_salmon/dupradar/intercepts_slope/RAP1_UNINDUCED_REP1_intercept_slope.txt
+  - star_salmon/dupradar/intercepts_slope/RAP1_UNINDUCED_REP2_intercept_slope.txt
+  - star_salmon/dupradar/intercepts_slope/WT_REP1_intercept_slope.txt
+  - star_salmon/dupradar/intercepts_slope/WT_REP2_intercept_slope.txt
+  - star_salmon/featurecounts/RAP1_IAA_30M_REP1.biotype_counts_mqc.tsv
+  - star_salmon/featurecounts/RAP1_IAA_30M_REP1.biotype_counts_rrna_mqc.tsv
+  - star_salmon/featurecounts/RAP1_IAA_30M_REP1.featureCounts.txt
+  - star_salmon/featurecounts/RAP1_IAA_30M_REP1.featureCounts.txt.summary
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP1.biotype_counts_mqc.tsv
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP1.biotype_counts_rrna_mqc.tsv
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP1.featureCounts.txt
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP1.featureCounts.txt.summary
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP2.biotype_counts_mqc.tsv
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP2.biotype_counts_rrna_mqc.tsv
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP2.featureCounts.txt
+  - star_salmon/featurecounts/RAP1_UNINDUCED_REP2.featureCounts.txt.summary
+  - star_salmon/featurecounts/WT_REP1.biotype_counts_mqc.tsv
+  - star_salmon/featurecounts/WT_REP1.biotype_counts_rrna_mqc.tsv
+  - star_salmon/featurecounts/WT_REP1.featureCounts.txt
+  - star_salmon/featurecounts/WT_REP1.featureCounts.txt.summary
+  - star_salmon/featurecounts/WT_REP2.biotype_counts_mqc.tsv
+  - star_salmon/featurecounts/WT_REP2.biotype_counts_rrna_mqc.tsv
+  - star_salmon/featurecounts/WT_REP2.featureCounts.txt
+  - star_salmon/featurecounts/WT_REP2.featureCounts.txt.summary
+  - star_salmon/log/RAP1_IAA_30M_REP1.SJ.out.tab
+  - star_salmon/log/RAP1_UNINDUCED_REP1.SJ.out.tab
+  - star_salmon/log/RAP1_UNINDUCED_REP2.SJ.out.tab
+  - star_salmon/log/WT_REP1.SJ.out.tab
+  - star_salmon/log/WT_REP2.SJ.out.tab
+  - star_salmon/preseq/RAP1_IAA_30M_REP1.lc_extrap.txt
+  - star_salmon/preseq/RAP1_UNINDUCED_REP1.lc_extrap.txt
+  - star_salmon/preseq/RAP1_UNINDUCED_REP2.lc_extrap.txt
+  - star_salmon/preseq/WT_REP1.lc_extrap.txt
+  - star_salmon/preseq/WT_REP2.lc_extrap.txt
+  - star_salmon/preseq/log/RAP1_IAA_30M_REP1.command.log
+  - star_salmon/preseq/log/RAP1_UNINDUCED_REP1.command.log
+  - star_salmon/preseq/log/RAP1_UNINDUCED_REP2.command.log
+  - star_salmon/preseq/log/WT_REP1.command.log
+  - star_salmon/preseq/log/WT_REP2.command.log
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/agogo.css
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/ajax-loader.gif
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/basic.css
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/bgfooter.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/bgtop.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/comment-bright.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/comment-close.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/comment.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/doctools.js
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/down-pressed.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/down.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/file.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/jquery.js
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/minus.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/plus.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/pygments.css
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/qualimap_logo_small.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/report.css
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/searchtools.js
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/underscore.js
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/up-pressed.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/up.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/css/websupport.js
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Coverage Profile Along Genes (High).png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Coverage Profile Along Genes (Low).png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Coverage Profile Along Genes (Total).png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Junction Analysis.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Reads Genomic Origin.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/images_qualimapReport/Transcript coverage histogram.png
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(high).txt
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(low).txt
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(total).txt
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/rnaseq_qc_results.txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/agogo.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/ajax-loader.gif
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/basic.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/bgfooter.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/bgtop.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/comment-bright.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/comment-close.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/comment.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/doctools.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/down-pressed.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/down.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/file.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/jquery.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/minus.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/plus.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/pygments.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/qualimap_logo_small.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/report.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/searchtools.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/underscore.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/up-pressed.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/up.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/css/websupport.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Coverage Profile Along Genes (High).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Coverage Profile Along Genes (Low).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Coverage Profile Along Genes (Total).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Junction Analysis.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Reads Genomic Origin.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/images_qualimapReport/Transcript coverage histogram.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(high).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(low).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(total).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/rnaseq_qc_results.txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/agogo.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/ajax-loader.gif
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/basic.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/bgfooter.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/bgtop.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/comment-bright.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/comment-close.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/comment.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/doctools.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/down-pressed.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/down.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/file.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/jquery.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/minus.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/plus.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/pygments.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/qualimap_logo_small.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/report.css
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/searchtools.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/underscore.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/up-pressed.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/up.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/css/websupport.js
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Coverage Profile Along Genes (High).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Coverage Profile Along Genes (Low).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Coverage Profile Along Genes (Total).png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Junction Analysis.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Reads Genomic Origin.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/images_qualimapReport/Transcript coverage histogram.png
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(high).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(low).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(total).txt
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/rnaseq_qc_results.txt
+  - star_salmon/qualimap/WT_REP1/css/agogo.css
+  - star_salmon/qualimap/WT_REP1/css/ajax-loader.gif
+  - star_salmon/qualimap/WT_REP1/css/basic.css
+  - star_salmon/qualimap/WT_REP1/css/bgfooter.png
+  - star_salmon/qualimap/WT_REP1/css/bgtop.png
+  - star_salmon/qualimap/WT_REP1/css/comment-bright.png
+  - star_salmon/qualimap/WT_REP1/css/comment-close.png
+  - star_salmon/qualimap/WT_REP1/css/comment.png
+  - star_salmon/qualimap/WT_REP1/css/doctools.js
+  - star_salmon/qualimap/WT_REP1/css/down-pressed.png
+  - star_salmon/qualimap/WT_REP1/css/down.png
+  - star_salmon/qualimap/WT_REP1/css/file.png
+  - star_salmon/qualimap/WT_REP1/css/jquery.js
+  - star_salmon/qualimap/WT_REP1/css/minus.png
+  - star_salmon/qualimap/WT_REP1/css/plus.png
+  - star_salmon/qualimap/WT_REP1/css/pygments.css
+  - star_salmon/qualimap/WT_REP1/css/qualimap_logo_small.png
+  - star_salmon/qualimap/WT_REP1/css/report.css
+  - star_salmon/qualimap/WT_REP1/css/searchtools.js
+  - star_salmon/qualimap/WT_REP1/css/underscore.js
+  - star_salmon/qualimap/WT_REP1/css/up-pressed.png
+  - star_salmon/qualimap/WT_REP1/css/up.png
+  - star_salmon/qualimap/WT_REP1/css/websupport.js
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Coverage Profile Along Genes (High).png
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Coverage Profile Along Genes (Low).png
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Coverage Profile Along Genes (Total).png
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Junction Analysis.png
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Reads Genomic Origin.png
+  - star_salmon/qualimap/WT_REP1/images_qualimapReport/Transcript coverage histogram.png
+  - star_salmon/qualimap/WT_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(high).txt
+  - star_salmon/qualimap/WT_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(low).txt
+  - star_salmon/qualimap/WT_REP1/raw_data_qualimapReport/coverage_profile_along_genes_(total).txt
+  - star_salmon/qualimap/WT_REP1/rnaseq_qc_results.txt
+  - star_salmon/qualimap/WT_REP2/css/agogo.css
+  - star_salmon/qualimap/WT_REP2/css/ajax-loader.gif
+  - star_salmon/qualimap/WT_REP2/css/basic.css
+  - star_salmon/qualimap/WT_REP2/css/bgfooter.png
+  - star_salmon/qualimap/WT_REP2/css/bgtop.png
+  - star_salmon/qualimap/WT_REP2/css/comment-bright.png
+  - star_salmon/qualimap/WT_REP2/css/comment-close.png
+  - star_salmon/qualimap/WT_REP2/css/comment.png
+  - star_salmon/qualimap/WT_REP2/css/doctools.js
+  - star_salmon/qualimap/WT_REP2/css/down-pressed.png
+  - star_salmon/qualimap/WT_REP2/css/down.png
+  - star_salmon/qualimap/WT_REP2/css/file.png
+  - star_salmon/qualimap/WT_REP2/css/jquery.js
+  - star_salmon/qualimap/WT_REP2/css/minus.png
+  - star_salmon/qualimap/WT_REP2/css/plus.png
+  - star_salmon/qualimap/WT_REP2/css/pygments.css
+  - star_salmon/qualimap/WT_REP2/css/qualimap_logo_small.png
+  - star_salmon/qualimap/WT_REP2/css/report.css
+  - star_salmon/qualimap/WT_REP2/css/searchtools.js
+  - star_salmon/qualimap/WT_REP2/css/underscore.js
+  - star_salmon/qualimap/WT_REP2/css/up-pressed.png
+  - star_salmon/qualimap/WT_REP2/css/up.png
+  - star_salmon/qualimap/WT_REP2/css/websupport.js
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Coverage Profile Along Genes (High).png
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Coverage Profile Along Genes (Low).png
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Coverage Profile Along Genes (Total).png
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Junction Analysis.png
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Reads Genomic Origin.png
+  - star_salmon/qualimap/WT_REP2/images_qualimapReport/Transcript coverage histogram.png
+  - star_salmon/qualimap/WT_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(high).txt
+  - star_salmon/qualimap/WT_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(low).txt
+  - star_salmon/qualimap/WT_REP2/raw_data_qualimapReport/coverage_profile_along_genes_(total).txt
+  - star_salmon/qualimap/WT_REP2/rnaseq_qc_results.txt
+  - star_salmon/rseqc/bam_stat/RAP1_IAA_30M_REP1.bam_stat.txt
+  - star_salmon/rseqc/bam_stat/RAP1_UNINDUCED_REP1.bam_stat.txt
+  - star_salmon/rseqc/bam_stat/RAP1_UNINDUCED_REP2.bam_stat.txt
+  - star_salmon/rseqc/bam_stat/WT_REP1.bam_stat.txt
+  - star_salmon/rseqc/bam_stat/WT_REP2.bam_stat.txt
+  - star_salmon/rseqc/infer_experiment/RAP1_IAA_30M_REP1.infer_experiment.txt
+  - star_salmon/rseqc/infer_experiment/RAP1_UNINDUCED_REP1.infer_experiment.txt
+  - star_salmon/rseqc/infer_experiment/RAP1_UNINDUCED_REP2.infer_experiment.txt
+  - star_salmon/rseqc/infer_experiment/WT_REP1.infer_experiment.txt
+  - star_salmon/rseqc/infer_experiment/WT_REP2.infer_experiment.txt
+  - star_salmon/rseqc/inner_distance/rscript/RAP1_IAA_30M_REP1.inner_distance_plot.r
+  - star_salmon/rseqc/inner_distance/rscript/WT_REP1.inner_distance_plot.r
+  - star_salmon/rseqc/inner_distance/rscript/WT_REP2.inner_distance_plot.r
+  - star_salmon/rseqc/inner_distance/txt/RAP1_IAA_30M_REP1.inner_distance_freq.txt
+  - star_salmon/rseqc/inner_distance/txt/RAP1_IAA_30M_REP1.inner_distance_mean.txt
+  - star_salmon/rseqc/inner_distance/txt/WT_REP1.inner_distance_freq.txt
+  - star_salmon/rseqc/inner_distance/txt/WT_REP1.inner_distance_mean.txt
+  - star_salmon/rseqc/inner_distance/txt/WT_REP2.inner_distance_freq.txt
+  - star_salmon/rseqc/inner_distance/txt/WT_REP2.inner_distance_mean.txt
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.bed
+  - star_salmon/rseqc/junction_annotation/log/RAP1_IAA_30M_REP1.junction_annotation.log
+  - star_salmon/rseqc/junction_annotation/log/RAP1_UNINDUCED_REP1.junction_annotation.log
+  - star_salmon/rseqc/junction_annotation/log/RAP1_UNINDUCED_REP2.junction_annotation.log
+  - star_salmon/rseqc/junction_annotation/log/WT_REP1.junction_annotation.log
+  - star_salmon/rseqc/junction_annotation/log/WT_REP2.junction_annotation.log
+  - star_salmon/rseqc/junction_annotation/rscript/RAP1_IAA_30M_REP1.junction_plot.r
+  - star_salmon/rseqc/junction_annotation/rscript/RAP1_UNINDUCED_REP1.junction_plot.r
+  - star_salmon/rseqc/junction_annotation/rscript/RAP1_UNINDUCED_REP2.junction_plot.r
+  - star_salmon/rseqc/junction_annotation/rscript/WT_REP1.junction_plot.r
+  - star_salmon/rseqc/junction_annotation/rscript/WT_REP2.junction_plot.r
+  - star_salmon/rseqc/junction_annotation/xls/RAP1_IAA_30M_REP1.junction.xls
+  - star_salmon/rseqc/junction_annotation/xls/RAP1_UNINDUCED_REP1.junction.xls
+  - star_salmon/rseqc/junction_annotation/xls/RAP1_UNINDUCED_REP2.junction.xls
+  - star_salmon/rseqc/junction_annotation/xls/WT_REP1.junction.xls
+  - star_salmon/rseqc/junction_annotation/xls/WT_REP2.junction.xls
+  - star_salmon/rseqc/read_distribution/RAP1_IAA_30M_REP1.read_distribution.txt
+  - star_salmon/rseqc/read_distribution/RAP1_UNINDUCED_REP1.read_distribution.txt
+  - star_salmon/rseqc/read_distribution/RAP1_UNINDUCED_REP2.read_distribution.txt
+  - star_salmon/rseqc/read_distribution/WT_REP1.read_distribution.txt
+  - star_salmon/rseqc/read_distribution/WT_REP2.read_distribution.txt
+  - star_salmon/rseqc/read_duplication/rscript/RAP1_IAA_30M_REP1.DupRate_plot.r
+  - star_salmon/rseqc/read_duplication/rscript/RAP1_UNINDUCED_REP1.DupRate_plot.r
+  - star_salmon/rseqc/read_duplication/rscript/RAP1_UNINDUCED_REP2.DupRate_plot.r
+  - star_salmon/rseqc/read_duplication/rscript/WT_REP1.DupRate_plot.r
+  - star_salmon/rseqc/read_duplication/rscript/WT_REP2.DupRate_plot.r
+  - star_salmon/rseqc/read_duplication/xls/RAP1_IAA_30M_REP1.pos.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/RAP1_IAA_30M_REP1.seq.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/RAP1_UNINDUCED_REP1.pos.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/RAP1_UNINDUCED_REP1.seq.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/RAP1_UNINDUCED_REP2.pos.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/RAP1_UNINDUCED_REP2.seq.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/WT_REP1.pos.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/WT_REP1.seq.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/WT_REP2.pos.DupRate.xls
+  - star_salmon/rseqc/read_duplication/xls/WT_REP2.seq.DupRate.xls
+  - star_salmon/salmon_tx2gene.tsv
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.markdup.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.markdup.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.markdup.sorted.bam.stats
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_IAA_30M_REP1.sorted.bam.stats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.markdup.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.markdup.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.markdup.sorted.bam.stats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP1.sorted.bam.stats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.markdup.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.markdup.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.markdup.sorted.bam.stats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.sorted.bam.flagstat
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.sorted.bam.idxstats
+  - star_salmon/samtools_stats/RAP1_UNINDUCED_REP2.sorted.bam.stats
+  - star_salmon/samtools_stats/WT_REP1.markdup.sorted.bam.flagstat
+  - star_salmon/samtools_stats/WT_REP1.markdup.sorted.bam.idxstats
+  - star_salmon/samtools_stats/WT_REP1.markdup.sorted.bam.stats
+  - star_salmon/samtools_stats/WT_REP1.sorted.bam.flagstat
+  - star_salmon/samtools_stats/WT_REP1.sorted.bam.idxstats
+  - star_salmon/samtools_stats/WT_REP1.sorted.bam.stats
+  - star_salmon/samtools_stats/WT_REP2.markdup.sorted.bam.flagstat
+  - star_salmon/samtools_stats/WT_REP2.markdup.sorted.bam.idxstats
+  - star_salmon/samtools_stats/WT_REP2.markdup.sorted.bam.stats
+  - star_salmon/samtools_stats/WT_REP2.sorted.bam.flagstat
+  - star_salmon/samtools_stats/WT_REP2.sorted.bam.idxstats
+  - star_salmon/samtools_stats/WT_REP2.sorted.bam.stats
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.ballgown/e2t.ctab
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.ballgown/e_data.ctab
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.ballgown/i2t.ctab
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.ballgown/i_data.ctab
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.ballgown/t_data.ctab
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.coverage.gtf
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.gene.abundance.txt
+  - star_salmon/stringtie/RAP1_IAA_30M_REP1.transcripts.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.ballgown/e2t.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.ballgown/e_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.ballgown/i2t.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.ballgown/i_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.ballgown/t_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.coverage.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.gene.abundance.txt
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.transcripts.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.ballgown/e2t.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.ballgown/e_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.ballgown/i2t.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.ballgown/i_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.ballgown/t_data.ctab
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.coverage.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.gene.abundance.txt
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.transcripts.gtf
+  - star_salmon/stringtie/WT_REP1.ballgown/e2t.ctab
+  - star_salmon/stringtie/WT_REP1.ballgown/e_data.ctab
+  - star_salmon/stringtie/WT_REP1.ballgown/i2t.ctab
+  - star_salmon/stringtie/WT_REP1.ballgown/i_data.ctab
+  - star_salmon/stringtie/WT_REP1.ballgown/t_data.ctab
+  - star_salmon/stringtie/WT_REP1.coverage.gtf
+  - star_salmon/stringtie/WT_REP1.gene.abundance.txt
+  - star_salmon/stringtie/WT_REP1.transcripts.gtf
+  - star_salmon/stringtie/WT_REP2.ballgown/e2t.ctab
+  - star_salmon/stringtie/WT_REP2.ballgown/e_data.ctab
+  - star_salmon/stringtie/WT_REP2.ballgown/i2t.ctab
+  - star_salmon/stringtie/WT_REP2.ballgown/i_data.ctab
+  - star_salmon/stringtie/WT_REP2.ballgown/t_data.ctab
+  - star_salmon/stringtie/WT_REP2.coverage.gtf
+  - star_salmon/stringtie/WT_REP2.gene.abundance.txt
+  - star_salmon/stringtie/WT_REP2.transcripts.gtf
+  - trimgalore/fastqc/RAP1_IAA_30M_REP1_1_val_1_fastqc.html
+  - trimgalore/fastqc/RAP1_IAA_30M_REP1_2_val_2_fastqc.html
+  - trimgalore/fastqc/RAP1_UNINDUCED_REP1_trimmed_fastqc.html
+  - trimgalore/fastqc/RAP1_UNINDUCED_REP2_trimmed_fastqc.html
+  - trimgalore/fastqc/WT_REP1_1_val_1_fastqc.html
+  - trimgalore/fastqc/WT_REP1_2_val_2_fastqc.html
+  - trimgalore/fastqc/WT_REP2_1_val_1_fastqc.html
+  - trimgalore/fastqc/WT_REP2_2_val_2_fastqc.html
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 306/864 files)
+
+  - bbsplit/WT_REP2.stats.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 241.00 B (241)          | 241.00 B (241)          |
+    | Line Count     | 3                       | 3                       |
+    '--------------------------------------------------------------------'
+
+  - fastqc/RAP1_IAA_30M_REP1_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 353.33 KB (361805)      | 353.33 KB (361805)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/RAP1_IAA_30M_REP1_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 345.78 KB (354079)      | 345.78 KB (354079)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/RAP1_UNINDUCED_REP1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 354.01 KB (362503)      | 354.01 KB (362503)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/RAP1_UNINDUCED_REP2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 355.12 KB (363643)      | 355.12 KB (363643)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/WT_REP1_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 357.86 KB (366448)      | 357.86 KB (366448)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/WT_REP1_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 348.23 KB (356587)      | 348.23 KB (356587)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/WT_REP2_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 353.13 KB (361601)      | 353.13 KB (361601)      |
+    '--------------------------------------------------------------------'
+
+  - fastqc/WT_REP2_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 346.20 KB (354509)      | 346.20 KB (354509)      |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_junction_saturation_plot_All_Junctions.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m690.00 B (690)         [39m | [33m692.00 B (692)         [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_junction_saturation_plot_Known_Junctions.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 581.00 B (581)          | 581.00 B (581)          |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/mqc_rseqc_junction_saturation_plot_Novel_Junctions.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m688.00 B (688)         [39m | [33m687.00 B (687)         [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/mqc_salmon_plot_1.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m29.03 KB (29729)       [39m | [33m29.05 KB (29744)       [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/mqc_star_alignment_plot_1.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 342.00 B (342)          | 342.00 B (342)          |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 25.15 KB (25753)        | 25.15 KB (25753)        |
+    | Line Count     | 137                     | 137                     |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc_data.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.96 MB (2058523)      [39m | [33m1.96 MB (2058544)      [39m |
+    | Line Count     | 57803                   | 57803                   |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc_general_stats.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.59 KB (3674)         [39m | [33m3.59 KB (3675)         [39m |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc_salmon.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m4.59 KB (4697)         [39m | [33m4.59 KB (4699)         [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc_sources.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 23.19 KB (23742)        | 23.19 KB (23742)        |
+    | Line Count     | 103                     | 103                     |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_data/multiqc_star.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.21 KB (1243)          | 1.21 KB (1243)          |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_cutadapt_filtered_reads_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 13.67 KB (13996)        | 13.67 KB (13996)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_cutadapt_filtered_reads_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.18 KB (14525)        | 14.18 KB (14525)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_cutadapt_trimmed_sequences_plot_3_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.44 KB (19907)        | 19.44 KB (19907)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 20.43 KB (20921)        | 20.43 KB (20921)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_adapter_content_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.08 KB (19539)        | 19.08 KB (19539)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_overrepresented_sequences_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 17.10 KB (17510)        | 17.10 KB (17510)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_overrepresented_sequences_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 17.11 KB (17518)        | 17.11 KB (17518)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_base_n_content_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.48 KB (18920)        | 18.48 KB (18920)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_base_n_content_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.23 KB (18663)        | 18.23 KB (18663)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_base_sequence_quality_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.23 KB (19691)        | 19.23 KB (19691)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_base_sequence_quality_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.23 KB (19691)        | 19.23 KB (19691)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_gc_content_plot-2_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.71 KB (19161)        | 18.71 KB (19161)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.32 KB (19784)        | 19.32 KB (19784)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_gc_content_plot_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.75 KB (19195)        | 18.75 KB (19195)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_gc_content_plot_Percentages.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 19.24 KB (19697)        | 19.24 KB (19697)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_quality_scores_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.84 KB (17247)        | 16.84 KB (17247)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_per_sequence_quality_scores_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.91 KB (17316)        | 16.91 KB (17316)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_counts_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.66 KB (16039)        | 15.66 KB (16039)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_counts_plot-2_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.13 KB (16514)        | 16.13 KB (16514)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_counts_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.60 KB (15977)        | 15.60 KB (15977)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_counts_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.13 KB (16520)        | 16.13 KB (16520)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_duplication_levels_plot-2_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.37 KB (18813)        | 18.37 KB (18813)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_duplication_levels_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.37 KB (18807)        | 18.37 KB (18807)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_fastqc_sequence_length_distribution_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.87 KB (19319)        | 18.87 KB (19319)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_featurecounts_biotype_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.08 KB (15443)        | 15.08 KB (15443)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_featurecounts_biotype_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.56 KB (15938)        | 15.56 KB (15938)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_picard_deduplication_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.09 KB (14427)        | 14.09 KB (14427)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_picard_deduplication_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.08 KB (15438)        | 15.08 KB (15438)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_preseq_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 17.17 KB (17587)        | 17.17 KB (17587)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_qualimap_gene_coverage_profile_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 21.29 KB (21804)        | 21.29 KB (21804)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_qualimap_gene_coverage_profile_Normalised.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 21.28 KB (21795)        | 21.28 KB (21795)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_qualimap_genomic_origin_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.86 KB (16236)        | 15.86 KB (16236)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_qualimap_genomic_origin_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.85 KB (17252)        | 16.85 KB (17252)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_infer_experiment_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.85 KB (15203)        | 14.85 KB (15203)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_inner_distance_plot_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.49 KB (15857)        | 15.49 KB (15857)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_inner_distance_plot_Percentages.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.47 KB (15841)        | 15.47 KB (15841)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_annotation_junctions_plot_Events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.81 KB (15164)        | 14.81 KB (15164)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_annotation_junctions_plot_Events_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.73 KB (15080)        | 14.73 KB (15080)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_annotation_junctions_plot_Junctions.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.83 KB (15189)        | 14.83 KB (15189)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_annotation_junctions_plot_Junctions_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.71 KB (15064)        | 14.71 KB (15064)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_saturation_plot_All_Junctions.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m15.49 KB (15865)       [39m | [33m15.49 KB (15861)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_saturation_plot_Known_Junctions.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m15.43 KB (15799)       [39m | [33m15.44 KB (15811)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_junction_saturation_plot_Novel_Junctions.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m15.51 KB (15883)       [39m | [33m15.47 KB (15838)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_read_distribution_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.66 KB (16032)        | 15.66 KB (16032)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_read_distribution_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.07 KB (16451)        | 16.07 KB (16451)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_rseqc_read_dups_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 18.07 KB (18501)        | 18.07 KB (18501)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_salmon_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m23.76 KB (24329)       [39m | [33m23.75 KB (24316)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_samtools-idxstats-mapped-reads-plot_Normalised_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 15.85 KB (16231)        | 15.85 KB (16231)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 16.83 KB (17231)        | 16.83 KB (17231)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_samtools-idxstats-mapped-reads-plot_Raw_Counts.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.95 KB (15313)        | 14.95 KB (15313)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_samtools_alignment_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 13.81 KB (14142)        | 13.81 KB (14142)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_samtools_alignment_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 14.80 KB (15154)        | 14.80 KB (15154)        |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_star_alignment_plot_1.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m16.13 KB (16517)       [39m | [33m16.13 KB (16516)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/pdf/mqc_star_alignment_plot_1_pc.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m16.58 KB (16974)       [39m | [33m16.58 KB (16973)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_saturation_plot_All_Junctions.png
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m50.50 KB (51710)       [39m | [33m49.89 KB (51092)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_saturation_plot_Known_Junctions.png
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m26.80 KB (27447)       [39m | [33m26.84 KB (27481)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/png/mqc_rseqc_junction_saturation_plot_Novel_Junctions.png
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m50.45 KB (51662)       [39m | [33m50.08 KB (51285)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/png/mqc_salmon_plot_1.png
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m47.84 KB (48985)       [39m | [33m47.88 KB (49034)       [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_cutadapt_filtered_reads_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 30.42 KB (31150)        | 30.42 KB (31150)        |
+    | Line Count     | 1203                    | 1203                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_cutadapt_filtered_reads_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 30.80 KB (31540)        | 30.80 KB (31540)        |
+    | Line Count     | 1241                    | 1241                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_cutadapt_trimmed_sequences_plot_3_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 55.10 KB (56421)        | 55.10 KB (56421)        |
+    | Line Count     | 2054                    | 2054                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 58.23 KB (59632)        | 58.23 KB (59632)        |
+    | Line Count     | 2164                    | 2164                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_adapter_content_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 59.04 KB (60457)        | 59.04 KB (60457)        |
+    | Line Count     | 2115                    | 2115                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_overrepresented_sequences_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 40.88 KB (41859)        | 40.88 KB (41859)        |
+    | Line Count     | 1596                    | 1596                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_overrepresented_sequences_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 40.88 KB (41859)        | 40.88 KB (41859)        |
+    | Line Count     | 1596                    | 1596                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_base_n_content_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 46.26 KB (47374)        | 46.26 KB (47374)        |
+    | Line Count     | 1842                    | 1842                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_base_n_content_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 46.30 KB (47410)        | 46.30 KB (47410)        |
+    | Line Count     | 1842                    | 1842                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_base_sequence_quality_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 46.24 KB (47351)        | 46.24 KB (47351)        |
+    | Line Count     | 1861                    | 1861                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_base_sequence_quality_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 46.25 KB (47361)        | 46.25 KB (47361)        |
+    | Line Count     | 1861                    | 1861                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_gc_content_plot-2_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 54.15 KB (55448)        | 54.15 KB (55448)        |
+    | Line Count     | 2159                    | 2159                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 53.86 KB (55153)        | 53.86 KB (55153)        |
+    | Line Count     | 2177                    | 2177                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_gc_content_plot_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 54.13 KB (55433)        | 54.13 KB (55433)        |
+    | Line Count     | 2159                    | 2159                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_gc_content_plot_Percentages.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 53.87 KB (55159)        | 53.87 KB (55159)        |
+    | Line Count     | 2177                    | 2177                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_quality_scores_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 43.01 KB (44039)        | 43.01 KB (44039)        |
+    | Line Count     | 1638                    | 1638                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_per_sequence_quality_scores_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 43.15 KB (44183)        | 43.15 KB (44183)        |
+    | Line Count     | 1644                    | 1644                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_counts_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 35.45 KB (36305)        | 35.45 KB (36305)        |
+    | Line Count     | 1422                    | 1422                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_counts_plot-2_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 35.81 KB (36666)        | 35.81 KB (36666)        |
+    | Line Count     | 1460                    | 1460                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_counts_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 35.40 KB (36252)        | 35.40 KB (36252)        |
+    | Line Count     | 1422                    | 1422                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_counts_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 35.81 KB (36666)        | 35.81 KB (36666)        |
+    | Line Count     | 1460                    | 1460                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_duplication_levels_plot-2_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 44.95 KB (46031)        | 44.95 KB (46031)        |
+    | Line Count     | 1767                    | 1767                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_duplication_levels_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 44.95 KB (46030)        | 44.95 KB (46030)        |
+    | Line Count     | 1767                    | 1767                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_fastqc_sequence_length_distribution_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 48.56 KB (49725)        | 48.56 KB (49725)        |
+    | Line Count     | 1893                    | 1893                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_featurecounts_biotype_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 33.74 KB (34546)        | 33.74 KB (34546)        |
+    | Line Count     | 1412                    | 1412                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_featurecounts_biotype_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.79 KB (35620)        | 34.79 KB (35620)        |
+    | Line Count     | 1470                    | 1470                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_picard_deduplication_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.81 KB (35643)        | 34.81 KB (35643)        |
+    | Line Count     | 1355                    | 1355                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_picard_deduplication_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.90 KB (35733)        | 34.90 KB (35733)        |
+    | Line Count     | 1413                    | 1413                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_preseq_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 41.21 KB (42202)        | 41.21 KB (42202)        |
+    | Line Count     | 1559                    | 1559                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_qualimap_gene_coverage_profile_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 48.16 KB (49316)        | 48.16 KB (49316)        |
+    | Line Count     | 1938                    | 1938                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_qualimap_gene_coverage_profile_Normalised.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 49.28 KB (50467)        | 49.28 KB (50467)        |
+    | Line Count     | 1970                    | 1970                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_qualimap_genomic_origin_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.28 KB (35107)        | 34.28 KB (35107)        |
+    | Line Count     | 1399                    | 1399                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_qualimap_genomic_origin_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.38 KB (35206)        | 34.38 KB (35206)        |
+    | Line Count     | 1457                    | 1457                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_infer_experiment_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 30.49 KB (31218)        | 30.49 KB (31218)        |
+    | Line Count     | 1296                    | 1296                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_inner_distance_plot_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 33.07 KB (33862)        | 33.07 KB (33862)        |
+    | Line Count     | 1348                    | 1348                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_inner_distance_plot_Percentages.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 31.56 KB (32322)        | 31.56 KB (32322)        |
+    | Line Count     | 1318                    | 1318                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_annotation_junctions_plot_Events.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 31.10 KB (31849)        | 31.10 KB (31849)        |
+    | Line Count     | 1269                    | 1269                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_annotation_junctions_plot_Events_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 30.61 KB (31345)        | 30.61 KB (31345)        |
+    | Line Count     | 1254                    | 1254                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_annotation_junctions_plot_Junctions.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 32.11 KB (32877)        | 32.11 KB (32877)        |
+    | Line Count     | 1301                    | 1301                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_annotation_junctions_plot_Junctions_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 30.99 KB (31731)        | 30.99 KB (31731)        |
+    | Line Count     | 1262                    | 1262                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_saturation_plot_All_Junctions.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m34.14 KB (34959)       [39m | [33m34.14 KB (34961)       [39m |
+    | Line Count     | 1368                    | 1368                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_saturation_plot_Known_Junctions.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m34.16 KB (34975)       [39m | [33m34.15 KB (34972)       [39m |
+    | Line Count     | 1382                    | 1382                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_junction_saturation_plot_Novel_Junctions.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 34.14 KB (34956)        | 34.14 KB (34956)        |
+    | Line Count     | 1368                    | 1368                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_read_distribution_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 33.84 KB (34650)        | 33.84 KB (34650)        |
+    | Line Count     | 1399                    | 1399                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_read_distribution_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 32.90 KB (33686)        | 32.90 KB (33686)        |
+    | Line Count     | 1401                    | 1401                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_rseqc_read_dups_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 43.24 KB (44282)        | 43.24 KB (44282)        |
+    | Line Count     | 1720                    | 1720                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_salmon_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m58.50 KB (59907)       [39m | [33m58.24 KB (59634)       [39m |
+    | Line Count     | [33m2346                   [39m | [33m2336                   [39m |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_samtools-idxstats-mapped-reads-plot_Normalised_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 31.71 KB (32474)        | 31.71 KB (32474)        |
+    | Line Count     | 1281                    | 1281                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 33.74 KB (34550)        | 33.74 KB (34550)        |
+    | Line Count     | 1346                    | 1346                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_samtools-idxstats-mapped-reads-plot_Raw_Counts.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 31.85 KB (32611)        | 31.85 KB (32611)        |
+    | Line Count     | 1260                    | 1260                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_samtools_alignment_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 28.25 KB (28928)        | 28.25 KB (28928)        |
+    | Line Count     | 1152                    | 1152                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_samtools_alignment_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 28.35 KB (29030)        | 28.35 KB (29030)        |
+    | Line Count     | 1210                    | 1210                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_star_alignment_plot_1.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 38.72 KB (39645)        | 38.72 KB (39645)        |
+    | Line Count     | 1549                    | 1549                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_plots/svg/mqc_star_alignment_plot_1_pc.svg
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 39.07 KB (40004)        | 39.07 KB (40004)        |
+    | Line Count     | 1587                    | 1587                    |
+    '--------------------------------------------------------------------'
+
+  - multiqc/star_salmon/multiqc_report.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.47 MB (1540021)      [39m | [33m1.47 MB (1539898)      [39m |
+    | Line Count     | 9656                    | 9656                    |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m549.00 B (549)         [39m | [33m561.00 B (561)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.79 KB (1828)         [39m | [33m1.79 KB (1829)         [39m |
+    | Line Count     | 49                      | 49                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m11.42 KB (11698)       [39m | [33m11.46 KB (11733)       [39m |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.74 KB (3832)          | 3.74 KB (3832)          |
+    | Line Count     | 46                      | 46                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.62 KB (3707)         [39m | [33m3.67 KB (3754)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_IAA_30M_REP1/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.76 KB (4871)          | 4.76 KB (4871)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m306.00 B (306)         [39m | [33m316.00 B (316)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.78 KB (1827)          | 1.78 KB (1827)          |
+    | Line Count     | 49                      | 49                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.97 KB (4070)          | 3.97 KB (4070)          |
+    | Line Count     | 51                      | 51                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m322.00 B (322)         [39m | [33m315.00 B (315)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP2/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.78 KB (1827)          | 1.78 KB (1827)          |
+    | Line Count     | 49                      | 49                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/RAP1_UNINDUCED_REP2/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.97 KB (4070)          | 3.97 KB (4070)          |
+    | Line Count     | 51                      | 51                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m548.00 B (548)         [39m | [33m561.00 B (561)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.79 KB (1828)         [39m | [33m1.79 KB (1829)         [39m |
+    | Line Count     | 49                      | 49                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m11.46 KB (11730)       [39m | [33m11.47 KB (11746)       [39m |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.74 KB (3833)          | 3.74 KB (3833)          |
+    | Line Count     | 46                      | 46                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.65 KB (3741)         [39m | [33m3.66 KB (3751)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP1/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.74 KB (4852)          | 4.74 KB (4852)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m556.00 B (556)         [39m | [33m572.00 B (572)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.79 KB (1828)          | 1.79 KB (1828)          |
+    | Line Count     | 49                      | 49                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m11.46 KB (11733)       [39m | [33m11.46 KB (11734)       [39m |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.74 KB (3832)          | 3.74 KB (3832)          |
+    | Line Count     | 46                      | 46                      |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.62 KB (3706)         [39m | [33m3.63 KB (3712)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/WT_REP2/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.72 KB (4830)          | 4.72 KB (4830)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/deseq2.dds.RData
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m7.44 KB (7617)         [39m | [33m7.43 KB (7604)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/deseq2.pca.vals.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m319.00 B (319)         [39m | [33m321.00 B (321)         [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/deseq2.plots.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m9.19 KB (9415)         [39m | [33m9.20 KB (9424)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/deseq2.sample.dists.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m509.00 B (509)         [39m | [33m507.00 B (507)         [39m |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/size_factors/RAP1_UNINDUCED_REP1.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 10.00 B (10)            | 10.00 B (10)            |
+    | Line Count     | 1                       | 1                       |
+    '--------------------------------------------------------------------'
+
+  - salmon/deseq2_qc/size_factors/deseq2.size_factors.RData
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 191.00 B (191)          | 191.00 B (191)          |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_counts.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.37 KB (6519)         [39m | [33m6.36 KB (6516)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_counts_length_scaled.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m8.67 KB (8874)         [39m | [33m8.67 KB (8877)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_counts_length_scaled.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m9.65 KB (9881)         [39m | [33m9.66 KB (9894)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_counts_scaled.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m8.64 KB (8848)         [39m | [33m8.64 KB (8852)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_counts_scaled.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m9.46 KB (9686)         [39m | [33m9.57 KB (9798)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.gene_tpm.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m7.24 KB (7416)         [39m | [33m7.26 KB (7431)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.transcript_counts.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.39 KB (6539)         [39m | [33m6.38 KB (6533)         [39m |
+    '--------------------------------------------------------------------'
+
+  - salmon/salmon.merged.transcript_tpm.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m7.46 KB (7636)         [39m | [33m7.47 KB (7651)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.60 MB (3778318)      [39m | [33m3.60 MB (3778293)      [39m |
+    | Total Reads    | 94912                   | 94912                   |
+    |   # Mapped     | 94912 (100.00%)         | 94912 (100.00%)         |
+    |   # Duplicate  | 11688 (12.31%)          | 11688 (12.31%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1.markdup.sorted.bam.bai
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.89 KB (1936)          | 1.89 KB (1936)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m561.00 B (561)         [39m | [33m565.00 B (565)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.24 KB (1267)         [39m | [33m1.24 KB (1268)         [39m |
+    | Line Count     | 48                      | 48                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.46 KB (11732)        | 11.46 KB (11732)        |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.73 KB (2795)          | 2.73 KB (2795)          |
+    | Line Count     | 39                      | 39                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.65 KB (3734)         [39m | [33m3.66 KB (3747)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_IAA_30M_REP1/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.75 KB (4866)          | 4.75 KB (4866)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.62 MB (1703202)      [39m | [33m1.62 MB (1703065)      [39m |
+    | Total Reads    | 49040                   | 49040                   |
+    |   # Mapped     | 49040 (100.00%)         | 49040 (100.00%)         |
+    |   # Duplicate  | 36290 (74.00%)          | 36290 (74.00%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam.bai
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.32 KB (1352)          | 1.32 KB (1352)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m313.00 B (313)         [39m | [33m304.00 B (304)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.24 KB (1266)          | 1.24 KB (1266)          |
+    | Line Count     | 48                      | 48                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.73 KB (2794)          | 2.73 KB (2794)          |
+    | Line Count     | 39                      | 39                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.29 KB (3374)          | 3.29 KB (3374)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP1/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.72 KB (4831)          | 4.72 KB (4831)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.13 MB (3279083)      [39m | [33m3.13 MB (3279085)      [39m |
+    | Total Reads    | 98338                   | 98338                   |
+    |   # Mapped     | 98338 (100.00%)         | 98338 (100.00%)         |
+    |   # Duplicate  | 78936 (80.27%)          | 78936 (80.27%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam.bai
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.03 KB (2080)          | 2.03 KB (2080)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m317.00 B (317)         [39m | [33m325.00 B (325)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.24 KB (1267)          | 1.24 KB (1267)          |
+    | Line Count     | 48                      | 48                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.73 KB (2796)          | 2.73 KB (2796)          |
+    | Line Count     | 39                      | 39                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.39 KB (3468)         [39m | [33m3.39 KB (3467)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/RAP1_UNINDUCED_REP2/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.76 KB (4879)          | 4.76 KB (4879)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.86 MB (7196616)      [39m | [33m6.86 MB (7196472)      [39m |
+    | Total Reads    | 188243                  | 188243                  |
+    |   # Mapped     | 188243 (100.00%)        | 188243 (100.00%)        |
+    |   # Duplicate  | 38470 (20.44%)          | 38470 (20.44%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1.markdup.sorted.bam.bai
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.45 KB (3536)          | 3.45 KB (3536)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m585.00 B (585)         [39m | [33m577.00 B (577)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.24 KB (1268)         [39m | [33m1.24 KB (1267)         [39m |
+    | Line Count     | 48                      | 48                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m11.46 KB (11733)       [39m | [33m11.46 KB (11739)       [39m |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.73 KB (2795)          | 2.73 KB (2795)          |
+    | Line Count     | 39                      | 39                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.65 KB (3737)         [39m | [33m3.64 KB (3727)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.73 KB (4848)          | 4.73 KB (4848)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.41 MB (3570486)      [39m | [33m3.41 MB (3570488)      [39m |
+    | Total Reads    | 94419                   | 94419                   |
+    |   # Mapped     | 94419 (100.00%)         | 94419 (100.00%)         |
+    |   # Duplicate  | 12165 (12.88%)          | 12165 (12.88%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2.markdup.sorted.bam.bai
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.84 KB (1880)          | 1.84 KB (1880)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/aux_info/fld.gz
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m579.00 B (579)         [39m | [33m585.00 B (585)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/aux_info/meta_info.json
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.24 KB (1267)         [39m | [33m1.24 KB (1266)         [39m |
+    | Line Count     | 48                      | 48                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/libParams/flenDist.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m11.46 KB (11732)       [39m | [33m11.46 KB (11734)       [39m |
+    | Line Count     | 2                       | 2                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/logs/salmon_quant.log
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.73 KB (2794)          | 2.73 KB (2794)          |
+    | Line Count     | 39                      | 39                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/quant.genes.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.61 KB (3698)         [39m | [33m3.61 KB (3697)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2/quant.sf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.71 KB (4824)          | 4.71 KB (4824)          |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/deseq2_qc/deseq2.plots.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 9.17 KB (9386)          | 9.17 KB (9386)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/box_plot/RAP1_IAA_30M_REP1_duprateExpBoxplot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 5.71 KB (5849)          | 5.71 KB (5849)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/box_plot/RAP1_UNINDUCED_REP1_duprateExpBoxplot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 6.34 KB (6497)          | 6.34 KB (6497)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/box_plot/RAP1_UNINDUCED_REP2_duprateExpBoxplot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 6.47 KB (6624)          | 6.47 KB (6624)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/box_plot/WT_REP1_duprateExpBoxplot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 5.84 KB (5976)          | 5.84 KB (5976)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/box_plot/WT_REP2_duprateExpBoxplot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 5.76 KB (5896)          | 5.76 KB (5896)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/histogram/RAP1_IAA_30M_REP1_expressionHist.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.90 KB (5022)          | 4.90 KB (5022)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/histogram/RAP1_UNINDUCED_REP1_expressionHist.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.82 KB (4940)          | 4.82 KB (4940)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/histogram/RAP1_UNINDUCED_REP2_expressionHist.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.88 KB (4997)          | 4.88 KB (4997)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/histogram/WT_REP1_expressionHist.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.94 KB (5061)          | 4.94 KB (5061)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/histogram/WT_REP2_expressionHist.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 4.94 KB (5057)          | 4.94 KB (5057)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/scatter_plot/RAP1_IAA_30M_REP1_duprateExpDens.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 10.02 KB (10265)        | 10.02 KB (10265)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/scatter_plot/RAP1_UNINDUCED_REP1_duprateExpDens.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 10.32 KB (10572)        | 10.32 KB (10572)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/scatter_plot/RAP1_UNINDUCED_REP2_duprateExpDens.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 10.96 KB (11223)        | 10.96 KB (11223)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/scatter_plot/WT_REP1_duprateExpDens.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 10.15 KB (10395)        | 10.15 KB (10395)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/dupradar/scatter_plot/WT_REP2_duprateExpDens.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 9.67 KB (9901)          | 9.67 KB (9901)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_IAA_30M_REP1.Log.final.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.94 KB (1988)          | 1.94 KB (1988)          |
+    | Line Count     | 37                      | 37                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_IAA_30M_REP1.Log.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.99 KB (9209)          | 8.99 KB (9209)          |
+    | Line Count     | 179                     | 179                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP1.Log.final.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.94 KB (1984)          | 1.94 KB (1984)          |
+    | Line Count     | 37                      | 37                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP1.Log.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.27 KB (8466)          | 8.27 KB (8466)          |
+    | Line Count     | 159                     | 159                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP1.Log.progress.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 447.00 B (447)          | 447.00 B (447)          |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP2.Log.final.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.94 KB (1986)          | 1.94 KB (1986)          |
+    | Line Count     | 37                      | 37                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP2.Log.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.27 KB (8466)          | 8.27 KB (8466)          |
+    | Line Count     | 159                     | 159                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/RAP1_UNINDUCED_REP2.Log.progress.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 447.00 B (447)          | 447.00 B (447)          |
+    | Line Count     | 6                       | 6                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP1.Log.final.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.95 KB (1992)          | 1.95 KB (1992)          |
+    | Line Count     | 37                      | 37                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP1.Log.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.62 KB (8830)          | 8.62 KB (8830)          |
+    | Line Count     | 179                     | 179                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP1.Log.progress.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 565.00 B (565)          | 565.00 B (565)          |
+    | Line Count     | 7                       | 7                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP2.Log.final.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.94 KB (1988)          | 1.94 KB (1988)          |
+    | Line Count     | 37                      | 37                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP2.Log.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.62 KB (8829)          | 8.62 KB (8829)          |
+    | Line Count     | 179                     | 179                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/log/WT_REP2.Log.progress.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 565.00 B (565)          | 565.00 B (565)          |
+    | Line Count     | 7                       | 7                       |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/picard_metrics/RAP1_IAA_30M_REP1.markdup.sorted.MarkDuplicates.metrics.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.26 KB (3342)          | 3.26 KB (3342)          |
+    | Line Count     | 112                     | 112                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/picard_metrics/RAP1_UNINDUCED_REP1.markdup.sorted.MarkDuplicates.metrics.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.42 KB (1452)          | 1.42 KB (1452)          |
+    | Line Count     | 10                      | 10                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/picard_metrics/RAP1_UNINDUCED_REP2.markdup.sorted.MarkDuplicates.metrics.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.42 KB (1451)          | 1.42 KB (1451)          |
+    | Line Count     | 10                      | 10                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/picard_metrics/WT_REP1.markdup.sorted.MarkDuplicates.metrics.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.25 KB (3331)          | 3.25 KB (3331)          |
+    | Line Count     | 112                     | 112                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/picard_metrics/WT_REP2.markdup.sorted.MarkDuplicates.metrics.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.22 KB (3300)          | 3.22 KB (3300)          |
+    | Line Count     | 112                     | 112                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/qualimap/RAP1_IAA_30M_REP1/qualimapReport.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.28 KB (11553)        | 11.28 KB (11553)        |
+    | Line Count     | 320                     | 320                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP1/qualimapReport.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.05 KB (11315)        | 11.05 KB (11315)        |
+    | Line Count     | 316                     | 316                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/qualimap/RAP1_UNINDUCED_REP2/qualimapReport.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.05 KB (11316)        | 11.05 KB (11316)        |
+    | Line Count     | 316                     | 316                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/qualimap/WT_REP1/qualimapReport.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.27 KB (11544)        | 11.27 KB (11544)        |
+    | Line Count     | 320                     | 320                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/qualimap/WT_REP2/qualimapReport.html
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 11.27 KB (11543)        | 11.27 KB (11543)        |
+    | Line Count     | 320                     | 320                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/pdf/RAP1_IAA_30M_REP1.inner_distance_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.38 KB (8586)          | 8.38 KB (8586)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/pdf/WT_REP1.inner_distance_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.41 KB (8616)          | 8.41 KB (8616)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/pdf/WT_REP2.inner_distance_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.41 KB (8613)          | 8.41 KB (8613)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/txt/RAP1_IAA_30M_REP1.inner_distance.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.77 MB (1851943)      [39m | [33m1.77 MB (1851942)      [39m |
+    | Line Count     | 38992                   | 38992                   |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/txt/WT_REP1.inner_distance.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 3.16 MB (3313008)       | 3.16 MB (3313008)       |
+    | Line Count     | 69249                   | 69249                   |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/inner_distance/txt/WT_REP2.inner_distance.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 1.74 MB (1821557)       | 1.74 MB (1821557)       |
+    | Line Count     | 38290                   | 38290                   |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_IAA_30M_REP1.splice_events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.57 KB (12875)        | 12.57 KB (12875)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_IAA_30M_REP1.splice_junction.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.57 KB (12873)        | 12.57 KB (12873)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_UNINDUCED_REP1.splice_events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.67 KB (12974)        | 12.67 KB (12974)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_UNINDUCED_REP1.splice_junction.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.63 KB (12929)        | 12.63 KB (12929)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_UNINDUCED_REP2.splice_events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.68 KB (12986)        | 12.68 KB (12986)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/RAP1_UNINDUCED_REP2.splice_junction.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.65 KB (12953)        | 12.65 KB (12953)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/WT_REP1.splice_events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.59 KB (12897)        | 12.59 KB (12897)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/WT_REP1.splice_junction.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.69 KB (12993)        | 12.69 KB (12993)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/WT_REP2.splice_events.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.61 KB (12913)        | 12.61 KB (12913)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/pdf/WT_REP2.splice_junction.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 12.69 KB (12997)        | 12.69 KB (12997)        |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/pdf/RAP1_IAA_30M_REP1.junctionSaturation_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m5.30 KB (5427)         [39m | [33m5.30 KB (5430)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/pdf/RAP1_UNINDUCED_REP1.junctionSaturation_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m5.27 KB (5397)         [39m | [33m5.27 KB (5398)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/pdf/RAP1_UNINDUCED_REP2.junctionSaturation_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 5.28 KB (5410)          | 5.28 KB (5410)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/pdf/WT_REP1.junctionSaturation_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m5.31 KB (5441)         [39m | [33m5.31 KB (5436)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/pdf/WT_REP2.junctionSaturation_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m5.29 KB (5419)         [39m | [33m5.30 KB (5424)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/rscript/RAP1_IAA_30M_REP1.junctionSaturation_plot.r
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m638.00 B (638)         [39m | [33m640.00 B (640)         [39m |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/rscript/RAP1_UNINDUCED_REP1.junctionSaturation_plot.r
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 637.00 B (637)          | 637.00 B (637)          |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/rscript/RAP1_UNINDUCED_REP2.junctionSaturation_plot.r
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 639.00 B (639)          | 639.00 B (639)          |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/rscript/WT_REP1.junctionSaturation_plot.r
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m652.00 B (652)         [39m | [33m651.00 B (651)         [39m |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_saturation/rscript/WT_REP2.junctionSaturation_plot.r
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 634.00 B (634)          | 634.00 B (634)          |
+    | Line Count     | 12                      | 12                      |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/read_duplication/pdf/RAP1_IAA_30M_REP1.DupRate_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 6.61 KB (6765)          | 6.61 KB (6765)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/read_duplication/pdf/RAP1_UNINDUCED_REP1.DupRate_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 6.43 KB (6586)          | 6.43 KB (6586)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/read_duplication/pdf/RAP1_UNINDUCED_REP2.DupRate_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 7.59 KB (7773)          | 7.59 KB (7773)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/read_duplication/pdf/WT_REP1.DupRate_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 8.20 KB (8397)          | 8.20 KB (8397)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/read_duplication/pdf/WT_REP2.DupRate_plot.pdf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 6.77 KB (6928)          | 6.77 KB (6928)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.34 KB (6493)         [39m | [33m6.35 KB (6500)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.64 KB (3730)         [39m | [33m3.64 KB (3728)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts_length_scaled.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m8.67 KB (8877)         [39m | [33m8.66 KB (8866)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts_length_scaled.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m9.65 KB (9877)         [39m | [33m9.65 KB (9885)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts_scaled.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m8.64 KB (8847)         [39m | [33m8.64 KB (8852)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_counts_scaled.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m9.63 KB (9861)         [39m | [33m9.61 KB (9839)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.gene_tpm.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m7.24 KB (7417)         [39m | [33m7.24 KB (7415)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.transcript_counts.rds
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m6.35 KB (6504)         [39m | [33m6.36 KB (6513)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.transcript_counts.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.86 KB (3950)         [39m | [33m3.86 KB (3948)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/salmon.merged.transcript_tpm.tsv
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m7.46 KB (7637)         [39m | [33m7.46 KB (7635)         [39m |
+    | Line Count     | 126                     | 126                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/RAP1_IAA_30M_REP1_1.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.65 KB (2711)          | 2.65 KB (2711)          |
+    | Line Count     | 115                     | 115                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/RAP1_IAA_30M_REP1_2.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.86 KB (2928)          | 2.86 KB (2928)          |
+    | Line Count     | 120                     | 120                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/RAP1_UNINDUCED_REP1.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 2.77 KB (2841)          | 2.77 KB (2841)          |
+    | Line Count     | 119                     | 119                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/RAP1_UNINDUCED_REP2.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m2.79 KB (2855)         [39m | [33m2.79 KB (2856)         [39m |
+    | Line Count     | 117                     | 117                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/WT_REP1_1.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m2.72 KB (2784)         [39m | [33m2.72 KB (2785)         [39m |
+    | Line Count     | 118                     | 118                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/WT_REP1_2.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m2.90 KB (2969)         [39m | [33m2.90 KB (2970)         [39m |
+    | Line Count     | 121                     | 121                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/WT_REP2_1.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m2.66 KB (2724)         [39m | [33m2.66 KB (2723)         [39m |
+    | Line Count     | 117                     | 117                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/WT_REP2_2.fastq.gz_trimming_report.txt
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m2.84 KB (2907)         [39m | [33m2.84 KB (2906)         [39m |
+    | Line Count     | 119                     | 119                     |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/RAP1_IAA_30M_REP1_1_val_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 357.75 KB (366339)      | 357.75 KB (366339)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/RAP1_IAA_30M_REP1_2_val_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 345.86 KB (354156)      | 345.86 KB (354156)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/RAP1_UNINDUCED_REP1_trimmed_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 359.13 KB (367744)      | 359.13 KB (367744)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/RAP1_UNINDUCED_REP2_trimmed_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 359.31 KB (367929)      | 359.31 KB (367929)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/WT_REP1_1_val_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 358.76 KB (367375)      | 358.76 KB (367375)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/WT_REP1_2_val_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 350.91 KB (359332)      | 350.91 KB (359332)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/WT_REP2_1_val_1_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 357.13 KB (365705)      | 357.13 KB (365705)      |
+    '--------------------------------------------------------------------'
+
+  - trimgalore/fastqc/WT_REP2_2_val_2_fastqc.zip
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | 353.42 KB (361903)      | 353.42 KB (361903)      |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel1[39m ⭐ (Different Features, 1/864 files)
+
+  - star_salmon/log/RAP1_IAA_30M_REP1.Log.progress.out
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m565.00 B (565)         [39m | [31m447.00 B (447)         [39m |
+    | Line Count     | [31m7                      [39m | [31m6                      [39m |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel0[39m (Not Found, Crate1: 8 files, Crate2: 8 files)
+
+  - Only in Crate1:
+
+    - outputs/multiqc/star_salmon/multiqc_data/mqc_mqc_mplplot_gtnuqiebfc_1.txt
+    - outputs/multiqc/star_salmon/multiqc_plots/pdf/mqc_mqc_mplplot_gtnuqiebfc_1.pdf
+    - outputs/multiqc/star_salmon/multiqc_plots/png/mqc_mqc_mplplot_gtnuqiebfc_1.png
+    - outputs/multiqc/star_salmon/multiqc_plots/svg/mqc_mqc_mplplot_gtnuqiebfc_1.svg
+    - outputs/pipeline_info/execution_report_2022-09-08_06-28-19.html
+    - outputs/pipeline_info/execution_timeline_2022-09-08_06-28-19.html
+    - outputs/pipeline_info/execution_trace_2022-09-08_06-28-19.txt
+    - outputs/pipeline_info/pipeline_dag_2022-09-08_06-28-19.dot
+
+  - Only in Crate2:
+
+    - outputs/multiqc/star_salmon/multiqc_data/mqc_mqc_mplplot_vpgladqwtb_1.txt
+    - outputs/multiqc/star_salmon/multiqc_plots/pdf/mqc_mqc_mplplot_vpgladqwtb_1.pdf
+    - outputs/multiqc/star_salmon/multiqc_plots/png/mqc_mqc_mplplot_vpgladqwtb_1.png
+    - outputs/multiqc/star_salmon/multiqc_plots/svg/mqc_mqc_mplplot_vpgladqwtb_1.svg
+    - outputs/pipeline_info/execution_report_2022-09-08_06-08-08.html
+    - outputs/pipeline_info/execution_timeline_2022-09-08_06-08-08.html
+    - outputs/pipeline_info/execution_trace_2022-09-08_06-08-08.txt
+    - outputs/pipeline_info/pipeline_dag_2022-09-08_06-08-08.dot
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 557 files   |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 306 files   |
+  | Unacceptable Differences  | ⭐        | Different Features  | 1 files     |
+  | Not Reproduced            |           | Not Found           | 16 files    |
+  '---------------------------------------------------------------------------'
+

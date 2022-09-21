@@ -1,0 +1,182 @@
+Tonkaz 0.2.2
+
+[32mChecking[39m Crate2 based on Crate1:
+
+  Crate1: [36m./tests/example_crate/rnaseq_1st.json[39m
+  Crate2: [36m./tests/example_crate/rnaseq_small.json[39m
+
+.----------------------------------------------------------------------------------------------.
+|                |                Crate1                |                Crate2                |
+|----------------|--------------------------------------|--------------------------------------|
+| WF Name        | [33mnf-core - rnaseq                    [39m | [33mnf-core -  ...  with Small Test Data[39m |
+| WF ID          | 20da6ea5-de91-4973-ac20-216882357a0d | 20da6ea5-de91-4973-ac20-216882357a0d |
+| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Type        | Nextflow                             | Nextflow                             |
+| WF Type Ver    | 1.0                                  | 1.0                                  |
+| WF Eng Name    | nextflow                             | nextflow                             |
+| WF Eng Version | 22.04.4                              | 22.04.4                              |
+| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
+| Run Name       | example_test                         | example_test                         |
+| Run State      | COMPLETE                             | COMPLETE                             |
+| ExitCode       | 0                                    | 0                                    |
+| Start Time     | 2022-09-08 06:28:11                  | 2022-09-15 09:07:41                  |
+| End Time       | 2022-09-08 06:45:53                  | 2022-09-15 09:22:17                  |
+| Duration       | 17m 42s                              | 14m 36s                              |
+| # Attachments  | 147 files                            | 147 files                            |
+| # Intermediate | [33m3342 files                          [39m | [33m2760 files                          [39m |
+| # Outputs      | [33m872 files (25 EDAM-assigned files)  [39m | [33m747 files (20 EDAM-assigned files)  [39m |
+'----------------------------------------------------------------------------------------------'
+  * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
+
+[32mComparing[39m workflow results...
+Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)
+
+Reproducibility level is defined as follows:
+
+  - [34mLevel3[39m ⭐⭐⭐ : Files are identical with the same checksum
+  - [34mLevel2[39m ⭐⭐   : Files are different, but their features (file size, map rate, etc.) are similar (within threshold: 0.05)
+  - [34mLevel1[39m ⭐     : Files are different, and their features are different (beyond threshold)
+  - [34mLevel0[39m        : File not found
+
+  [34mLevel3[39m: "Fully Reproduced" <---> [34mLevel0[39m: "Not Reproduced"
+
+=== [34mLevel3[39m ⭐⭐⭐ (Same Checksum, 8/20 files)
+
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP1.junction.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.Interact.bed
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP2.junction.bed
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.coverage.gtf
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP1.transcripts.gtf
+  - star_salmon/stringtie/WT_REP2.coverage.gtf
+  - star_salmon/stringtie/WT_REP2.transcripts.gtf
+
+=== [34mLevel2[39m ⭐⭐ (Similar Features, 5/20 files)
+
+  - star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m1.62 MB (1703202)      [39m | [33m1.62 MB (1703131)      [39m |
+    | Total Reads    | 49040                   | 49040                   |
+    |   # Mapped     | 49040 (100.00%)         | 49040 (100.00%)         |
+    |   # Duplicate  | 36290 (74.00%)          | 36290 (74.00%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m3.41 MB (3570486)      [39m | [33m3.41 MB (3570482)      [39m |
+    | Total Reads    | 94419                   | 94419                   |
+    |   # Mapped     | 94419 (100.00%)         | 94419 (100.00%)         |
+    |   # Duplicate  | 12165 (12.88%)          | 12165 (12.88%)          |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.transcripts.gtf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m38.14 KB (39058)       [39m | [33m38.00 KB (38913)       [39m |
+    | Line Count     | 259                     | 259                     |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/stringtie/WT_REP1.coverage.gtf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m14.12 KB (14460)       [39m | [33m13.75 KB (14077)       [39m |
+    | Line Count     | [33m156                    [39m | [33m152                    [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/stringtie/WT_REP1.transcripts.gtf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [33m37.97 KB (38879)       [39m | [33m37.91 KB (38815)       [39m |
+    | Line Count     | 259                     | 259                     |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel1[39m ⭐ (Different Features, 7/20 files)
+
+  - star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m3.13 MB (3279083)      [39m | [31m1.68 MB (1758332)      [39m |
+    | Total Reads    | [31m98338                  [39m | [31m49223                  [39m |
+    |   # Mapped     | [31m98338 (100.00%)        [39m | [31m49223 (100.00%)        [39m |
+    |   # Duplicate  | [31m78936 (80.27%)         [39m | [31m36278 (73.70%)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/WT_REP1.markdup.sorted.bam
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m6.86 MB (7196616)      [39m | [31m3.48 MB (3648457)      [39m |
+    | Total Reads    | [31m188243                 [39m | [31m92675                  [39m |
+    |   # Mapped     | [31m188243 (100.00%)       [39m | [31m92675 (100.00%)        [39m |
+    |   # Duplicate  | [31m38470 (20.44%)         [39m | [31m13592 (14.67%)         [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.Interact.bed
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m9.99 KB (10233)        [39m | [31m7.10 KB (7269)         [39m |
+    | Line Count     | [31m72                     [39m | [31m51                     [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/bed/RAP1_UNINDUCED_REP2.junction.bed
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m4.82 KB (4933)         [39m | [31m3.40 KB (3484)         [39m |
+    | Line Count     | [31m71                     [39m | [31m50                     [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.Interact.bed
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m22.46 KB (22995)       [39m | [31m13.94 KB (14270)       [39m |
+    | Line Count     | [31m162                    [39m | [31m101                    [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/rseqc/junction_annotation/bed/WT_REP1.junction.bed
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m10.96 KB (11225)       [39m | [31m6.78 KB (6946)         [39m |
+    | Line Count     | [31m161                    [39m | [31m100                    [39m |
+    '--------------------------------------------------------------------'
+
+  - star_salmon/stringtie/RAP1_UNINDUCED_REP2.coverage.gtf
+    .--------------------------------------------------------------------.
+    |                |        in Crate1        |        in Crate2        |
+    |----------------|-------------------------|-------------------------|
+    | File Size      | [31m12.62 KB (12918)       [39m | [31m10.69 KB (10948)       [39m |
+    | Line Count     | [31m139                    [39m | [31m118                    [39m |
+    '--------------------------------------------------------------------'
+
+=== [34mLevel0[39m (Not Found, Crate1: 5 files, Crate2: 0 files)
+
+  - Only in Crate1:
+
+    - outputs/star_salmon/RAP1_IAA_30M_REP1.markdup.sorted.bam
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.Interact.bed
+    - outputs/star_salmon/rseqc/junction_annotation/bed/RAP1_IAA_30M_REP1.junction.bed
+    - outputs/star_salmon/stringtie/RAP1_IAA_30M_REP1.coverage.gtf
+    - outputs/star_salmon/stringtie/RAP1_IAA_30M_REP1.transcripts.gtf
+
+[32mSummarize[39m compare result:
+
+  .---------------------------------------------------------------------------.
+  |      Reproducibility      |   Level   |     Definition      |   File #    |
+  |---------------------------|-----------|---------------------|-------------|
+  | Fully Reproduced          | ⭐⭐⭐    | Same Checksum       | 8 files     |
+  | Acceptable Differences    | ⭐⭐      | Similar Features    | 5 files     |
+  | Unacceptable Differences  | ⭐        | Different Features  | 7 files     |
+  | Not Reproduced            |           | Not Found           | 5 files     |
+  '---------------------------------------------------------------------------'
+

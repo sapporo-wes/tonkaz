@@ -2,9 +2,13 @@
 
 This directory contains tests for `Tonkaz`.
 
-These test data are generated using [`sapporo-wes/sapporo-service`](https://github.com/sapporo-wes/sapporo-service) and [`sapporo-wes/yevis-cli`](https://github.com/sapporo-wes/yevis-cli).
+These test data are generated using [`sapporo-wes/sapporo-service`](https://github.com/sapporo-wes/sapporo-service), [`sapporo-wes/yevis-cli`](https://github.com/sapporo-wes/yevis-cli) and Tonkaz.
 
-Also, please check [sapporo-wes/test-workflow](https://github.com/sapporo-wes/test-workflow).
+The procedure of generating each data is as follows:
+
+```
+workflow -- (Sapporo-service/Yevis) --> execution_results + ro_crate -- (Tonkaz) --> comparison_results
+```
 
 ## Run tests
 
@@ -12,28 +16,49 @@ Several combinations of crates are available as follows:
 
 ```bash
 # GATK (Linux, 1st) <-> GATK (Linux, 2nd)
+# Use case: Same environment
+# Result: ./comparison_results/gatk_same_env.log
 $ deno test -A ./tests/gatk_test.ts
 
 # GATK (Linux) <-> GATK (Mac)
+# Use case: Different environment
+# Result: ./comparison_results/gatk_diff_env.log
 $ deno test -A ./tests/gatk_mac_test.ts
 
 # JGA (Linux, 1st) <-> JGA (Linux, 2nd)
+# Use case: Same environment
+# Result: ./comparison_results/jga_same_env.log
 $ deno test -A ./tests/jga_test.ts
 
 # JGA (Linux) <-> JGA (Mac)
+# Use case: Different environment
+# Result: ./comparison_results/jga_diff_env.log
 $ deno test -A ./tests/jga_mac_test.ts
 
 # RNA-seq (Linux, 1st) <-> RNA-seq (Linux, 2nd)
+# Use case: Same environment
+# Result: ./comparison_results/rnaseq_same_env.log
 $ deno test -A ./tests/rnaseq_test.ts
 
 # RNA-seq (Linux) <-> RNA-seq (Mac)
+# Use case: Different environment
+# Result: ./comparison_results/rnaseq_diff_env.log
 $ deno test -A ./tests/rnaseq_mac_test.ts
 
 # RNA-seq (Linux, 1st) <-> RNA-seq (Linux, v3.6)
+# Use case: Different version
+# Result: ./comparison_results/rnaseq_diff_ver.log
 $ deno test -A ./tests/rnaseq_v3.6_test.ts
 
 # RNA-seq (Linux, 1st) <-> RNA-seq (Linux, small)
+# Use case: Missing dataset
+# Result: ./comparison_results/rnaseq_missing_data.log
 $ deno test -A ./tests/rnaseq_small_test.ts
+
+# RNA-seq (Linux, 1st) <-> RNA-seq (Linux, small)
+# Use case: All files
+# Result: ./comparison_results/rnaseq_all_files.log
+$ deno test -A ./tests/rnaseq_all_files_test.ts
 
 # RNA-seq (Linux, with yevis) <-> RNA-seq (Linux, only sapporo)
 $ deno test -A ./tests/rnaseq_only_sapporo_test.ts
@@ -44,7 +69,9 @@ $ deno test -A ./tests/trimming_mac_test.ts
 
 ## About test data
 
-The json files contained in [`example_crate`](./example_crate) are generated using [`sapporo-wes/sapporo-service`](https://github.com/sapporo-wes/sapporo-service) and [`sapporo-wes/yevis-cli`](https://github.com/sapporo-wes/yevis-cli).
+The raw data of workflow execution results are stored in [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7098337.svg)](https://doi.org/10.5281/zenodo.7098337).
+
+The crate files contained in [`example_crate`](./example_crate):
 
 ```
 example_crate/
@@ -66,7 +93,7 @@ example_crate/
 
 ### Executed environment
 
-About the environment in which the crate was generated.
+About the environment in which these crates were generated.
 
 | Field                   | Linux env                                  | Mac Apple silicon env |
 | ----------------------- | ------------------------------------------ | --------------------- |
@@ -95,6 +122,24 @@ Executed as follows:
 
 ```bash
 $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_gatk-workflows_mitochondria-pipeline.yml
+```
+
+### JGA
+
+- Crate:
+  - [`jga_1st.json`](./example_crate/jga_1st.json)
+    - Crate generated on `Linux` environment. (1st execution)
+  - [`jga_2nd.json`](./example_crate/jga_2nd.json)
+    - Crate generated on `Linux` environment. (2nd execution (same settings))
+  - [`jga_mac.json`](./example_crate/jga_mac.json)
+    - Crate generated on `Mac Apple silicon` environment.
+
+See https://github.com/sapporo-wes/test-workflow#biosciencedbcjga-analysis---per-sample-workflow for more details about the executed workflow.
+
+Executed as follows:
+
+```bash
+$ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_jga-workflow_per-sample.yml
 ```
 
 ### RNA-seq
@@ -129,24 +174,6 @@ $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test
 
 # v3.6
 $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_nf-core_rnaseq_v3.6.yml
-```
-
-### JGA
-
-- Crate:
-  - [`jga_1st.json`](./example_crate/jga_1st.json)
-    - Crate generated on `Linux` environment. (1st execution)
-  - [`jga_2nd.json`](./example_crate/jga_2nd.json)
-    - Crate generated on `Linux` environment. (2nd execution (same settings))
-  - [`jga_mac.json`](./example_crate/jga_mac.json)
-    - Crate generated on `Mac Apple silicon` environment.
-
-See https://github.com/sapporo-wes/test-workflow#biosciencedbcjga-analysis---per-sample-workflow for more details about the executed workflow.
-
-Executed as follows:
-
-```bash
-$ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_jga-workflow_per-sample.yml
 ```
 
 ### Trimming
