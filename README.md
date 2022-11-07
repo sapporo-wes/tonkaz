@@ -3,6 +3,8 @@
 [![DOI](https://zenodo.org/badge/195738176.svg)](https://zenodo.org/badge/latestdoi/195738176)
 [![Apache License](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat&color=important)](http://www.apache.org/licenses/LICENSE-2.0)
 
+**[Paper Link](https://www.biorxiv.org/content/10.1101/2022.10.11.511695)**
+
 Tonkaz is a CLI tool to verify workflow reproducibility.
 It compares the [RO-Crate](https://www.researchobject.org/ro-crate/) of workflow execution results and calculates the reproducibility level of each output file.
 
