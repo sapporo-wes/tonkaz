@@ -130,9 +130,6 @@
                     "@id": "stderr.log"
                 }
             ],
-            "license": {
-                "@id": "http://choosealicense.com/licenses/apache-2.0/"
-            },
             "mainEntity": {
                 "@id": "https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl"
             },
@@ -151,7 +148,10 @@
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
                 }
-            ]
+            ],
+            "license": {
+                "@id": "http://choosealicense.com/licenses/apache-2.0/"
+            }
         },
         {
             "@id": "http://choosealicense.com/licenses/apache-2.0/",

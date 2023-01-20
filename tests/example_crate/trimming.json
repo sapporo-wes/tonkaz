@@ -157,9 +157,6 @@
                     "@id": "outputs/ERR034597_1.small.fq.trimmed.2P.fq"
                 }
             ],
-            "license": {
-                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
-            },
             "mainEntity": {
                 "@id": "https://raw.githubusercontent.com/sapporo-wes/yevis-cli/8d3275b4126700fcd4eb1a4e377409d3f1d15d26/tests/CWL/wf/trimming_and_qc.cwl"
             },
@@ -178,7 +175,10 @@
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
                 }
-            ]
+            ],
+            "license": {
+                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
+            }
         },
         {
             "@id": "http://choosealicense.com/licenses/cc0-1.0/",

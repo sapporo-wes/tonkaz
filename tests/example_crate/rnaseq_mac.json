@@ -679,9 +679,6 @@
                     "@id": "exe/.nextflow/cache/4552fd01-3298-4d11-bbdb-029d82b5eb7b/db/000003.log"
                 }
             ],
-            "license": {
-                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
-            },
             "mainEntity": {
                 "@id": "exe/main.nf"
             },
@@ -700,7 +697,10 @@
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
                 }
-            ]
+            ],
+            "license": {
+                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
+            }
         },
         {
             "@id": "http://choosealicense.com/licenses/cc0-1.0/",

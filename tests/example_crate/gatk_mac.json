@@ -247,9 +247,6 @@
                     "@id": "exe/cromwell-executions/MitochondriaPipeline/94565b4b-59e1-4129-988b-1bfa2ccdd813/call-SubsetBamToChrM/execution/script.background"
                 }
             ],
-            "license": {
-                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
-            },
             "mainEntity": {
                 "@id": "https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/MitochondriaPipeline.wdl"
             },
@@ -268,7 +265,10 @@
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
                 }
-            ]
+            ],
+            "license": {
+                "@id": "http://choosealicense.com/licenses/cc0-1.0/"
+            }
         },
         {
             "@id": "http://choosealicense.com/licenses/cc0-1.0/",
