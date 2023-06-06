@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:bullseye-slim
 
 LABEL org.opencontainers.image.authors="@suecharo <suehiro619@gmail.com>"
 LABEL org.opencontainers.image.url="https://github.com/sapporo-wes/tonkaz"
