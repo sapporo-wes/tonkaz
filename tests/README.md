@@ -69,9 +69,7 @@ $ deno test -A ./tests/trimming_mac_test.ts
 
 ## About test data
 
-The raw data of workflow execution results are stored in [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7098337.svg)](https://doi.org/10.5281/zenodo.7098337).
-
-<!-- TODO: fix to new batch [![DOI](https://zenodo.org/badge/195738176.svg)](https://zenodo.org/badge/latestdoi/195738176) -->
+The raw data of workflow execution results are stored in [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7098336.svg)](https://doi.org/10.5281/zenodo.7098336).
 
 The crate files contained in [`example_crate`](./example_crate):
 
