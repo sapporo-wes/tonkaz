@@ -42,6 +42,10 @@ export function difference(ids_1: string[], ids_2: string[]): string[] {
   return ids_1.filter((id) => !ids_2.includes(id));
 }
 
+export function union(ids_1: string[], ids_2: string[]): string[] {
+  return [...new Set([...ids_1, ...ids_2])];
+}
+
 export function formatDuration(
   duration: ReturnType<typeof datetime.difference>,
 ): string {

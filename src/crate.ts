@@ -23,6 +23,7 @@ export class Crate {
   "mainWf": Entity;
   "createAction": Entity;
   "summary": CrateSummary;
+  "multiqcStats": Entity | undefined;
 
   constructor(loc: string) {
     this.location = loc;
@@ -52,6 +53,14 @@ export class Crate {
       this.rootdataEntity = this.findEntity("./");
       this.mainWf = this.getChildEntity(this.rootdataEntity, "mainEntity");
       this.createAction = this.getChildEntity(this.rootdataEntity, "mentions");
+      try {
+        this.multiqcStats = this.getChildEntity(
+          this.createAction,
+          "multiqcStats",
+        );
+      } catch (_) {
+        this.multiqcStats = undefined;
+      }
     } catch (e) {
       throw new Error(
         `Failed to initialize crate ${this.location}: ${e.message}`,

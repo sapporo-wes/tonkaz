@@ -16,6 +16,7 @@ export async function main(): Promise<void> {
       parsedArgs.all,
       parsedArgs.threshold,
       parsedArgs.json,
+      parsedArgs.suppressMultiqc,
     );
   } catch (e) {
     console.error(`${colors.red("Error occurred!!")}: ${e.message}`);

@@ -15,6 +15,7 @@ ${colors.blue("Options:")}
   -a, --all                    Use all output files for comparison
   -t, --threshold <threshold>  Set threshold for comparison (default: ${compare.DEFAULT_THRESHOLD})
   -j, --json                   Output result as JSON
+  -s, --suppressMultiqc            Suppress comparison of MultiQC statistics
   -h, --help                   Show this help message and exit
   -v, --version                Show version and exit
 
@@ -31,11 +32,12 @@ export interface Args {
   loc1: string;
   loc2: string;
   json: boolean;
+  suppressMultiqc: boolean;
 }
 
 export async function parseArgs(args: string[]): Promise<Args> {
   const parsedArgs = parse(args, {
-    boolean: ["all", "help", "version", "json"],
+    boolean: ["all", "help", "version", "json", "suppressMultiqc"],
     string: ["threshold"],
     alias: {
       a: "all",
@@ -43,6 +45,7 @@ export async function parseArgs(args: string[]): Promise<Args> {
       h: "help",
       v: "version",
       j: "json",
+      s: "suppressMultiqc",
     },
   });
 
@@ -86,5 +89,6 @@ export async function parseArgs(args: string[]): Promise<Args> {
     loc1,
     loc2,
     json: parsedArgs.json,
+    suppressMultiqc: parsedArgs.suppressMultiqc,
   };
 }
