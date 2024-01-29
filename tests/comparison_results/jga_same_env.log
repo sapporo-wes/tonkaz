@@ -1,29 +1,25 @@
-Tonkaz 0.2.2
+[0m[38;5;245mrunning 1 test from ./tests/jga_test.ts[0m
+JGA Linux test ...
+[0m[38;5;245m------- output -------[0m
+Tonkaz 0.2.5
 
 [32mChecking[39m Crate2 based on Crate1:
 
-  Crate1: [36m./tests/example_crate/jga_1st.json[39m
-  Crate2: [36m./tests/example_crate/jga_2nd.json[39m
+  Crate1: [36m/home/suecharo/git/github.com/sapporo-wes/tonkaz/tests/example_crate/jga_1st.json[39m
+  Crate2: [36m/home/suecharo/git/github.com/sapporo-wes/tonkaz/tests/example_crate/jga_2nd.json[39m
 
 .----------------------------------------------------------------------------------------------.
 |                |                Crate1                |                Crate2                |
 |----------------|--------------------------------------|--------------------------------------|
-| WF Name        | jga-analysis per-sample workflow     | jga-analysis per-sample workflow     |
-| WF ID          | 579bbccf-ff06-4c5f-98cb-d7a2dc73eca8 | 579bbccf-ff06-4c5f-98cb-d7a2dc73eca8 |
-| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Name        | [33mSapporo workflow run jga_1st        [39m | [33mSapporo workflow run jga_2nd        [39m |
 | WF Type        | Common Workflow Language             | Common Workflow Language             |
-| WF Type Ver    | v1.1                                 | v1.1                                 |
-| WF Eng Name    | cwltool                              | cwltool                              |
-| WF Eng Version | 3.1.20220628170238                   | 3.1.20220628170238                   |
-| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
-| Run Name       | test_1                               | test_1                               |
+| WF Type Ver    | 1.1                                  | 1.1                                  |
 | Run State      | COMPLETE                             | COMPLETE                             |
 | ExitCode       | 0                                    | 0                                    |
 | Start Time     | 2022-09-10 13:33:40                  | 2022-09-10 20:40:42                  |
 | End Time       | 2022-09-10 15:03:05                  | 2022-09-10 22:09:08                  |
 | Duration       | 1h 29m 25s                           | 1h 28m 26s                           |
-| # Attachments  | 0 files                              | 0 files                              |
-| # Intermediate | 0 files                              | 0 files                              |
+| # Attachments  | 23 files                             | 23 files                             |
 | # Outputs      | 48 files (4 EDAM-assigned files)     | 48 files (4 EDAM-assigned files)     |
 '----------------------------------------------------------------------------------------------'
   * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
@@ -98,4 +94,118 @@ Reproducibility level is defined as follows:
   | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
   | Not Reproduced            |           | Not Found           | 0 files     |
   '---------------------------------------------------------------------------'
+
+[32mComparing[39m multiqc stats...
+Crates contain MultiQC stats, which we will be comparing. MultiQC stats are aggregated on a sample level.
+
+  - Bcftools_stats Number_of_MNPs
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023.autosome_PAR_ploidy_2.g | 0            | 0            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_2.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrY_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Bcftools_stats Number_of_SNPs
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023.autosome_PAR_ploidy_2.g | 14           | 14           | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_2.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrY_nonPAR_ploidy_1.g  | 4            | 4            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Bcftools_stats Number_of_indels
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023.autosome_PAR_ploidy_2.g | 1            | 1            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_2.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrY_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Bcftools_stats Number_of_records
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023.autosome_PAR_ploidy_2.g | 1061         | 1061         | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_1.g  | 2            | 2            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_2.g  | 2            | 2            | ⭐⭐      |
+    | NA19023.chrY_nonPAR_ploidy_1.g  | 42           | 42           | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Bcftools_stats Tstv
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023.autosome_PAR_ploidy_2.g | 2.5          | 2.5          | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_1.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrX_nonPAR_ploidy_2.g  | 0            | 0            | ⭐⭐      |
+    | NA19023.chrY_nonPAR_ploidy_1.g  | 1            | 1            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Picard_mark_duplicates PERCENT_DUPLICATION
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | ERR1347662                      | 0.000966     | 0.000966     | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Picard_wgsmetrics MEAN_COVERAGE
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Picard_wgsmetrics MEDIAN_COVERAGE
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Picard_wgsmetrics PCT_30X
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Picard_wgsmetrics SD_COVERAGE
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 0            | 0            | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Samtools Flagstat_total
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 21866        | 21866        | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Samtools Mapped_passed
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 21838        | 21838        | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+  - Samtools Mapped_passed_pct
+    .---------------------------------------------------------------------------.
+    |             Sample              |  in Crate1   |  in Crate2   |   Level   |
+    |---------------------------------|--------------|--------------|-----------|
+    | NA19023                         | 99.87        | 99.87        | ⭐⭐      |
+    '---------------------------------------------------------------------------'
+
+[0m[38;5;245m----- output end -----[0m
+JGA Linux test ... [0m[32mok[0m [0m[38;5;245m(9ms)[0m
+
+[0m[32mok[0m | 1 passed | 0 failed [0m[38;5;245m(10ms)[0m
 

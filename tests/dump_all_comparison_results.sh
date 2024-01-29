@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euxo pipefail
+set -euo pipefail
 
 HERE=$(
   cd $(dirname $0)
@@ -7,12 +7,19 @@ HERE=$(
 )
 cd $HERE/..
 
-mv ./tests/comparison_results/rnaseq_same_env.json ./tests/comparison_results/rnaseq_same_env.log
-mv ./tests/comparison_results/rnaseq_diff_env.json ./tests/comparison_results/rnaseq_diff_env.log
-mv ./tests/comparison_results/rnaseq_diff_ver.json ./tests/comparison_results/rnaseq_diff_ver.log
-mv ./tests/comparison_results/rnaseq_missing_data.json ./tests/comparison_results/rnaseq_missing_data.log
-mv ./tests/comparison_results/rnaseq_all_files.json ./tests/comparison_results/rnaseq_all_files.log
-mv ./tests/comparison_results/jga_same_env.json ./tests/comparison_results/jga_same_env.log
-mv ./tests/comparison_results/jga_diff_env.json ./tests/comparison_results/jga_diff_env.log
-mv ./tests/comparison_results/gatk_same_env.json ./tests/comparison_results/gatk_same_env.log
-mv ./tests/comparison_results/gatk_diff_env.json ./tests/comparison_results/gatk_diff_env.log
+declare -A tests=(
+  "gatk_same_env" "gatk_test.ts"
+  "gatk_diff_env" "gatk_mac_test.ts"
+  "jga_same_env" "jga_test.ts"
+  "jga_diff_env" "jga_mac_test.ts"
+  "rnaseq_same_env" "rnaseq_test.ts"
+  "rnaseq_diff_env" "rnaseq_mac_test.ts"
+  "rnaseq_diff_ver" "rnaseq_v3.6_test.ts"
+  "rnaseq_missing_data" "rnaseq_small_test.ts"
+  "rnaseq_all_files" "rnaseq_all_files_test.ts"
+)
+
+for test in "${!tests[@]}"; do
+  echo "Running test: $test"
+  deno test -A ./tests/${tests[$test]} > >(tee ./tests/comparison_results/$test.log)
+done

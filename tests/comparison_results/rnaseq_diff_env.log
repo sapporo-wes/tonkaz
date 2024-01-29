@@ -1,29 +1,25 @@
-Tonkaz 0.2.2
+[0m[38;5;245mrunning 1 test from ./tests/rnaseq_mac_test.ts[0m
+RNA-seq Mac test ...
+[0m[38;5;245m------- output -------[0m
+Tonkaz 0.2.5
 
 [32mChecking[39m Crate2 based on Crate1:
 
-  Crate1: [36m./tests/example_crate/rnaseq_1st.json[39m
-  Crate2: [36m./tests/example_crate/rnaseq_mac.json[39m
+  Crate1: [36m/home/suecharo/git/github.com/sapporo-wes/tonkaz/tests/example_crate/rnaseq_1st.json[39m
+  Crate2: [36m/home/suecharo/git/github.com/sapporo-wes/tonkaz/tests/example_crate/rnaseq_mac.json[39m
 
 .----------------------------------------------------------------------------------------------.
 |                |                Crate1                |                Crate2                |
 |----------------|--------------------------------------|--------------------------------------|
-| WF Name        | [33mnf-core - rnaseq                    [39m | [33mnf-core - rnaseq - v3.7             [39m |
-| WF ID          | 20da6ea5-de91-4973-ac20-216882357a0d | 20da6ea5-de91-4973-ac20-216882357a0d |
-| WF Ver         | 1.0.0                                | 1.0.0                                |
+| WF Name        | [33mSapporo workflow run rnaseq_1st     [39m | [33mSapporo workflow run rnaseq_mac     [39m |
 | WF Type        | Nextflow                             | Nextflow                             |
 | WF Type Ver    | 1.0                                  | 1.0                                  |
-| WF Eng Name    | nextflow                             | nextflow                             |
-| WF Eng Version | 22.04.4                              | 22.04.4                              |
-| Sapporo Ver    | 1.4.8                                | 1.4.8                                |
-| Run Name       | example_test                         | example_test                         |
 | Run State      | [33mCOMPLETE                            [39m | [33mEXECUTOR_ERROR                      [39m |
 | ExitCode       | [33m0                                   [39m | [33m1                                   [39m |
 | Start Time     | 2022-09-08 06:28:11                  | 2022-09-14 08:42:09                  |
 | End Time       | 2022-09-08 06:45:53                  | 2022-09-14 08:44:23                  |
 | Duration       | 17m 42s                              | 2m 14s                               |
 | # Attachments  | 147 files                            | 147 files                            |
-| # Intermediate | [33m3342 files                          [39m | [33m36 files                            [39m |
 | # Outputs      | [33m872 files (25 EDAM-assigned files)  [39m | [33m4 files (0 EDAM-assigned files)     [39m |
 '----------------------------------------------------------------------------------------------'
   * EDAM extensions: .bam/.bb/.bed/.bw/.fa/.fasta/.fastq/.fastq.gz/.fq/.fq.gz/.gtf/.gff/.sam/.vcf/.vcf.gz/.wig
@@ -86,4 +82,9 @@ Reproducibility level is defined as follows:
   | Unacceptable Differences  | ⭐        | Different Features  | 0 files     |
   | Not Reproduced            |           | Not Found           | 25 files    |
   '---------------------------------------------------------------------------'
+
+[0m[38;5;245m----- output end -----[0m
+RNA-seq Mac test ... [0m[32mok[0m [0m[38;5;245m(14ms)[0m
+
+[0m[32mok[0m | 1 passed | 0 failed [0m[38;5;245m(15ms)[0m
 
