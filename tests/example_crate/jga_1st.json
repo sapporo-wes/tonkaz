@@ -19,7 +19,7 @@
           "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
         }
       ],
-      "datePublished": "2024-01-28T10:52:00+00:00",
+      "datePublished": "2024-01-29T04:20:51+00:00",
       "hasPart": [
         {
           "@id": "https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl"
@@ -822,12 +822,33 @@
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.autosome_PAR_ploidy_2.wgs_metrics.log"
     },
     {
+      "@id": "#vcftools",
+      "@type": "SoftwareApplication",
+      "name": "vcftools",
+      "version": "0.1.16--pl5321h9a82719_6"
+    },
+    {
+      "@id": "#b97cd884-8256-4c4a-9f5c-b40e0ffed3dd",
+      "@type": [
+        "FileStats"
+      ],
+      "generatedBy": {
+        "@id": "#vcftools"
+      },
+      "indelsCount": 0,
+      "snpsCount": 0,
+      "variantCount": 2
+    },
+    {
       "@id": "outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz",
       "@type": "File",
       "contentSize": 24408,
       "dateModified": "2022-09-11T00:03:01",
       "encodingFormat": "http://edamontology.org/format_3016",
       "sha512": "2eac577b0626787c8e1b8546f42310cf9dcbea882292516cdbd8a75a05166653abffb75551eaaebf3a0c9cde31a3d54a481b5f1360b5205ec2d8dc73854192cc",
+      "stats": {
+        "@id": "#b97cd884-8256-4c4a-9f5c-b40e0ffed3dd"
+      },
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_1.g.vcf.gz"
     },
     {
@@ -852,12 +873,27 @@
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.log"
     },
     {
+      "@id": "#eedd03d4-9a21-46c1-8942-e905d3149bf7",
+      "@type": [
+        "FileStats"
+      ],
+      "generatedBy": {
+        "@id": "#vcftools"
+      },
+      "indelsCount": 0,
+      "snpsCount": 4,
+      "variantCount": 42
+    },
+    {
       "@id": "outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz",
       "@type": "File",
       "contentSize": 24931,
       "dateModified": "2022-09-10T22:45:25",
       "encodingFormat": "http://edamontology.org/format_3016",
       "sha512": "a4876258fd697980a3a7ed678f3d3923049b68b4e2058293b6f4d3d55d12b583f4e701971c33ca9078a8f1b6951a177b07e9019a6b6928dfe4c507909a7c0e96",
+      "stats": {
+        "@id": "#eedd03d4-9a21-46c1-8942-e905d3149bf7"
+      },
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrY_nonPAR_ploidy_1.g.vcf.gz"
     },
     {
@@ -936,12 +972,27 @@
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.cram.collect_base_dist_by_cycle"
     },
     {
+      "@id": "#e568344c-9818-4ab0-b02c-e6c47c230975",
+      "@type": [
+        "FileStats"
+      ],
+      "generatedBy": {
+        "@id": "#vcftools"
+      },
+      "indelsCount": 0,
+      "snpsCount": 0,
+      "variantCount": 2
+    },
+    {
       "@id": "outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz",
       "@type": "File",
       "contentSize": 24602,
       "dateModified": "2022-09-10T22:43:34",
       "encodingFormat": "http://edamontology.org/format_3016",
       "sha512": "28387445db7849fa2957130d2979e11e2329adeb3c80dc38cabd2e8dc07c71a425f26160ee8fb313315db4c8343be52475591b889ecbf61645cec3d18b0c0cf3",
+      "stats": {
+        "@id": "#e568344c-9818-4ab0-b02c-e6c47c230975"
+      },
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.chrX_nonPAR_ploidy_2.g.vcf.gz"
     },
     {
@@ -1255,12 +1306,27 @@
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz.tbi.log"
     },
     {
+      "@id": "#3759084e-be7b-4ea4-a240-6a3c4ff42816",
+      "@type": [
+        "FileStats"
+      ],
+      "generatedBy": {
+        "@id": "#vcftools"
+      },
+      "indelsCount": 1,
+      "snpsCount": 14,
+      "variantCount": 1061
+    },
+    {
       "@id": "outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz",
       "@type": "File",
       "contentSize": 34397,
       "dateModified": "2022-09-10T23:57:38",
       "encodingFormat": "http://edamontology.org/format_3016",
       "sha512": "58b1ed78251ababa6dc48d8f1e51d07fc1c551e2e0382cd4e593bd790d33a7141c6d45816a2c2c4e57c70b8d067b7fe736cf795f9e88974eb8aba8f31ec0bde6",
+      "stats": {
+        "@id": "#3759084e-be7b-4ea4-a240-6a3c4ff42816"
+      },
       "url": "http://localhost:1122/runs/79027d00-d40c-4d25-b71d-3c07afc9ac86/data/outputs/NA19023.autosome_PAR_ploidy_2.g.vcf.gz"
     },
     {
@@ -1309,7 +1375,7 @@
       "@id": "multiqc_general_stats.json",
       "@type": "File",
       "contentSize": 2443,
-      "dateModified": "2024-01-28T19:52:33.486242",
+      "dateModified": "2024-01-29T13:21:49.728284",
       "encodingFormat": "application/json",
       "lineCount": 42,
       "name": "MultiQC stats",

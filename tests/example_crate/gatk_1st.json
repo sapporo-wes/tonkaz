@@ -19,7 +19,7 @@
           "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
         }
       ],
-      "datePublished": "2024-01-28T10:10:00+00:00",
+      "datePublished": "2024-01-29T04:19:50+00:00",
       "hasPart": [
         {
           "@id": "https://raw.githubusercontent.com/broadinstitute/gatk/bd640eaf935c56155c4caa23922a96cfd5f14b6e/scripts/mitochondria_m2_wdl/MitochondriaPipeline.wdl"
@@ -649,13 +649,54 @@
       "url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/chrM/non_control_region.chrM.interval_list"
     },
     {
+      "@id": "#samtools",
+      "@type": "SoftwareApplication",
+      "name": "samtools",
+      "version": "1.15.1--h1170115_0"
+    },
+    {
+      "@id": "#aee6082b-35db-4355-bf66-1fde5c0504e1",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.3063243148927087,
+      "duplicateReads": 723304,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 0.9999944944088605,
+      "mappedReads": 2361223,
+      "totalReads": 2361236,
+      "unmappedRate": 5.505591139555724e-06,
+      "unmappedReads": 13
+    },
+    {
       "@id": "outputs/G97753.NA12878.realigned.bam",
       "@type": "File",
       "contentSize": 103241649,
       "dateModified": "2022-09-08T18:58:31",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "057c8d8eeb508e0792e39fd45fbfab4eecb9c15b601a4d9fdc540ae21e55aaaddcb8079978fa97efe799db0fddfa6b792cac9db662bb0d121da403acceda8781",
+      "stats": {
+        "@id": "#aee6082b-35db-4355-bf66-1fde5c0504e1"
+      },
       "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.realigned.bam"
+    },
+    {
+      "@id": "#e1f0ec4c-92aa-4227-b86a-7d255fd8e14e",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.3063459248661424,
+      "duplicateReads": 719878,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 1.0,
+      "mappedReads": 2349886,
+      "totalReads": 2349886,
+      "unmappedRate": 0.0,
+      "unmappedReads": 0
     },
     {
       "@id": "outputs/G97753.NA12878.bam",
@@ -664,6 +705,9 @@
       "dateModified": "2022-09-08T18:58:31",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "5bb2600f09cdbb7847e2bac06ebf1323f97a9243a0323c5429c375ed262965334952f3e4eda904096aa7ea6f1f79a4c05f5443785257ee981bbaff65ce2d531c",
+      "stats": {
+        "@id": "#e1f0ec4c-92aa-4227-b86a-7d255fd8e14e"
+      },
       "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.bam"
     },
     {
@@ -767,6 +811,24 @@
       "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/G97753.NA12878.realigned.bai"
     },
     {
+      "@id": "#vcftools",
+      "@type": "SoftwareApplication",
+      "name": "vcftools",
+      "version": "0.1.16--pl5321h9a82719_6"
+    },
+    {
+      "@id": "#3c08d059-bd30-4180-a871-07596fa0bfbe",
+      "@type": [
+        "FileStats"
+      ],
+      "generatedBy": {
+        "@id": "#vcftools"
+      },
+      "indelsCount": 2,
+      "snpsCount": 16,
+      "variantCount": 18
+    },
+    {
       "@id": "outputs/splitAndPassOnly.vcf",
       "@type": "File",
       "contentSize": 16229,
@@ -774,6 +836,9 @@
       "encodingFormat": "http://edamontology.org/format_3016",
       "lineCount": 96,
       "sha512": "9278bb53e11183d0be5fcb45c5eea49235bbbc02da9d2181c4c32bd13550a8059f0348e3db4314de3778214dd584271063c97d60b89687328255a5c786ac3fa4",
+      "stats": {
+        "@id": "#3c08d059-bd30-4180-a871-07596fa0bfbe"
+      },
       "url": "http://localhost:1122/runs/c71fb9c2-b6e8-48f4-9350-c9b6ab4647dc/data/outputs/splitAndPassOnly.vcf"
     },
     {
@@ -800,7 +865,7 @@
       "@id": "multiqc_general_stats.json",
       "@type": "File",
       "contentSize": 790,
-      "dateModified": "2024-01-28T19:10:09.696322",
+      "dateModified": "2024-01-29T13:20:21.550558",
       "encodingFormat": "application/json",
       "lineCount": 14,
       "name": "MultiQC stats",

@@ -19,7 +19,7 @@
           "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
         }
       ],
-      "datePublished": "2024-01-28T11:19:22+00:00",
+      "datePublished": "2024-01-29T04:24:56+00:00",
       "hasPart": [
         {
           "@id": "exe/main.nf"
@@ -9327,12 +9327,37 @@
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/salmon.merged.transcript_tpm.tsv"
     },
     {
+      "@id": "#samtools",
+      "@type": "SoftwareApplication",
+      "name": "samtools",
+      "version": "1.15.1--h1170115_0"
+    },
+    {
+      "@id": "#e4a99fb3-e90b-4499-a898-8b46af1a94dd",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.1288405935246084,
+      "duplicateReads": 12165,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 1.0,
+      "mappedReads": 94419,
+      "totalReads": 94419,
+      "unmappedRate": 0.0,
+      "unmappedReads": 0
+    },
+    {
       "@id": "outputs/star_salmon/WT_REP2.markdup.sorted.bam",
       "@type": "File",
       "contentSize": 3570482,
       "dateModified": "2022-09-15T18:16:48",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "1ebd0e1dce6a54293e239cea3c717cda25064f57b21ab86be1b20af4ad775524e84e13643e6a2caf3fcd190d6029846d15baf21014c115a77aeb80f7fda9b2af",
+      "stats": {
+        "@id": "#e4a99fb3-e90b-4499-a898-8b46af1a94dd"
+      },
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/WT_REP2.markdup.sorted.bam"
     },
     {
@@ -9354,13 +9379,48 @@
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/salmon.merged.gene_counts.rds"
     },
     {
+      "@id": "#c772191a-1a36-4c88-82b5-1bcad94f48c2",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.7400081566068516,
+      "duplicateReads": 36290,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 1.0,
+      "mappedReads": 49040,
+      "totalReads": 49040,
+      "unmappedRate": 0.0,
+      "unmappedReads": 0
+    },
+    {
       "@id": "outputs/star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam",
       "@type": "File",
       "contentSize": 1703131,
       "dateModified": "2022-09-15T18:13:28",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "018170c1f242ba57a0ca9d5522153818387c80f4bada61b158eda1bafcb07da1fe31ee5ea7c8adcede840954c328b0a2098f1d36cd47ce7783b0db7749da41df",
+      "stats": {
+        "@id": "#c772191a-1a36-4c88-82b5-1bcad94f48c2"
+      },
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/RAP1_UNINDUCED_REP1.markdup.sorted.bam"
+    },
+    {
+      "@id": "#b6480fd4-5239-4746-b422-cdc460263760",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.14666306986781763,
+      "duplicateReads": 13592,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 1.0,
+      "mappedReads": 92675,
+      "totalReads": 92675,
+      "unmappedRate": 0.0,
+      "unmappedReads": 0
     },
     {
       "@id": "outputs/star_salmon/WT_REP1.markdup.sorted.bam",
@@ -9369,6 +9429,9 @@
       "dateModified": "2022-09-15T18:18:00",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "7d95892d6a25dda3d88da49b6321296b4d4d2c9f40ede037b10c6eea175985b1de0ae5160438c88c3af749b47463e1bc8e7487c8ae03bb9b5d7376745b5356c5",
+      "stats": {
+        "@id": "#b6480fd4-5239-4746-b422-cdc460263760"
+      },
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/WT_REP1.markdup.sorted.bam"
     },
     {
@@ -9481,12 +9544,31 @@
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam.bai"
     },
     {
+      "@id": "#bbcdc530-5de2-4b29-807e-fc18f1e567ce",
+      "@type": [
+        "FileStats"
+      ],
+      "duplicateRate": 0.737013184893241,
+      "duplicateReads": 36278,
+      "generatedBy": {
+        "@id": "#samtools"
+      },
+      "mappedRate": 1.0,
+      "mappedReads": 49223,
+      "totalReads": 49223,
+      "unmappedRate": 0.0,
+      "unmappedReads": 0
+    },
+    {
       "@id": "outputs/star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam",
       "@type": "File",
       "contentSize": 1758332,
       "dateModified": "2022-09-15T18:15:40",
       "encodingFormat": "http://edamontology.org/format_2572",
       "sha512": "535d4f966602f371eadcda993709326346cf9e2ae9273d57665e4b18caf642ddba24931e9f5f5f1d713798a694dae082f07972b9788adcb7483961c2c817c417",
+      "stats": {
+        "@id": "#bbcdc530-5de2-4b29-807e-fc18f1e567ce"
+      },
       "url": "http://localhost:1122/runs/eaaae8dc-b00f-4b9c-8862-506f310f79fc/data/outputs/star_salmon/RAP1_UNINDUCED_REP2.markdup.sorted.bam"
     },
     {
@@ -14514,7 +14596,7 @@
       "@id": "multiqc_general_stats.json",
       "@type": "File",
       "contentSize": 13237,
-      "dateModified": "2024-01-28T20:19:47.050398",
+      "dateModified": "2024-01-29T13:25:23.409308",
       "encodingFormat": "application/json",
       "lineCount": 208,
       "name": "MultiQC stats",

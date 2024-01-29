@@ -19,7 +19,7 @@
           "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
         }
       ],
-      "datePublished": "2024-01-28T11:17:07+00:00",
+      "datePublished": "2024-01-29T04:23:06+00:00",
       "hasPart": [
         {
           "@id": "https://gist.githubusercontent.com/suecharo/f9678286cc876c91d8968dfbd7cd4aac/raw/12ebacca526f65fd6e1a9248aa248818ce300ba3/per-sample.packed.cwl"
