@@ -1,5 +1,12 @@
 {
   "tasks": {
     "main": "deno run --allow-read --allow-net src/main.ts"
+  },
+  "imports": {
+    "ascii_table": "https://deno.land/x/ascii_table@v0.1.0/mod.ts",
+    "colors": "https://deno.land/std@0.213.0/fmt/colors.ts",
+    "datetime": "https://deno.land/std@0.213.0/datetime/mod.ts",
+    "emoji": "https://deno.land/x/emoji@0.3.0/mod.ts",
+    "parse_args": "https://deno.land/std@0.213.0/cli/parse_args.ts"
   }
 }

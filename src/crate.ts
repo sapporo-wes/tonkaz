@@ -1,5 +1,5 @@
 import { utils } from "./mod.ts";
-import { datetime } from "./deps.ts";
+import { difference as datetime_diff } from "datetime";
 
 export interface CrateSummary {
   wfName: string;
@@ -13,7 +13,7 @@ export interface CrateSummary {
   testId: string;
   startTime: Date;
   endTime: Date;
-  duration: ReturnType<typeof datetime.difference>;
+  duration: ReturnType<typeof datetime_diff>;
   exitCode: string;
   state: string;
   wfAttachments: string[];
@@ -173,7 +173,7 @@ export class Crate {
       } catch (_) {
         throw new Error(`Invalid end time ${endTimeStr}`);
       }
-      const duration = datetime.difference(startTime, endTime);
+      const duration = datetime_diff(startTime, endTime);
 
       const summary: CrateSummary = {
         wfName,
@@ -343,7 +343,7 @@ export class Entity {
       throw new Error(`Entity ${this.id} has no dateModified`);
     }
     const dateModifiedDate = utils.parseDatetime(dateModified);
-    const duration = datetime.difference(
+    const duration = datetime_diff(
       this.crate.summary.startTime,
       dateModifiedDate,
     );
@@ -435,7 +435,7 @@ export class Entity {
 
 export interface FileStats {
   contentSize: number;
-  duration: ReturnType<typeof datetime.difference>;
+  duration: ReturnType<typeof datetime_diff>;
   lineCount?: number;
   checksum: string;
   samtoolsStats?: SamtoolsStats;

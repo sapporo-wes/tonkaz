@@ -1,4 +1,6 @@
-import { asciiTable, color, datetime } from "./deps.ts";
+import * as ascii_table from "ascii_table";
+import * as colors from "colors";
+import * as datetime from "datetime";
 
 export async function isFile(loc: string): Promise<boolean> {
   return await Deno.stat(loc).then((stat) => stat.isFile).catch(() => false);
@@ -77,28 +79,36 @@ export function tablePaddingLeft(table: string, padding: number): string {
 }
 
 // considering color code, all items must be aligned
-export function ourTableToString(table: asciiTable.default): string {
-  const colLenArr = table.getHeading().map((h) => h.length);
+export function ourTableToString(table: ascii_table.default): string {
+  const colLenArr = table.getHeading().map((h: string) => h.length);
   const body = [] as string[];
 
   // top bar
   body.push(
     `.${
-      "-".repeat(colLenArr.reduce((a, b) => a + b) + 3 * colLenArr.length - 1)
+      "-".repeat(
+        colLenArr.reduce((a: number, b: number) => a + b) +
+          3 * colLenArr.length - 1,
+      )
     }.`,
   );
   // heading
   body.push(`| ${table.getHeading().join(" | ")} |`);
   // middle bar
-  body.push(`|${colLenArr.map((len) => "-".repeat(len + 2)).join("|")}|`);
+  body.push(
+    `|${colLenArr.map((len: number) => "-".repeat(len + 2)).join("|")}|`,
+  );
   // body
-  table.getRows().forEach((row) => {
+  table.getRows().forEach((row: string[]) => {
     body.push(`| ${row.join(" | ")} |`);
   });
   // bottom bar
   body.push(
     `'${
-      "-".repeat(colLenArr.reduce((a, b) => a + b) + 3 * colLenArr.length - 1)
+      "-".repeat(
+        colLenArr.reduce((a: number, b: number) => a + b) +
+          3 * colLenArr.length - 1,
+      )
     }'`,
   );
 
@@ -107,7 +117,7 @@ export function ourTableToString(table: asciiTable.default): string {
 
 export function warningColor(pair: string[]): string[] {
   return pair[0] !== pair[1]
-    ? [color.yellow(pair[0]), color.yellow(pair[1])]
+    ? [colors.yellow(pair[0]), colors.yellow(pair[1])]
     : pair;
 }
 

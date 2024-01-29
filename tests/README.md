@@ -6,7 +6,7 @@ These test data are generated using [`sapporo-wes/sapporo-service`](https://gith
 
 The procedure of generating each data is as follows:
 
-```
+```text
 workflow -- (Sapporo-service/Yevis) --> execution_results + ro_crate -- (Tonkaz) --> comparison_results
 ```
 
@@ -71,9 +71,11 @@ $ deno test -A ./tests/trimming_mac_test.ts
 
 The raw data of workflow execution results are stored in [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7098337.svg)](https://doi.org/10.5281/zenodo.7098337).
 
+<!-- TODO: fix to new batch [![DOI](https://zenodo.org/badge/195738176.svg)](https://zenodo.org/badge/latestdoi/195738176) -->
+
 The crate files contained in [`example_crate`](./example_crate):
 
-```
+```text
 example_crate/
 ├── gatk_1st.json
 ├── gatk_2nd.json
@@ -116,12 +118,12 @@ About the environment in which these crates were generated.
   - [`gatk_mac.json`](./example_crate/gatk_mac.json)
     - Crate generated on `Mac Apple silicon` environment.
 
-See https://github.com/sapporo-wes/test-workflow#broadinstitutegatkmitochondriapipeline for more details about the executed workflow.
+See <https://github.com/sapporo-wes/test-workflow#broadinstitutegatkmitochondriapipeline> for more details about the executed workflow.
 
 Executed as follows:
 
 ```bash
-$ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_gatk-workflows_mitochondria-pipeline.yml
+yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_gatk-workflows_mitochondria-pipeline.yml
 ```
 
 ### JGA
@@ -134,12 +136,12 @@ $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test
   - [`jga_mac.json`](./example_crate/jga_mac.json)
     - Crate generated on `Mac Apple silicon` environment.
 
-See https://github.com/sapporo-wes/test-workflow#biosciencedbcjga-analysis---per-sample-workflow for more details about the executed workflow.
+See <https://github.com/sapporo-wes/test-workflow#biosciencedbcjga-analysis---per-sample-workflow> for more details about the executed workflow.
 
 Executed as follows:
 
 ```bash
-$ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_jga-workflow_per-sample.yml
+yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test-workflow/main/yevis-metadata_jga-workflow_per-sample.yml
 ```
 
 ### RNA-seq
@@ -161,7 +163,7 @@ $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test
     - Using `nf-core/rnaseq` version is `3.7`.
     - Using `Sapporo` only. (Not using `Yevis`)
 
-See https://github.com/sapporo-wes/test-workflow#nf-corernaseq for more details about the executed workflow.
+See <https://github.com/sapporo-wes/test-workflow#nf-corernaseq> for more details about the executed workflow.
 
 Executed as follows:
 
@@ -184,10 +186,10 @@ $ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/test
   - [`trimming_mac.json`](./example_crate/trimming_mac.json)
     - Crate generated on `Mac Apple silicon` environment.
 
-Workflow is https://github.com/sapporo-wes/yevis-cli/blob/main/tests/test-metadata-CWL.yml
+Workflow is <https://github.com/sapporo-wes/yevis-cli/blob/main/tests/test-metadata-CWL.yml>
 
 Executed as follows:
 
 ```bash
-$ yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/yevis-cli/main/tests/test-metadata-CWL.yml
+yevis test --fetch-ro-crate https://raw.githubusercontent.com/sapporo-wes/yevis-cli/main/tests/test-metadata-CWL.yml
 ```

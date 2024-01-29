@@ -1,5 +1,5 @@
 import { args, compare, crate } from "./mod.ts";
-import { color } from "./deps.ts";
+import * as colors from "colors";
 
 export const TonkazVersion = "0.2.5";
 
@@ -18,7 +18,7 @@ export async function main(): Promise<void> {
       parsedArgs.json,
     );
   } catch (e) {
-    console.error(`${color.red("Error occurred!!")}: ${e.message}`);
+    console.error(`${colors.red("Error occurred!!")}: ${e.message}`);
     Deno.exit(1);
   }
   Deno.exit(0);

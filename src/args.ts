@@ -1,4 +1,6 @@
-import { color, flags } from "./deps.ts";
+import * as colors from "colors";
+import { parseArgs as parse } from "parse_args";
+
 import { compare, main, utils } from "./mod.ts";
 
 function usage(): void {
@@ -7,16 +9,16 @@ Tonkaz ${main.TonkazVersion} by @suecharo
 
 CLI tool to verify workflow reproducibility
 
-${color.blue("Usage:")} tonkaz [options] crate1 crate2
+${colors.blue("Usage:")} tonkaz [options] crate1 crate2
 
-${color.blue("Options:")}
+${colors.blue("Options:")}
   -a, --all                    Use all output files for comparison
   -t, --threshold <threshold>  Set threshold for comparison (default: ${compare.DEFAULT_THRESHOLD})
   -j, --json                   Output result as JSON
   -h, --help                   Show this help message and exit
   -v, --version                Show version and exit
 
-${color.blue("Examples:")}
+${colors.blue("Examples:")}
   $ tonkaz crate1 crate2
   $ tonkaz crate1 https://example.com/crate2
   $ tonkaz https://example.com/crate1 https://example.com/crate2`);
@@ -32,7 +34,7 @@ export interface Args {
 }
 
 export async function parseArgs(args: string[]): Promise<Args> {
-  const parsedArgs = flags.parse(args, {
+  const parsedArgs = parse(args, {
     boolean: ["all", "help", "version", "json"],
     string: ["threshold"],
     alias: {

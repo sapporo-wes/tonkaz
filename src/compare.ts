@@ -1,6 +1,8 @@
 import { crate, main, utils } from "./mod.ts";
-import { asciiTable, color, datetime, emoji } from "./deps.ts";
-
+import * as ascii_table from "ascii_table";
+import * as emoji from "emoji";
+import * as colors from "colors";
+import * as datetime from "datetime";
 export const DEFAULT_THRESHOLD = 0.05;
 export const OUTPUTS_ID_PREFIX_RE = new RegExp(`^outputs/`);
 
@@ -42,10 +44,10 @@ export function renderFirstMsg(crate1: crate.Crate, crate2: crate.Crate): void {
   console.log(`\
 Tonkaz ${main.TonkazVersion}
 
-${color.green("Checking")} Crate2 based on Crate1:
+${colors.green("Checking")} Crate2 based on Crate1:
 
-  Crate1: ${color.cyan(crate1.location)}
-  Crate2: ${color.cyan(crate2.location)}
+  Crate1: ${colors.cyan(crate1.location)}
+  Crate2: ${colors.cyan(crate2.location)}
 `);
 }
 
@@ -59,13 +61,13 @@ export function renderSummaryTable(
   };
 
   // alignFuncs
-  const a1 = (val: string) => asciiTable.default.alignLeft(val, 14, " ");
+  const a1 = (val: string) => ascii_table.default.alignLeft(val, 14, " ");
   const a23Header = (val: string) =>
-    asciiTable.default.alignCenter(val, 36, " ");
+    ascii_table.default.alignCenter(val, 36, " ");
   const a23 = (val: string) =>
-    asciiTable.default.alignLeft(ellipseVal(val), 36, " ");
+    ascii_table.default.alignLeft(ellipseVal(val), 36, " ");
 
-  const data: asciiTable.AsciiData = {
+  const data: ascii_table.AsciiData = {
     title: "",
     heading: [a1(""), a23Header("Crate1"), a23Header("Crate2")],
     rows: [],
@@ -151,7 +153,7 @@ export function renderSummaryTable(
     }
   });
 
-  const table = asciiTable.default.fromJSON(data);
+  const table = ascii_table.default.fromJSON(data);
   console.log(utils.ourTableToString(table));
 }
 
@@ -328,7 +330,7 @@ export function renderRepLevelExplanation(
   all: boolean,
   threshold: number,
 ): void {
-  console.log(`${color.green("Comparing")} workflow results...`);
+  console.log(`${colors.green("Comparing")} workflow results...`);
   if (!all) {
     console.log(
       "Calculate the reproducibility level by comparing the EDAM-assigned output files of Crate1 and Crate2. (option `--all` to use all output files)",
@@ -348,7 +350,7 @@ export function renderRepLevelExplanation(
     .reverse();
   levels.forEach((l) => {
     console.log(
-      `  - ${color.blue(`Level${l}`)} ${STAR.repeat(l)}${
+      `  - ${colors.blue(`Level${l}`)} ${STAR.repeat(l)}${
         "  ".repeat(
           3 - l,
         )
@@ -362,8 +364,8 @@ export function renderRepLevelExplanation(
 
   console.log(""); // empty line
   console.log(
-    `  ${color.blue("Level3")}: "Fully Reproduced" <---> ${
-      color.blue(
+    `  ${colors.blue("Level3")}: "Fully Reproduced" <---> ${
+      colors.blue(
         "Level0",
       )
     }: "Not Reproduced"`,
@@ -387,7 +389,7 @@ export function renderCompareResult(
 
 export function renderLevel3Files(result: CompareResult): void {
   console.log(
-    `=== ${color.blue("Level3")} ${
+    `=== ${colors.blue("Level3")} ${
       STAR.repeat(3)
     } (Same Checksum, ${result.level3Ids.length}/${result.bothIds.length} files)`,
   );
@@ -411,7 +413,7 @@ export function renderLevel2Files(
   threshold: number,
 ): void {
   console.log(
-    `=== ${color.blue("Level2")} ${
+    `=== ${colors.blue("Level2")} ${
       STAR.repeat(2)
     } (Similar Features, ${result.level2Ids.length}/${result.bothIds.length} files)`,
   );
@@ -430,7 +432,7 @@ export function renderLevel1Files(
   threshold: number,
 ): void {
   console.log(
-    `=== ${color.blue("Level1")} ${
+    `=== ${colors.blue("Level1")} ${
       STAR.repeat(1)
     } (Different Features, ${result.level1Ids.length}/${result.bothIds.length} files)`,
   );
@@ -445,7 +447,7 @@ export function renderLevel1Files(
 export function renderLevel0Files(result: CompareResult): void {
   console.log(
     `=== ${
-      color.blue("Level0")
+      colors.blue("Level0")
     } (Not Found, Crate1: ${result.onlyCrate1Ids.length} files, Crate2: ${result.onlyCrate2Ids.length} files)`,
   );
   console.log(""); // empty line
@@ -484,18 +486,18 @@ export function renderFileStats(
   const s2 = e2.stats();
 
   // alignFuncs
-  const a1 = (val: string) => asciiTable.default.alignLeft(val, 14, " ");
+  const a1 = (val: string) => ascii_table.default.alignLeft(val, 14, " ");
   const a23Header = (val: string) =>
-    asciiTable.default.alignCenter(val, 23, " ");
-  const a23 = (val: string) => asciiTable.default.alignLeft(val, 23, " ");
+    ascii_table.default.alignCenter(val, 23, " ");
+  const a23 = (val: string) => ascii_table.default.alignLeft(val, 23, " ");
 
-  const data: asciiTable.AsciiData = {
+  const data: ascii_table.AsciiData = {
     title: "",
     heading: [a1(""), a23Header("in Crate1"), a23Header("in Crate2")],
     rows: [],
   };
 
-  // compareVal -> format -> align -> colorized
+  // compareVal -> format -> align -> colorsized
   const appendRow = (
     header: string,
     val1: number | undefined,
@@ -508,14 +510,14 @@ export function renderFileStats(
     let formattedVal1 = a23(formatFunc(val1, arg1));
     let formattedVal2 = a23(formatFunc(val2, arg2));
     if (result === ReproducibilityLevel.DIFFERENT_FEATURES) {
-      formattedVal1 = color.red(formattedVal1);
-      formattedVal2 = color.red(formattedVal2);
+      formattedVal1 = colors.red(formattedVal1);
+      formattedVal2 = colors.red(formattedVal2);
     } else if (result === ReproducibilityLevel.SIMILAR_FEATURES) {
       if (val1 == val2) {
         // do nothing => same value
       } else {
-        formattedVal1 = color.yellow(formattedVal1);
-        formattedVal2 = color.yellow(formattedVal2);
+        formattedVal1 = colors.yellow(formattedVal1);
+        formattedVal2 = colors.yellow(formattedVal2);
       }
     }
     data.rows.push([a1(header), formattedVal1, formattedVal2]);
@@ -559,7 +561,7 @@ export function renderFileStats(
     });
   }
 
-  const table = asciiTable.default.fromJSON(data);
+  const table = ascii_table.default.fromJSON(data);
 
   console.log(`  - ${id.replace(trim_prefix_regex, "")}`);
   console.log(
@@ -600,15 +602,15 @@ export function renderJson(compareResult: CompareResult): void {
 export function renderCompareSummary(compareResult: CompareResult): void {
   // alignFuncs
   const aHeader = (val: string, len: number) =>
-    asciiTable.default.alignCenter(val, len, " ");
+    ascii_table.default.alignCenter(val, len, " ");
   const a = (val: string, len: number) =>
-    asciiTable.default.alignLeft(val, len, " ");
+    ascii_table.default.alignLeft(val, len, " ");
   const col1Len = 9;
   const col2Len = 25;
   const col3Len = 19;
   const col4Len = 11;
 
-  const data: asciiTable.AsciiData = {
+  const data: ascii_table.AsciiData = {
     title: "",
     heading: [
       aHeader("Reproducibility", col2Len),
@@ -653,9 +655,9 @@ export function renderCompareSummary(compareResult: CompareResult): void {
     compareResult.onlyCrate1Ids.length + compareResult.onlyCrate2Ids.length,
   );
 
-  console.log(`${color.green("Summarize")} compare result:`);
+  console.log(`${colors.green("Summarize")} compare result:`);
   console.log(""); // empty line
-  const table = asciiTable.default.fromJSON(data);
+  const table = ascii_table.default.fromJSON(data);
   console.log(utils.tablePaddingLeft(utils.ourTableToString(table), 2));
   console.log(""); // empty line
 }
