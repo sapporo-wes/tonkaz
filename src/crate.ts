@@ -3,21 +3,14 @@ import { difference as datetime_diff } from "datetime";
 
 export interface CrateSummary {
   wfName: string;
-  wfVersion: string;
-  wfId: string;
   wfType: string;
   wfTypeVersion: string;
-  sapporoVersion: string;
-  wfEngineName: string;
-  wfEngineVersion: string;
-  testId: string;
   startTime: Date;
   endTime: Date;
   duration: ReturnType<typeof datetime_diff>;
   exitCode: string;
   state: string;
   wfAttachments: string[];
-  intermediateFiles: string[];
   outputs: string[];
   outputsWithEdam: string[];
 }
@@ -28,10 +21,7 @@ export class Crate {
   "entities": Record<string, Entity>;
   "rootdataEntity": Entity;
   "mainWf": Entity;
-  "testSuite": Entity;
-  "testResult": Entity;
-  "testDefinition": Entity;
-  "testInstance": Entity;
+  "createAction": Entity;
   "summary": CrateSummary;
 
   constructor(loc: string) {
@@ -61,10 +51,7 @@ export class Crate {
 
       this.rootdataEntity = this.findEntity("./");
       this.mainWf = this.getChildEntity(this.rootdataEntity, "mainEntity");
-      this.testSuite = this.getChildEntity(this.rootdataEntity, "about");
-      this.testResult = this.getChildEntity(this.testSuite, "result");
-      this.testDefinition = this.getChildEntity(this.testSuite, "definition");
-      this.testInstance = this.getChildEntity(this.testSuite, "instance");
+      this.createAction = this.getChildEntity(this.rootdataEntity, "mentions");
     } catch (e) {
       throw new Error(
         `Failed to initialize crate ${this.location}: ${e.message}`,
@@ -100,13 +87,7 @@ export class Crate {
     try {
       // General Metadata
       const wfName = unknownToStr(
-        this.getValRecursively(this.mainWf, ["name"]),
-      );
-      const wfVersion = unknownToStr(
-        this.getValRecursively(this.mainWf, ["version"]),
-      );
-      const wfId = unknownToStr(
-        this.getValRecursively(this.mainWf, ["yevisId"]),
+        this.getValRecursively(this.createAction, ["name"]),
       );
       const wfType = unknownToStr(
         this.getValRecursively(this.mainWf, ["programmingLanguage", "name"]),
@@ -115,40 +96,22 @@ export class Crate {
         this.getValRecursively(this.mainWf, ["programmingLanguage", "version"]),
       );
       const exitCode = unknownToStr(
-        this.getValRecursively(this.testResult, ["exitCode"]),
+        this.getValRecursively(this.createAction, ["exitCode"]),
       );
       const state = unknownToStr(
-        this.getValRecursively(this.testResult, ["state"]),
-      );
-      const testId = unknownToStr(
-        this.getValRecursively(this.testDefinition, ["yevisTestId"]),
-      );
-      const sapporoVersion = unknownToStr(
-        this.getValRecursively(this.testInstance, ["runsOn", "version"]),
-      );
-      const wfEngineName = unknownToStr(
-        this.getValRecursively(this.testDefinition, ["conformsTo", "name"]),
-      );
-      const wfEngineVersion = unknownToStr(
-        this.getValRecursively(this.testDefinition, ["conformsTo", "version"]),
+        this.getValRecursively(this.createAction, ["wesState"]),
       );
 
       // File IDs
       let wfAttachments: string[] = [];
       try {
-        wfAttachments = this.mainWf.flattenIds("attachment");
-      } catch (_) {
-        // do nothing
-      }
-      let intermediateFiles: string[] = [];
-      try {
-        intermediateFiles = this.testResult.flattenIds("intermediateFiles");
+        wfAttachments = this.createAction.flattenIds("object");
       } catch (_) {
         // do nothing
       }
       let outputs: string[] = [];
       try {
-        outputs = this.testResult.flattenIds("outputs");
+        outputs = this.createAction.flattenIds("result");
       } catch (_) {
         // do nothing
       }
@@ -156,7 +119,7 @@ export class Crate {
 
       // Time
       const startTimeStr = unknownToStr(
-        this.getValRecursively(this.testResult, ["startTime"]),
+        this.getValRecursively(this.createAction, ["startTime"]),
       );
       let startTime: Date;
       try {
@@ -165,7 +128,7 @@ export class Crate {
         throw new Error(`Invalid start time ${startTimeStr}`);
       }
       const endTimeStr = unknownToStr(
-        this.getValRecursively(this.testResult, ["endTime"]),
+        this.getValRecursively(this.createAction, ["endTime"]),
       );
       let endTime: Date;
       try {
@@ -177,21 +140,14 @@ export class Crate {
 
       const summary: CrateSummary = {
         wfName,
-        wfVersion,
-        wfId,
         wfType,
         wfTypeVersion,
-        sapporoVersion,
-        wfEngineName,
-        wfEngineVersion,
-        testId,
         startTime,
         endTime,
         duration,
         exitCode,
         state,
         wfAttachments,
-        intermediateFiles,
         outputs,
         outputsWithEdam,
       };
@@ -297,14 +253,18 @@ export class Entity {
   }
 
   hasEdam(): boolean {
-    return "format" in this.self;
+    if (!("encodingFormat" in this.self)) {
+      return false;
+    }
+    const encodingFormat = this.flattenIds("encodingFormat")[0];
+    return encodingFormat.startsWith("http://edamontology.org");
   }
 
   getEdamUrl(): string | undefined {
     if (!this.hasEdam()) {
       return undefined;
     }
-    return this.flattenIds("format")[0];
+    return this.flattenIds("encodingFormat")[0];
   }
 
   getStatId(): string | undefined {

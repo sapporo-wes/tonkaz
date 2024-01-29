@@ -75,21 +75,14 @@ export function renderSummaryTable(
 
   const headerKeys: [string, keyof crate.CrateSummary][] = [
     ["WF Name", "wfName"],
-    ["WF ID", "wfId"],
-    ["WF Ver", "wfVersion"],
     ["WF Type", "wfType"],
     ["WF Type Ver", "wfTypeVersion"],
-    ["WF Eng Name", "wfEngineName"],
-    ["WF Eng Version", "wfEngineVersion"],
-    ["Sapporo Ver", "sapporoVersion"],
-    ["Run Name", "testId"],
     ["Run State", "state"],
     ["ExitCode", "exitCode"],
     ["Start Time", "startTime"],
     ["End Time", "endTime"],
     ["Duration", "duration"],
     ["# Attachments", "wfAttachments"],
-    ["# Intermediate", "intermediateFiles"],
     ["# Outputs", "outputs"],
     ["# Outputs with EDAM", "outputsWithEdam"],
   ];
